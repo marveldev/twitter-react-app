@@ -41,7 +41,7 @@
   padding: 0 0 0 1em;
 }
 
-#trendButton {
+.trending-tweets > button {
   float: right;
   margin-right: 1em;
   border: unset;
@@ -69,17 +69,14 @@
   padding-bottom: 1em;
 }
 
-
-
-
 .trend-modal {
   display: none;
   background-color: #fff;
   position: fixed;
   top: 3em;
   left: 25em;
-  width: 43em;
-  height: 40em;
+  width: 45%;
+  height: 75%;
   border-radius: 1em;
   z-index: 2;
 }
@@ -98,9 +95,10 @@
   background-color: #F5FBFE;
 }
 
-.trend-modal > strong {
+.trend-modal > h4 {
+  display: inline;
+  font-weight: bold;
   font-size: 1.3em;
-  font-weight: 800;
 }
 
 .set-location {
@@ -109,28 +107,27 @@
 }
 
 .trend-modal p {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1.3em;
   border-bottom: 1px solid #e6ecf0;
   padding: 0.4em 0 0.4em 1em;
 }
 
-.trend-modal span {
-  padding: 0 0 0 1.5em;
+.set-location > div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2em 0 1.5em;
 }
 
-.set-trend input {
-  float: right;
+.trend-modal input {
   transform: scale(1.5);
   cursor: pointer;
-  margin-right: 2em;
 }
 
-.set-location input {
-  float: right;
-  transform: scale(1.5);
-  cursor: pointer;
-  margin-right: 2em;
+.set-trend > div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2em 0 1.5em;
 }
 
 .trend-modal small {
