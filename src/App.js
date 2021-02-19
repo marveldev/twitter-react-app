@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import HomePage from "./components/homePage/HomePage"
+import LeftNav from "./components/leftNav/LeftNav"
+import TrendingPane from "./components/trendingPane/TrendingPane"
+import './index.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-layer">
+      <LeftNav />
+      <HomePage />
+      <TrendingPane />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

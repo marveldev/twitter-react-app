@@ -1,0 +1,91 @@
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4em;
+  height: 4em;
+  border-radius: 2em;
+  margin-top: 0.2em;
+  cursor: pointer;
+}
+
+#logo > i {
+  color: #1DA1F2;
+  font-size: 2.5em;
+}
+
+.left-nav-content {
+  position: fixed;
+  left: 3em;
+  height: 100%;
+  width: 21.35%;
+  border-right: 1px solid #E6ECF0;
+}
+
+button {
+  border: unset;
+  background: transparent;
+  outline: none;
+}
+
+.left-nav-content button:hover,
+#logo:hover,
+.user-info:hover {
+  background-color: #E8F5FE;
+}
+
+.left-nav-content > button {
+  display: block;
+  padding: 0.5em 1.5em 0.5em 1em;
+  width: fit-content;
+  border-radius: 2em;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.left-nav-content > button i {
+  margin-right: 1em;
+  vertical-align: middle;
+  font-size: 1.2em;
+}
+
+#homeButton {
+  color: #1DA1F2;
+}
+
+#homeButton > i {
+  vertical-align: sub;
+}
+
+.left-nav-photo {
+  width: 3em;
+  height: 3em;
+  max-width: 3em;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #000000d7;
+  margin-right: 0.5em;
+}
+
+#tweetModalButton {
+  width: 80%;
+  height: 3em;
+  color: #fff;
+  background-color: #1DA1F2;
+  margin-top: 0.5em;
+  font-size: 1.1em;
+}
+
+#tweetModalButton:hover {
+  background-color: #1a8acf;
+}
+
+.user-info {
+  position: absolute;
+  bottom: 2em;
+  cursor: pointer;
+  padding: 0.5em 1.5em 0.5em 1em;
+  width: 80%;
+  border-radius: 2em;
+  font-weight: 700;
+}
