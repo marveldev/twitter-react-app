@@ -12,7 +12,7 @@ const HomePage = () => {
         <div>
           <div>
             <textarea className="home-tweet-input" placeholder="What's happening?"></textarea>
-            <button><strong>Everyone can reply</strong></button>
+            <strong>Everyone can reply</strong>
           </div>
           <div className="tweet-options">
             <div>
@@ -25,7 +25,7 @@ const HomePage = () => {
               <span><i className="fa fa-smile-o"></i></span>
               <span><i className="fa fa-calendar-plus-o"></i></span>
             </div>
-            <button className="add-tweet-button">Tweet</button>
+            <button type="button" className="add-tweet-button">Tweet</button>
           </div>
         </div>
       </div>
