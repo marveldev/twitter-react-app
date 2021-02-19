@@ -6,6 +6,7 @@ import './index.css'
 function App() {
   return (
     <div className="app-layer">
+      <div id="overlay"></div>
       <LeftNav />
       <HomePage />
       <TrendingPane />
