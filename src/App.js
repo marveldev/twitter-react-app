@@ -1,6 +1,4 @@
-import HomePage from "./components/homePage/HomePage"
-import LeftNav from "./components/leftNav/LeftNav"
-import TrendingPane from "./components/trendingPane/TrendingPane"
+import { TrendingPane, HomePage, LeftNav } from './components'
 import './index.css'
 
 function App() {
