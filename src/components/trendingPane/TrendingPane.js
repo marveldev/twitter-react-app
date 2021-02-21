@@ -1,4 +1,4 @@
-import '../trendingPane/trendingPane.css'
+import './trendingPane.css'
 
 const TrendingPane = () => {
   const displayTrendModal = () => {
