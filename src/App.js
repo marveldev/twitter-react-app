@@ -1,4 +1,4 @@
-import { TrendingPane, HomePage, LeftNav } from './components'
+import { TrendingPane, HomePage, LeftNav, ProfilePage } from './components'
 import './index.css'
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
     <div className="app-layer">
       <div id="overlay"></div>
       <LeftNav />
-      <HomePage />
+      <ProfilePage />
       <TrendingPane />
     </div>
   )
