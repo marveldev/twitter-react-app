@@ -1,4 +1,4 @@
-import '../leftNav/leftNav.css'
+import './leftNav.css'
 
 const LeftNav = () => {
   return (
