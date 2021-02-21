@@ -1,9 +1,9 @@
-import '../homePage/homePage.css'
+import './homePage.css'
 
 const HomePage = () => {
   return (
     <div className="home-page">
-      <div className="home">
+      <div className="header">
         <span>Home</span>
       </div>
       <div id="tweetContainer">
