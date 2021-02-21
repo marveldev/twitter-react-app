@@ -13,7 +13,7 @@
   margin-left: 2em;
 }
 
-.home {
+.header {
   position: fixed;
   background-color: #fff;
   z-index: 1;
@@ -23,7 +23,7 @@
   border-right: 1px solid #E6ECF0;
 }
 
-.home > span {
+.header > span {
   font-weight: 700;
   height: 1.8em;
   font-size: 1.5em;
