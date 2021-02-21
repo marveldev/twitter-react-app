@@ -102,3 +102,34 @@
   color: #1DA1F2;
   border-bottom: 2px solid #1DA1F2;
 }
+
+.edit-profile-modal {
+  display: none;
+  background-color: #fff;
+  position: fixed;
+  top: 5%;
+  left: 25%;
+  width: 44.4%;
+  height: auto;
+  padding-bottom: 1em;
+  z-index: 2;
+  border-radius: 0.8em;
+}
+
+.edit-profile-modal > .header {
+  border-top-left-radius: 0.8em;
+  border-top-right-radius: 0.8em;
+}
+
+.content {
+  height: 40em;
+  max-height: 41em;
+  overflow-y: scroll;
+}
+
+.entry-box-container > textarea {
+  resize: none;
+  width: 90%;
+  height: 4em;
+  margin: 0 1.5em;
+}
