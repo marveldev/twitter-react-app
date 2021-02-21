@@ -14,20 +14,20 @@
 }
 
 .header {
+  display: flex;
   position: fixed;
   background-color: #fff;
   z-index: 1;
   width: 42.8em;
-  padding: 1em;
+  padding: 1em 0;
   border-bottom: 1px solid #E6ECF0;
   border-right: 1px solid #E6ECF0;
 }
 
-.header > span {
+.header span {
   font-weight: 700;
   height: 1.8em;
   font-size: 1.5em;
-  margin-left: 0.5em;
 }
 
 #tweetContainer {
