@@ -19,14 +19,14 @@
   background-color: #fff;
   z-index: 1;
   width: 42.8em;
-  padding: 1em 0;
+  height: 4em;
   border-bottom: 1px solid #E6ECF0;
   border-right: 1px solid #E6ECF0;
 }
 
 .header span {
   font-weight: 700;
-  height: 1.8em;
+  height: auto;
   font-size: 1.5em;
 }
 
