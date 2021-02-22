@@ -2,11 +2,15 @@ import { Link } from 'react-router-dom'
 import './leftNav.css'
 
 const LeftNav = () => {
+  const switchPage = page => {
+    localStorage.setItem('currentPage', page)
+  }
+
   return (
     <div className="left-nav">
       <div className="left-nav-content">
         <span id="logo"><i className="fa">&#xf099;</i></span>
-        <Link to="/" className="nav-button active">
+        <Link to="/" onClick={switchPage('/')} className="nav-button active">
           <i className="glyphicon glyphicon-home"></i>Home
         </Link>
         <button type="button" className="nav-button"><i className="fa fa-hashtag"></i>Explore</button>
@@ -14,7 +18,7 @@ const LeftNav = () => {
         <button type="button" className="nav-button"><i className="fa fa-envelope-o"></i>Messages</button>
         <button type="button" className="nav-button"><i className="fa fa-bookmark-o"></i>Bookmarks</button>
         <button type="button" className="nav-button"><i className="fa fa-list-alt"></i>Lists</button>
-        <Link to="/profile" className="nav-button">
+        <Link to="/profile" onClick={switchPage('/profile')} className="nav-button">
           <i className="fa fa-user-o"></i>Profile
         </Link>
         <button type="button" className="nav-button"><i className="fa fa-caret-down"></i>More</button>
