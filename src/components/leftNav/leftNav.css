@@ -28,33 +28,34 @@ button {
   outline: none;
 }
 
-.left-nav-content button:hover,
 #logo:hover,
 .user-info:hover {
   background-color: #E8F5FE;
 }
 
-.left-nav-content > button {
+.left-nav-content .active {
+  color: #1DA1F2;
+}
+
+.nav-button {
   display: block;
   padding: 0.5em 1.5em 0.5em 1em;
   width: fit-content;
   border-radius: 2em;
   font-size: 1.3em;
   font-weight: 700;
+  color: #000;
 }
 
-.left-nav-content > button i {
+.nav-button:hover {
+  background-color: #E8F5FE;
+  text-decoration: none;
+}
+
+.nav-button i {
   margin-right: 1em;
-  vertical-align: middle;
+  vertical-align: bottom;
   font-size: 1.2em;
-}
-
-#homeButton {
-  color: #1DA1F2;
-}
-
-#homeButton > i {
-  vertical-align: sub;
 }
 
 .left-nav-photo {
@@ -74,6 +75,7 @@ button {
   background-color: #1DA1F2;
   margin-top: 0.5em;
   font-size: 1.1em;
+  border-radius: 1.5em;
 }
 
 #tweetModalButton:hover {
