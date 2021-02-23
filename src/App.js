@@ -1,4 +1,6 @@
-import { TrendingPane, HomePage, LeftNav, ProfilePage } from './components'
+import {
+  TrendingPane, HomePage, LeftNav, ProfilePage, ExplorePage
+} from './components'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './index.css'
 
