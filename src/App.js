@@ -1,10 +1,10 @@
 import {
-  TrendingPane, HomePage, LeftNav, ProfilePage, ExplorePage
+  TrendingPane, HomePage, LeftNav, ProfilePage, ExplorePage, NotificationPage
 } from './components'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './index.css'
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <div className="app-layer">
