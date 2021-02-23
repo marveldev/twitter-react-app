@@ -4,7 +4,7 @@ const ExplorePage = () => {
   return (
     <div className="explore-page">
       <div className="header">
-        <i className="fa fa-search"></i>
+        <i className="fa fa-search icon"></i>
         <input type="text" className="search-input" placeholder="Search Twitter" />
         <button type="button"><i className="material-icons">&#xe8b8;</i></button>
       </div>
