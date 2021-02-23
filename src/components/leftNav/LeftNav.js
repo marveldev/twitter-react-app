@@ -9,7 +9,9 @@ const LeftNav = () => {
         <Link to="/" className="nav-button active">
           <i className="glyphicon glyphicon-home"></i>Home
         </Link>
-        <button type="button" className="nav-button"><i className="fa fa-hashtag"></i>Explore</button>
+        <Link to="/explore" className="nav-button">
+          <i className="fa fa-hashtag"></i>Explore
+        </Link>
         <button type="button" className="nav-button"><i className="fa fa-bell-o"></i>Notifications</button>
         <button type="button" className="nav-button"><i className="fa fa-envelope-o"></i>Messages</button>
         <button type="button" className="nav-button"><i className="fa fa-bookmark-o"></i>Bookmarks</button>
