@@ -1,0 +1,31 @@
+.notification-page {
+  border-right: 1px solid #E6ECF0;
+  height: 100%;
+}
+
+.notification-page .header {
+  height: 7em;
+}
+
+.notification-page button {
+  /* display: flex; */
+  background-color: gray;
+}
+.notification-page-content {
+  width: 42.7em;
+  margin: 4em 0 0;
+}
+
+.notification-page-content > div {
+  border-top: 1px solid #E6ECF0;
+}
+
+.notification-page-content img {
+  height: 3.8em;
+  width: 3.8em;
+  max-width: 3.8em;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #000000d7;
+  margin-left: 2em;
+}
