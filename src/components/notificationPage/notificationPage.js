@@ -3,14 +3,14 @@ import "./notificationPage.css"
 const NotificationPage = () => {
   return (
     <div className="notification-page">
-      <div className="header">
+      <div id="header">
         <div>
           <span>Notifications</span>
           <button type="button"><i class="material-icons">&#xe8b8;</i></button>
         </div>
-        <div>
-          <button>All</button>
-          <button>Mentions</button>
+        <div id="pageNavButtons">
+          <button type="button" className="current">All</button>
+          <button type="button">Mentions</button>
         </div>
       </div>
       <div className="notification-page-content">
