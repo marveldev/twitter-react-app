@@ -8,6 +8,20 @@
   margin: 4em 0 0;
 }
 
+.header .search-input {
+  font-size: 1.1em;
+  margin: auto;
+  background-color: #EBEEF0;
+  padding-left: 3em;
+}
+
+.icon {
+  position: relative;
+  left: 2em;
+  top: 1.5em;
+  color: #7C8C99;
+}
+
 #image {
   height: 25em;
   background-image:
