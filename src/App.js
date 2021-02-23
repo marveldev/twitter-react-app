@@ -6,8 +6,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app-layer">
-        <LeftNav />
         <div id="overlay"></div>
+        <LeftNav />
         <Switch>
           <Route path="/" component={HomePage} exact/>
           <Route path="/profile" component={ProfilePage}/>
