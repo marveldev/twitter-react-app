@@ -14,6 +14,7 @@ const App = () => {
           <Route path="/" component={HomePage} exact/>
           <Route path="/profile" component={ProfilePage}/>
           <Route path="/explore" component={ExplorePage}/>
+          <Route path="/notification" component={NotificationPage}/>
         </Switch>
         <TrendingPane />
       </div>
