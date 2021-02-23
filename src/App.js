@@ -13,6 +13,7 @@ function App() {
         <Switch>
           <Route path="/" component={HomePage} exact/>
           <Route path="/profile" component={ProfilePage}/>
+          <Route path="/explore" component={ExplorePage}/>
         </Switch>
         <TrendingPane />
       </div>
