@@ -71,7 +71,8 @@
   font-size: 1.1em;
 }
 
-.explore-page-content .current-trend:hover {
+.explore-page-content .current-trend:hover,
+.tweet-content-item:hover {
   background-color: #EBEEF0;
 }
 
