@@ -1,0 +1,104 @@
+.explore-page {
+  border-right: 1px solid #E6ECF0;
+  height: 100%;
+}
+
+.explore-page-content {
+  width: 42.7em;
+  margin: 4em 0 0;
+}
+
+#image {
+  height: 25em;
+  background-image:
+  linear-gradient(to bottom, #ffffff2a, #00000011, #000000ea),
+  url('https://pbs.twimg.com/semantic_core_img/1256224053565640704/FVkUoDzu?format=jpg&name=small');
+}
+
+#imageInfo {
+  position: relative;
+  bottom: 4em;
+  font-size: 1.1em;
+  color: #fff;
+  padding-left: 1.2em;
+}
+
+#imageInfo > p {
+  margin: 0;
+}
+
+#imageInfo > p:last-child {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.explore-page-content > div {
+  border-bottom: 1em solid #F7F9FA;
+}
+
+.explore-page-content > div:first-child {
+  height: 26em;
+}
+
+.explore-page-content h4 {
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 0 0 0 0.8em;
+}
+
+.explore-page-content .current-trend {
+  height: 5.5em;
+  margin: 0;
+  padding: 0.5em 0 0 1.2em;
+  border-top: 1px solid #E6ECF0;
+}
+
+.explore-page-content strong {
+  font-size: 1.1em;
+}
+
+.explore-page-content .current-trend:hover {
+  background-color: #EBEEF0;
+}
+
+.explore-page-content .home-page-photo {
+  margin-left: 1em;
+}
+
+.tweet-content-item {
+  display: grid;
+  grid-template-columns: 0.5fr 2.5fr 0.5fr;
+  padding: 1em 0 1em;
+  width: 100%;
+  height: auto;
+  border-top: 1px solid #E6ECF0;
+}
+
+.tweet-content-item > div {
+  font-size: 1.1em;
+}
+
+.tweet-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+}
+
+.tweet-info > button:hover {
+  color: #0a0aff;
+}
+
+.tweet-info > button i {
+  padding-right: 0.5em;
+  font-size: 1.2em;
+}
+
+.tweet-info > button:nth-child(3):hover {
+  color: #f11c00;
+}
+
+.tweet-content-item > button {
+  width: 2em;
+  height: 2em;
+  margin-left: 2em;
+}
