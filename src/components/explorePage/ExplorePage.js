@@ -4,9 +4,9 @@ const ExplorePage = () => {
   return (
     <div className="explore-page">
       <div className="header">
-        <i class="fa fa-search icon"></i>
+        <i className="fa fa-search icon"></i>
         <input type="text" className="search-input" placeholder="Search Twitter" />
-        <button type="button"><i class="material-icons">&#xe8b8;</i></button>
+        <button type="button"><i className="material-icons">&#xe8b8;</i></button>
       </div>
       <div className="explore-page-content">
         <div>
@@ -54,13 +54,13 @@ const ExplorePage = () => {
                 As developers, one of the most used body part is our eyes due to staring at screens.
               </p>
               <div className="tweet-info">
-                <button><i class="fa fa-comment-o"></i>5.1k</button>
-                <button><i class="fa fa-retweet"></i>2.1k</button>
-                <button><i class="fa fa-heart-o"></i>3.1k</button>
-                <button><i class="fa fa-upload"></i></button>
+                <button><i className="fa fa-comment-o"></i>5.1k</button>
+                <button><i className="fa fa-retweet"></i>2.1k</button>
+                <button><i className="fa fa-heart-o"></i>3.1k</button>
+                <button><i className="fa fa-upload"></i></button>
               </div>
             </div>
-            <button><i class="material-icons">&#xe5d3;</i></button>
+            <button><i className="material-icons">&#xe5d3;</i></button>
           </div>
           <div className="tweet-content-item">
             <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="photo" />
@@ -71,13 +71,13 @@ const ExplorePage = () => {
                 Developer: I know 2 things, how to open my editor and how to search google
               </p>
               <div className="tweet-info">
-                <button><i class="fa fa-comment-o"></i>5.1k</button>
-                <button><i class="fa fa-retweet"></i>2.1k</button>
-                <button><i class="fa fa-heart-o"></i>3.1k</button>
-                <button><i class="fa fa-upload"></i></button>
+                <button><i className="fa fa-comment-o"></i>5.1k</button>
+                <button><i className="fa fa-retweet"></i>2.1k</button>
+                <button><i className="fa fa-heart-o"></i>3.1k</button>
+                <button><i className="fa fa-upload"></i></button>
               </div>
             </div>
-            <button><i class="material-icons">&#xe5d3;</i></button>
+            <button><i className="material-icons">&#xe5d3;</i></button>
           </div>
           <div className="tweet-content-item">
             <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="photo" />
@@ -87,13 +87,13 @@ const ExplorePage = () => {
                 Bad Habits you should break as a developer!
               </p>
               <div className="tweet-info">
-                <button><i class="fa fa-comment-o"></i>5.1k</button>
-                <button><i class="fa fa-retweet"></i>2.1k</button>
-                <button><i class="fa fa-heart-o"></i>3.1k</button>
-                <button><i class="fa fa-upload"></i></button>
+                <button><i className="fa fa-comment-o"></i>5.1k</button>
+                <button><i className="fa fa-retweet"></i>2.1k</button>
+                <button><i className="fa fa-heart-o"></i>3.1k</button>
+                <button><i className="fa fa-upload"></i></button>
               </div>
             </div>
-            <button><i class="material-icons">&#xe5d3;</i></button>
+            <button><i className="material-icons">&#xe5d3;</i></button>
           </div>
         </div>
       </div>
