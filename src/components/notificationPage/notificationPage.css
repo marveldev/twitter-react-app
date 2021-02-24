@@ -10,7 +10,7 @@
   width: 42.8em;
   border-bottom: 1px solid #E6ECF0;
   border-right: 1px solid #E6ECF0;
-  height: 7em;
+  height: 7.2em;
 }
 
 #header span {
@@ -40,24 +40,52 @@
 
 .current {
   color: #1DA1F2;
-  border-bottom: 1px solid #1DA1F2;
+  border-bottom: 0.2em solid #1DA1F2;
 }
 
 .notification-page-content {
-  width: 42.7em;
-  margin: 4em 0 0;
+  position: relative;
+  top: 7.2em;
+  border-bottom: 1px solid #E6ECF0;
+}
+
+.notification-page-content > div:hover {
+  background-color: #EBEEF0;
 }
 
 .notification-page-content > div {
+  display: grid;
+  grid-template-columns: 0.2fr 1.5fr;
+  height: auto;
+  padding: 0.5em 1em 0 1em;
   border-top: 1px solid #E6ECF0;
+  font-size: 1.1em;
+  cursor: pointer;
 }
 
 .notification-page-content img {
-  height: 3.8em;
-  width: 3.8em;
-  max-width: 3.8em;
+  height: 2em;
+  width: 2em;
+  max-width: 2em;
   border-radius: 50%;
   object-fit: cover;
   background-color: #000000d7;
-  margin-left: 2em;
+  margin-bottom: 0.5em;
+}
+
+.notification-page-content i {
+  font-size: 1.6em;
+  margin: 0.2em 0 0 1.2em;
+}
+
+.heart-icon {
+  color: #E0245E;
+}
+
+.symbol {
+  color: #1DA1F2;
+}
+
+.fa-star {
+  color: #794BC4;
 }
