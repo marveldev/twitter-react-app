@@ -1,0 +1,25 @@
+.bookmarks-page {
+  border-right: 1px solid #E6ECF0;
+  height: 100%;
+}
+
+.bookmarks-page .header {
+  padding: 1em 1.5em;
+}
+
+.bookmarks-page-content {
+  position: relative;
+  top: 4em;
+  text-align: center;
+}
+
+.bookmarks-page p {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 1.7em;
+}
+
+.bookmarks-page-content > span {
+  font-size: 1.1em;
+  color: #7C8C99;
+}
