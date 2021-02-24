@@ -4,7 +4,7 @@ const ListsPage = () => {
   return (
     <div className="lists-page">
       <div className="header">
-        <button type="button"><i class="material-icons">&#xe5c4;</i></button>
+        <button type="button"><i className="material-icons">&#xe5c4;</i></button>
         <div>
           <span>Lists</span>
           <small>@Marvel1167481</small>
