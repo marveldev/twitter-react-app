@@ -74,6 +74,7 @@
 .explore-page-content .current-trend:hover,
 .tweet-content-item:hover {
   background-color: #EBEEF0;
+  cursor: pointer;
 }
 
 .explore-page-content .home-page-photo {
