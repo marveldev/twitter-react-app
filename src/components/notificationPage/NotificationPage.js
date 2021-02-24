@@ -6,7 +6,7 @@ const NotificationPage = () => {
       <div id="header">
         <div>
           <span>Notifications</span>
-          <button type="button"><i class="material-icons">&#xe8b8;</i></button>
+          <button type="button"><i className="material-icons">&#xe8b8;</i></button>
         </div>
         <div id="pageNavButtons">
           <button type="button" className="current">All</button>
@@ -15,21 +15,21 @@ const NotificationPage = () => {
       </div>
       <div className="notification-page-content">
         <div>
-          <i class="fa fa-bell symbol"></i>
+          <i className="fa fa-bell symbol"></i>
           <div>
             <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
             <p>New Tweet notifications for <strong>Ebenezer Don</strong></p>
           </div>
         </div>
         <div>
-          <i class="fa fa-user-o symbol"></i>
+          <i className="fa fa-user-o symbol"></i>
           <div>
             <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
             <p><strong>Alo Kayode</strong> followed you</p>
           </div>
         </div>
         <div>
-          <i class="fa fa-heart heart-icon"></i>
+          <i className="fa fa-heart heart-icon"></i>
           <div>
             <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
             <p><strong>Ebenezer Don</strong> liked your Tweet</p>
@@ -37,7 +37,7 @@ const NotificationPage = () => {
           </div>
         </div>
         <div>
-          <i class="fa fa-star"></i>
+          <i className="fa fa-star"></i>
           <div>
             <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
             <p>Recommended For You</p>
@@ -45,7 +45,7 @@ const NotificationPage = () => {
           </div>
         </div>
         <div>
-          <i class="fa fa-heart heart-icon"></i>
+          <i className="fa fa-heart heart-icon"></i>
           <div>
             <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
             <p><strong>John Ademoye</strong> liked tour Tweet</p>
@@ -53,21 +53,21 @@ const NotificationPage = () => {
           </div>
         </div>
         <div>
-          <i class="fa fa-bell symbol"></i>
+          <i className="fa fa-bell symbol"></i>
           <div>
             <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
             <p>New Tweet notifications for <strong>Ebenezer Don</strong></p>
           </div>
         </div>
         <div>
-          <i class="fa fa-user-o symbol"></i>
+          <i className="fa fa-user-o symbol"></i>
           <div>
             <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
             <p><strong>Alo Kayode</strong> followed you</p>
           </div>
         </div>
         <div>
-          <i class="fa fa-star"></i>
+          <i className="fa fa-star"></i>
           <div>
             <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
             <p>Recommended For You</p>

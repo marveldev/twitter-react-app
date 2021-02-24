@@ -9,7 +9,7 @@ const ProfilePage = () => {
   return (
     <div className="profile-page">
       <div className="header">
-        <button type="button"><i class="material-icons">&#xe5c4;</i></button>
+        <button type="button"><i className="material-icons">&#xe5c4;</i></button>
         <div>
           <span>Jane Doe</span>
           <small>4 Tweets</small>
@@ -26,9 +26,9 @@ const ProfilePage = () => {
             <div className="user-bio">
               <strong>Jane Doe</strong>
               <p>Front-end developer || Christian</p>
-              <span><i class="material-icons">&#xe55f;</i>Lagos, Nigeria</span>
-              <span><i class="fa fa-birthday-cake"></i>Born April 5, 1990</span>
-              <span><i class="fa fa-calendar"></i>Joined January 2021</span>
+              <span><i className="material-icons">&#xe55f;</i>Lagos, Nigeria</span>
+              <span><i className="fa fa-birthday-cake"></i>Born April 5, 1990</span>
+              <span><i className="fa fa-calendar"></i>Joined January 2021</span>
               <div>
                 <span><strong>48 </strong>Following</span>
                 <span><strong>8 </strong>Followers</span>
