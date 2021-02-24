@@ -1,5 +1,5 @@
 import {
-  TrendingPane, HomePage, LeftNav, ProfilePage, ExplorePage, NotificationPage
+  TrendingPane, HomePage, LeftNav, ProfilePage, ExplorePage, NotificationPage, BookmarkPage
 } from './components'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './index.css'
@@ -15,6 +15,7 @@ const App = () => {
           <Route path="/profile" component={ProfilePage}/>
           <Route path="/explore" component={ExplorePage}/>
           <Route path="/notification" component={NotificationPage}/>
+          <Route path="/bookmark" component={BookmarkPage}/>
         </Switch>
         <TrendingPane />
       </div>
