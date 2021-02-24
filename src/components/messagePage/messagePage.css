@@ -1,0 +1,12 @@
+.message-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.message-page-content {
+  position: relative;
+  top: 4em;
+  border-right: 1px solid #E6ECF0;
+  height: 100%;
+}
