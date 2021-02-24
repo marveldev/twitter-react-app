@@ -16,7 +16,9 @@ const LeftNav = () => {
           <i class="fa fa-bell-o"></i>Notifications
         </Link>
         <button type="button" className="nav-button"><i class="fa fa-envelope-o"></i>Messages</button>
-        <button type="button" className="nav-button"><i class="fa fa-bookmark-o"></i>Bookmarks</button>
+        <Link to="/bookmark" className="nav-button">
+          <i class="fa fa-bookmark-o"></i>Bookmarks
+        </Link>
         <button type="button" className="nav-button"><i class="fa fa-list-alt"></i>Lists</button>
         <Link to="/profile" className="nav-button">
           <i class="fa fa-user-o"></i>Profile
