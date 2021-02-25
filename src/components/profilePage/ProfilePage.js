@@ -1,4 +1,39 @@
+import { useState } from 'react'
 import './profilePage.css'
+
+const Bio = (props) => {
+  const { dateOfBirth } = props
+  const [name, setName] = useState('Precious')
+  const [Location, setLocation] = useState({
+    city: 'Lagos',
+    country: 'Nigeria'
+  })
+
+  const updateName = (event) => {
+    event.preventDefault()
+    const nameInput = document.querySelector('.name-field').value
+    
+    console.log(name);
+  }
+
+  return (
+    <div className="user-bio">
+      <strong>{name}</strong>
+      <p>Front-end developer || Christian</p>
+      <span><i className="material-icons">&#xe55f;</i>{Location.city}</span>
+      <span><i className="fa fa-birthday-cake"></i>Born {dateOfBirth}</span>
+      <span><i className="fa fa-calendar"></i>Joined January 2021</span>
+      <div>
+        <span><strong>48 </strong>Following</span>
+        <span><strong>8 </strong>Followers</span>
+      </div>
+      <form onSubmit={(event) => updateName(event)}>
+        <input type="text" className="name-field" />
+        <button type="submit">Change name</button>
+      </form>
+    </div>
+  )
+}
 
 const ProfilePage = () => {
   const openEditModal = () => {
@@ -23,17 +58,11 @@ const ProfilePage = () => {
             <div className="profile-photo">
               <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
             </div>
-            <div className="user-bio">
-              <strong>Jane Doe</strong>
-              <p>Front-end developer || Christian</p>
-              <span><i className="material-icons">&#xe55f;</i>Lagos, Nigeria</span>
-              <span><i className="fa fa-birthday-cake"></i>Born April 5, 1990</span>
-              <span><i className="fa fa-calendar"></i>Joined January 2021</span>
-              <div>
-                <span><strong>48 </strong>Following</span>
-                <span><strong>8 </strong>Followers</span>
-              </div>
-            </div>
+            <Bio
+              name="Judith Beans"
+              dateOfBirth="$th April 1865"
+              city="Lagos, Nigeria"
+            />
           </div>
           <button type="button" onClick={() => openEditModal()}>Edit profile</button>
         </div>
