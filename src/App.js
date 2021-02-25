@@ -18,9 +18,11 @@ const App = () => {
           <Route path="/notification" component={NotificationPage}/>
           <Route path="/bookmark" component={BookmarkPage}/>
           <Route path="/list" component={ListsPage}/>
-          <Route path="/messages" component={MessagePage}/>
         </Switch>
-        <TrendingPane />
+        <Switch>
+          <Route path="/messages" component={MessagePage}/>
+          <TrendingPane />
+        </Switch>
       </div>
     </BrowserRouter>
   )
