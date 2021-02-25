@@ -1,12 +1,92 @@
 .message-page {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  left: 24.5%;
   height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.message-pane {
+  text-align: center;
+  font-size: 1.2em;
+  margin: auto;
 }
 
 .message-page-content {
   position: relative;
-  top: 4em;
+  top: 2.5em;
   border-right: 1px solid #E6ECF0;
   height: 100%;
+}
+
+.message-header span {
+  font-weight: 700;
+  height: auto;
+  font-size: 1.5em;
+  margin: auto 1em;
+}
+
+.message-header > button {
+  color: #1DA1F2;
+  font-size: 1.5em;
+  margin: auto 1em;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-color: #fff;
+  z-index: 1;
+  width: 29em;
+  height: 4em;
+  border-bottom: 1px solid #C4CFD6;
+  border-right: 1px solid #E6ECF0;
+}
+
+#searchInputContainer i {
+  position: relative;
+  left: 1.5em;
+  top: 2em;
+  font-size: 1.1em;
+  color: #7C8C99;
+}
+
+#searchInputContainer {
+  border-bottom: 1px solid #E6ECF0;
+  padding: 1em;
+
+}
+
+#searchInputContainer .search-input {
+  background-color: #EBEEF0;
+  font-size: 1.1em;
+  height: 2.7em;
+  padding-left: 4em;
+}
+
+#messageInfo {
+  font-size: 1.3em;
+  text-align: center;
+  padding-top: 2em;
+}
+
+#messageInfo > p {
+  font-size: 0.8em;
+  color: #5B7083;
+  padding: 0.8em;
+}
+
+.message-button {
+  padding: 0 1em;
+  height: 2.5em;
+  color: #fff;
+  background-color: #1DA1F2;
+  border-radius: 1.5em;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.message-button:hover {
+  background-color: #1a8acf;
 }
