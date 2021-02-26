@@ -111,3 +111,17 @@
     border-right: none;
   }
 }
+
+@media screen and (max-width: 425px) {
+  #header {
+    width: 100%;
+  }
+
+  .notification-page-content {
+    margin-bottom: 13em;
+  }
+
+  .notification-page-content > div {
+    grid-template-columns: 0.3fr 1.4fr;
+  }
+}

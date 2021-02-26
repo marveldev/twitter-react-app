@@ -12,7 +12,7 @@ const MessagePage = () => {
           <div>
             <div id="searchInputContainer">
               <i className="fa fa-search"></i>
-              <input type="text" className="search-input" placeholder="Search Twitter" />
+              <input type="text" className="search-input" placeholder="Search for people and groups" />
             </div>
             <div id="messageInfo">
               <strong>Send a message, get a message</strong>

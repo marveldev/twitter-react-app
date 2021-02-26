@@ -118,3 +118,18 @@
     width: 18.6em;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .message-page {
+    left: 0;
+    display: block;
+  }
+
+  .message-header {
+    width: 100%;
+  }
+
+  .message-pane {
+    display: none;
+  }
+}

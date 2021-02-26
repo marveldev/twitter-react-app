@@ -23,6 +23,8 @@
 }
 
 #image {
+  background-size: cover;
+  background-position: center;
   height: 25em;
   background-image:
   linear-gradient(to bottom, #ffffff2a, #00000011, #000000ea),
@@ -128,5 +130,20 @@
 @media screen and (max-width: 768px) {
   .explore-page-content {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .explore-page-content {
+    width: 100%;
+    margin: 4em 0;
+  }
+
+  .tweet-content-item {
+    grid-template-columns: 0.5fr 2fr 0.6fr;
+  }
+
+  .explore-page-content .home-page-photo {
+    font-size: 0.9em;
   }
 }
