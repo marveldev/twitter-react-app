@@ -3,8 +3,8 @@ import './profilePage.css'
 
 const Bio = (props) => {
   const { dateOfBirth } = props
-  const [name, setName] = useState('Precious')
-  const [Location, setLocation] = useState({
+  const [name, setName] = useState('Jane Doe')
+  const [location, setLocation] = useState({
     city: 'Lagos',
     country: 'Nigeria'
   })
@@ -12,15 +12,24 @@ const Bio = (props) => {
   const updateName = (event) => {
     event.preventDefault()
     const nameInput = document.querySelector('.name-field').value
-    
-    console.log(name);
+    setName(nameInput)
+  }
+
+  const updateLocation = (event) => {
+    event.preventDefault()
+    const cityInput = document.querySelector('.city-field').value
+    const countryInput = document.querySelector('.country-field').value
+    setLocation({
+      city: cityInput,
+      country: countryInput
+    })
   }
 
   return (
     <div className="user-bio">
       <strong>{name}</strong>
       <p>Front-end developer || Christian</p>
-      <span><i className="material-icons">&#xe55f;</i>{Location.city}</span>
+      <span><i className="material-icons">&#xe55f;</i>{location.city}, {location.country}</span>
       <span><i className="fa fa-birthday-cake"></i>Born {dateOfBirth}</span>
       <span><i className="fa fa-calendar"></i>Joined January 2021</span>
       <div>
@@ -30,6 +39,11 @@ const Bio = (props) => {
       <form onSubmit={(event) => updateName(event)}>
         <input type="text" className="name-field" />
         <button type="submit">Change name</button>
+      </form>
+      <form onSubmit={(event) => updateLocation(event)}>
+        <input type="text" className="city-field" />
+        <input type="text" className="country-field" />
+        <button type="submit">Change location</button>
       </form>
     </div>
   )
