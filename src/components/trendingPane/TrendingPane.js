@@ -21,27 +21,26 @@ const TrendingPane = () => {
         </div>
         <div className="current-trend">
           <p>Trending in Nigeria</p>
-          <strong>Erica</strong>
+          <strong>Rema</strong>
           <p>Trending with: Laycon, #BBNaijaLockdown</p>
-          <p>128k Tweets</p>
+          <p>28.1k Tweets</p>
         </div>
         <div className="current-trend">
           <p>Trending in Nigeria</p>
-          <strong>Erica</strong>
-          <p>Trending with: Laycon, #BBNaijaLockdown</p>
-          <p>128k Tweets</p>
+          <strong>#bobrisky</strong>
+          <p>12.5k Tweets</p>
         </div>
         <div className="current-trend">
           <p>Trending in Nigeria</p>
-          <strong>Erica</strong>
+          <strong>Tosin</strong>
           <p>Trending with: Laycon, #BBNaijaLockdown</p>
-          <p>128k Tweets</p>
+          <p>2,833 Tweets</p>
         </div>
         <div className="current-trend">
           <p>Trending in Nigeria</p>
-          <strong>Erica</strong>
+          <strong>#FreeSomto</strong>
           <p>Trending with: Laycon, #BBNaijaLockdown</p>
-          <p>128k Tweets</p>
+          <p>2,282 Tweets</p>
         </div>
         <div className="current-trend">
           <p>Trending in Nigeria</p>
