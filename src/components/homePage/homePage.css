@@ -98,3 +98,10 @@
   background-color: #8ED0F9;
   margin-right: 0.5em;
 }
+
+@media screen and (max-width: 1024px) {
+  .header {
+    width: 32em;
+    border-left: 1px solid #E6ECF0;
+  }
+}

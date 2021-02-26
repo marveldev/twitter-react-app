@@ -187,3 +187,19 @@
 .content::-webkit-scrollbar-track {
   background-color: transparent;
 }
+
+@media screen and (max-width: 1024px) {
+  .page-content {
+    width: 32em;
+  }
+
+  .user-bio-container > button {
+    margin-top: 0.8em;
+    margin-right: 1em;
+    width: 10em;
+  }
+
+  .options-button {
+    margin-top: 1em;
+  }
+}

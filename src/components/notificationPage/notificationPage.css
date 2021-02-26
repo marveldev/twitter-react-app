@@ -89,3 +89,10 @@
 .fa-star {
   color: #794BC4;
 }
+
+@media screen and (max-width: 1024px) {
+  #header {
+    width: 32.2em;
+    border-left: 1px solid #E6ECF0;
+  }
+}

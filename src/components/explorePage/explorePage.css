@@ -118,3 +118,9 @@
   height: 2em;
   margin-left: 2em;
 }
+
+@media screen and (max-width: 1024px) {
+  .explore-page-content {
+    width: 32em;
+  }
+}

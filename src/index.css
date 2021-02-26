@@ -22,3 +22,9 @@
   height: 100%;
   background-color: #99999981;
 }
+
+@media screen and (max-width: 1024px)  {
+  .app-layer {
+    grid-template-columns: 1.15fr 2fr 1.4fr;
+  }
+}

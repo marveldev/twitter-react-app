@@ -90,3 +90,21 @@
 .message-button:hover {
   background-color: #1a8acf;
 }
+
+@media screen and (max-width: 1024px) {
+  .message-header {
+    width: 22em;
+    border-left: 1px solid #E6ECF0;
+  }
+
+  .message-page {
+    left: 25.2%;
+  }
+
+  .message-pane {
+    text-align: center;
+    font-size: 1.2em;
+    margin: auto;
+    padding: 0 1em;
+  }
+}
