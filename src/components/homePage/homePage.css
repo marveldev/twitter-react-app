@@ -104,7 +104,7 @@
 
 @media screen and (max-width: 1024px) {
   .header {
-    width: 32em;
+    width: 32.2em;
     border-left: 1px solid #E6ECF0;
   }
 }
@@ -124,5 +124,29 @@
   .header {
     width: 100%;
     top: 0;
+  }
+
+  #tweetContainer {
+    grid-template-columns: 0.4fr 1.5fr;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #tweetContainer {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+
+  .tweet-options {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  #tweetContainer {
+    grid-template-columns: 0.6fr 1.5fr;
+  }
+
+  .tweet-options > div span:last-child {
+    display: none;
   }
 }

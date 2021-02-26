@@ -85,8 +85,8 @@
 
 .tweet-content-item {
   display: grid;
-  grid-template-columns: 0.5fr 2.5fr 0.5fr;
-  padding: 1em 0 1em;
+  grid-template-columns: 0.3fr 1.8fr;
+  padding: 1em 1.8em 1em 0;
   width: 100%;
   height: auto;
   border-top: 1px solid #E6ECF0;
@@ -115,35 +115,73 @@
   color: #f11c00;
 }
 
-.tweet-content-item > button {
-  width: 2em;
-  height: 2em;
-  margin-left: 2em;
+.tweet-person {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 1024px) {
   .explore-page-content {
     width: 100%;
   }
+
+  .tweet-content-item {
+    grid-template-columns: 0.3fr 1.3fr;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .explore-page-content {
-    width: 100%;
+  .tweet-content-item {
+    grid-template-columns: 0.3fr 1.8fr;
   }
 }
 
 @media screen and (max-width: 425px) {
   .explore-page-content {
-    width: 100%;
     margin: 4em 0;
   }
 
+  #image {
+    height: 18em;
+  }
+
+  .explore-page-content > div:first-child {
+    height: 19em;
+  }
+
+  #imageInfo {
+    bottom: 4em;
+  }
+
   .tweet-content-item {
-    grid-template-columns: 0.5fr 2fr 0.6fr;
+    grid-template-columns: 0.3fr 1.4fr;
   }
 
   .explore-page-content .home-page-photo {
     font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .tweet-content-item {
+    font-size: 0.85em;
+  }
+
+  #image {
+    height: 15em;
+  }
+
+  .explore-page-content > div:first-child {
+    height: 16em;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .tweet-content-item {
+    grid-template-columns: 0.3fr 1.2fr;
+  }
+
+  #imageInfo {
+    bottom: 6em;
   }
 }

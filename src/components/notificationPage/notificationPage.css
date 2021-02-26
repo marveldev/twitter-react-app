@@ -95,6 +95,10 @@
     width: 32.2em;
     border-left: 1px solid #E6ECF0;
   }
+
+  .notification-page-content > div {
+    grid-template-columns: 0.3fr 1.8fr;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -123,5 +127,11 @@
 
   .notification-page-content > div {
     grid-template-columns: 0.3fr 1.4fr;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .notification-page-content > div {
+    grid-template-columns: 0.3fr 1fr;
   }
 }
