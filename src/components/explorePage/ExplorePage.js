@@ -49,7 +49,10 @@ const ExplorePage = () => {
           <div className="tweet-content-item">
             <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="photo" />
             <div>
-              <strong>Derick Alangi</strong>
+              <div className="tweet-person">
+                <strong>Derick Alangi</strong>
+                <button><i className="material-icons">&#xe5d3;</i></button>
+              </div>
               <p>
                 As developers, one of the most used body part is our eyes due to staring at screens.
               </p>
@@ -60,12 +63,14 @@ const ExplorePage = () => {
                 <button><i className="fa fa-upload"></i></button>
               </div>
             </div>
-            <button><i className="material-icons">&#xe5d3;</i></button>
           </div>
           <div className="tweet-content-item">
             <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="photo" />
             <div>
-              <strong>Molly Struve</strong>
+              <div className="tweet-person">
+                <strong>Molly Struve</strong>
+                <button><i className="material-icons">&#xe5d3;</i></button>
+              </div>
               <p>
                 Interviewer: What makes you think you are qualified for this job?
                 Developer: I know 2 things, how to open my editor and how to search google
@@ -77,12 +82,14 @@ const ExplorePage = () => {
                 <button><i className="fa fa-upload"></i></button>
               </div>
             </div>
-            <button><i className="material-icons">&#xe5d3;</i></button>
           </div>
           <div className="tweet-content-item">
             <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="photo" />
             <div>
-              <strong>Danny Thompson</strong>
+              <div className="tweet-person">
+                <strong>Danny Thompson</strong>
+                <button><i className="material-icons">&#xe5d3;</i></button>
+              </div>
               <p>
                 Bad Habits you should break as a developer!
               </p>
@@ -93,7 +100,6 @@ const ExplorePage = () => {
                 <button><i className="fa fa-upload"></i></button>
               </div>
             </div>
-            <button><i className="material-icons">&#xe5d3;</i></button>
           </div>
         </div>
       </div>
