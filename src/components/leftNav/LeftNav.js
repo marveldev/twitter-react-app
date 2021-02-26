@@ -48,7 +48,7 @@ const LeftNav = () => {
           <i className="fa fa-caret-down"></i>
           <span>More</span>
         </button>
-        <button className="tweet nav-button"><i class="material-icons">&#xe0cb;</i></button>
+        <button className="tweet-modal-button"><i class="material-icons">&#xe0cb;</i></button>
         <button type="button" id="tweetModalButton">Tweet</button>
         <div className="user-info">
           <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
