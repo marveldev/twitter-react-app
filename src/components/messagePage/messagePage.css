@@ -108,3 +108,13 @@
     padding: 0 1em;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .message-page {
+    left: 15.3%;
+  }
+
+  .message-header {
+    width: 18.6em;
+  }
+}

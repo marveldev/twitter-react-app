@@ -96,3 +96,18 @@
     border-left: 1px solid #E6ECF0;
   }
 }
+
+@media screen and (max-width: 768px) {
+  #header {
+    width: 42.3em;
+  }
+
+  .notification-page-content {
+    height: 100%;
+    border-right: 1px solid #E6ECF0;
+  }
+
+  .notification-page {
+    border-right: none;
+  }
+}

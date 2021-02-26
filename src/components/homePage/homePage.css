@@ -34,12 +34,15 @@
   font-size: 1.5em;
 }
 
+.home-page-content {
+  position: relative;
+  top: 6em;
+}
+
 #tweetContainer {
   display: grid;
   grid-template-columns: 0.3fr 1.5fr;
   height: auto;
-  position: relative;
-  top: 6em;
   border-bottom: 10px solid #E6ECF0;
 }
 
@@ -103,5 +106,16 @@
   .header {
     width: 32em;
     border-left: 1px solid #E6ECF0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    width: 42.2em;
+  }
+
+  .home-page {
+    border-right: 1px solid #E6ECF0;
+    height: 100vh;
   }
 }

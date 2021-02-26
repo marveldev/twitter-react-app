@@ -28,3 +28,9 @@
     grid-template-columns: 1.15fr 2fr 1.4fr;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .app-layer {
+    grid-template-columns: 0.4fr 2fr 0.2fr;
+  }
+}

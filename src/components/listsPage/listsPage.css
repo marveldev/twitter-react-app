@@ -66,3 +66,10 @@
     grid-template-columns: 0.3fr 1.2fr 0.2fr;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .lists-page {
+    border-right: 1px solid #E6ECF0;
+    height: 100%;
+  }
+}
