@@ -29,7 +29,8 @@ button {
 }
 
 #logo:hover,
-.user-info:hover {
+.user-info:hover,
+.dropdown-content > button:hover {
   background-color: #E8F5FE;
 }
 
@@ -81,6 +82,10 @@ button {
   font-weight: 600;
 }
 
+.tweet-modal-header > button:hover {
+  background-color: #E8F5FE;
+}
+
 #tweetModalButton:hover {
   background-color: #1a8acf;
 }
@@ -101,6 +106,79 @@ button {
 
 .tweet-modal-button i {
   vertical-align: middle;
+}
+
+.tweet-modal {
+  background-color: #ffffff;
+  position: fixed;
+  top: 3em;
+  left: 28%;
+  width: 43%;
+  height: fit-content;
+  border-radius: 1em;
+  z-index: 2;
+}
+
+.tweet-modal-header {
+  border-bottom: 1px solid  #E6ECF0;
+  height: 4em;
+}
+
+.tweet-modal-header > button {
+  border: unset;
+  font-size: 1.5em;
+  color: #1da1f2;
+  margin: 0.3em 1em 0.3em 0.5em;
+  padding: 0.2em 0.6em;
+  border-radius: 1em;
+  background-color: #fff;
+}
+
+.tweet-modal #tweetContainer {
+  border-bottom: none;
+  padding-top: 1em;
+}
+
+.tweet-modal .home-tweet-input {
+  height: 7em;
+  margin-top: 0.5em;
+}
+
+.dropdown-content {
+  position: fixed;
+  bottom: 18em;
+  left: 3em;
+  background-color: #ffff;
+  width: 16em;
+  height: auto;
+  z-index: 2;
+  border-radius: 0.5em;
+  padding: 1em 0;
+  box-shadow: 0px 8px 16px 0px #00000033;
+}
+
+.dropdown-content > button {
+  display: block;
+  text-align: left;
+  padding: 1em;
+  border-radius: 0.5em;
+  width: 100%;
+  font-size: 1.1em;
+}
+
+.dropdown-content i {
+  font-size: 1.2em;
+  vertical-align: middle;
+  margin-right: 1em;
+}
+
+.dropdown-content > button:nth-child(4) {
+  border-bottom: 1px solid #E6ECF0;
+  border-radius: 0;
+}
+
+.dropdown-content > button:nth-child(2) i {
+  margin-right: 1.5em;
 }
 
 @media screen and (max-width: 768px) {
