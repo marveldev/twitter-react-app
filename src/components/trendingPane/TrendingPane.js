@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"
 import './trendingPane.css'
 
 const TrendingPane = () => {
@@ -6,9 +6,9 @@ const TrendingPane = () => {
 
   const trendModal = (
     <>
-      <div id="overlay"></div>
+      <div className="overlay"></div>
       <div className="trend-modal">
-        <button type="button" id="closeTrendModalButton" onClick={() => setModalActive(false) }>X</button>
+        <button type="button" id="closeTrendModalButton" onClick={() => setModalActive(false)}>X</button>
         <h4>Trends</h4>
         <div className="set-location">
           <p>Location</p>
