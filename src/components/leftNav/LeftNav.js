@@ -1,46 +1,46 @@
 import { Link } from 'react-router-dom'
+import { useState } from "react"
 import './leftNav.css'
 
 const LeftNav = () => {
-  const addActiveClass = (element) => {
-    document.querySelector('.active').classList.remove('active')
-    document.querySelector(element).classList.add('active')
-  }
+  const [pageActive, setPageActive] = useState(false)
 
   return (
     <div className="left-nav">
       <div className="left-nav-content">
         <span id="logo"><i className="fa">&#xf099;</i></span>
-        <Link to="/" className="nav-button home active" onClick={() => addActiveClass('.home')}> 
+        <Link to="/" className={pageActive ? 'nav-button active' : 'nav-button'}
+          onClick={() => setPageActive(true)}>
           <i className="glyphicon glyphicon-home"></i>
           <span>Home</span>
         </Link>
-        <Link to="/explore" className="nav-button explore"
-          onClick={() => addActiveClass('.explore')}>
+        <Link to="/explore" className={pageActive ? 'nav-button active' : 'nav-button'}
+          onClick={() => setPageActive(true)}>
           <i className="fa fa-hashtag"></i>
           <span>Explore</span>
         </Link>
-        <Link to="/notification" className="nav-button notification"
-          onClick={() => addActiveClass('.notification')}>
+        <Link to="/notification" className={pageActive ? 'nav-button active' : 'nav-button'}
+          onClick={() => setPageActive(true)}>
           <i className="fa fa-bell-o"></i>
           <span>Notifications</span>
         </Link>
-        <Link to="/messages" className="nav-button messages"
-          onClick={() => addActiveClass('.messages')}>
+        <Link to="/messages" className={pageActive ? 'nav-button active' : 'nav-button'}
+          onClick={() => setPageActive(true)}>
           <i className="fa fa-envelope-o"></i>
           <span>Messages</span>
         </Link>
-        <Link to="/bookmark" className="bookmarks nav-button"
-          onClick={() => addActiveClass('.bookmarks')}>
+        <Link to="/bookmark" className={pageActive ? 'nav-button active' : 'nav-button'}
+          onClick={() => setPageActive(true)}>
           <i className="fa fa-bookmark-o"></i>
           <span>Bookmarks</span>
         </Link>
-        <Link to="/list" className="lists nav-button" onClick={() => addActiveClass('.lists')}>
+        <Link to="/list" className={pageActive ? 'nav-button active' : 'nav-button'}
+          onClick={() => setPageActive(true)}>
           <i className="fa fa-list-alt"></i>
           <span>Lists</span>
         </Link>
-        <Link to="/profile" className="nav-button profile"
-          onClick={() => addActiveClass('.profile')}>
+        <Link to="/profile"  className={pageActive ? 'nav-button active' : 'nav-button'}
+          onClick={() => setPageActive(true)}>
           <i className="fa fa-user-o"></i>
           <span>Profile</span>
         </Link>
