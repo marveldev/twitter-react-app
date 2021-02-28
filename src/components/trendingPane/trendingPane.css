@@ -80,7 +80,7 @@
   z-index: 2;
 }
 
-#closeTrendModalButton {
+.trend-modal > button {
   border: unset;
   font-size: 1.5em;
   color: #1da1f2;
@@ -90,7 +90,7 @@
   background-color: #fff;
 }
 
-#closeTrendModalButton:hover {
+.trend-modal > button:hover {
   background-color: #F5FBFE;
 }
 
