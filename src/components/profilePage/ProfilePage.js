@@ -1,10 +1,41 @@
+import { useState } from "react"
 import './profilePage.css'
 
 const ProfilePage = () => {
-  const openEditModal = () => {
-    document.querySelector('.edit-profile-modal').style.display = 'block'
-    document.querySelector('#overlay').style.display = 'block'
-  }
+  const [modalDisplay, setModalDisplay] = useState(false)
+
+  const editProfileModal = (
+    <>
+      <div className="overlay" onClick={() => setModalDisplay(false)}></div>
+      <div className="edit-profile-modal">
+        <div className="header">
+          <button type="button" id="closeModalButton"
+            onClick={() => setModalDisplay(false)}>X
+          </button>
+          <span>Edit profile</span>
+          <button id="saveProfileButton">Save</button>
+        </div>
+        <div className="content">
+          <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG"
+            className="photo" alt="photo" />
+          <div>
+            <div className="profile-photo">
+              <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
+            </div>
+            <div className="entry-box-container">
+              <input type="text" maxLength="20" placeholder="Name" required/>
+              <textarea placeholder="Bio"></textarea>
+              <input type="text" maxLength="20" placeholder="Location"/>
+              <textarea placeholder="Website"></textarea>
+              <label>Birth date
+                <input type="date" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
 
   return (
     <div className="profile-page">
@@ -35,7 +66,7 @@ const ProfilePage = () => {
               </div>
             </div>
           </div>
-          <button type="button" onClick={() => openEditModal()}>Edit profile</button>
+          <button type="button" onClick={() => setModalDisplay(true)}>Edit profile</button>
         </div>
         <div className="options-button">
           <button>Tweets</button>
@@ -44,31 +75,7 @@ const ProfilePage = () => {
           <button>Likes</button>
         </div>
       </div>
-      <div className="edit-profile-modal">
-        <div className="header">
-          <button type="button" id="closeModalButton">X</button>
-          <span>Edit profile</span>
-          <button id="saveProfileButton">Save</button>
-        </div>
-        <div className="content">
-          <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG"
-            className="photo" alt="photo" />
-          <div>
-            <div className="profile-photo">
-              <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
-            </div>
-            <div className="entry-box-container">
-              <input type="text" maxLength="20" placeholder="Name" required/>
-              <textarea placeholder="Bio"></textarea>
-              <input type="text" maxLength="20" placeholder="Location"/>
-              <textarea placeholder="Website"></textarea>
-              <label>Birth date
-                <input type="date" />
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
+      { modalDisplay && editProfileModal }
     </div>
   )
 }
