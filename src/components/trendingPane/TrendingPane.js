@@ -8,7 +8,7 @@ const TrendingPane = () => {
     <>
       <div className="overlay"></div>
       <div className="trend-modal">
-        <button type="button" id="closeTrendModalButton" onClick={() => setModalActive(false)}>X</button>
+        <button type="button" onClick={() => setModalActive(false)}>X</button>
         <h4>Trends</h4>
         <div className="set-location">
           <p>Location</p>
