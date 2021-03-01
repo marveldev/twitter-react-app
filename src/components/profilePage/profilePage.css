@@ -47,6 +47,10 @@
   background-color: #000000d7;
 }
 
+.content .profile-photo {
+  font-size: 2.5em;
+}
+
 .user-bio {
   position: relative;
   bottom: 35%;
@@ -130,7 +134,7 @@
   overflow-y: scroll;
 }
 
-.content > div {
+.content > div:last-child {
   position: relative;
   bottom: 15%;
   left: 0.5em;
@@ -185,6 +189,29 @@
 
 .content::-webkit-scrollbar-track {
   background-color: transparent;
+}
+
+.photo-input {
+  position: relative;
+  bottom: 25%;
+  color: #fff;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.photo-input i {
+  vertical-align: middle;
+}
+
+.photo-input span {
+  padding: 0.8em;
+  border-radius: 2em;
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+
+.photo-input span:hover {
+  background-color: #ffffff1f;
 }
 
 @media screen and (max-width: 1024px) {
