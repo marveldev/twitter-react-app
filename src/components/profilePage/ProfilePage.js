@@ -18,9 +18,19 @@ const ProfilePage = () => {
         <div className="content">
           <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG"
             className="photo" alt="photo" />
+          <div className="photo-input">
+            <input type="file" id="addPhoto" />
+            <label for="addPhoto">
+              <span><i class="material-icons">&#xe412;</i></span>
+            </label>
+            <span><i class="material-icons">&#xe5cd;</i></span>
+          </div>
           <div>
             <div className="profile-photo">
               <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
+              <label for="addPhoto" className="stuff">
+                <span><i class="fa fa-camera"></i></span>
+              </label>
             </div>
             <div className="entry-box-container">
               <input type="text" maxLength="20" placeholder="Name" required/>
