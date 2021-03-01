@@ -8,10 +8,10 @@ const ProfilePage = () => {
   const [modalDisplay, setModalDisplay] = useState(false)
   const [deleteButton, setDeleteButton] = useState('none')
   const [name, setName] = useState('Jane Doe')
-  const [bio, setBio] = useState('Bio')
-  const [location, setLocation] = useState('Location')
-  const [website, setWebsite] = useState('Website')
-  const [birthDate, setBirthDate] = useState()
+  const [bio, setBio] = useState('Front-end dev')
+  const [location, setLocation] = useState('Lagos, Nigeria')
+  const [website, setWebsite] = useState('')
+  const [birthDate, setBirthDate] = useState('April, 27th 1869')
 
   const addPhoto = (id) => {
     const photoReader = new FileReader()
