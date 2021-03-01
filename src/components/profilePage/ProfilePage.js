@@ -2,7 +2,24 @@ import { useState } from "react"
 import './profilePage.css'
 
 const ProfilePage = () => {
+  const defaultPhotoSource = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
+  const [topPhoto, setTopPhoto] = useState(defaultPhotoSource)
+  const [profilePhoto, setProfilePhoto] = useState(defaultPhotoSource)
   const [modalDisplay, setModalDisplay] = useState(false)
+  const [deleteButton, setDeleteButton] = useState('none')
+
+  const addPhoto = (id) => {
+    const photoReader = new FileReader()
+    photoReader.readAsDataURL(document.querySelector(id).files[0])
+    photoReader.addEventListener('load', () => {
+      if (id == '#topPhotoPicker') {
+        setTopPhoto(photoReader.result)
+        setDeleteButton('inline')
+      } else {
+        setProfilePhoto(photoReader.result)
+      }
+    })
+  }
 
   const editProfileModal = (
     <>
@@ -16,20 +33,29 @@ const ProfilePage = () => {
           <button id="saveProfileButton">Save</button>
         </div>
         <div className="content">
-          <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG"
-            className="photo" alt="photo" />
-          <div className="photo-input">
-            <input type="file" id="addPhoto" />
-            <label for="addPhoto">
-              <span><i class="material-icons">&#xe412;</i></span>
+          <img src={topPhoto} className="photo" alt="photo" />
+          <div className="top-photo-container">
+            <input type="file" id="topPhotoPicker"
+              onChange={() => addPhoto('#topPhotoPicker')}
+            />
+            <label htmlFor="topPhotoPicker">
+              <span title="Add photo"><i className="material-icons">&#xe412;</i></span>
             </label>
-            <span><i class="material-icons">&#xe5cd;</i></span>
+            <span style={{display: deleteButton}} title="Remove photo"
+              onClick={() => {setTopPhoto(defaultPhotoSource); setDeleteButton('none')}}>
+              <i className="material-icons">&#xe5cd;</i>
+            </span>
           </div>
           <div>
             <div className="profile-photo">
-              <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
-              <label for="addPhoto" className="stuff">
-                <span><i class="fa fa-camera"></i></span>
+              <img src={profilePhoto} alt="photo"/>
+            </div>
+            <div className="add-photo">
+              <input type="file" id="profilePhotoPicker"
+                onChange={() => addPhoto('#profilePhotoPicker')}
+              />
+              <label htmlFor="profilePhotoPicker">
+                <span title="Add photo"><i className="fa fa-camera"></i></span>
               </label>
             </div>
             <div className="entry-box-container">
@@ -57,12 +83,11 @@ const ProfilePage = () => {
         </div>
       </div>
       <div className="page-content">
-        <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG"
-          className="photo" alt="photo" />
+        <img src={topPhoto} className="photo" alt="photo" />
         <div className="user-bio-container">
           <div>
             <div className="profile-photo">
-              <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
+              <img src={profilePhoto} alt="photo"/>
             </div>
             <div className="user-bio">
               <strong>Jane Doe</strong>
