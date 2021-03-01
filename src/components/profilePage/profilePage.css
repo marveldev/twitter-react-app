@@ -112,9 +112,9 @@
   position: fixed;
   top: 5%;
   left: 25%;
-  width: 44.4%;
+  width: fit-content;
   height: auto;
-  padding-bottom: 1em;
+  padding: 0 0.5em 1em 0;
   z-index: 2;
   border-radius: 0.8em;
 }
@@ -136,7 +136,7 @@
 
 .content > div:last-child {
   position: relative;
-  bottom: 15%;
+  bottom: 18%;
   left: 0.5em;
 }
 
@@ -191,7 +191,7 @@
   background-color: transparent;
 }
 
-.photo-input {
+.top-photo-container {
   position: relative;
   bottom: 25%;
   color: #fff;
@@ -199,19 +199,40 @@
   text-align: center;
 }
 
-.photo-input i {
+.top-photo-container i {
   vertical-align: middle;
 }
 
-.photo-input span {
+.top-photo-container span {
   padding: 0.8em;
   border-radius: 2em;
   margin: 0 0.5em;
   cursor: pointer;
 }
 
-.photo-input span:hover {
+.top-photo-container span:hover,
+.add-photo span:hover {
   background-color: #ffffff1f;
+}
+
+.add-photo {
+  position: absolute;
+  left: 9%;
+  bottom: 80%;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.add-photo span {
+  padding: 0.8em;
+  border-radius: 2em;
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+
+#topPhotoPicker,
+#profilePhotoPicker {
+  display: none;
 }
 
 @media screen and (max-width: 1024px) {
