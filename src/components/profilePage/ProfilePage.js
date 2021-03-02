@@ -26,18 +26,25 @@ const ProfilePage = () => {
     })
   }
 
+  const dateInputEvent = () => {
+    const birthDateInput = document.querySelector('.birth-date-field').value
+    const date = new Date(birthDateInput)
+    const month = date.toLocaleString('default', { month: 'long' });
+    const day = date.getDate()
+    const year = date.getFullYear()
+    const birthDateValue = month + ' ' + day + ',' + ' ' + year
+    setBirthDate(birthDateValue)
+  }
+
   const updateBio = () => {
     const nameInput = document.querySelector('.name-field').value
     const bioInput = document.querySelector('.bio-field').value
     const locationInput = document.querySelector('.location-field').value
     const websiteInput = document.querySelector('.website-field').value
-    const birthDateInput = document.querySelector('.birth-date-field').value
-    console.log(birthDateInput);
     setName(nameInput)
     setBio(bioInput)
     setLocation(locationInput)
     setWebsite(websiteInput)
-    setBirthDate(birthDateInput)
     setModalDisplay(false)
   }
 
@@ -50,7 +57,11 @@ const ProfilePage = () => {
             onClick={() => setModalDisplay(false)}>X
           </button>
           <span>Edit profile</span>
-          <button id="saveProfileButton" onClick={() => updateBio()}>Save</button>
+          <button
+            onClick={() => {dateInputEvent(); updateBio()}}
+            id="saveProfileButton">
+            Save
+          </button>
         </div>
         <div className="content">
           <img src={topPhoto} className="photo" alt="photo" />
@@ -78,8 +89,9 @@ const ProfilePage = () => {
                 <span title="Add photo"><i className="fa fa-camera"></i></span>
               </label>
             </div>
-            <div className="entry-box-container">
-              <input type="text" className="name-field"
+            <form className="entry-box-container">
+              <input
+                type="text" className="name-field"
                 maxLength="20" placeholder={name} required
               />
               <textarea className="bio-field" placeholder={bio}></textarea>
@@ -88,9 +100,12 @@ const ProfilePage = () => {
               />
               <textarea className="website-field" placeholder={website}></textarea>
               <label>Birth date
-                <input type="date" className="birth-date-field" placeholder={birthDate} />
+                <input
+                  type="date" className="birth-date-field" 
+                  placeholder={birthDate}
+                />
               </label>
-            </div>
+            </form>
           </div>
         </div>
       </div>
