@@ -1,5 +1,6 @@
 import { useState } from "react"
 import EditProfileModal from './EditProfileModal'
+import Tweets from '../homePage/Tweets'
 import './profilePage.css'
 
 const ProfilePage = () => {
@@ -50,6 +51,9 @@ const ProfilePage = () => {
           <button>Likes</button>
         </div>
       </div>
+      <div id="tweetOutput">
+        <Tweets />
+      </div>
       { modalDisplay &&
         <EditProfileModal
           setModalDisplay={setModalDisplay}
@@ -57,6 +61,7 @@ const ProfilePage = () => {
           setBio={setBio}
         />
       }
+
     </div>
   )
 }
