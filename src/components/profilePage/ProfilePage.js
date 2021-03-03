@@ -39,9 +39,8 @@ const ProfilePage = () => {
               </div>
             </div>
           </div>
-          <button
-            onClick={() => setModalDisplay(true)}
-            type="button">Edit profile
+          <button onClick={() => setModalDisplay(true)} type="button">
+            Edit profile
           </button>
         </div>
         <div className="options-button">
