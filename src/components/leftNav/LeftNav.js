@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from "react"
+import TweetModal from './TweetModal'
 import './leftNav.css'
 
 const LeftNav = () => {
@@ -7,43 +8,12 @@ const LeftNav = () => {
   const [tweetModalDisplay, setTweetModalDisplay] = useState(false)
   const [dropDownDisplay, setDropDownDisplay] = useState(false)
 
-  const tweetModal = (
-    <>
-      <div className="overlay"></div>
-      <div className="tweet-modal">
-        <div className="tweet-modal-header">
-          <button type="button" onClick={() => setTweetModalDisplay(false)}>X</button>
-        </div>
-        <div id="tweetContainer">
-          <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-            className="home-page-photo" alt="user-profile" />
-          <div>
-            <div>
-              <textarea className="home-tweet-input" placeholder="What's happening?"></textarea>
-              <strong>Everyone can reply</strong>
-            </div>
-            <div className="tweet-options">
-              <div>
-                <input type="file" id="addPhoto" />
-                <label for="addPhoto">
-                  <span><i className="fa fa-file-picture-o" id="photoIcon"></i></span>
-                </label>
-                <span><i className="fa fa-git-square"></i></span>
-                <span><i className="fa fa-bar-chart"></i></span>
-                <span><i className="fa fa-smile-o"></i></span>
-                <span><i className="fa fa-calendar-plus-o"></i></span>
-              </div>
-              <button type="button" className="add-tweet-button">Tweet</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-
   const dropDownModal = (
     <>
-      <div className="overlay" style={{backgroundColor: "#110d0d0a"}} onClick={() => setDropDownDisplay(false)}></div>
+      <div className="overlay" style={{backgroundColor: "#110d0d0a"}}
+        onClick={() => setDropDownDisplay(false)}
+      >
+      </div>
       <div className="dropdown-content">
         <button><i className="material-icons">&#xe8e1;</i>Topics</button>
         <button><i className="fa fa-bolt"></i>Moments</button>
@@ -111,15 +81,23 @@ const LeftNav = () => {
           <i className="fa fa-caret-down"></i>
           <span>More</span>
         </button>
-        <button className="tweet-modal-button"><i className="material-icons">&#xe0cb;</i></button>
-        <button type="button" id="tweetModalButton" onClick={() => setTweetModalDisplay(true)}>Tweet</button>
+        <button className="tweet-modal-button">
+          <i className="material-icons">&#xe0cb;</i>
+        </button>
+        <button type="button" id="tweetModalButton" onClick={() => setTweetModalDisplay(true)}>
+          Tweet
+        </button>
         <div className="user-info">
           <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
             className="left-nav-photo" alt="user-profile" />
           <span>Jane Doe</span>
         </div>
       </div>
-      { tweetModalDisplay && tweetModal }
+      { tweetModalDisplay &&
+        <TweetModal
+          setTweetModalDisplay={setTweetModalDisplay}
+        />
+      }
       { dropDownDisplay && dropDownModal }
     </div>
   )
