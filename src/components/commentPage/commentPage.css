@@ -1,0 +1,112 @@
+.comment-page {
+  border-right: 1px solid #E6ECF0;
+  height: 100%;
+}
+
+.comment-page .header span {
+  padding: 0.5em 0;
+}
+
+.tweet-content {
+  position: relative;
+  top: 5em;
+}
+
+.tweet-content .home-page-photo {
+  margin-left: 0;
+}
+
+.tweet-content > div:first-child {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-left: 1.5em;
+}
+
+.tweet-content > div:nth-child(2) {
+  height: auto;
+  padding: 1em 2em 0.5em;
+}
+
+.user-profile-name {
+  margin: 1em 0;
+  flex: 0.92;
+  font-weight: 650;
+  font-size: 1.1em;
+}
+
+.tweet-text {
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+.tweet-interaction {
+  padding: 1em 0;
+  margin: 0 2em;
+  border-top: 1px solid #E6ECF0;
+  border-bottom: 1px solid #E6ECF0;
+  font-size: 1.1em;
+}
+
+.tweet-interaction > span {
+  padding-right: 1em;
+}
+
+.user-tweet-options {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.4em;
+  padding: 0.5em;
+  border-bottom: 1px solid #E6ECF0;
+}
+
+.comment-modal {
+  position: fixed;
+  top: 3em;
+  left: 28%;
+  width: 43%;
+  height: fit-content;
+  border-radius: 1em;
+  z-index: 2;
+  background-color: #ffffff;
+}
+
+.comment-content {
+  display: grid;
+  grid-template-columns: 0.3fr 1.5fr;
+  width: 100%;
+  height: auto;
+  margin: 1em 0;
+}
+
+.comment-content p {
+  font-size: 1.1em;
+}
+
+.comment-modal .tweet-options {
+  justify-content: space-between;
+  border-top: none;
+  margin-left: 2em;
+}
+
+.comment-input {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.comment-input .home-tweet-input {
+  height: 6.5em;
+  padding: 0.5em 1em;
+  overflow-y: auto;
+}
+
+#commentOutput {
+  /* position: relative; */
+}
+
+.comment-item {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #E6ECF0;
+}
