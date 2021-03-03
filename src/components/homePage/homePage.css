@@ -103,6 +103,16 @@
   margin-right: 0.5em;
 }
 
+.tweet-item .tweet-content-item {
+  grid-template-columns: 0.37fr 1.8fr;
+  border-bottom: 1px solid #E6ECF0;
+  border-top: none;
+}
+
+.tweet-item .tweet-info i {
+  font-size: 1.5em;
+}
+
 @media screen and (max-width: 1024px) {
   .header {
     width: 32.2em;
