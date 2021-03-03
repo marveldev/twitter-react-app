@@ -3,7 +3,7 @@ import { useState } from "react"
 import './leftNav.css'
 
 const LeftNav = () => {
-  const [pageActive, setPageActive] = useState(false)
+  const [activeNav, setActiveNav] = useState('')
   const [tweetModalDisplay, setTweetModalDisplay] = useState(false)
   const [dropDownDisplay, setDropDownDisplay] = useState(false)
 
@@ -16,7 +16,7 @@ const LeftNav = () => {
         </div>
         <div id="tweetContainer">
           <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-            className="home-page-photo" alt="photo" />
+            className="home-page-photo" alt="user-profile" />
           <div>
             <div>
               <textarea className="home-tweet-input" placeholder="What's happening?"></textarea>
@@ -60,38 +60,50 @@ const LeftNav = () => {
     <div className="left-nav">
       <div className="left-nav-content">
         <span id="logo"><i className="fa">&#xf099;</i></span>
-        <Link to="/" className={pageActive ? 'nav-button active' : 'nav-button'}
-          onClick={() => setPageActive(true)}>
+        <Link to="/" className={activeNav === 'home' ? 'nav-button active' : 'nav-button'}
+          onClick={() => setActiveNav('home')}>
           <i className="glyphicon glyphicon-home"></i>
           <span>Home</span>
         </Link>
-        <Link to="/explore" className={pageActive ? 'nav-button active' : 'nav-button'}
-          onClick={() => setPageActive(true)}>
+        <Link to="/explore"
+          className={activeNav === 'explore' ? 'nav-button active' : 'nav-button'}
+          onClick={() => setActiveNav('explore')}
+        >
           <i className="fa fa-hashtag"></i>
           <span>Explore</span>
         </Link>
-        <Link to="/notification" className={pageActive ? 'nav-button active' : 'nav-button'}
-          onClick={() => setPageActive(true)}>
+        <Link to="/notification"
+          className={activeNav === 'notification' ? 'nav-button active' : 'nav-button'}
+          onClick={() => setActiveNav('notification')}
+        >
           <i className="fa fa-bell-o"></i>
           <span>Notifications</span>
         </Link>
-        <Link to="/messages" className={pageActive ? 'nav-button active' : 'nav-button'}
-          onClick={() => setPageActive(true)}>
+        <Link to="/messages"
+          className={activeNav === 'messages' ? 'nav-button active' : 'nav-button'}
+          onClick={() => setActiveNav('messages')}
+        >
           <i className="fa fa-envelope-o"></i>
           <span>Messages</span>
         </Link>
-        <Link to="/bookmark" className={pageActive ? 'nav-button active' : 'nav-button'}
-          onClick={() => setPageActive(true)}>
+        <Link to="/bookmark"
+          className={activeNav === 'bookmark' ? 'nav-button active' : 'nav-button'}
+          onClick={() => setActiveNav('bookmark')}
+        >
           <i className="fa fa-bookmark-o"></i>
           <span>Bookmarks</span>
         </Link>
-        <Link to="/list" className={pageActive ? 'nav-button active' : 'nav-button'}
-          onClick={() => setPageActive(true)}>
+        <Link to="/list"
+          className={activeNav === 'list' ? 'nav-button active' : 'nav-button'}
+          onClick={() => setActiveNav('list')}
+        >
           <i className="fa fa-list-alt"></i>
           <span>Lists</span>
         </Link>
-        <Link to="/profile"  className={pageActive ? 'nav-button active' : 'nav-button'}
-          onClick={() => setPageActive(true)}>
+        <Link to="/profile"
+          className={activeNav === 'profile' ? 'nav-button active' : 'nav-button'}
+          onClick={() => setActiveNav('profile')}
+        >
           <i className="fa fa-user-o"></i>
           <span>Profile</span>
         </Link>
@@ -103,7 +115,7 @@ const LeftNav = () => {
         <button type="button" id="tweetModalButton" onClick={() => setTweetModalDisplay(true)}>Tweet</button>
         <div className="user-info">
           <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-            className="left-nav-photo" alt="photo" />
+            className="left-nav-photo" alt="user-profile" />
           <span>Jane Doe</span>
         </div>
       </div>
