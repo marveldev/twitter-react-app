@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom"
+
 const Tweets = ({ tweetText }) => {
   return (
-    <div className="tweet-item">
+    <Link to="/comment" className="tweet-item">
       <div className="tweet-content-item">
         <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="user-profile" />
         <div>
@@ -17,7 +19,7 @@ const Tweets = ({ tweetText }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 
