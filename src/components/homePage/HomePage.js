@@ -1,6 +1,26 @@
+import Tweets from "./Tweets"
 import './homePage.css'
+import { useState } from "react"
 
 const HomePage = () => {
+  const defaultPhoto = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
+  const [tweetInput, setInputText] = useState('')
+  const [tweetData, setTweetData] = useState([])
+
+  const inputTextHandler = (event) => {
+    setInputText(event.target.value)
+  }
+
+  const addTweetData = () => {
+    setTweetData([
+      ...tweetData, {
+        name: 'Derick Alangi', id: 'id' + Date.parse(new Date()).toString(),
+        profilePhoto: defaultPhoto, tweetText: tweetInput
+      }
+    ])
+    setInputText('')
+  }
+
   return (
     <div className="home-page">
       <div className="header">
@@ -8,17 +28,20 @@ const HomePage = () => {
       </div>
       <div className="home-page-content">
         <div id="tweetContainer">
-          <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-            className="home-page-photo" alt="photo" />
+          <img src={defaultPhoto} className="home-page-photo" alt="user-profile" />
           <div>
             <div>
-              <textarea className="home-tweet-input" placeholder="What's happening?"></textarea>
+              <textarea
+                onChange={inputTextHandler} value={tweetInput}
+                className="home-tweet-input" placeholder="What's happening?"
+              >
+            </textarea>
               <strong>Everyone can reply</strong>
             </div>
             <div className="tweet-options">
               <div>
                 <input type="file" id="addPhoto" />
-                <label for="addPhoto">
+                <label htmlFor="addPhoto">
                   <span><i className="fa fa-file-picture-o" id="photoIcon"></i></span>
                 </label>
                 <span><i className="fa fa-git-square"></i></span>
@@ -26,11 +49,24 @@ const HomePage = () => {
                 <span><i className="fa fa-smile-o"></i></span>
                 <span><i className="fa fa-calendar-plus-o"></i></span>
               </div>
-              <button type="button" className="add-tweet-button">Tweet</button>
+              <button
+                onClick={addTweetData}
+                type="button" className="add-tweet-button"
+              >
+                Tweet
+              </button>
             </div>
           </div>
         </div>
-        <div id="tweetOutput"></div>
+        <div id="tweetOutput">
+          {tweetData.map(tweetItem => (
+            <Tweets
+              key={tweetItem.id}
+              tweetText={tweetItem.tweetText}
+              setTweetData={setTweetData}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )
