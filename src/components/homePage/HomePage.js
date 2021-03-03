@@ -63,7 +63,6 @@ const HomePage = () => {
             <Tweets
               key={tweetItem.id}
               tweetText={tweetItem.tweetText}
-              setTweetData={setTweetData}
             />
           ))}
         </div>
