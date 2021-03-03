@@ -103,6 +103,16 @@
   margin-right: 0.5em;
 }
 
+.tweet-item {
+  color: #000;
+  text-decoration: none;
+}
+
+.tweet-item:hover {
+  color: #000;
+  text-decoration: none;
+}
+
 .tweet-item .tweet-content-item {
   grid-template-columns: 0.37fr 1.8fr;
   border-bottom: 1px solid #E6ECF0;
