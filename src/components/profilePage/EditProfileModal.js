@@ -38,17 +38,19 @@ const EditProfileModal = ({ setModalDisplay, bio, setBio }) => {
       <div className="edit-profile-modal">
         <div className="header">
           <button
-            onClick={() => setModalDisplay(false)}
-            type="button" id="closeModalButton">X
+            onClick={() => setModalDisplay(false)} type="button" id="closeModalButton"
+          >
+            X
           </button>
           <span>Edit profile</span>
           <button
-            onClick={updateBio}
-            id="saveProfileButton">Save
+            onClick={updateBio} id="saveProfileButton"
+          >
+            Save
           </button>
         </div>
         <div className="content">
-          <img src={bio.headerPhoto} className="photo" id="headerPhoto" alt="" />
+          <img src={bio.headerPhoto} className="photo" id="headerPhoto" alt="user-profile" />
           <div className="header-photo-container">
             <input
               onChange={() => addPhoto('#headerPhotoPicker')}
@@ -63,7 +65,7 @@ const EditProfileModal = ({ setModalDisplay, bio, setBio }) => {
           </div>
           <div>
             <div className="profile-photo">
-              <img src={bio.profilePhoto} id="profilePhoto" alt=""/>
+              <img src={bio.profilePhoto} id="profilePhoto" alt="user-profile"/>
             </div>
             <div className="add-photo">
               <input
@@ -78,7 +80,7 @@ const EditProfileModal = ({ setModalDisplay, bio, setBio }) => {
               <input
                 type="text" className="name-field"
                 maxLength="20" placeholder="Name"
-                defaultValue ={bio.name}
+                defaultValue={bio.name}
                 required
               />
               <textarea
@@ -87,12 +89,15 @@ const EditProfileModal = ({ setModalDisplay, bio, setBio }) => {
                 defaultValue={bio.aboutUser}>
               </textarea>
               <input type="text" className="location-field"
-                maxLength="20" placeholder="Location"
+                maxLength="20" placeholder="Location" defaultValue={bio.location}
               />
-              <textarea className="website-field" placeholder="Website"></textarea>
+              <textarea className="website-field"
+                placeholder="Website" defaultValue={bio.website}
+              >
+              </textarea>
               <label>Birth date
                 <input
-                  type="date" className="birth-date-field" defaultValue='02/07/2017'
+                  type="date" className="birth-date-field"
                 />
               </label>
             </form>
