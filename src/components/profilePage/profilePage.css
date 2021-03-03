@@ -193,7 +193,7 @@
   background-color: transparent;
 }
 
-.top-photo-container {
+.header-photo-container {
   position: relative;
   bottom: 25%;
   color: #fff;
@@ -201,18 +201,18 @@
   text-align: center;
 }
 
-.top-photo-container i {
+.header-photo-container i {
   vertical-align: middle;
 }
 
-.top-photo-container span {
+.header-photo-container span {
   padding: 0.8em;
   border-radius: 2em;
   margin: 0 0.5em;
   cursor: pointer;
 }
 
-.top-photo-container span:hover,
+.header-photo-container span:hover,
 .add-photo span:hover {
   background-color: #ffffff1f;
 }
@@ -232,7 +232,7 @@
   cursor: pointer;
 }
 
-#topPhotoPicker,
+#headerPhotoPicker,
 #profilePhotoPicker {
   display: none;
 }
