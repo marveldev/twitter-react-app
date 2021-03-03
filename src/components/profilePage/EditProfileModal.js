@@ -1,0 +1,106 @@
+const EditProfileModal = ({ setModalDisplay, bio, setBio }) => {
+  const addPhoto = (id) => {
+    const photoReader = new FileReader()
+    photoReader.readAsDataURL(document.querySelector(id).files[0])
+    photoReader.addEventListener('load', () => {
+      if (id === '#headerPhotoPicker') {
+        document.querySelector('#headerPhoto').src = photoReader.result
+      } else {
+        document.querySelector('#profilePhoto').src = photoReader.result
+      }
+    })
+  }
+
+  const updateBio = () => {
+    const nameInput = document.querySelector('.name-field').value
+    const bioInput = document.querySelector('.about-user').value
+    const locationInput = document.querySelector('.location-field').value
+    const headerPhoto = document.querySelector('#headerPhoto').src
+    const profilePhoto = document.querySelector('#profilePhoto').src
+    const websiteInput = document.querySelector('.website-field').value
+    const birthDateInput = document.querySelector('.birth-date-field').value
+    const date = new Date(birthDateInput)
+    const month = date.toLocaleString('default', { month: 'long' });
+    const day = date.getDate()
+    const year = date.getFullYear()
+    const birthDate = 'Born '.concat(month, ' ', day, ',' , ' ', year)
+    setBio({
+      name: nameInput, aboutUser: bioInput, location: locationInput,
+      website: websiteInput, birthDate: birthDate, profilePhoto: profilePhoto,
+      headerPhoto: headerPhoto
+    })
+    setModalDisplay(false)
+  }
+
+  return (
+    <>
+      <div onClick={() => setModalDisplay(false)} className="overlay"></div>
+      <div className="edit-profile-modal">
+        <div className="header">
+          <button
+            onClick={() => setModalDisplay(false)}
+            type="button" id="closeModalButton">X
+          </button>
+          <span>Edit profile</span>
+          <button
+            onClick={updateBio}
+            id="saveProfileButton">Save
+          </button>
+        </div>
+        <div className="content">
+          <img src={bio.headerPhoto} className="photo" id="headerPhoto" alt="" />
+          <div className="header-photo-container">
+            <input
+              onChange={() => addPhoto('#headerPhotoPicker')}
+              type="file" id="headerPhotoPicker"
+            />
+            <label htmlFor="headerPhotoPicker">
+              <span title="Add photo"><i className="material-icons">&#xe412;</i></span>
+            </label>
+            <span title="Remove photo">
+              <i className="material-icons">&#xe5cd;</i>
+            </span>
+          </div>
+          <div>
+            <div className="profile-photo">
+              <img src={bio.profilePhoto} id="profilePhoto" alt=""/>
+            </div>
+            <div className="add-photo">
+              <input
+                onChange={() => addPhoto('#profilePhotoPicker')}
+                type="file" id="profilePhotoPicker"
+              />
+              <label htmlFor="profilePhotoPicker">
+                <span title="Add photo"><i className="fa fa-camera"></i></span>
+              </label>
+            </div>
+            <form className="entry-box-container">
+              <input
+                type="text" className="name-field"
+                maxLength="20" placeholder="Name"
+                defaultValue ={bio.name}
+                required
+              />
+              <textarea
+                className="about-user"
+                placeholder="Short introduction"
+                defaultValue={bio.aboutUser}>
+              </textarea>
+              <input type="text" className="location-field"
+                maxLength="20" placeholder="Location"
+              />
+              <textarea className="website-field" placeholder="Website"></textarea>
+              <label>Birth date
+                <input
+                  type="date" className="birth-date-field" defaultValue='02/07/2017'
+                />
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default EditProfileModal
