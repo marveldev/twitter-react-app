@@ -8,8 +8,8 @@
 }
 
 .tweet-content {
-  position: relative;
-  top: 5em;
+  margin-top: 5em;
+  height: auto;
 }
 
 .tweet-content .home-page-photo {
@@ -101,12 +101,13 @@
   overflow-y: auto;
 }
 
-#commentOutput {
-  /* position: relative; */
-}
-
 .comment-item {
   display: flex;
   width: 100%;
   border-bottom: 1px solid #E6ECF0;
+}
+
+.comment-item .tweet-content-item {
+  grid-template-columns: 0.35fr 1.8fr;
+  border-top: none;
 }
