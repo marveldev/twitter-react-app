@@ -1,6 +1,6 @@
 const Comments = () => {
   return (
-    <div class="comment-item">
+    <div className="comment-item">
       <div className="tweet-content-item">
         <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="user-profile" />
         <div>
