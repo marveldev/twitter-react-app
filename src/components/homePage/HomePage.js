@@ -3,22 +3,22 @@ import './homePage.css'
 import { useState } from "react"
 
 const HomePage = () => {
-  const defaultPhoto = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-  const [tweetInput, setInputText] = useState('')
+  const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
   const [tweetData, setTweetData] = useState([])
 
-  const inputTextHandler = (event) => {
-    setInputText(event.target.value)
-  }
+  const addTweetData = selector => {
+    const tweetText = document.querySelector(selector).value
+    const name = 'Derick Alangi'
+    const id = 'id' + Date.parse(new Date()).toString()
+    const tweetObject = {
+      profilePhotoUrl,
+      tweetText,
+      name,
+      id
+    }
 
-  const addTweetData = () => {
-    setTweetData([
-      ...tweetData, {
-        name: 'Derick Alangi', id: 'id' + Date.parse(new Date()).toString(),
-        profilePhoto: defaultPhoto, tweetText: tweetInput
-      }
-    ])
-    setInputText('')
+    setTweetData([...tweetData, tweetObject])
+    document.querySelector(selector).value = ''
   }
 
   return (
@@ -28,11 +28,11 @@ const HomePage = () => {
       </div>
       <div className="home-page-content">
         <div id="tweetContainer">
-          <img src={defaultPhoto} className="home-page-photo" alt="user-profile" />
+          <img src={profilePhotoUrl} className="home-page-photo" alt="user-profile" />
           <div>
             <div>
               <textarea
-                onChange={inputTextHandler} value={tweetInput}
+                id="homeTweetInput"
                 className="home-tweet-input" placeholder="What's happening?"
               >
             </textarea>
@@ -50,7 +50,7 @@ const HomePage = () => {
                 <span><i className="fa fa-calendar-plus-o"></i></span>
               </div>
               <button
-                onClick={addTweetData}
+                onClick={() => addTweetData('#homeTweetInput')}
                 type="button" className="add-tweet-button"
               >
                 Tweet
