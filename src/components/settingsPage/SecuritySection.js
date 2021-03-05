@@ -5,7 +5,7 @@ const SecuritySection = () => {
         <span>Security and account access</span>
       </div>
       <div className="section-content">
-      <div>
+        <div>
           <span>Manage your account’s security and keep track of your account’s
             usage including apps that you have connected to your account.
           </span>
