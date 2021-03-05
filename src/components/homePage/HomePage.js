@@ -6,6 +6,14 @@ const HomePage = () => {
   const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
   const [tweetData, setTweetData] = useState([])
 
+  const inputTextHandler = (event) => {
+    if (event.target.value.length >= 1) {
+      document.querySelector('#home').classList.add('enable')
+    } else {
+      document.querySelector('#home').classList.remove('enable')
+    }
+  }
+
   const addTweetData = selector => {
     const tweetText = document.querySelector(selector).value
     const name = 'Derick Alangi'
@@ -32,10 +40,10 @@ const HomePage = () => {
           <div>
             <div>
               <textarea
-                id="homeTweetInput"
-                className="home-tweet-input" placeholder="What's happening?"
+                onChange={inputTextHandler}
+                className="home input-box" placeholder="What's happening?"
               >
-            </textarea>
+              </textarea>
               <strong>Everyone can reply</strong>
             </div>
             <div className="tweet-options">
@@ -50,8 +58,8 @@ const HomePage = () => {
                 <span><i className="fa fa-calendar-plus-o"></i></span>
               </div>
               <button
-                onClick={() => addTweetData('#homeTweetInput')}
-                type="button" className="add-tweet-button"
+                onClick={() => addTweetData('.home')}
+                type="button" id="home" className="tweet-button"
               >
                 Tweet
               </button>
