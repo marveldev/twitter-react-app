@@ -40,7 +40,7 @@ const EditProfileModal = ({ setModalDisplay, bio, setBio }) => {
           <button
             onClick={() => setModalDisplay(false)} type="button" id="closeModalButton"
           >
-            X
+            <i className="material-icons">&#xe5cd;</i>
           </button>
           <span>Edit profile</span>
           <button

@@ -3,7 +3,9 @@ const TweetModal = ({ setTweetModalDisplay }) => (
     <div className="overlay" onClick={() => setTweetModalDisplay(false)}></div>
     <div className="tweet-modal">
       <div className="tweet-modal-header">
-        <button type="button" onClick={() => setTweetModalDisplay(false)}>X</button>
+        <button type="button" onClick={() => setTweetModalDisplay(false)}>
+          <i className="material-icons">&#xe5cd;</i>
+        </button>
       </div>
       <div id="tweetContainer">
         <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'

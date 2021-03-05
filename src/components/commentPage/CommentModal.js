@@ -4,7 +4,9 @@ const CommentModal = ({ setCommentModal }) => {
       <div className="overlay" onClick={() => setCommentModal(false)}></div>
       <div className="comment-modal">
         <div className="tweet-modal-header">
-          <button type="button" onClick={() => setCommentModal(false)}>X</button>
+          <button type="button" onClick={() => setCommentModal(false)}>
+            <i className="material-icons">&#xe5cd;</i>
+          </button>
         </div>
         <div className="comment-content">
           <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="user-profile" />
