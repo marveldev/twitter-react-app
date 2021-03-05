@@ -15,13 +15,19 @@ const LeftNav = () => {
       >
       </div>
       <div className="dropdown-content">
-        <button><i className="material-icons">&#xe8e1;</i>Topics</button>
-        <button><i className="fa fa-bolt"></i>Moments</button>
-        <button><i className="fa fa-external-link-square"></i>Twitter Ads</button>
-        <button><i className="fa fa-bar-chart"></i>Analytics</button>
-        <button><i className="material-icons">&#xe8b8;</i>Settings and privacy</button>
-        <button><i className="fa fa-question-circle-o"></i>Help Center</button>
-        <button><i className="material-icons">&#xe3ae;</i>Display</button>
+        <button className="dropdown-button"><i className="material-icons">&#xe8e1;</i>Topics</button>
+        <button className="dropdown-button"><i className="fa fa-bolt"></i>Moments</button>
+        <button className="dropdown-button"><i className="fa fa-external-link-square"></i>Twitter Ads</button>
+        <button className="dropdown-button"><i className="fa fa-bar-chart"></i>Analytics</button>
+        <Link to='./settings'
+          className="dropdown-button"
+          onClick={() => setDropDownDisplay(false)}
+        >
+          <i className="material-icons">&#xe8b8;</i>
+          Settings and privacy
+        </Link>
+        <button className="dropdown-button"><i className="fa fa-question-circle-o"></i>Help Center</button>
+        <button className="dropdown-button"><i className="material-icons">&#xe3ae;</i>Display</button>
       </div>
     </>
   )
