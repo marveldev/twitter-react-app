@@ -1,6 +1,10 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
+import CommentModal from "../commentPage/CommentModal"
 
 const Tweets = ({ tweetText }) => {
+  const [commentModalDisplay, setCommentModal] = useState(false)
+
   return (
     <div className="tweet-item">
       <div className="tweet-content-item">
@@ -14,13 +18,17 @@ const Tweets = ({ tweetText }) => {
             <p>{tweetText}</p>
           </Link>
           <div className="tweet-info">
-            <button><i className="fa fa-comment-o"></i>5.1k</button>
+            <button onClick={() => setCommentModal(true)}>
+              <i className="fa fa-comment-o"></i>
+              5.1k
+            </button>
             <button><i className="fa fa-retweet"></i>2.1k</button>
             <button><i className="fa fa-heart-o"></i>3.1k</button>
             <button><i className="fa fa-upload"></i></button>
           </div>
         </div>
       </div>
+      {commentModalDisplay && <CommentModal setCommentModal={setCommentModal}/>}
     </div>
   )
 }
