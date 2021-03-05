@@ -1,0 +1,36 @@
+.settings-page {
+  position: absolute;
+  left: 24.5%;
+  width: 75%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.settings {
+  position: relative;
+  top: 4em;
+}
+
+.settings > button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 1.5em;
+  font-size: 1.1em;
+  width: 100%;
+  border-bottom: 1px solid #E6ECF0;
+}
+
+.settings i {
+  font-size: 1.8em;
+  color: #808488;
+}
+
+.settings > button:hover {
+  background-color: #F7F9FA;
+}
+
+.current-section {
+  border-right: 0.15em solid #1DA1F2;
+}
