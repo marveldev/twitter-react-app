@@ -5,7 +5,7 @@ const NotificationSection = () => {
         <span>Notifications</span>
       </div>
       <div className="section-content">
-      <div>
+        <div>
           <span>Select the kinds of notifications you get about your
             activities, interests, and recommendations.
           </span>
