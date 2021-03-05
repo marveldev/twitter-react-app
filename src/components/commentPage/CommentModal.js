@@ -17,7 +17,7 @@ const CommentModal = ({ setCommentModal }) => {
         </div>
         <div className="comment-input">
           <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="user-profile" />
-          <textarea className="home-tweet-input" placeholder="Tweet your reply"></textarea>
+          <textarea className="input-box" placeholder="Tweet your reply"></textarea>
         </div>
         <div className="tweet-options">
           <div>
@@ -27,7 +27,7 @@ const CommentModal = ({ setCommentModal }) => {
             <span><i className="fa fa-smile-o"></i></span>
             <span><i className="fa fa-calendar-plus-o"></i></span>
           </div>
-          <button className="add-tweet-button">Reply</button>
+          <button className="tweet-button">Reply</button>
         </div>
       </div>
     </>
