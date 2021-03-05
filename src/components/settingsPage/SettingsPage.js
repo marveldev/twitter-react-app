@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import AccessiblitySection from './AccessiblitySection.js'
+import AccessiblitySection from './AccessiblitySection'
 import AccountSection from './AccountSection'
-import NotificationSection from './NotificationSection.js'
+import NotificationSection from './NotificationSection'
+import PrivacySection from './PrivacySection'
 import SecuritySection from './SecuritySection'
 import './settingsPage.css'
 
@@ -28,7 +29,10 @@ const SettingsPage = () => {
             <span>Security and account access</span>
             <i class="material-icons">&#xe315;</i>
           </button>
-          <button type="button">
+          <button
+            onClick={() => setCurrentSection('privacy')}
+            type="button" className={currentSection === 'privacy' ? 'current-section' : ''}
+          >
             <span>Privacy and safety</span>
             <i class="material-icons">&#xe315;</i>
           </button>
@@ -56,6 +60,7 @@ const SettingsPage = () => {
       {currentSection === 'security' && <SecuritySection />}
       {currentSection === 'notification' && <NotificationSection />}
       {currentSection === 'accessibility' && <AccessiblitySection />}
+      {currentSection === 'privacy' && <PrivacySection />}
     </div>
   )
 }
