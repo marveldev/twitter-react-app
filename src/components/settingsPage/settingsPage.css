@@ -1,7 +1,7 @@
 .settings-page {
   position: absolute;
   left: 24.5%;
-  width: 75%;
+  width: 74%;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -10,6 +10,10 @@
 .settings {
   position: relative;
   top: 4em;
+}
+
+.settings-page .headline {
+  width: 28.4em;
 }
 
 .settings > button {
@@ -24,13 +28,63 @@
 
 .settings i {
   font-size: 1.8em;
-  color: #808488;
+  color: #5B7083;
 }
 
-.settings > button:hover {
+.settings-page button:hover {
   background-color: #F7F9FA;
 }
 
 .current-section {
   border-right: 0.15em solid #1DA1F2;
+}
+
+.section span {
+  padding: 0.5em 1em;
+}
+
+.section-content {
+  position: relative;
+  top: 4em;
+  border-right: 1px solid #E6ECF0;
+  height: 100%;
+}
+
+.section-content > div {
+  padding: 1em 2em;
+  border-bottom: 1px solid #E6ECF0;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 1.5em;
+  font-size: 1.1em;
+  width: 100%;
+  border-bottom: 1px solid #E6ECF0;
+  text-align: left;
+}
+
+.button > div {
+  flex: 0.88;
+}
+
+.button p {
+  margin: 0;
+}
+
+.button > p {
+  color: #5B7083;
+  font-size: 1.3em;
+}
+
+.section-content span {
+  font-size: 0.9em;
+  color: #5B7083;
+}
+
+.button > i {
+  font-size: 1.8em;
+  color: #5B7083;
 }
