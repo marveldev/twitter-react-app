@@ -4,11 +4,11 @@ const MessagePage = () => {
   return (
     <div className="message-page">
       <div>
-        <div className="message-header">
+        <div className="headline">
           <span>Messages</span>
           <button type="button"><i className="fa fa-envelope-o"></i></button>
         </div>
-        <div className="message-page-content">
+        <div className="page-core">
           <div>
             <div id="searchInputContainer">
               <i className="fa fa-search"></i>
