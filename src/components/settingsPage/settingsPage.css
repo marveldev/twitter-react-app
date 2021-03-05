@@ -62,7 +62,7 @@
   padding: 0.8em 1.5em;
   font-size: 1.1em;
   width: 100%;
-  border-bottom: 1px solid #E6ECF0;
+  border-bottom: 1px solid #EBEEF0;
   text-align: left;
 }
 
@@ -87,4 +87,24 @@
 .button > i {
   font-size: 1.8em;
   color: #5B7083;
+}
+
+.section-content h3 {
+  font-weight: 700;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.section-content section {
+  border-bottom: 0.8em solid #F7F9FA;
+}
+
+.section-content section:last-child {
+  border-bottom: none;
+  height: 15em;
+}
+
+.more-privacy-options p {
+  color: #000;
+  font-size: 1em;
 }
