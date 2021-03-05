@@ -1,7 +1,7 @@
-import { useState } from 'react'
 import CommentModal from './CommentModal'
-import Comments from "./Comments";
+import Comments from "./Comments"
 import './commentPage.css'
+import { useState } from "react"
 
 const CommentPage = () => {
   const [commentModalDisplay, setCommentModal] = useState(false)
