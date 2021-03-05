@@ -29,8 +29,7 @@ button {
 }
 
 #logo:hover,
-.user-info:hover,
-.dropdown-content > button:hover {
+.user-info:hover {
   background-color: #E8F5FE;
 }
 
@@ -49,7 +48,8 @@ button {
   color: #000;
 }
 
-.nav-button:hover {
+.nav-button:hover,
+.dropdown-button:hover {
   background-color: #E8F5FE;
   color: #000;
   text-decoration: none;
@@ -157,27 +157,28 @@ button {
   box-shadow: 0px 8px 16px 0px #00000033;
 }
 
-.dropdown-content > button {
+.dropdown-button {
   display: block;
   text-align: left;
   padding: 1em;
   border-radius: 0.5em;
   width: 100%;
   font-size: 1.1em;
+  color: #000;
 }
 
-.dropdown-content i {
+.dropdown-button i {
   font-size: 1.2em;
   vertical-align: middle;
   margin-right: 1em;
 }
 
-.dropdown-content > button:nth-child(4) {
+.dropdown-button:nth-child(4) {
   border-bottom: 1px solid #E6ECF0;
   border-radius: 0;
 }
 
-.dropdown-content > button:nth-child(2) i {
+.dropdown-button:nth-child(2) i {
   margin-right: 1.5em;
 }
 
