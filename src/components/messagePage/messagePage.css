@@ -12,27 +12,27 @@
   margin: auto;
 }
 
-.message-page-content {
+.page-core {
   position: relative;
   top: 2.5em;
   border-right: 1px solid #E6ECF0;
   height: 100%;
 }
 
-.message-header span {
+.headline span {
   font-weight: 700;
   height: auto;
   font-size: 1.5em;
   margin: auto 1em;
 }
 
-.message-header > button {
+.headline > button {
   color: #1DA1F2;
   font-size: 1.5em;
   margin: auto 1em;
 }
 
-.message-header {
+.headline {
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -92,7 +92,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .message-header {
+  .headline {
     width: 22em;
     border-left: 1px solid #E6ECF0;
   }
@@ -114,7 +114,7 @@
     left: 15.3%;
   }
 
-  .message-header {
+  .headline {
     width: 18.6em;
   }
 }
@@ -125,7 +125,7 @@
     display: block;
   }
 
-  .message-header {
+  .headline {
     width: 100%;
   }
 
