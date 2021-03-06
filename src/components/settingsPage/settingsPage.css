@@ -55,6 +55,11 @@
   border-bottom: 1px solid #E6ECF0;
 }
 
+.more-privacy-options > div {
+  padding: 1em 2em;
+  border-bottom: 1px solid #E6ECF0;
+}
+
 .button {
   display: flex;
   justify-content: space-between;
@@ -101,7 +106,7 @@
 
 .section-content section:last-child {
   border-bottom: none;
-  height: 15em;
+  padding-bottom: 5em;
 }
 
 .more-privacy-options p {
