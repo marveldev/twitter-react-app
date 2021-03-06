@@ -13,7 +13,7 @@ const PrivacySection = () => {
         </div>
         <section>
           <button type="button" className="button">
-            <p className="material-icons">&#xe152;</p>
+            <p className="fa fa-users"></p>
             <div>
               <p>Audience and tagging</p>
               <span>Manage what information you allow other people on Twitter to see.</span>
@@ -21,7 +21,7 @@ const PrivacySection = () => {
             <i className="material-icons">&#xe315;</i>
           </button>
           <button type="button" className="button">
-            <p className="material-icons">&#xe152;</p>
+            <p className="material-icons">&#xe3c9;</p>
             <div>
               <p>Your Tweets</p>
               <span>Manage the information associated with your Tweets. </span>
@@ -29,7 +29,7 @@ const PrivacySection = () => {
             <i className="material-icons">&#xe315;</i>
           </button>
           <button type="button" className="button">
-            <p className="material-icons">&#xe152;</p>
+            <p className="fa fa-wpforms"></p>
             <div>
               <p>Content you see</p>
               <span>Decide what you see on Twitter based on
@@ -39,26 +39,26 @@ const PrivacySection = () => {
             <i className="material-icons">&#xe315;</i>
           </button>
           <button type="button" className="button">
-            <p className="material-icons">&#xe152;</p>
+            <p className="material-icons">&#xe04f;</p>
             <div>
-              <p>Filters</p>
-              <span>Choose the notification you'd like to see — and those you don't.</span>
+              <p>Mute and block</p>
+              <span>Manage the accounts, words, and notifications that you've muted or blocked</span>
             </div>
             <i className="material-icons">&#xe315;</i>
           </button>
           <button type="button" className="button">
-            <p className="material-icons">&#xe152;</p>
+            <p className="material-icons">&#xe0e1;</p>
             <div>
-              <p>Filters</p>
-              <span>Choose the notification you'd like to see — and those you don't.</span>
+              <p>Direct Messages</p>
+              <span>Manage who can message you directly.</span>
             </div>
             <i className="material-icons">&#xe315;</i>
           </button>
           <button type="button" className="button">
-            <p className="material-icons">&#xe152;</p>
+            <p className="material-icons">&#xe8b6;</p>
             <div>
-              <p>Filters</p>
-              <span>Choose the notification you'd like to see — and those you don't.</span>
+              <p>Discoverability and contacts</p>
+              <span>Control your discoverability settings and manage contacts you've imported.</span>
             </div>
             <i className="material-icons">&#xe315;</i>
           </button>
@@ -68,34 +68,40 @@ const PrivacySection = () => {
         </div>
         <section>
           <button type="button" className="button">
-            <p className="material-icons">&#xe152;</p>
+            <p className="material-icons">&#xe0df;</p>
             <div>
-              <p>Filters</p>
-              <span>Choose the notification you'd like to see — and those you don't.</span>
+              <p>Ads preferences</p>
+              <span>Manage your ads experience on Twitter</span>
             </div>
             <i className="material-icons">&#xe315;</i>
           </button>
           <button type="button" className="button">
-            <p className="material-icons">&#xe152;</p>
+            <p className="material-icons">&#xe6e1;</p>
             <div>
-              <p>Filters</p>
-              <span>Choose the notification you'd like to see — and those you don't.</span>
+              <p>Off-Twitter activity</p>
+              <span>Manage how Twitter uses your online activity outside of Twitter,
+                such as the websites you visit, to personalize your experienece.
+              </span>
             </div>
             <i className="material-icons">&#xe315;</i>
           </button>
           <button type="button" className="button">
-            <p className="material-icons">&#xe152;</p>
+            <p className="material-icons">&#xe8d4;</p>
             <div>
-              <p>Filters</p>
-              <span>Choose the notification you'd like to see — and those you don't.</span>
+              <p>Data sharing with business partners</p>
+              <span>Allow sharing of additional information
+                with Twitter's business partners.
+              </span>
             </div>
             <i className="material-icons">&#xe315;</i>
           </button>
           <button type="button" className="button">
-            <p className="material-icons">&#xe152;</p>
+              <p className="material-icons">&#xe0c8;</p>
             <div>
-              <p>Filters</p>
-              <span>Choose the notification you'd like to see — and those you don't.</span>
+              <p>Location information</p>
+              <span>Manage the location information Twitter
+                uses to personalize your experience.
+              </span>
             </div>
             <i className="material-icons">&#xe315;</i>
           </button>
