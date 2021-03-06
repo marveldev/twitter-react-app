@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import AccessiblitySection from './AccessiblitySection'
 import AccountSection from './AccountSection'
+import DisplaySection from './DisplaySection.js'
 import NotificationSection from './NotificationSection'
 import PrivacySection from './PrivacySection'
 import ResourceSection from './ResourceSection.js'
@@ -63,9 +64,12 @@ const SettingsPage = () => {
       {currentSection === 'account' && <AccountSection />}
       {currentSection === 'security' && <SecuritySection />}
       {currentSection === 'notification' && <NotificationSection />}
-      {currentSection === 'accessibility' && <AccessiblitySection />}
+      {currentSection === 'accessibility' &&
+        <AccessiblitySection setCurrentSection={setCurrentSection} />
+      }
       {currentSection === 'privacy' && <PrivacySection />}
       {currentSection === 'resource' && <ResourceSection />}
+      {currentSection === 'display' && <DisplaySection />}
     </div>
   )
 }
