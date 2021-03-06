@@ -37,6 +37,7 @@
 
 .current-section {
   border-right: 0.15em solid #1DA1F2;
+  background-color: #F7F9FA;
 }
 
 .section span {
