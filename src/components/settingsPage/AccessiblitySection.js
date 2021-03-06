@@ -1,4 +1,4 @@
-const AccessiblitySection = () => {
+const AccessiblitySection = ({ setCurrentSection }) => {
   return (
     <div className="notification-section">
       <div className="section header">
@@ -18,7 +18,10 @@ const AccessiblitySection = () => {
           </div>
           <i className="material-icons">&#xe315;</i>
         </button>
-        <button type="button" className="button">
+        <button
+          onClick={() => setCurrentSection('display')}
+          type="button" className="button"
+        >
           <p class="material-icons">&#xe3ae;</p>
           <div>
             <p>Display</p>
