@@ -3,6 +3,7 @@ import AccessiblitySection from './AccessiblitySection'
 import AccountSection from './AccountSection'
 import NotificationSection from './NotificationSection'
 import PrivacySection from './PrivacySection'
+import ResourceSection from './ResourceSection.js'
 import SecuritySection from './SecuritySection'
 import './settingsPage.css'
 
@@ -50,7 +51,10 @@ const SettingsPage = () => {
             <span>Accessibility, display, and languages</span>
             <i class="material-icons">&#xe315;</i>
           </button>
-          <button type="button">
+          <button
+            onClick={() => setCurrentSection('resource')}
+            type="button" className={currentSection === 'resource' ? 'current-section' : ''}
+          >
             <span>Additional resources</span>
             <i class="material-icons">&#xe315;</i>
           </button>
@@ -61,6 +65,7 @@ const SettingsPage = () => {
       {currentSection === 'notification' && <NotificationSection />}
       {currentSection === 'accessibility' && <AccessiblitySection />}
       {currentSection === 'privacy' && <PrivacySection />}
+      {currentSection === 'resource' && <ResourceSection />}
     </div>
   )
 }
