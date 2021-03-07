@@ -291,3 +291,31 @@
   font-size: 1.1em;
   margin-left: 1em;
 }
+
+.previous-button {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .settings-page {
+    left: 15.3%;
+    display: block;
+    border-right: 1px solid #E6ECF0;
+  }
+
+  .previous-button {
+    display: inline;
+  }
+
+  .settings-page .headline {
+    width: 74%;
+  }
+
+  #currentSection {
+    display: none;
+  }
+
+  .section {
+    width: 74%;
+  }
+}
