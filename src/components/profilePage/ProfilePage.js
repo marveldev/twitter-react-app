@@ -50,9 +50,9 @@ const ProfilePage = () => {
           <button>Media</button>
           <button>Likes</button>
         </div>
-      </div>
-      <div id="tweetOutput">
-        <Tweets />
+        <div id="tweetOutput">
+          <Tweets />
+        </div>
       </div>
       { modalDisplay &&
         <EditProfileModal
