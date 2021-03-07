@@ -243,6 +243,13 @@ button {
   .tweet-modal .input-box {
     font-size: 1.4em;
   }
+
+  .nav-button:nth-child(6),
+  .nav-button:nth-child(7),
+  .nav-button:nth-child(8),
+  .nav-button:nth-child(9) {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -291,5 +298,26 @@ button {
 
   #logo {
     display: none;
+  }
+
+  .mobile-left-nav {
+    position: fixed;
+    top: 0;
+    width: 65%;
+    z-index: 2;
+    height: 100%;
+    background-color: #fff;
+  }
+
+  .mobile-left-nav .headline {
+    width: 65%;
+  }
+
+  #mobileLeftNav {
+    position: relative;
+    top: 4.5em;
+    height: 100%;
+    max-height: 85% ;
+    overflow-y: auto;
   }
 }
