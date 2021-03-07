@@ -18,7 +18,7 @@ const ListsPage = () => {
         <div>
           <h4>Discover new Lists</h4>
           <div className="new-list-item">
-            <img src="https://pbs.twimg.com/media/EXZ2mJCUEAEbJb3?format=png&name=small" alt="photo"/>
+            <img src="https://pbs.twimg.com/media/EXZ2mJCUEAEbJb3?format=png&name=small" alt="user-profile"/>
             <div>
               <p>Celebrities</p>
               <p><strong>kingbookah</strong>_@kingbookah</p>
@@ -26,7 +26,7 @@ const ListsPage = () => {
             <button type="button">Follow</button>
           </div>
           <div className="new-list-item">
-            <img src="https://pbs.twimg.com/media/EXZ2mJCUEAEbJb3?format=png&name=small" alt="photo"/>
+            <img src="https://pbs.twimg.com/media/EXZ2mJCUEAEbJb3?format=png&name=small" alt="user-profile"/>
             <div>
               <p>LEMTOL ORGANIC ANTISEPTIC</p>
               <p><strong>LEMTOL ORGANIC ANTISEPTIC </strong>@ lemtola</p>
