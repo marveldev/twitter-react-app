@@ -234,6 +234,15 @@ button {
   .user-info:hover {
     background-color: transparent
   }
+
+  .tweet-modal {
+    left: 12%;
+    width: 75%;
+  }
+
+  .tweet-modal .input-box {
+    font-size: 1.4em;
+  }
 }
 
 @media screen and (max-width: 425px) {
