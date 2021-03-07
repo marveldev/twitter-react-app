@@ -11,15 +11,13 @@ const DisplaySection = () => {
             These settings affect all the Twitter accounts on this browser.
           </span>
         </div>
-        <section>
+        <section className="twitter-info">
+          <span className="logo"><i className="fa">&#xf099;</i></span>
           <div>
-            <span id="logo"><i className="fa">&#xf099;</i></span>
-            <div>
-              <p>Twitter</p>
-              <p>At the heart of Twitter are short messages called Tweets just
-                like this one which can include photos, links, text, and hashtags!
-              </p>
-            </div>
+            <strong>Twitter</strong>
+            <p>At the heart of Twitter are short messages called Tweets just
+              like this one which can include photos, links, text, and hashtags!
+            </p>
           </div>
         </section>
         <section className="more-options">
