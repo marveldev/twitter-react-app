@@ -129,6 +129,10 @@
   font-size: 1.5em;
 }
 
+.home-page .header button {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
   .header {
     width: 32.2em;
@@ -139,6 +143,12 @@
 @media screen and (max-width: 768px) {
   .header {
     width: 42.2em;
+  }
+
+  .home-page .header button {
+    display: inline;
+    width: 3em;
+    font-size: 1.3em;
   }
 
   .home-page {
