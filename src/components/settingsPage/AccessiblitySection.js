@@ -5,7 +5,7 @@ const AccessiblitySection = ({ setCurrentSection }) => {
         <span>Accessibility, display and languages</span>
       </div>
       <div className="section-content">
-      <div>
+        <div>
           <span>Manage how Twitter content is displayed to you.</span>
         </div>
         <button type="button" className="button">
