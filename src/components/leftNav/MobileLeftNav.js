@@ -13,10 +13,12 @@ const MobileLeftNav = ({ setMobileLeftNav }) => {
           <div className="user-profile">
             <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
               className="left-nav-photo" alt="user-profile" />
-            <span>Jane Doe</span>
+            <strong>Jane Doe</strong>
+            <div>
+              <span><strong>38</strong> Following</span>
+              <span><strong>17</strong> Followers</span>
+            </div>
           </div>
-          <span><strong>38</strong> Following</span>
-          <span><strong>17</strong> Followers</span>
           <Link to="/profile"
             className="dropdown-button"
             onClick={() => {}}
@@ -66,7 +68,7 @@ const MobileLeftNav = ({ setMobileLeftNav }) => {
             <i className="material-icons">&#xe3ae;</i>
             Display
           </button>
-          <button>Log out</button>
+          <button className="dropdown-button">Log out</button>
         </div>
       </div>
     </>
