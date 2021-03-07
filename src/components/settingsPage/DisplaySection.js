@@ -2,7 +2,9 @@ const DisplaySection = () => {
   return (
     <div>
       <div className="section header">
-        <button type="button"><i className="material-icons">&#xe5c4;</i></button>
+        <button type="button" className="previous-button">
+          <i className="material-icons">&#xe5c4;</i>
+        </button>
         <span>Display</span>
       </div>
       <div className="section-content">

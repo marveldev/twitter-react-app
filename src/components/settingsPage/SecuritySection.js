@@ -2,6 +2,9 @@ const SecuritySection = () => {
   return (
     <div className="security-section">
       <div className="section header">
+        <button type="button" className="previous-button">
+          <i className="material-icons">&#xe5c4;</i>
+        </button>
         <span>Security and account access</span>
       </div>
       <div className="section-content">

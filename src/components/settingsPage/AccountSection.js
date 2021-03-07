@@ -2,6 +2,9 @@ const AccountSection = () => {
   return (
     <div className="account-section">
       <div className="section header">
+        <button type="button" className="previous-button">
+          <i className="material-icons">&#xe5c4;</i>
+        </button>
         <span>Your Account</span>
       </div>
       <div className="section-content">

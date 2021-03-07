@@ -2,6 +2,9 @@ const PrivacySection = () => {
   return (
     <div className="privacy-section">
       <div className="section header">
+        <button type="button" className="previous-button">
+          <i className="material-icons">&#xe5c4;</i>
+        </button>
         <span>Privacy and safety</span>
       </div>
       <div className="section-content">
