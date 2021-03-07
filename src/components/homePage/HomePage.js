@@ -1,10 +1,12 @@
 import Tweets from "./Tweets"
 import './homePage.css'
 import { useState } from "react"
+import MobileLeftNav from "../leftNav/MobileLeftNav"
 
 const HomePage = () => {
   const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
   const [tweetData, setTweetData] = useState([])
+  const [mobileLeftNav, setMobileLeftNav] = useState(false)
 
   const inputTextHandler = (event) => {
     if (event.target.value.length >= 1) {
@@ -32,6 +34,7 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <div className="header">
+        <button onClick={() => setMobileLeftNav(true)} className="fa fa-align-justify"></button>
         <span>Home</span>
       </div>
       <div className="home-page-content">
@@ -75,6 +78,7 @@ const HomePage = () => {
           ))}
         </div>
       </div>
+      { mobileLeftNav && <MobileLeftNav setMobileLeftNav={setMobileLeftNav}/>}
     </div>
   )
 }
