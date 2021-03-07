@@ -10,50 +10,60 @@ import './settingsPage.css'
 
 const SettingsPage = () => {
   const [currentSection, setCurrentSection] = useState('account')
+
+  const switchCurrentSection = (name) => {
+    if (window.innerWidth <= 768) {
+      document.querySelector('#settingsPage').style.display = 'none'
+      document.querySelector('#currentSection').style.display = 'block'
+    }
+
+    setCurrentSection(name)
+  }
+
   return (
     <div className="settings-page">
-      <div>
+      <div id="settingsPage">
         <div className="headline">
           <span>Settings</span>
         </div>
         <div className="settings page-core">
           <button
-            onClick={() => setCurrentSection('account')}
+            onClick={() => switchCurrentSection('account')}
             type="button" className={currentSection === 'account' ? 'current-section' : ''}
           >
             <span>Your account</span>
             <i class="material-icons">&#xe315;</i>
           </button>
           <button
-            onClick={() => setCurrentSection('security')}
+            onClick={() => switchCurrentSection('security')}
             type="button" className={currentSection === 'security' ? 'current-section' : ''}
           >
             <span>Security and account access</span>
             <i class="material-icons">&#xe315;</i>
           </button>
           <button
-            onClick={() => setCurrentSection('privacy')}
+            onClick={() => switchCurrentSection('privacy')}
             type="button" className={currentSection === 'privacy' ? 'current-section' : ''}
           >
             <span>Privacy and safety</span>
             <i class="material-icons">&#xe315;</i>
           </button>
           <button
-            onClick={() => setCurrentSection('notification')}
+            onClick={() => switchCurrentSection('notification')}
             type="button" className={currentSection === 'notification' ? 'current-section' : ''}
           >
             <span>Notifications</span>
             <i class="material-icons">&#xe315;</i>
           </button>
           <button
-            onClick={() => setCurrentSection('accessibility')}
+            onClick={() => switchCurrentSection('accessibility')}
             type="button" className={currentSection === 'accessibility' ? 'current-section' : ''}
           >
             <span>Accessibility, display, and languages</span>
             <i class="material-icons">&#xe315;</i>
           </button>
           <button
-            onClick={() => setCurrentSection('resource')}
+            onClick={() => switchCurrentSection('resource')}
             type="button" className={currentSection === 'resource' ? 'current-section' : ''}
           >
             <span>Additional resources</span>
@@ -61,15 +71,17 @@ const SettingsPage = () => {
           </button>
         </div>
       </div>
-      {currentSection === 'account' && <AccountSection />}
-      {currentSection === 'security' && <SecuritySection />}
-      {currentSection === 'notification' && <NotificationSection />}
-      {currentSection === 'accessibility' &&
-        <AccessiblitySection setCurrentSection={setCurrentSection} />
-      }
-      {currentSection === 'privacy' && <PrivacySection />}
-      {currentSection === 'resource' && <ResourceSection />}
-      {currentSection === 'display' && <DisplaySection />}
+      <div id="currentSection">
+        {currentSection === 'account' && <AccountSection />}
+        {currentSection === 'security' && <SecuritySection />}
+        {currentSection === 'notification' && <NotificationSection />}
+        {currentSection === 'accessibility' &&
+          <AccessiblitySection setCurrentSection={setCurrentSection} />
+        }
+        {currentSection === 'privacy' && <PrivacySection />}
+        {currentSection === 'resource' && <ResourceSection />}
+        {currentSection === 'display' && <DisplaySection />}
+      </div>
     </div>
   )
 }
