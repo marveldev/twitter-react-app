@@ -13,13 +13,13 @@ const ResourceSection = () => {
         <div>
           <h3>Release notes</h3>
         </div>
-        <section className="more-privacy-options">
+        <section className="more-options">
           <button type="button" className="button">
             <p>Release notes</p>
             <i className="material-icons">&#xe315;</i>
           </button>
         </section>
-        <section className="more-privacy-options">
+        <section className="more-options">
           <div>
             <h3>Legal</h3>
           </div>
@@ -40,7 +40,7 @@ const ResourceSection = () => {
             <i className="material-icons">&#xe315;</i>
           </button>
         </section>
-        <section className="more-privacy-options">
+        <section className="more-options">
           <div>
             <h3>Miscellaneous</h3>
           </div>

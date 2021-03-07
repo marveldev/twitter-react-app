@@ -109,7 +109,7 @@ const PrivacySection = () => {
         <div>
           <h3>Learn more about privacy on Twitter</h3>
         </div>
-        <section className="more-privacy-options">
+        <section className="more-options">
           <button type="button" className="button">
             <p>Privacy center</p>
             <i className="material-icons">&#xe315;</i>
