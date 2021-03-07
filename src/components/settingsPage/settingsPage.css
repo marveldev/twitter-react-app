@@ -265,3 +265,29 @@
 #lightsOutTheme {
   background-color: #000;
 }
+
+.twitter-info {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 1.5em;
+}
+
+.twitter-info .logo {
+  background-color: #1DA1F2;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7em;
+  height: 4em;
+  border-radius: 2em;
+}
+
+.twitter-info .logo i {
+  font-size: 2em;
+}
+
+.twitter-info div {
+  font-size: 1.1em;
+  margin-left: 1em;
+}
