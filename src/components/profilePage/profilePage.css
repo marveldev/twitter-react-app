@@ -264,4 +264,16 @@
     height: 100%;
     border-right: 1px solid #E6ECF0;
   }
+
+  .edit-profile-modal {
+    left: 10%;
+  }
+
+  .edit-profile-modal > .header {
+    width: 42.7em;
+  }
+
+  .entry-box-container {
+    margin: 0 1em;
+  }
 }
