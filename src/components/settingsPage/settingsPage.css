@@ -56,7 +56,7 @@
   border-bottom: 1px solid #E6ECF0;
 }
 
-.more-privacy-options > div {
+.more-options > div {
   padding: 1em 2em;
   border-bottom: 1px solid #E6ECF0;
 }
@@ -110,7 +110,158 @@
   padding-bottom: 5em;
 }
 
-.more-privacy-options p {
+.more-options p {
   color: #000;
   font-size: 1em;
+}
+
+.color-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.circle {
+  display: block;
+  border-radius: 50%;
+  font-size: 1.5em;
+  padding: 0.5em 0.8em;
+}
+
+.color-options i {
+  margin: 0.5em;
+  font-size: 1.6em;
+}
+
+#blueColor i {
+  color: #5DADEC;
+  font-size: 1.8em;
+}
+
+#blueColor > button {
+  color: #fff;
+  background-color: #1DA1F2;
+}
+
+#tangerineColor i {
+  color: #FFAD1F;
+  font-size: 1.9em;
+}
+
+#tangerineColor > button {
+  color: #fff;
+  background-color: #FFAD1F;
+}
+
+#orangeColor > button {
+  color: #fff;
+  background-color: #F45D22;
+}
+
+#greenColor > button {
+  color: #fff;
+  background-color: #17BF63;
+}
+
+#ceriseColor > button {
+  color: #fff;
+  background-color: #E0245E;
+}
+
+#purpleColor > button {
+  color: #fff;
+  background-color: #794BC4;
+}
+
+.font-size-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.theme-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.theme-options > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 12em;
+  height: 4em;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+
+.theme-options p {
+  flex: 0.8;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin: 0;
+  color: #fff;
+}
+
+.container {
+  position: relative;
+  left: 0;
+  cursor: pointer;
+  font-size: 1.5em;
+  flex: 0;
+}
+
+.container input {
+  opacity: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0.4em;
+  left: 0.4em;
+	width: 1em;
+	height: 1em;
+  border: 0.15em solid #6B7D8C;
+  border-radius: 50%;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #1DA1F2;
+  width: 1.1em;
+	height: 1.1em;
+  border: 0.15em solid #1DA1F2;
+}
+
+.checkmark:after {
+  content: "\f00c";
+  font-family: 'FontAwesome';
+  position: absolute;
+  display: none;
+}
+
+.container .checkmark:after {
+  bottom: 0.1em;
+	left: 0em;
+	width: 1em;
+	height: 1em;
+  color: #fff;
+  font-weight: 100;
+  font-size: 0.8em;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+#defaultTheme {
+  border: 0.2em solid #1DA1F2;
+}
+
+#defaultTheme > p {
+  color: #000;
+}
+
+#dimTheme {
+  background-color: #15202B;
+}
+
+#lightsOutTheme {
+  background-color: #000;
 }
