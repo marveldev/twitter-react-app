@@ -73,3 +73,9 @@
     height: 100%;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .lists-page-content {
+    padding-bottom: 7em;
+  }
+}
