@@ -1,4 +1,9 @@
 const DisplaySection = () => {
+  const toggleTheme = (theme) => {
+    document.querySelector('#root').className = theme
+    localStorage.setItem('theme', theme)
+  }
+
   return (
     <div>
       <div className="section header">
@@ -67,21 +72,21 @@ const DisplaySection = () => {
             <h3>Background</h3>
           </div>
           <div className="theme-options">
-            <div id="defaultTheme">
+            <div id="defaultTheme" onClick={() => toggleTheme('default')}>
               <label className="container">
                 <input type="radio" name="radio"/>
                 <span className="checkmark"></span>
               </label>
               <p>Default</p>
             </div>
-            <div id="dimTheme">
+            <div id="dimTheme" onClick={() => toggleTheme('dim')}>
               <label className="container">
               <input type="radio" name="radio" />
                 <span className="checkmark"></span>
               </label>
               <p>Dim</p>
             </div>
-            <div id="lightsOutTheme">
+            <div id="lightsOutTheme" onClick={() => toggleTheme('lightsOut')}>
               <label className="container">
                 <input type="radio" name="radio" />
                 <span className="checkmark"></span>
