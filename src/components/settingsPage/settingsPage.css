@@ -372,3 +372,28 @@
     width: 10em;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .section {
+    height: 5em;
+    font-size: 0.9em;
+  }
+
+  .section span {
+    margin: auto 0;
+  }
+
+  .section-content h3 {
+    font-size: 1.3em;
+  }
+
+  .twitter-info .logo {
+    width: 12em;
+  }
+}
+
+@media screen and (max-width: 322px) {
+  .twitter-info .logo {
+    width: 15em;
+  }
+}
