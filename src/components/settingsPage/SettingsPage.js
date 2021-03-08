@@ -24,6 +24,7 @@ const SettingsPage = () => {
     <div className="settings-page">
       <div id="settingsPage">
         <div className="headline">
+          <button type="button" className="previous-button"><i className="material-icons">&#xe5c4;</i></button>
           <span>Settings</span>
         </div>
         <div className="settings page-core">
@@ -32,42 +33,42 @@ const SettingsPage = () => {
             type="button" className={currentSection === 'account' ? 'current-section' : ''}
           >
             <span>Your account</span>
-            <i class="material-icons">&#xe315;</i>
+            <i className="material-icons">&#xe315;</i>
           </button>
           <button
             onClick={() => switchCurrentSection('security')}
             type="button" className={currentSection === 'security' ? 'current-section' : ''}
           >
             <span>Security and account access</span>
-            <i class="material-icons">&#xe315;</i>
+            <i className="material-icons">&#xe315;</i>
           </button>
           <button
             onClick={() => switchCurrentSection('privacy')}
             type="button" className={currentSection === 'privacy' ? 'current-section' : ''}
           >
             <span>Privacy and safety</span>
-            <i class="material-icons">&#xe315;</i>
+            <i className="material-icons">&#xe315;</i>
           </button>
           <button
             onClick={() => switchCurrentSection('notification')}
             type="button" className={currentSection === 'notification' ? 'current-section' : ''}
           >
             <span>Notifications</span>
-            <i class="material-icons">&#xe315;</i>
+            <i className="material-icons">&#xe315;</i>
           </button>
           <button
             onClick={() => switchCurrentSection('accessibility')}
             type="button" className={currentSection === 'accessibility' ? 'current-section' : ''}
           >
             <span>Accessibility, display, and languages</span>
-            <i class="material-icons">&#xe315;</i>
+            <i className="material-icons">&#xe315;</i>
           </button>
           <button
             onClick={() => switchCurrentSection('resource')}
             type="button" className={currentSection === 'resource' ? 'current-section' : ''}
           >
             <span>Additional resources</span>
-            <i class="material-icons">&#xe315;</i>
+            <i className="material-icons">&#xe315;</i>
           </button>
         </div>
       </div>
