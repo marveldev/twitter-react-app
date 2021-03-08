@@ -23,3 +23,9 @@
   font-size: 1.1em;
   color: #7C8C99;
 }
+
+@media screen and (max-width: 375px) {
+  .bookmarks-page-content {
+    padding: 0 1em;
+  }
+}
