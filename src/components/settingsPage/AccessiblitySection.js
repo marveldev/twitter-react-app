@@ -1,6 +1,6 @@
 const AccessiblitySection = ({ setCurrentSection }) => {
   return (
-    <div className="notification-section">
+    <div className="accessibility-section">
       <div className="section header">
         <button type="button" className="previous-button">
           <i className="material-icons">&#xe5c4;</i>
@@ -12,7 +12,7 @@ const AccessiblitySection = ({ setCurrentSection }) => {
           <span>Manage how Twitter content is displayed to you.</span>
         </div>
         <button type="button" className="button">
-          <p class="material-icons">&#xe8f5;</p>
+          <p className="material-icons">&#xe8f5;</p>
           <div>
             <p>Accessibility</p>
             <span>Manage aspects of your Twitter experience such as
@@ -25,7 +25,7 @@ const AccessiblitySection = ({ setCurrentSection }) => {
           onClick={() => setCurrentSection('display')}
           type="button" className="button"
         >
-          <p class="material-icons">&#xe3ae;</p>
+          <p className="material-icons">&#xe3ae;</p>
           <div>
             <p>Display</p>
             <span>Manage your font size, color and background. These settings affect
@@ -35,7 +35,7 @@ const AccessiblitySection = ({ setCurrentSection }) => {
           <i className="material-icons">&#xe315;</i>
         </button>
         <button type="button" className="button">
-          <p class="material-icons">&#xe894;</p>
+          <p className="material-icons">&#xe894;</p>
           <div>
             <p>Languages</p>
             <span>Manage which languages are used to personalize your Twitter experience.</span>
@@ -43,7 +43,7 @@ const AccessiblitySection = ({ setCurrentSection }) => {
           <i className="material-icons">&#xe315;</i>
         </button>
         <button type="button" className="button">
-          <p class="material-icons">&#xe24b;</p>
+          <p className="material-icons">&#xe24b;</p>
           <div>
             <p>Data usage</p>
             <span>Limit how Twitter uses some of your network data.
