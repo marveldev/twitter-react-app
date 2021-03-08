@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './index.css'
 
 const App = () => {
+  document.querySelector('#root').className = localStorage.getItem('theme')
   return (
     <BrowserRouter>
       <div className="app-layer">
