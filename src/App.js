@@ -4,12 +4,13 @@ import {
 } from './components'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './index.css'
+import { useState } from 'react'
 
 const App = () => {
-  document.querySelector('#root').className = localStorage.getItem('theme')
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || '')
   return (
     <BrowserRouter>
-      <div className="app-layer">
+      <div className={`app-layer ${theme}`}>
         <LeftNav />
         <Switch>
           <Route path="/" component={HomePage} exact/>
@@ -22,7 +23,14 @@ const App = () => {
         </Switch>
         <Switch>
           <Route path="/messages" component={MessagePage}/>
-          <Route path="/settings" component={SettingsPage}/>
+          <Route
+            path="/settings"
+            component={() => (
+              <SettingsPage
+                setTheme={setTheme}
+              />
+            )}
+          />
           <TrendingPane />
         </Switch>
       </div>
