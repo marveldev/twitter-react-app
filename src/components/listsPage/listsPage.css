@@ -79,3 +79,17 @@
     padding-bottom: 7em;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .new-list-item {
+    grid-template-columns: 0.3fr 1.2fr 0.2fr;
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 322px) {
+  .new-list-item {
+    grid-template-columns: 0.4fr 1.2fr 0.2fr;
+    font-size: 0.9em;
+  }
+}
