@@ -121,8 +121,9 @@
     width: 100%;
   }
 
-  .notification-page-content {
-    margin-bottom: 13em;
+  .notification-page-content > div:last-child {
+    margin-bottom: 10em;
+    border-bottom: 1px solid #E6ECF0;
   }
 
   .notification-page-content > div {
