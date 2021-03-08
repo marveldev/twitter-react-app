@@ -8,7 +8,7 @@ import ResourceSection from './ResourceSection.js'
 import SecuritySection from './SecuritySection'
 import './settingsPage.css'
 
-const SettingsPage = () => {
+const SettingsPage = ({ setTheme }) => {
   const [currentSection, setCurrentSection] = useState('account')
 
   const switchCurrentSection = (name) => {
@@ -81,7 +81,7 @@ const SettingsPage = () => {
         }
         {currentSection === 'privacy' && <PrivacySection />}
         {currentSection === 'resource' && <ResourceSection />}
-        {currentSection === 'display' && <DisplaySection />}
+        {currentSection === 'display' && <DisplaySection setTheme={setTheme}/>}
       </div>
     </div>
   )
