@@ -157,6 +157,11 @@
     grid-template-columns: 0.3fr 1.4fr;
   }
 
+  .tweet-content-item:last-child {
+    margin-bottom: 7em;
+    border-bottom: 1px solid #E6ECF0;
+  }
+
   .explore-page-content .home-page-photo {
     font-size: 0.9em;
   }
