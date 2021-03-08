@@ -1,0 +1,189 @@
+.lights-out {
+  color: #fff;
+}
+
+.lights-out .logo > i {
+  color: #fff;
+}
+
+.lights-out .logo:hover {
+  background-color: #192734;
+}
+
+.lights-out .left-nav {
+  border-right: 1px solid #2F3336;
+}
+
+.lights-out .left-nav > a:hover {
+  color: #1DA1F2;
+}
+
+.lights-out a:hover,
+.lights-out #trend-button:hover {
+  background-color: #15181c;
+}
+
+.lights-out .left-nav > a {
+  color: #fff;
+}
+
+.lights-out .dropdown-content {
+  background-color: #000;
+  box-shadow: 0px 8px 16px 0px #fdf8f833;
+}
+
+.lights-out .dropdown-content a {
+  color: #fff;
+}
+
+.lights-out .dropdown-content i {
+  color: #585f65;
+}
+
+.dim-theme .dropdown-content > a:nth-child(4) {
+  border-bottom: 1px solid #38444d;
+}
+
+.lights-out button:hover {
+  background-color: #2d91cf;
+}
+
+.lights-out .trending-pane > input {
+  background-color: #15181C;
+}
+
+.lights-out .trending-pane > i,
+.lights-out .trending-pane > input::placeholder {
+  color: #6E767D;
+}
+
+.lights-out .tweet-options > a:hover,
+.lights-out .tweet-item:hover,
+.lights-out #photoIcon:hover {
+  background-color: #15181C;
+}
+
+.lights-out textarea {
+  background-color: #000;
+}
+
+.lights-out .tweet-item {
+  border-top: 1px solid #2F3336;
+  border-bottom: 1px solid #2F3336;
+}
+
+.lights-out .tweet-info > a {
+  color: #657786;
+}
+
+.lights-out .home-page {
+  border-right: 1px solid #2F3336;
+}
+
+.lights-out .user-options {
+  border-bottom: 10px solid #2F3336;
+}
+
+.lights-out .trending-tweets,
+.lights-out .trending-tweets > button {
+  background-color: #15181c;
+}
+
+.lights-out .current-trend {
+  border-top: 1px solid #2f3336;
+}
+
+.lights-out .trend-modal,
+.lights-out .trend-modal button  {
+  background-color: #000;
+}
+
+.lights-out .trend-modal button:hover,
+.lights-out #close-modal-button:hover {
+  background-color: #192734;
+}
+
+.lights-out .set-location {
+  border-top: 1px solid #2f3336;
+  border-bottom: 15px solid #2f3336;
+}
+
+.lights-out .home {
+  border-bottom: 1px solid #2f3336;
+}
+
+.lights-out .tweet-info > a:hover {
+  color: #1DA1F2;;
+}
+
+.lights-out .tweet-info > a:nth-child(3):hover {
+  color: #f11c00;
+}
+
+.lights-out .trend-modal p,
+.lights-out .heading {
+  border-bottom: 1px solid #253341;
+}
+
+.lights-out .theme-modal {
+  background-color: #000;
+}
+
+.lights-out .tweet-options {
+  border-top: 1px solid #2f3336;
+}
+
+.lights-out #lightOutButton {
+  box-shadow: 0px 8px 16px 0px #fdf8f854;
+}
+
+.lights-out #tweet-modal-overlay {
+  background-color: #393d43ad;
+}
+
+.lights-out .tweet-modal-container,
+.lights-out #close-modal-button {
+  background-color: #000;
+}
+
+.lights-out .nav-input-modal {
+  border-top: 1px solid #2F3336;
+}
+
+.lights-out .delete-button,
+.lights-out .delete-modal,
+.lights-out .edit-profile-modal {
+  background-color: #000;
+}
+
+.lights-out .cancel-button {
+  color: #000;
+}
+
+.lights-out #nameInput {
+  background-color: #18181c;
+}
+
+.lights-out #nameInput::placeholder {
+  color: #fff;
+}
+
+@media screen and (max-width: 425px) {
+  .lights-out .smallscreen-left-nav {
+    background-color: #000;
+  }
+
+  .lights-out .smallscreen-left-nav > a {
+    color: #fff;
+  }
+
+  .lights-out .smallscreen-nav {
+    border-top: 2px solid #2F3336;
+    background-color: #000;
+  }
+
+  .lights-out .home {
+    border-bottom: 2px solid #2F3336;
+    background-color: #000;
+  }
+}

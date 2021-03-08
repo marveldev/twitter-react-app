@@ -1,0 +1,186 @@
+.dim {
+  color: #fff;
+}
+
+.dim .logo > i {
+  color: #fff;
+}
+
+.dim .logo:hover {
+  background-color: #192734;
+}
+
+.dim .left-nav {
+  border-right: 1px solid #38444D;
+}
+
+.dim .left-nav > a:hover {
+  color: #1DA1F2;
+}
+
+.dim a:hover,
+.dim #trend-button:hover {
+  background-color: #192734;
+}
+
+.dim .left-nav > a {
+  color: #fff;
+}
+
+.dim .dropdown-content {
+  background-color: #15202B;
+  box-shadow: 0px 8px 16px 0px #fdf8f833;
+}
+
+.dim .dropdown-content a {
+  color: #fff;
+}
+
+.dim .dropdown-content i {
+  color: #6d7d8a;
+}
+
+.dim .dropdown-content > a:nth-child(4) {
+  border-bottom: 1px solid #38444d;
+}
+
+.dim button:hover {
+  background-color: #2d91cf;
+}
+
+.dim .trending-pane > input {
+  background-color: #253341;
+}
+
+.dim .trending-pane > i,
+.dim .trending-pane > input::placeholder {
+  color: #7C8C99;
+}
+
+.dim .tweet-options > a:hover,
+.dim .tweet-item:hover,
+.dim #photoIcon:hover {
+  background-color: #192734;
+}
+
+.dim textarea {
+  background-color: #15202B;
+}
+
+.dim .tweet-item {
+  border-top: 1px solid #253341;
+  border-bottom: 1px solid #253341;
+}
+
+
+.dim .tweet-info > a {
+  color: #657786;
+}
+
+.dim .tweet-info > a:hover {
+  color: #1DA1F2;
+}
+
+.dim .tweet-info > a:nth-child(3):hover {
+  color: #f11c00;
+}
+
+.dim .home-page {
+  border-right: 1px solid #253341;
+}
+
+.dim .home {
+  border-bottom: 1px solid #253341;
+}
+
+.dim .user-options {
+  border-bottom: 10px solid #253341;
+}
+
+.dim .trending-tweets,
+.dim .trending-tweets > button {
+  background-color: #1E2C39;
+}
+
+.dim .current-trend {
+  border-top: 1px solid  #38444D;
+}
+
+.dim .trend-modal button:hover,
+.dim #close-modal-button:hover {
+  background-color: #192734;
+}
+
+.dim .trend-modal,
+.dim .trend-modal button {
+  background-color: #15202B;
+}
+
+.dim .set-location {
+  border-top: 1px solid #253341;
+  border-bottom: 15px solid #253341;
+}
+
+.dim .trend-modal p,
+.dim .heading {
+  border-bottom: 1px solid #253341;
+}
+
+.dim .theme-modal {
+  background-color: #15202B;
+}
+
+.dim .tweet-options {
+  border-top: 1px solid #253341;
+}
+
+.dim .tweet-modal-container,
+.dim #close-modal-button {
+  background-color: #15202B;
+}
+
+.dim .nav-input-modal {
+  border-top: 1px solid #253341;
+}
+
+.dim .delete-button,
+.dim .delete-modal,
+.dim .edit-profile-modal {
+  background-color: #15202B;
+}
+
+.dim #tweet-modal-overlay {
+  background-color: #3b465169;
+}
+
+.dim .cancel-button {
+  color: #000;
+}
+
+.dim #nameInput {
+  background-color: #192734;
+}
+
+.dim #nameInput::placeholder {
+  color: #fff;
+}
+
+@media screen and (max-width: 425px) {
+  .dim .smallscreen-left-nav {
+    background-color: #192734;
+  }
+
+  .dim .smallscreen-left-nav > a {
+    color: #fff;
+  }
+
+  .dim .smallscreen-nav {
+    border-top: 2px solid #253341;
+    background-color: #192734;
+  }
+
+  .dim .home {
+    border-bottom: 2px solid #253341;
+    background-color: #192734;
+  }
+}
