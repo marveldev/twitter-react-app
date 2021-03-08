@@ -17,21 +17,21 @@ const NotificationPage = () => {
         <div>
           <i className="fa fa-bell symbol"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
+            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
             <p>New Tweet notifications for <strong>Ebenezer Don</strong></p>
           </div>
         </div>
         <div>
           <i className="fa fa-user-o symbol"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
+            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
             <p><strong>Alo Kayode</strong> followed you</p>
           </div>
         </div>
         <div>
           <i className="fa fa-heart heart-icon"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
+            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
             <p><strong>Ebenezer Don</strong> liked your Tweet</p>
             <p>Ten ways to know a junior developer</p>
           </div>
@@ -39,7 +39,7 @@ const NotificationPage = () => {
         <div>
           <i className="fa fa-star"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
+            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
             <p>Recommended For You</p>
             <p>I'm fired</p>
           </div>
@@ -47,7 +47,7 @@ const NotificationPage = () => {
         <div>
           <i className="fa fa-heart heart-icon"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
+            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
             <p><strong>John Ademoye</strong> liked tour Tweet</p>
             <p>hey</p>
           </div>
@@ -55,21 +55,21 @@ const NotificationPage = () => {
         <div>
           <i className="fa fa-bell symbol"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
+            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
             <p>New Tweet notifications for <strong>Ebenezer Don</strong></p>
           </div>
         </div>
         <div>
           <i className="fa fa-user-o symbol"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
+            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
             <p><strong>Alo Kayode</strong> followed you</p>
           </div>
         </div>
         <div>
           <i className="fa fa-star"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="photo"/>
+            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
             <p>Recommended For You</p>
             <p>I'm fired</p>
           </div>
