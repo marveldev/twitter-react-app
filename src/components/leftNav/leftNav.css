@@ -304,17 +304,26 @@ button {
     z-index: 2;
     height: 100%;
     background-color: #fff;
+    animation: slideIn 0.4s ease-in-out;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-30%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 
   .mobile-left-nav .headline {
-    width: 65%;
+    position: relative;
+    width: 100%;
   }
 
   #mobileLeftNav {
-    position: relative;
-    top: 4.5em;
     height: 100%;
-    max-height: 85% ;
+    max-height: 85%;
     overflow-y: auto;
   }
 
@@ -332,7 +341,7 @@ button {
   .dropdown-button i {
     font-size: 1.2em;
     vertical-align: middle;
-    margin-right: 1em;
+    margin: 0 1em;
   }
 
   .dropdown-button:nth-child(2n+7) {
@@ -354,5 +363,17 @@ button {
 
   .dropdown-button:nth-child(4) {
     border-bottom: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .mobile-left-nav {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 322px) {
+  .mobile-left-nav {
+    width: 85%;
   }
 }
