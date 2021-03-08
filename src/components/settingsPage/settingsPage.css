@@ -319,3 +319,14 @@
     width: 74%;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .settings-page {
+    width: 100%;
+    left: 0;
+  }
+
+  .settings-page .headline {
+    width: 100%;
+  }
+}
