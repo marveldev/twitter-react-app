@@ -7,7 +7,12 @@ const MobileLeftNav = ({ setMobileLeftNav }) => {
       <div className="mobile-left-nav">
         <div className="headline">
           <span>Account info</span>
-          <button type="button"><i className="material-icons">&#xe5cd;</i></button>
+          <button
+            onClick={() => setMobileLeftNav(false)}
+            type="button"
+          >
+            <i className="material-icons">&#xe5cd;</i>
+          </button>
         </div>
         <div id="mobileLeftNav">
           <div className="user-profile">
