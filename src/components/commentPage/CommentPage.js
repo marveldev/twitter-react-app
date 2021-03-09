@@ -19,7 +19,7 @@ const CommentPage = () => {
         </div>
         <div>
           <p className="tweet-text">Hey All</p>
-          <p>2:51pm. Feb 15, 2021. Twitter Web App</p>
+          <p id="time">2:51pm. Feb 15, 2021. Twitter Web App</p>
         </div>
         <div className="tweet-interaction">
           <span><strong>42 </strong>Retweets</span>
