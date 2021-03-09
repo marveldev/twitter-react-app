@@ -185,7 +185,7 @@
 
 .dim .edit-profile-modal,
 .dim .comment-modal,
-.dim .comment-input .input-box {
+.dim .input-box {
   background-color: #15202B;
 }
 
@@ -197,7 +197,7 @@
 
 .dim .entry-box-container textarea::placeholder,
 .dim .entry-box-container input::placeholder,
-.dim .comment-input .input-box::placeholder {
+.dim .input-box::placeholder {
   color: #788895;
 }
 
@@ -249,37 +249,6 @@
   border-bottom: 1px solid #38444D;
 }
 
-
-
-
-
-
-
-.dim .theme-modal {
-  background-color: #15202B;
-}
-
-.dim .tweet-options {
-  border-top: 1px solid #38444D;
-}
-
-.dim .tweet-modal-container,
-.dim #close-modal-button {
-  background-color: #15202B;
-}
-
-.dim .nav-input-modal {
-  border-top: 1px solid #38444D;
-}
-
-.dim .delete-button,
-.dim .delete-modal,
-
-
-.dim #tweet-modal-overlay {
-  background-color: #3b465169;
-}
-
-.dim .cancel-button {
-  color: #000;
+.dim #root {
+  background-color: #15202b;
 }
