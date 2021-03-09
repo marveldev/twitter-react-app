@@ -55,11 +55,9 @@
 #searchInputContainer {
   border-bottom: 1px solid #E6ECF0;
   padding: 1em;
-
 }
 
 #searchInputContainer .search-input {
-  background-color: #EBEEF0;
   font-size: 1.1em;
   height: 2.7em;
   padding-left: 4em;
@@ -71,9 +69,12 @@
   padding-top: 2em;
 }
 
+.message-page p {
+  color: #5B7083;
+}
+
 #messageInfo > p {
   font-size: 0.8em;
-  color: #5B7083;
   padding: 0.8em;
 }
 
