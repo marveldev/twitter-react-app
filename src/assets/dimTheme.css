@@ -74,22 +74,22 @@
 }
 
 .dim .home-page {
-  border-right: 1px solid #253341;
+  border-right: 1px solid #38444D;
 }
 
 .dim .header,
 .dim #header {
   background-color: #15202b;
-  border-right: 1px solid #253341;
-  border-bottom: 1px solid #253341;
+  border-right: 1px solid #38444D;
+  border-bottom: 1px solid #38444D;
 }
 
 .dim #tweetContainer {
-  border-bottom: 10px solid #253341;
+  border-bottom: 10px solid #38444D;
 }
 
 .dim .search-input {
-  background-color: #253341;
+  background-color: #38444D;
 }
 
 .dim .search-input::placeholder {
@@ -111,26 +111,26 @@
 }
 
 .dim .set-location {
-  border-top: 1px solid #253341;
-  border-bottom: 15px solid #253341;
+  border-top: 1px solid #38444D;
+  border-bottom: 15px solid #38444D;
 }
 
 .dim .trend-modal p,
 .dim .notification-page-content {
-  border-bottom: 1px solid #253341;
+  border-bottom: 1px solid #38444D;
 }
 
 .dim .explore-page,
 .dim .notification-page {
-  border-right: 1px solid #253341;
+  border-right: 1px solid #38444D;
 }
 
 .dim .explore-page-content > div {
-  border-bottom: 1em solid #253341;
+  border-bottom: 1em solid #38444D;
 }
 
 .dim .explore-page-content .current-trend {
-  border-top: 1px solid #253341;
+  border-top: 1px solid #38444D;
 }
 
 .dim .explore-page-content .current-trend:hover,
@@ -140,50 +140,127 @@
 
 .dim .tweet-content-item,
 .dim .notification-page-content > div {
-  border-top: 1px solid #253341;
+  border-top: 1px solid #38444D;
 }
 
 .dim .notification-page-content > div:hover  {
   background-color: #192734;
-
 }
 
+.dim .bookmarks-page,
+.dim .lists-page,
+.dim .profile-page {
+  border-right: 1px solid #38444D;
+}
 
+.dim .lists-page-content > div {
+  border-bottom: 0.7em solid #192734;
+}
 
+.dim .lists-page-content h4 {
+  border-bottom: 1px solid #38444D;
+}
 
-.dim textarea {
+.dim .list > p {
+  border-bottom: 1px solid #38444D;
+  color: #788895;
+}
+
+.dim .new-list-item {
+  border-bottom: 1px solid #38444D;
+}
+
+.dim .profile-photo {
   background-color: #15202B;
 }
 
-.dim .tweet-item {
-  border-top: 1px solid #253341;
-  border-bottom: 1px solid #253341;
+.dim .user-bio span {
+  color: #788895;
 }
 
-
-.dim .tweet-info > a {
-  color: #657786;
+.dim .options-button {
+  border-bottom: 1px solid #38444D;
+  color: #788895;
 }
 
-.dim .tweet-info > a:hover {
+.dim .edit-profile-modal,
+.dim .comment-modal,
+.dim .comment-input .input-box {
+  background-color: #15202B;
+}
+
+.dim .entry-box-container input,
+.dim .entry-box-container > textarea {
+  background-color: #15202B;
+  border: 1px solid #38444D;
+}
+
+.dim .entry-box-container textarea::placeholder,
+.dim .entry-box-container input::placeholder,
+.dim .comment-input .input-box::placeholder {
+  color: #788895;
+}
+
+.dim .tweet-item .tweet-content-item {
+  border-bottom: 1px solid #38444D;
+}
+
+.dim .comment-link {
+  color: #fff;
+}
+
+.dim .tweet-info > button,
+.dim .tweet-person > button {
+  color: #7C8C99;
+}
+
+.dim .tweet-info > button:hover {
   color: #1DA1F2;
 }
 
-.dim .tweet-info > a:nth-child(3):hover {
+.dim .tweet-info > button:nth-child(3):hover {
   color: #f11c00;
 }
 
-.dim .trend-modal button:hover,
-.dim #close-modal-button:hover {
-  background-color: #192734;
+.dim .comment-page {
+  border-right: 1px solid #38444D;
 }
+
+.dim .tweet-interaction > span,
+#time {
+  color: #7C8C99;
+}
+
+.dim .tweet-interaction strong {
+  color: #fff;
+}
+
+.dim .tweet-interaction {
+  border-top: 1px solid #38444D;
+  border-bottom: 1px solid #38444D;
+}
+
+.dim .user-tweet-options {
+  border-bottom: 1px solid #38444D;
+  color: #7C8C99;
+}
+
+.dim .comment-item {
+  border-bottom: 1px solid #38444D;
+}
+
+
+
+
+
+
 
 .dim .theme-modal {
   background-color: #15202B;
 }
 
 .dim .tweet-options {
-  border-top: 1px solid #253341;
+  border-top: 1px solid #38444D;
 }
 
 .dim .tweet-modal-container,
@@ -192,14 +269,12 @@
 }
 
 .dim .nav-input-modal {
-  border-top: 1px solid #253341;
+  border-top: 1px solid #38444D;
 }
 
 .dim .delete-button,
 .dim .delete-modal,
-.dim .edit-profile-modal {
-  background-color: #15202B;
-}
+
 
 .dim #tweet-modal-overlay {
   background-color: #3b465169;
@@ -207,12 +282,4 @@
 
 .dim .cancel-button {
   color: #000;
-}
-
-.dim #nameInput {
-  background-color: #192734;
-}
-
-.dim #nameInput::placeholder {
-  color: #fff;
 }
