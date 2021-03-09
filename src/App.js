@@ -7,7 +7,9 @@ import './index.css'
 import { useState } from 'react'
 
 const App = () => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || '')
+  const themeObject = JSON.parse(localStorage.getItem('theme'))
+  const [theme, setTheme] = useState(themeObject.theme || '')
+  document.body.style.backgroundColor = themeObject.backgroundColor
   return (
     <BrowserRouter>
       <div className={`app-layer ${theme}`}>
