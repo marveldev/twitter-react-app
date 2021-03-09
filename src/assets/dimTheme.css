@@ -37,7 +37,8 @@
   background-color: #15202b;
 }
 
-.dim .tweet-modal-header {
+.dim .tweet-modal-header,
+.dim .dropdown-button:nth-child(4) {
   border-bottom: 1px solid #38444D;
 }
 
@@ -62,31 +63,93 @@
   color: #6d7d8a;
 }
 
-.dim .dropdown-button:nth-child(4) {
-  border-bottom: 1px solid #38444d;
+.dim .tweet-button {
+  background-color: #19608E;
+  color: #8A8F95;
 }
 
-
-
-
-.dim button:hover {
-  /* background-color: #2d91cf; */
+.dim .enable {
+  background-color: #1DA1F2;
+  color: #fff;
 }
 
-.dim .trending-pane > input {
+.dim .home-page {
+  border-right: 1px solid #253341;
+}
+
+.dim .header,
+.dim #header {
+  background-color: #15202b;
+  border-right: 1px solid #253341;
+  border-bottom: 1px solid #253341;
+}
+
+.dim #tweetContainer {
+  border-bottom: 10px solid #253341;
+}
+
+.dim .search-input {
   background-color: #253341;
 }
 
-.dim .trending-pane > i,
-.dim .trending-pane > input::placeholder {
+.dim .search-input::placeholder {
   color: #7C8C99;
 }
 
-.dim .tweet-options > a:hover,
-.dim .tweet-item:hover,
-.dim #photoIcon:hover {
+.dim .trending-tweets,
+.dim .trending-tweets > button {
+  background-color: #1E2C39;
+}
+
+.dim .current-trend {
+  border-top: 1px solid #38444D;
+}
+
+.dim .trend-modal,
+.dim .trend-modal > button {
+  background-color: #15202B;
+}
+
+.dim .set-location {
+  border-top: 1px solid #253341;
+  border-bottom: 15px solid #253341;
+}
+
+.dim .trend-modal p,
+.dim .notification-page-content {
+  border-bottom: 1px solid #253341;
+}
+
+.dim .explore-page,
+.dim .notification-page {
+  border-right: 1px solid #253341;
+}
+
+.dim .explore-page-content > div {
+  border-bottom: 1em solid #253341;
+}
+
+.dim .explore-page-content .current-trend {
+  border-top: 1px solid #253341;
+}
+
+.dim .explore-page-content .current-trend:hover,
+.dim .tweet-content-item:hover {
   background-color: #192734;
 }
+
+.dim .tweet-content-item,
+.dim .notification-page-content > div {
+  border-top: 1px solid #253341;
+}
+
+.dim .notification-page-content > div:hover  {
+  background-color: #192734;
+
+}
+
+
+
 
 .dim textarea {
   background-color: #15202B;
@@ -110,45 +173,9 @@
   color: #f11c00;
 }
 
-.dim .home-page {
-  border-right: 1px solid #253341;
-}
-
-.dim .home {
-  border-bottom: 1px solid #253341;
-}
-
-.dim .user-options {
-  border-bottom: 10px solid #253341;
-}
-
-.dim .trending-tweets,
-.dim .trending-tweets > button {
-  background-color: #1E2C39;
-}
-
-.dim .current-trend {
-  border-top: 1px solid  #38444D;
-}
-
 .dim .trend-modal button:hover,
 .dim #close-modal-button:hover {
   background-color: #192734;
-}
-
-.dim .trend-modal,
-.dim .trend-modal button {
-  background-color: #15202B;
-}
-
-.dim .set-location {
-  border-top: 1px solid #253341;
-  border-bottom: 15px solid #253341;
-}
-
-.dim .trend-modal p,
-.dim .heading {
-  border-bottom: 1px solid #253341;
 }
 
 .dim .theme-modal {
@@ -188,24 +215,4 @@
 
 .dim #nameInput::placeholder {
   color: #fff;
-}
-
-@media screen and (max-width: 425px) {
-  .dim .smallscreen-left-nav {
-    background-color: #192734;
-  }
-
-  .dim .smallscreen-left-nav > a {
-    color: #fff;
-  }
-
-  .dim .smallscreen-nav {
-    border-top: 2px solid #253341;
-    background-color: #192734;
-  }
-
-  .dim .home {
-    border-bottom: 2px solid #253341;
-    background-color: #192734;
-  }
 }
