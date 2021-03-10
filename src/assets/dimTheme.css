@@ -23,6 +23,7 @@
 .dim .nav-button:hover,
 .dim .dropdown-button:hover {
   background-color: #192734;
+  color: #1DA1F2;
 }
 
 .dim .active {
