@@ -13,7 +13,11 @@
 }
 
 .settings-page .headline {
-  width: 28.4em;
+  width: 28.2em;
+}
+
+.section {
+  width: 42.8em;
 }
 
 .settings > button {
