@@ -86,7 +86,7 @@ const DisplaySection = ({ setTheme }) => {
               </label>
               <p>Dim</p>
             </div>
-            <div id="lightsOutTheme" onClick={() => changeTheme('lightsOut')}>
+            <div id="lightsOutTheme" onClick={() => changeTheme('lights-out')}>
               <label className="container">
                 <input type="radio" name="radio" />
                 <span className="checkmark"></span>
