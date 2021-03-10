@@ -94,7 +94,7 @@
 }
 
 .dim .search-input::placeholder {
-  color: #7C8C99;
+  color: #8fa1af;
 }
 
 .dim .trending-tweets,
@@ -118,7 +118,7 @@
 
 .dim .trend-modal p,
 .dim .notification-page-content,
-.dim #searchInputContainer  {
+.dim #searchInputContainer {
   border-bottom: 1px solid #38444D;
 }
 
@@ -214,7 +214,7 @@
 
 .dim .tweet-info > button,
 .dim .tweet-person > button {
-  color: #7C8C99;
+  color: #8fa1af;
 }
 
 .dim .tweet-info > button:hover {
@@ -232,7 +232,7 @@
 
 .dim .tweet-interaction > span,
 #time {
-  color: #7C8C99;
+  color: #8fa1af;
 }
 
 .dim .tweet-interaction strong {
@@ -246,7 +246,11 @@
 
 .dim .user-tweet-options {
   border-bottom: 1px solid #38444D;
-  color: #7C8C99;
+  color: #8fa1af;
+}
+
+.dim .tweet-options {
+  border-top: 1px solid #38444D;
 }
 
 .dim .comment-item {
@@ -254,7 +258,7 @@
 }
 
 .dim .message-page p {
-  color: #7C8C99;
+  color: #8fa1af;
 }
 
 .dim .settings-page button,
@@ -263,7 +267,7 @@
 }
 
 .dim .settings-page i {
-  color: #7C8C99;
+  color: #8fa1af;
 }
 
 .dim .current-section {
@@ -276,9 +280,35 @@
 }
 
 .dim .section-content span {
-  color: #7C8C99;
+  color: #8fa1af;
 }
 
 .dim .section-content section {
   border-bottom: 0.8em solid #192734;
+}
+
+.dim .more-options p {
+  color: #fff;
+}
+
+.dim .more-options > div {
+  border-bottom: 1px solid #38444D;
+}
+
+.dim .previous-button i {
+  color: #1DA1F2;
+}
+
+.dim .logo i {
+  color: #fff;
+  background-color: #1DA1F2;
+}
+
+.dim #defaultTheme {
+  border: none;
+  background-color: #fff;
+}
+
+.dim #dimTheme {
+  border: 0.2em solid #1DA1F2;
 }
