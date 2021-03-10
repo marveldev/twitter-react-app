@@ -13,7 +13,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className={`app-layer ${theme}`}>
-        <LeftNav />
+        <LeftNav setTheme={setTheme}/>
         <Switch>
           <Route path="/" component={HomePage} exact/>
           <Route path="/comment" component={CommentPage}/>
