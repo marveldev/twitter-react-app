@@ -48,7 +48,12 @@ button {
   color: #000;
 }
 
-.nav-button:hover,
+.nav-button:hover {
+  background-color: #E8F5FE;
+  color: #1DA1F2;
+  text-decoration: none;
+}
+
 .dropdown-button:hover {
   background-color: #E8F5FE;
   color: #000;
@@ -180,6 +185,57 @@ button {
 
 .dropdown-button:nth-child(2) i {
   margin-right: 1.5em;
+}
+
+.display-modal {
+  background-color: #fff;
+  position: fixed;
+  top: 5%;
+  left: 25%;
+  width: fit-content;
+  height: 84%;
+  z-index: 2;
+  border-radius: 0.8em;
+}
+
+.display-modal .header {
+  width: 42.3em;
+  border-top-left-radius: 0.8em;
+  border-top-right-radius: 0.8em;
+}
+
+.display-modal .header span {
+  margin: auto;
+}
+
+.display-modal .section-content {
+  width: 42.3em;
+  height: auto;
+  max-height: 35em;
+  overflow-y: scroll;
+  padding-bottom: 3em;
+}
+
+.display-modal .more-options h3 {
+  font-size: 1em;
+  color: #6E8192;
+}
+
+.save-button {
+  font-size: 1.05em;
+  display: block;
+  margin: auto;
+  width: 5em;
+  height: 2.5em;
+  border: unset;
+  border-radius: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1DA1F2;
+}
+
+.save-button:hover {
+  background-color: #2d91cf;
 }
 
 @media screen and (max-width: 768px) {
