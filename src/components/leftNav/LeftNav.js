@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom'
 import { useState } from "react"
 import TweetModal from './TweetModal'
 import './leftNav.css'
+import DisplayModal from './DisplayModal'
 
-const LeftNav = () => {
+const LeftNav = ({ setTheme }) => {
   const [activeNav, setActiveNav] = useState('')
   const [tweetModalDisplay, setTweetModalDisplay] = useState(false)
   const [dropDownDisplay, setDropDownDisplay] = useState(false)
+  const [displayModal, setDisplayModal] = useState(false)
 
   const dropDownModal = (
     <>
@@ -15,10 +17,22 @@ const LeftNav = () => {
       >
       </div>
       <div className="dropdown-content">
-        <button className="dropdown-button"><i className="material-icons">&#xe8e1;</i>Topics</button>
-        <button className="dropdown-button"><i className="fa fa-bolt"></i>Moments</button>
-        <button className="dropdown-button"><i className="fa fa-external-link-square"></i>Twitter Ads</button>
-        <button className="dropdown-button"><i className="fa fa-bar-chart"></i>Analytics</button>
+        <button className="dropdown-button">
+          <i className="material-icons">&#xe8e1;</i>
+          Topics
+        </button>
+        <button className="dropdown-button">
+          <i className="fa fa-bolt"></i>
+          Moments
+        </button>
+        <button className="dropdown-button">
+          <i className="fa fa-external-link-square"></i>
+          Twitter Ads
+        </button>
+        <button className="dropdown-button">
+          <i className="fa fa-bar-chart"></i>
+          Analytics
+        </button>
         <Link to='./settings'
           className="dropdown-button"
           onClick={() => setDropDownDisplay(false)}
@@ -26,8 +40,16 @@ const LeftNav = () => {
           <i className="material-icons">&#xe8b8;</i>
           Settings and privacy
         </Link>
-        <button className="dropdown-button"><i className="fa fa-question-circle-o"></i>Help Center</button>
-        <button className="dropdown-button"><i className="material-icons">&#xe3ae;</i>Display</button>
+        <button className="dropdown-button">
+          <i className="fa fa-question-circle-o"></i>
+          Help Center
+        </button>
+        <button className="dropdown-button"
+          onClick={() => {setDisplayModal(true); setDropDownDisplay(false)}}
+        >
+          <i className="material-icons">&#xe3ae;</i>
+          Display
+        </button>
       </div>
     </>
   )
@@ -105,6 +127,11 @@ const LeftNav = () => {
         />
       }
       { dropDownDisplay && dropDownModal }
+      { displayModal &&
+        <DisplayModal
+          setDisplayModal={setDisplayModal} setTheme={setTheme}
+        />
+      }
     </div>
   )
 }
