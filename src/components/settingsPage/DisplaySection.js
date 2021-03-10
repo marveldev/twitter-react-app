@@ -5,7 +5,7 @@ const DisplaySection = ({ setTheme }) => {
   }
 
   return (
-    <div>
+    <div className="display-section">
       <div className="section header">
         <button type="button" className="previous-button">
           <i className="material-icons">&#xe5c4;</i>
