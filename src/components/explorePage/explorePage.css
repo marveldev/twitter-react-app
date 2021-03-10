@@ -3,6 +3,11 @@
   height: 100%;
 }
 
+.explore-page .header {
+  width: 42.75em;
+  border-left: 1px solid #E6ECF0;
+}
+
 .explore-page-content {
   width: 42.7em;
   margin: 4em 0 0;
