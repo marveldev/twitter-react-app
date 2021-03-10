@@ -1,30 +1,46 @@
 .lights-out {
   color: #fff;
+  background-color: #000;
 }
 
-.lights-out .logo > i {
+.lights-out #logo > i {
   color: #fff;
 }
 
-.lights-out .logo:hover {
-  background-color: #192734;
+.lights-out #logo:hover,
+.lights-out .user-info:hover {
+  background-color: #15181C;
 }
 
-.lights-out .left-nav {
+.lights-out .left-nav-content {
   border-right: 1px solid #2F3336;
 }
 
-.lights-out .left-nav > a:hover {
+.lights-out .nav-button {
+  color: #fff;
+}
+
+.lights-out .nav-button:hover,
+.lights-out .dropdown-button:hover {
+  color: #1DA1F2;
+  background-color: #15181C;
+}
+
+.lights-out .active {
   color: #1DA1F2;
 }
 
-.lights-out a:hover,
-.lights-out #trend-button:hover {
-  background-color: #15181c;
+.lights-out .tweet-modal-header > button {
+  background-color: #000;
 }
 
-.lights-out .left-nav > a {
-  color: #fff;
+.lights-out .tweet-modal-header,
+.lights-out .dropdown-button:nth-child(4) {
+  border-bottom: 1px solid #2F3336;
+}
+
+.lights-out .tweet-modal {
+  background-color: #000;
 }
 
 .lights-out .dropdown-content {
@@ -32,158 +48,269 @@
   box-shadow: 0px 8px 16px 0px #fdf8f833;
 }
 
-.lights-out .dropdown-content a {
+.lights-out .dropdown-button {
   color: #fff;
 }
 
 .lights-out .dropdown-content i {
-  color: #585f65;
-}
-
-.dim-theme .dropdown-content > a:nth-child(4) {
-  border-bottom: 1px solid #38444d;
-}
-
-.lights-out button:hover {
-  background-color: #2d91cf;
-}
-
-.lights-out .trending-pane > input {
-  background-color: #15181C;
-}
-
-.lights-out .trending-pane > i,
-.lights-out .trending-pane > input::placeholder {
-  color: #6E767D;
-}
-
-.lights-out .tweet-options > a:hover,
-.lights-out .tweet-item:hover,
-.lights-out #photoIcon:hover {
-  background-color: #15181C;
-}
-
-.lights-out textarea {
-  background-color: #000;
-}
-
-.lights-out .tweet-item {
-  border-top: 1px solid #2F3336;
-  border-bottom: 1px solid #2F3336;
-}
-
-.lights-out .tweet-info > a {
-  color: #657786;
+  color: #a6aeb4;
 }
 
 .lights-out .home-page {
   border-right: 1px solid #2F3336;
 }
 
-.lights-out .user-options {
-  border-bottom: 10px solid #2F3336;
+.lights-out .header,
+.lights-out #header,
+.lights-out .headline {
+  background-color: #000;
+  border-right: 1px solid #2F3336;
+  border-bottom: 1px solid #2F3336;
+}
+
+.lights-out .overlay {
+  background-color: #393d43ad;
+}
+
+.lights-out .tweet-modal-header > button:hover {
+  background-color: #15181C;
+}
+
+.lights-out .tweet-button {
+  background-color: #19608E;
+  color: #8A8F95;
+}
+
+.lights-out .enable {
+  background-color: #1DA1F2;
+  color: #fff;
+}
+
+.lights-out #tweetContainer {
+  border-bottom: 10px solid #15181C;
+}
+
+.lights-out .search-input {
+  background-color: #202327;
+}
+
+.lights-out .search-input::placeholder {
+  color: #a6aeb4;
 }
 
 .lights-out .trending-tweets,
 .lights-out .trending-tweets > button {
-  background-color: #15181c;
+  background-color: #000;
 }
 
 .lights-out .current-trend {
-  border-top: 1px solid #2f3336;
-}
-
-.lights-out .trend-modal,
-.lights-out .trend-modal button  {
-  background-color: #000;
-}
-
-.lights-out .trend-modal button:hover,
-.lights-out #close-modal-button:hover {
-  background-color: #192734;
-}
-
-.lights-out .set-location {
-  border-top: 1px solid #2f3336;
-  border-bottom: 15px solid #2f3336;
-}
-
-.lights-out .home {
-  border-bottom: 1px solid #2f3336;
-}
-
-.lights-out .tweet-info > a:hover {
-  color: #1DA1F2;;
-}
-
-.lights-out .tweet-info > a:nth-child(3):hover {
-  color: #f11c00;
-}
-
-.lights-out .trend-modal p,
-.lights-out .heading {
-  border-bottom: 1px solid #253341;
-}
-
-.lights-out .theme-modal {
-  background-color: #000;
-}
-
-.lights-out .tweet-options {
-  border-top: 1px solid #2f3336;
-}
-
-.lights-out #lightOutButton {
-  box-shadow: 0px 8px 16px 0px #fdf8f854;
-}
-
-.lights-out #tweet-modal-overlay {
-  background-color: #393d43ad;
-}
-
-.lights-out .tweet-modal-container,
-.lights-out #close-modal-button {
-  background-color: #000;
-}
-
-.lights-out .nav-input-modal {
   border-top: 1px solid #2F3336;
 }
 
-.lights-out .delete-button,
-.lights-out .delete-modal,
-.lights-out .edit-profile-modal {
+.lights-out .trend-modal,
+.lights-out .trend-modal > button {
   background-color: #000;
 }
 
-.lights-out .cancel-button {
-  color: #000;
+.lights-out .set-location {
+  border-top: 1px solid #2F3336;
+  border-bottom: 15px solid #15181C;
 }
 
-.lights-out #nameInput {
-  background-color: #18181c;
+.lights-out .trend-modal p,
+.lights-out .notification-page-content,
+.lights-out #searchInputContainer {
+  border-bottom: 1px solid #2F3336;
 }
 
-.lights-out #nameInput::placeholder {
+
+.lights-out .explore-page,
+.lights-out .notification-page {
+  border-right: 1px solid #2F3336;
+}
+
+.lights-out .explore-page-content > div {
+  border-bottom: 1em solid #15181C;
+}
+
+.lights-out .explore-page-content .current-trend {
+  border-top: 1px solid #2F3336;
+}
+
+.lights-out .current-trend:hover,
+.lights-out .tweet-content-item:hover {
+  background-color: #15181C;
+}
+
+.lights-out .tweet-content-item,
+.lights-out .notification-page-content > div {
+  border-top: 1px solid #2F3336;
+}
+
+.lights-out .notification-page-content > div:hover,
+.lights-out .settings-page button:hover {
+  background-color: #15181C;
+}
+
+.lights-out .bookmarks-page,
+.lights-out .lists-page,
+.lights-out .profile-page {
+  border-right: 1px solid #2F3336;
+}
+
+.lights-out .lists-page-content > div {
+  border-bottom: 0.7em solid #15181C;
+}
+
+.lights-out .lists-page-content h4 {
+  border-bottom: 1px solid #2F3336;
+}
+
+.lights-out .list > p {
+  border-bottom: 1px solid #2F3336;
+  color: #788895;
+}
+
+.lights-out .new-list-item {
+  border-bottom: 1px solid #2F3336;
+}
+
+.lights-out .profile-photo {
+  /* background-color: #15202B; */
+}
+
+.lights-out .user-bio span {
+  color: #788895;
+}
+
+.lights-out .options-button {
+  border-bottom: 1px solid #2F3336;
+  color: #788895;
+}
+
+.lights-out .edit-profile-modal,
+.lights-out .comment-modal,
+.lights-out .input-box {
+  background-color: #000;
+}
+
+.lights-out .entry-box-container input,
+.lights-out .entry-box-container > textarea {
+  background-color: #000;
+  border: 1px solid #2F3336;
+}
+
+.lights-out .entry-box-container textarea::placeholder,
+.lights-out .entry-box-container input::placeholder,
+.lights-out .input-box::placeholder {
+  color: #788895;
+}
+
+.lights-out .tweet-item .tweet-content-item {
+  border-bottom: 1px solid #2F3336;
+}
+
+.lights-out .comment-link {
   color: #fff;
 }
 
-@media screen and (max-width: 425px) {
-  .lights-out .smallscreen-left-nav {
-    background-color: #000;
-  }
-
-  .lights-out .smallscreen-left-nav > a {
-    color: #fff;
-  }
-
-  .lights-out .smallscreen-nav {
-    border-top: 2px solid #2F3336;
-    background-color: #000;
-  }
-
-  .lights-out .home {
-    border-bottom: 2px solid #2F3336;
-    background-color: #000;
-  }
+.lights-out .tweet-info > button,
+.lights-out .tweet-person > button {
+  color: #949ba1;
 }
+
+.lights-out .tweet-info > button:hover {
+  color: #1DA1F2;
+}
+
+.lights-out .tweet-info > button:nth-child(3):hover {
+  color: #f11c00;
+}
+
+.lights-out .comment-page,
+.lights-out .page-core {
+  border-right: 1px solid #2F3336;
+}
+
+.lights-out .tweet-interaction > span,
+#time {
+  color: #949ba1;
+}
+
+.lights-out .tweet-interaction strong {
+  color: #fff;
+}
+
+.lights-out .tweet-interaction {
+  border-top: 1px solid #2F3336;
+  border-bottom: 1px solid #2F3336;
+}
+
+.lights-out .user-tweet-options {
+  border-bottom: 1px solid #2F3336;
+  color: #949ba1;
+}
+
+.lights-out .tweet-options {
+  border-top: 1px solid #2F3336;
+}
+
+.lights-out .comment-item {
+  border-bottom: 1px solid #2F3336;
+}
+
+.lights-out .message-page p {
+  /* color: #8fa1af; */
+}
+
+.lights-out .settings-page button,
+.lights-out .section-content > div {
+  border-bottom: 1px solid #2F3336;
+}
+
+.lights-out .settings-page i {
+  /* color: #8fa1af; */
+}
+
+/* .lights-out .current-section {
+  border-right: 0.15em solid #1DA1F2;
+  background-color: #192734;
+} */
+
+.lights-out .section-content {
+  border-right: 1px solid #2F3336;
+}
+
+.lights-out .section-content span {
+  /* color: #8fa1af; */
+}
+
+.lights-out .section-content section {
+  /* border-bottom: 0.8em solid #192734; */
+}
+
+.lights-out .more-options p {
+  color: #fff;
+}
+
+.lights-out .more-options > div {
+  border-bottom: 1px solid #2F3336;
+}
+
+.lights-out .previous-button i {
+  /* color: #1DA1F2; */
+}
+
+/* .lights-out .logo i {
+  color: #fff;
+  background-color: #1DA1F2;
+} */
+
+/* .lights-out #defaultTheme {
+  border: none;
+  background-color: #fff;
+}
+
+.lights-out #dimTheme {
+  border: 0.2em solid #1DA1F2;
+} */
