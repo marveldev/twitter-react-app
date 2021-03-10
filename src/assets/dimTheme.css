@@ -85,7 +85,7 @@
   border-bottom: 1px solid #38444D;
 }
 
-.dim #tweetContainer {
+.dim .home-page #tweetContainer {
   border-bottom: 10px solid #38444D;
 }
 
@@ -122,6 +122,10 @@
   border-bottom: 1px solid #38444D;
 }
 
+.dim .section-content section:last-child {
+  border-bottom: none;
+}
+
 .dim .explore-page,
 .dim .notification-page {
   border-right: 1px solid #38444D;
@@ -138,6 +142,10 @@
 .dim .explore-page-content .current-trend:hover,
 .dim .tweet-content-item:hover {
   background-color: #192734;
+}
+
+.dim .explore-page .header {
+  border-left: 1px solid #38444D;
 }
 
 .dim .tweet-content-item,
