@@ -8,8 +8,10 @@ const HomePage = () => {
   const [tweetData, setTweetData] = useState([])
   const [mobileLeftNav, setMobileLeftNav] = useState(false)
 
-  const inputTextHandler = (event) => {
-    if (event.target.value.length >= 1) {
+  const tweetTextHandler = () => {
+    const homeTweetText = document.querySelector('.home')
+    const homeTweetTextValue = homeTweetText.value
+    if (homeTweetTextValue.length >= 1) {
       document.querySelector('#home').classList.add('enable')
     } else {
       document.querySelector('#home').classList.remove('enable')
@@ -29,6 +31,7 @@ const HomePage = () => {
 
     setTweetData([...tweetData, tweetObject])
     document.querySelector(selector).value = ''
+    document.querySelector('#home').classList.remove('enable')
   }
 
   return (
@@ -43,7 +46,7 @@ const HomePage = () => {
           <div>
             <div>
               <textarea
-                onChange={inputTextHandler}
+                onChange={() => tweetTextHandler()}
                 className="home input-box" placeholder="What's happening?"
               >
               </textarea>
