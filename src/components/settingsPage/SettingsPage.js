@@ -9,7 +9,8 @@ import SecuritySection from './SecuritySection'
 import './settingsPage.css'
 
 const SettingsPage = ({ setTheme }) => {
-  const [currentSection, setCurrentSection] = useState('account')
+  const [currentSection, setCurrentSection] =
+  useState(localStorage.getItem('storedSection') || 'account')
 
   const switchCurrentSection = (name) => {
     if (window.innerWidth <= 768) {
@@ -18,6 +19,7 @@ const SettingsPage = ({ setTheme }) => {
     }
 
     setCurrentSection(name)
+    localStorage.setItem('storedSection', name)
   }
 
   return (
@@ -77,7 +79,7 @@ const SettingsPage = ({ setTheme }) => {
         {currentSection === 'security' && <SecuritySection />}
         {currentSection === 'notification' && <NotificationSection />}
         {currentSection === 'accessibility' &&
-          <AccessiblitySection setCurrentSection={setCurrentSection} />
+          <AccessiblitySection switchCurrentSection={switchCurrentSection} />
         }
         {currentSection === 'privacy' && <PrivacySection />}
         {currentSection === 'resource' && <ResourceSection />}
