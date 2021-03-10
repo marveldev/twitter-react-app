@@ -122,6 +122,7 @@
 }
 
 .edit-profile-modal > .header {
+  width: 42.8em;
   padding-top: 1em;
   justify-content: space-between;
   border-top-left-radius: 0.8em;
