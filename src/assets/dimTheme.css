@@ -78,7 +78,8 @@
 }
 
 .dim .header,
-.dim #header {
+.dim #header,
+.dim .headline {
   background-color: #15202b;
   border-right: 1px solid #38444D;
   border-bottom: 1px solid #38444D;
@@ -89,7 +90,7 @@
 }
 
 .dim .search-input {
-  background-color: #38444D;
+  background-color: #253341;
 }
 
 .dim .search-input::placeholder {
@@ -116,7 +117,8 @@
 }
 
 .dim .trend-modal p,
-.dim .notification-page-content {
+.dim .notification-page-content,
+.dim #searchInputContainer  {
   border-bottom: 1px solid #38444D;
 }
 
@@ -143,7 +145,8 @@
   border-top: 1px solid #38444D;
 }
 
-.dim .notification-page-content > div:hover  {
+.dim .notification-page-content > div:hover,
+.dim .settings-page button:hover {
   background-color: #192734;
 }
 
@@ -222,7 +225,8 @@
   color: #f11c00;
 }
 
-.dim .comment-page {
+.dim .comment-page,
+.dim .page-core {
   border-right: 1px solid #38444D;
 }
 
@@ -249,6 +253,32 @@
   border-bottom: 1px solid #38444D;
 }
 
-.dim #root {
-  background-color: #15202b;
+.dim .message-page p {
+  color: #7C8C99;
+}
+
+.dim .settings-page button,
+.dim .section-content > div {
+  border-bottom: 1px solid #38444D;
+}
+
+.dim .settings-page i {
+  color: #7C8C99;
+}
+
+.dim .current-section {
+  border-right: 0.15em solid #1DA1F2;
+  background-color: #192734;
+}
+
+.dim .section-content {
+  border-right: 1px solid #38444D;
+}
+
+.dim .section-content span {
+  color: #7C8C99;
+}
+
+.dim .section-content section {
+  border-bottom: 0.8em solid #192734;
 }
