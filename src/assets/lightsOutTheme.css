@@ -86,7 +86,7 @@
   color: #fff;
 }
 
-.lights-out #tweetContainer {
+.lights-out .home-page #tweetContainer {
   border-bottom: 10px solid #15181C;
 }
 
@@ -100,7 +100,7 @@
 
 .lights-out .trending-tweets,
 .lights-out .trending-tweets > button {
-  background-color: #000;
+  background-color: #15181C;
 }
 
 .lights-out .current-trend {
@@ -176,7 +176,7 @@
 }
 
 .lights-out .profile-photo {
-  /* background-color: #15202B; */
+  background-color: #000;
 }
 
 .lights-out .user-bio span {
@@ -259,8 +259,12 @@
   border-bottom: 1px solid #2F3336;
 }
 
+.lights-out .explore-page .header {
+  border-left: 1px solid #2F3336;
+}
+
 .lights-out .message-page p {
-  /* color: #8fa1af; */
+  color: #949ba1;
 }
 
 .lights-out .settings-page button,
@@ -269,24 +273,28 @@
 }
 
 .lights-out .settings-page i {
-  /* color: #8fa1af; */
+  color: #949ba1;
 }
 
-/* .lights-out .current-section {
+.lights-out .current-section {
   border-right: 0.15em solid #1DA1F2;
-  background-color: #192734;
-} */
+  background-color: #15181C;
+}
 
 .lights-out .section-content {
   border-right: 1px solid #2F3336;
 }
 
 .lights-out .section-content span {
-  /* color: #8fa1af; */
+  color: #949ba1;
 }
 
 .lights-out .section-content section {
-  /* border-bottom: 0.8em solid #192734; */
+  border-bottom: 0.8em solid #15181C;
+}
+
+.lights-out .section-content section:last-child {
+  border-bottom: none;
 }
 
 .lights-out .more-options p {
@@ -298,19 +306,19 @@
 }
 
 .lights-out .previous-button i {
-  /* color: #1DA1F2; */
+  color: #1DA1F2;
 }
 
-/* .lights-out .logo i {
+.lights-out .logo i {
   color: #fff;
   background-color: #1DA1F2;
-} */
+}
 
-/* .lights-out #defaultTheme {
+.lights-out #defaultTheme {
   border: none;
   background-color: #fff;
 }
 
-.lights-out #dimTheme {
+.lights-out #lightsOutTheme {
   border: 0.2em solid #1DA1F2;
-} */
+}
