@@ -1,9 +1,7 @@
 const DisplaySection = ({ setTheme }) => {
-  const toggleTheme = (theme, backgroundColor) => {
+  const changeTheme = (theme) => {
     setTheme(theme)
-    const themeObject = {theme, backgroundColor}
-    localStorage.setItem('theme', JSON.stringify(themeObject))
-    document.body.style.backgroundColor = backgroundColor
+    localStorage.setItem('storedTheme', theme)
   }
 
   return (
@@ -74,21 +72,21 @@ const DisplaySection = ({ setTheme }) => {
             <h3>Background</h3>
           </div>
           <div className="theme-options">
-            <div id="defaultTheme" onClick={() => toggleTheme('default') }>
+            <div id="defaultTheme" onClick={() => changeTheme('default')}>
               <label className="container">
                 <input type="radio" name="radio"/>
                 <span className="checkmark"></span>
               </label>
               <p>Default</p>
             </div>
-            <div id="dimTheme" onClick={() => toggleTheme('dim', '#15202b') }>
+            <div id="dimTheme" onClick={() => changeTheme('dim')}>
               <label className="container">
               <input type="radio" name="radio" />
                 <span className="checkmark"></span>
               </label>
               <p>Dim</p>
             </div>
-            <div id="lightsOutTheme" onClick={() => toggleTheme('lightsOut') }>
+            <div id="lightsOutTheme" onClick={() => changeTheme('lightsOut')}>
               <label className="container">
                 <input type="radio" name="radio" />
                 <span className="checkmark"></span>
