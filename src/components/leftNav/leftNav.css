@@ -224,7 +224,7 @@ button {
 .save-button {
   font-size: 1.05em;
   display: block;
-  margin: auto;
+  margin: 1em auto;
   width: 5em;
   height: 2.5em;
   border: unset;
