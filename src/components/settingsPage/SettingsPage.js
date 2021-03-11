@@ -8,7 +8,7 @@ import ResourceSection from './ResourceSection.js'
 import SecuritySection from './SecuritySection'
 import './settingsPage.css'
 
-const SettingsPage = ({ setTheme }) => {
+const SettingsPage = ({ theme, setTheme }) => {
   const [currentSection, setCurrentSection] =
   useState(localStorage.getItem('storedSection') || 'account')
 
@@ -83,7 +83,7 @@ const SettingsPage = ({ setTheme }) => {
         }
         {currentSection === 'privacy' && <PrivacySection />}
         {currentSection === 'resource' && <ResourceSection />}
-        {currentSection === 'display' && <DisplaySection setTheme={setTheme}/>}
+        {currentSection === 'display' && <DisplaySection theme={theme} setTheme={setTheme}/>}
       </div>
     </div>
   )
