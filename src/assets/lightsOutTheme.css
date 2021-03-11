@@ -322,3 +322,7 @@
 .lights-out #lightsOutTheme {
   border: 0.2em solid #1DA1F2;
 }
+
+.lights-out .display-modal {
+  background-color: #000;
+}

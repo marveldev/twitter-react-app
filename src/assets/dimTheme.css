@@ -321,3 +321,11 @@
 .dim #dimTheme {
   border: 0.2em solid #1DA1F2;
 }
+
+.dim .display-modal {
+  background-color: #15202b;
+}
+
+.dim .display-modal h3 {
+  color: #8899A6;
+}
