@@ -13,7 +13,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className={`app-layer ${theme}`}>
-        <LeftNav setTheme={setTheme}/>
+        <LeftNav theme={theme} setTheme={setTheme}/>
         <Switch>
           <Route path="/" component={HomePage} exact/>
           <Route path="/comment" component={CommentPage}/>
@@ -29,6 +29,7 @@ const App = () => {
             path="/settings"
             component={() => (
               <SettingsPage
+                theme={theme}
                 setTheme={setTheme}
               />
             )}
