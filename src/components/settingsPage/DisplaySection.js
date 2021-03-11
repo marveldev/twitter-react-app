@@ -1,4 +1,4 @@
-const DisplaySection = ({ setTheme }) => {
+const DisplaySection = ({ theme, setTheme }) => {
   const changeTheme = (theme) => {
     setTheme(theme)
     localStorage.setItem('storedTheme', theme)
@@ -74,21 +74,30 @@ const DisplaySection = ({ setTheme }) => {
           <div className="theme-options">
             <div id="defaultTheme" onClick={() => changeTheme('default')}>
               <label className="container">
-                <input type="radio" name="radio"/>
+                <input
+                  type="radio" name="radio"
+                  defaultChecked={theme === 'default' ? true : false}
+                />
                 <span className="checkmark"></span>
               </label>
               <p>Default</p>
             </div>
             <div id="dimTheme" onClick={() => changeTheme('dim')}>
               <label className="container">
-              <input type="radio" name="radio" />
+                <input
+                  type="radio" name="radio"
+                  defaultChecked={theme === 'dim' ? true : false}
+                />
                 <span className="checkmark"></span>
               </label>
               <p>Dim</p>
             </div>
             <div id="lightsOutTheme" onClick={() => changeTheme('lights-out')}>
               <label className="container">
-                <input type="radio" name="radio" />
+                <input
+                  type="radio" name="radio"
+                  defaultChecked={theme === 'lights-out' ? true : false}
+                />
                 <span className="checkmark"></span>
               </label>
               <p>Lights out</p>
