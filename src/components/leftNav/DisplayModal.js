@@ -71,35 +71,33 @@ const DisplayModal = ({ setDisplayModal, theme, setTheme }) => {
               <h3>Background</h3>
             </div>
             <div className="theme-options">
-              <div id="defaultTheme" onClick={() => changeTheme('default')}>
-                <label className="container">
-                  <input
-                    type="radio" name="radio"
+              <div>
+                <label className="container" id="defaultTheme"
+                  onClick={() => changeTheme('default')}
+                >
+                  <input type="radio" name="radio"
                     defaultChecked={theme === 'default' ? true : false}
                   />
-                  <span className="checkmark"></span>
+                  <span className="checkmark"></span>Default
                 </label>
-                <p>Default</p>
               </div>
-              <div id="dimTheme" onClick={() => changeTheme('dim')}>
-                <label className="container">
-                  <input
-                    type="radio" name="radio"
+              <div>
+                <label className="container" id="dimTheme" onClick={() => changeTheme('dim')}>
+                  <input type="radio" name="radio"
                     defaultChecked={theme === 'dim' ? true : false}
                   />
-                  <span className="checkmark"></span>
+                  <span className="checkmark"></span>Dim
                 </label>
-                <p>Dim</p>
               </div>
-              <div id="lightsOutTheme" onClick={() => changeTheme('lights-out')}>
-                <label className="container">
-                  <input
-                    type="radio" name="radio"
+              <div>
+                <label className="container" id="lightsOutTheme"
+                  onClick={() => changeTheme('lights-out')}
+                >
+                  <input type="radio" name="radio"
                     defaultChecked={theme === 'lights-out' ? true : false}
                   />
-                  <span className="checkmark"></span>
+                  <span className="checkmark"></span>Lights-out
                 </label>
-                <p>Lights out</p>
               </div>
             </div>
           </section>
