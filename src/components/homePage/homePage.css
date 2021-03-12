@@ -109,16 +109,6 @@
   background-color: #1DA1F2;
 }
 
-.comment-link {
-  color: #000;
-  text-decoration: none;
-}
-
-.comment-link:hover {
-  color: #000;
-  text-decoration: none;
-}
-
 .tweet-item .tweet-content-item {
   grid-template-columns: 0.37fr 1.8fr;
   border-bottom: 1px solid #E6ECF0;
