@@ -2,14 +2,19 @@ import { useState } from "react"
 import EditProfileModal from './EditProfileModal'
 import Tweets from '../homePage/Tweets'
 import './profilePage.css'
+import CommentModal from "../commentPage/CommentModal.js"
 
-const ProfilePage = () => {
-  const defaultPhotoSource = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-  const [modalDisplay, setModalDisplay] = useState(false)
+const ProfilePage = ({ tweetData, commentModal, setCommentModal }) => {
+  const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
+  const [editModalDisplay, setEditModal] = useState(false)
   const [bio, setBio] = useState({
-    name: 'Jane Doe', aboutUser: 'Front-end developer', location: 'Lagos, Nigeria',
-    website: '', birthDate: 'Born April 5, 1906', profilePhoto: defaultPhotoSource,
-    headerPhoto: defaultPhotoSource
+    name: 'Jane Doe',
+    aboutUser: 'Front-end developer',
+    location: 'Lagos, Nigeria',
+    website: '',
+    birthDate: 'Born April 5, 1906',
+    profilePhoto: profilePhotoUrl,
+    headerPhoto: profilePhotoUrl
   })
 
   return (
@@ -40,7 +45,7 @@ const ProfilePage = () => {
               </div>
             </div>
           </div>
-          <button onClick={() => setModalDisplay(true)} type="button">
+          <button onClick={() => setEditModal(true)} type="button">
             Edit profile
           </button>
         </div>
@@ -51,17 +56,17 @@ const ProfilePage = () => {
           <button>Likes</button>
         </div>
         <div id="tweetOutput">
-          <Tweets />
+          <Tweets tweetData={tweetData} setCommentModal={setCommentModal} />
         </div>
       </div>
-      { modalDisplay &&
+      { editModalDisplay &&
         <EditProfileModal
-          setModalDisplay={setModalDisplay}
+          setEditModal={setEditModal}
           bio={bio}
           setBio={setBio}
         />
       }
-
+      {commentModal && <CommentModal setCommentModal={setCommentModal}/>}
     </div>
   )
 }
