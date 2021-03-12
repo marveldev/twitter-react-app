@@ -33,7 +33,7 @@ const TweetModal = ({ setTweetModalDisplay }) => {
             <div className="tweet-options">
               <div>
                 <input type="file" id="addPhoto" />
-                <label for="addPhoto">
+                <label htmlFor="addPhoto">
                   <span><i className="fa fa-file-picture-o" id="photoIcon"></i></span>
                 </label>
                 <span><i className="fa fa-git-square"></i></span>
