@@ -1,12 +1,14 @@
 import { useState } from "react"
 import EditProfileModal from './EditProfileModal'
 import Tweets from '../homePage/Tweets'
+import CommentModal from "../commentPage/CommentModal"
+import TweetDropdown from "../homePage/TweetDropdown"
 import './profilePage.css'
-import CommentModal from "../commentPage/CommentModal.js"
 
 const ProfilePage = ({ tweetData, commentModal, setCommentModal }) => {
   const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
   const [editModalDisplay, setEditModal] = useState(false)
+  const [tweetDropdown, setTweetDropdown] = useState(false)
   const [bio, setBio] = useState({
     name: 'Jane Doe',
     aboutUser: 'Front-end developer',
@@ -56,7 +58,11 @@ const ProfilePage = ({ tweetData, commentModal, setCommentModal }) => {
           <button>Likes</button>
         </div>
         <div id="tweetOutput">
-          <Tweets tweetData={tweetData} setCommentModal={setCommentModal} />
+          <Tweets
+            tweetData={tweetData}
+            setCommentModal={setCommentModal}
+            setTweetDropdown={setTweetDropdown}
+          />
         </div>
       </div>
       { editModalDisplay &&
@@ -67,6 +73,7 @@ const ProfilePage = ({ tweetData, commentModal, setCommentModal }) => {
         />
       }
       {commentModal && <CommentModal setCommentModal={setCommentModal}/>}
+      {tweetDropdown && <TweetDropdown setTweetDropdown={setTweetDropdown} />}
     </div>
   )
 }
