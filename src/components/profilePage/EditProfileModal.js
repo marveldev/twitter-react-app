@@ -1,4 +1,4 @@
-const EditProfileModal = ({ setModalDisplay, bio, setBio }) => {
+const EditProfileModal = ({ setEditModal, bio, setBio }) => {
   const addPhoto = (id) => {
     const photoReader = new FileReader()
     photoReader.readAsDataURL(document.querySelector(id).files[0])
@@ -29,16 +29,16 @@ const EditProfileModal = ({ setModalDisplay, bio, setBio }) => {
       website: websiteInput, birthDate: birthDate, profilePhoto: profilePhoto,
       headerPhoto: headerPhoto
     })
-    setModalDisplay(false)
+    setEditModal(false)
   }
 
   return (
     <>
-      <div onClick={() => setModalDisplay(false)} className="overlay"></div>
+      <div onClick={() => setEditModal(false)} className="overlay"></div>
       <div className="edit-profile-modal">
         <div className="header">
           <button
-            onClick={() => setModalDisplay(false)} type="button" id="closeModalButton"
+            onClick={() => setEditModal(false)} type="button" id="closeModalButton"
           >
             <i className="material-icons">&#xe5cd;</i>
           </button>
