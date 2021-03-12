@@ -123,6 +123,42 @@
   display: none;
 }
 
+.tweet-dropdown {
+  background-color: #fff;
+  position: relative;
+  bottom: 25%;
+  width: 14em;
+  height: auto;
+  z-index: 2;
+  padding: 0.8em 0;
+  border-radius: 0.5em;
+  box-shadow: 0.2em 0.2em 0.5em 0.5em #E4E7EA;
+}
+
+.tweet-dropdown button {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  height: 3.5em;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.tweet-dropdown i {
+  vertical-align: middle;
+  font-size: 1.4em;
+  padding: 0 0.5em;
+}
+
+.tweet-dropdown button:first-child {
+  color: #E0245E;
+}
+
+.tweet-dropdown button:hover {
+  background-color: #F7F7F7;
+}
+
 @media screen and (max-width: 1024px) {
   .header {
     width: 32.2em;
