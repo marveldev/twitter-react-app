@@ -1,23 +1,29 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
-import CommentModal from "../commentPage/CommentModal"
+import { useHistory } from "react-router-dom"
 
-const Tweets = ({ tweetData }) => {
-  const [commentModalDisplay, setCommentModal] = useState(false)
+const Tweets = ({ tweetData, setCommentModal }) => {
+  const history = useHistory('')
 
   return (
     tweetData.map(tweetItem => (
-      <Link to='/comment' key={tweetItem.id} className="tweet-item">
+      <div onClick={() => history.push("/comment")}
+        key={tweetItem.id} className="tweet-item"
+      >
         <div className="tweet-content-item">
-          <img onClick={()=>console.log('hey')} src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="user-profile" />
+          <img onClick={event => { history.push("/profile"); event.stopPropagation() }} src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="user-profile" />
           <div>
             <div className="tweet-person">
-              <strong className="stuff">Derick </strong>
-              <button className=" one" onClick={()=>console.log('hey')} ><i className="material-icons">&#xe5d3;</i></button>
+              <strong
+                onClick={event => { history.push("/profile"); event.stopPropagation() }}
+              >
+                Derick
+              </strong>
+              <button><i className="material-icons">&#xe5d3;</i></button>
             </div>
             <p>{tweetItem.tweetText}</p>
             <div className="tweet-info">
-              <button className="stuff two" onClick={() => setCommentModal(true)}>
+              <button
+                onClick={event => { setCommentModal(true); event.stopPropagation() }}
+              >
                 <i className="fa fa-comment-o"></i>
                 5.1k
               </button>
@@ -27,8 +33,7 @@ const Tweets = ({ tweetData }) => {
             </div>
           </div>
         </div>
-        {commentModalDisplay && <CommentModal setCommentModal={setCommentModal}/>}
-      </Link>
+      </div>
     ))
   )
 }
