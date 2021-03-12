@@ -1,6 +1,6 @@
 import { useHistory } from "react-router-dom"
 
-const Tweets = ({ tweetData, setCommentModal }) => {
+const Tweets = ({ tweetData, setCommentModal, setTweetDropdown }) => {
   const history = useHistory('')
 
   return (
@@ -17,7 +17,11 @@ const Tweets = ({ tweetData, setCommentModal }) => {
               >
                 Derick
               </strong>
-              <button><i className="material-icons">&#xe5d3;</i></button>
+              <button
+                onClick={event => { setTweetDropdown(true); event.stopPropagation() }}
+              >
+                <i className="material-icons">&#xe5d3;</i>
+              </button>
             </div>
             <p>{tweetItem.tweetText}</p>
             <div className="tweet-info">
