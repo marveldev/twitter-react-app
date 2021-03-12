@@ -10,9 +10,9 @@ import './settingsPage.css'
 
 const SettingsPage = ({ theme, setTheme }) => {
   const [currentSection, setCurrentSection] =
-  useState(localStorage.getItem('storedSection') || 'account')
+    useState(localStorage.getItem('storedSection') || 'account')
 
-  const switchCurrentSection = (name) => {
+  const switchCurrentSection = name => {
     if (window.innerWidth <= 768) {
       document.querySelector('#settingsPage').style.display = 'none'
       document.querySelector('#currentSection').style.display = 'block'
