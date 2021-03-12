@@ -316,6 +316,7 @@
 .dim #defaultTheme {
   border: none;
   background-color: #fff;
+  color: #000;
 }
 
 .dim #dimTheme {

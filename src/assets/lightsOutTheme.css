@@ -317,6 +317,7 @@
 .lights-out #defaultTheme {
   border: none;
   background-color: #fff;
+  color: #000;
 }
 
 .lights-out #lightsOutTheme {
