@@ -1,11 +1,12 @@
 import Tweets from "./Tweets"
-import './homePage.css'
 import { useState } from "react"
 import MobileLeftNav from "../leftNav/MobileLeftNav"
+import CommentModal from "../commentPage/CommentModal"
+import './homePage.css'
 
-const HomePage = () => {
+const HomePage = ({ tweetData, setTweetData, commentModal, setCommentModal }) => {
   const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-  const [tweetData, setTweetData] = useState([])
+
   const [mobileLeftNav, setMobileLeftNav] = useState(false)
 
   const tweetTextHandler = () => {
@@ -72,9 +73,10 @@ const HomePage = () => {
           </div>
         </div>
         <div id="tweetOutput">
-          <Tweets tweetData={tweetData} />
+          <Tweets tweetData={tweetData} setCommentModal={setCommentModal} />
         </div>
       </div>
+      {commentModal && <CommentModal setCommentModal={setCommentModal}/>}
       { mobileLeftNav && <MobileLeftNav setMobileLeftNav={setMobileLeftNav}/>}
     </div>
   )
