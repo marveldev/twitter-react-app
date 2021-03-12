@@ -9,9 +9,8 @@ const HomePage = () => {
   const [mobileLeftNav, setMobileLeftNav] = useState(false)
 
   const tweetTextHandler = () => {
-    const homeTweetText = document.querySelector('.home')
-    const homeTweetTextValue = homeTweetText.value
-    if (homeTweetTextValue.length >= 1) {
+    const homeTweetTextValue = document.querySelector('.home').value
+    if (homeTweetTextValue.trim().length >= 1) {
       document.querySelector('#home').classList.add('enable')
     } else {
       document.querySelector('#home').classList.remove('enable')
@@ -73,12 +72,7 @@ const HomePage = () => {
           </div>
         </div>
         <div id="tweetOutput">
-          {tweetData.map(tweetItem => (
-            <Tweets
-              key={tweetItem.id}
-              tweetText={tweetItem.tweetText}
-            />
-          ))}
+          <Tweets tweetData={tweetData} />
         </div>
       </div>
       { mobileLeftNav && <MobileLeftNav setMobileLeftNav={setMobileLeftNav}/>}
