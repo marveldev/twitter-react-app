@@ -3,10 +3,15 @@ import { useState } from "react"
 import MobileLeftNav from "../leftNav/MobileLeftNav"
 import CommentModal from "../commentPage/CommentModal"
 import './homePage.css'
+import TweetDropdown from "./TweetDropdown"
+import DeleteModal from "./DeleteModal.js"
 
-const HomePage = ({ tweetData, setTweetData, commentModal, setCommentModal }) => {
+const HomePage = ({
+    tweetData, setTweetData, commentModal,
+    setCommentModal, tweetDropdown, setTweetDropdown,
+    deleteModal, setDeleteModal
+  }) => {
   const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-
   const [mobileLeftNav, setMobileLeftNav] = useState(false)
 
   const tweetTextHandler = () => {
@@ -73,10 +78,31 @@ const HomePage = ({ tweetData, setTweetData, commentModal, setCommentModal }) =>
           </div>
         </div>
         <div id="tweetOutput">
-          <Tweets tweetData={tweetData} setCommentModal={setCommentModal} />
+          <Tweets
+            tweetData={tweetData}
+            setCommentModal={setCommentModal}
+            setTweetDropdown={setTweetDropdown}
+            setDeleteModal={setDeleteModal}
+          />
         </div>
       </div>
       {commentModal && <CommentModal setCommentModal={setCommentModal}/>}
+      {tweetDropdown.isActive &&
+        <TweetDropdown
+          tweetDropdown={tweetDropdown}
+          setTweetDropdown={setTweetDropdown}
+          deleteModal={deleteModal}
+          setDeleteModal={setDeleteModal}
+        />
+      }
+      {deleteModal.isActive &&
+        <DeleteModal
+          deleteModal={deleteModal}
+          setDeleteModal={setDeleteModal}
+          tweetData={tweetData}
+          setTweetData={setTweetData}
+        />
+      }
       { mobileLeftNav && <MobileLeftNav setMobileLeftNav={setMobileLeftNav}/>}
     </div>
   )
