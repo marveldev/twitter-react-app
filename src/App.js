@@ -17,7 +17,12 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className={`app-layer ${theme}`}>
-        <LeftNav theme={theme} setTheme={setTheme}/>
+        <LeftNav
+          theme={theme}
+          setTheme={setTheme}
+          tweetData={tweetData}
+          setTweetData={setTweetData}
+        />
         <Switch>
           <Route path="/"
             component={() => (
