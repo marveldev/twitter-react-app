@@ -125,14 +125,14 @@
 
 .tweet-dropdown {
   background-color: #fff;
-  position: relative;
-  bottom: 25%;
+  position: absolute;
+  left: 50%;
   width: 14em;
   height: auto;
   z-index: 2;
   padding: 0.8em 0;
   border-radius: 0.5em;
-  box-shadow: 0.2em 0.2em 0.5em 0.5em #E4E7EA;
+  box-shadow: 0.2em 0.2em 0.5em 0.5em #e4e7eaca;
 }
 
 .tweet-dropdown button {
@@ -157,6 +157,41 @@
 
 .tweet-dropdown button:hover {
   background-color: #F7F7F7;
+}
+
+.delete-modal {
+  position: fixed;
+  top: 15em;
+  left: 35%;
+  width: 25%;
+  padding: 1em 2em;
+  height: 15em;
+  border-radius: 0.8em;
+  text-align: center;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.delete-modal button {
+  margin: 1em 0.5em;
+  width: 8em;
+  height: 2.5em;
+  border: unset;
+  border-radius: 1.5em;
+  font-weight: 700;
+}
+
+.delete-modal p {
+  font-size: 1.2em;
+}
+
+.confirm-button {
+  color: #fff;
+  background: #e0245e;
+}
+
+.cancel-button {
+  background: #EBEEF0;
 }
 
 @media screen and (max-width: 1024px) {
