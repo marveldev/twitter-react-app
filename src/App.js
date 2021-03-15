@@ -10,6 +10,8 @@ const App = () => {
   const storedTheme = localStorage.getItem('storedTheme')
   const [theme, setTheme] = useState(storedTheme || '')
   const [tweetData, setTweetData] = useState([])
+  const [tweetDropdown, setTweetDropdown] = useState({isActive: false, position:''})
+  const [deleteModal, setDeleteModal] = useState({isActive: false, tweetId:''})
   const [commentModal, setCommentModal] = useState(false)
 
   return (
@@ -24,6 +26,10 @@ const App = () => {
                 setTweetData={setTweetData}
                 commentModal={commentModal}
                 setCommentModal={setCommentModal}
+                tweetDropdown={tweetDropdown}
+                setTweetDropdown={setTweetDropdown}
+                deleteModal={deleteModal}
+                setDeleteModal={setDeleteModal}
               />
             )} exact
           />
