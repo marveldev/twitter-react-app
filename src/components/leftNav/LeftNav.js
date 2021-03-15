@@ -4,7 +4,7 @@ import TweetModal from './TweetModal'
 import './leftNav.css'
 import DisplayModal from './DisplayModal'
 
-const LeftNav = ({ theme, setTheme }) => {
+const LeftNav = ({ theme, setTheme, tweetData, setTweetData }) => {
   const [activeNav, setActiveNav] = useState('')
   const [tweetModalDisplay, setTweetModalDisplay] = useState(false)
   const [dropDownDisplay, setDropDownDisplay] = useState(false)
@@ -124,6 +124,8 @@ const LeftNav = ({ theme, setTheme }) => {
       { tweetModalDisplay &&
         <TweetModal
           setTweetModalDisplay={setTweetModalDisplay}
+          tweetData={tweetData}
+          setTweetData={setTweetData}
         />
       }
       { dropDownDisplay && dropDownModal }
