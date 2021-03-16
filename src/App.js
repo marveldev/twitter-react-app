@@ -11,8 +11,8 @@ const App = () => {
   const [theme, setTheme] = useState(storedTheme || '')
   const [tweetData, setTweetData] = useState([])
   const [editTweetModal, setEditTweetModal] = useState(false)
-  const [tweetDropdown, setTweetDropdown] = useState({isActive: false, position:''})
-  const [deleteModal, setDeleteModal] = useState({isActive: false, tweetId:''})
+  const [tweetDropdown, setTweetDropdown] = useState({isActive: false})
+  const [deleteModal, setDeleteModal] = useState(false)
   const [commentModal, setCommentModal] = useState(false)
 
   return (
