@@ -8,6 +8,7 @@ const Tweets = ({ tweetData, setCommentModal, setTweetDropdown, setDeleteModal }
     setTweetDropdown({isActive: true, position: top + 'px'})
     setDeleteModal({tweetId: tweetId})
   }
+
   return (
     tweetData.map(tweetItem => (
       <div onClick={() => history.push("/comment")}
