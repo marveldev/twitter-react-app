@@ -10,6 +10,7 @@ const App = () => {
   const storedTheme = localStorage.getItem('storedTheme')
   const [theme, setTheme] = useState(storedTheme || '')
   const [tweetData, setTweetData] = useState([])
+  const [editTweetModal, setEditTweetModal] = useState(false)
   const [tweetDropdown, setTweetDropdown] = useState({isActive: false, position:''})
   const [deleteModal, setDeleteModal] = useState({isActive: false, tweetId:''})
   const [commentModal, setCommentModal] = useState(false)
@@ -35,6 +36,8 @@ const App = () => {
                 setTweetDropdown={setTweetDropdown}
                 deleteModal={deleteModal}
                 setDeleteModal={setDeleteModal}
+                editTweetModal={editTweetModal}
+                setEditTweetModal={setEditTweetModal}
               />
             )} exact
           />
@@ -43,8 +46,15 @@ const App = () => {
             component={() => (
               <ProfilePage
                 tweetData={tweetData}
+                setTweetData={setTweetData}
                 commentModal={commentModal}
                 setCommentModal={setCommentModal}
+                tweetDropdown={tweetDropdown}
+                setTweetDropdown={setTweetDropdown}
+                deleteModal={deleteModal}
+                setDeleteModal={setDeleteModal}
+                editTweetModal={editTweetModal}
+                setEditTweetModal={setEditTweetModal}
               />
             )}
           />
