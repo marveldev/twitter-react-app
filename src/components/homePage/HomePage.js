@@ -4,40 +4,18 @@ import MobileLeftNav from "../leftNav/MobileLeftNav"
 import CommentModal from "../commentPage/CommentModal"
 import './homePage.css'
 import TweetDropdown from "./TweetDropdown"
-import DeleteModal from "./DeleteModal.js"
+import DeleteModal from "./DeleteModal"
+import { inputEventHandler, addTweetData } from "../helper"
+import EditTweetModal from "./EditTweetModal"
 
-const HomePage = ({
-    tweetData, setTweetData, commentModal,
-    setCommentModal, tweetDropdown, setTweetDropdown,
-    deleteModal, setDeleteModal
-  }) => {
+const HomePage = (
+  {
+    tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal,
+    setCommentModal, tweetDropdown, setTweetDropdown, deleteModal, setDeleteModal
+  }
+) => {
   const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
   const [mobileLeftNav, setMobileLeftNav] = useState(false)
-
-  const tweetTextHandler = () => {
-    const homeTweetTextValue = document.querySelector('.home').value
-    if (homeTweetTextValue.trim().length >= 1) {
-      document.querySelector('#home').classList.add('enable')
-    } else {
-      document.querySelector('#home').classList.remove('enable')
-    }
-  }
-
-  const addTweetData = selector => {
-    const tweetText = document.querySelector(selector).value
-    const name = 'Derick Alangi'
-    const id = 'id' + Date.parse(new Date()).toString()
-    const tweetObject = {
-      profilePhotoUrl,
-      tweetText,
-      name,
-      id
-    }
-
-    setTweetData([...tweetData, tweetObject])
-    document.querySelector(selector).value = ''
-    document.querySelector('#home').classList.remove('enable')
-  }
 
   return (
     <div className="home-page">
@@ -51,8 +29,8 @@ const HomePage = ({
           <div>
             <div>
               <textarea
-                onChange={() => tweetTextHandler()}
-                className="home input-box" placeholder="What's happening?"
+                onChange={() => inputEventHandler('#tweetHomeBox', '#tweetHomeButton')}
+                id="tweetHomeBox" className="input-box" placeholder="What's happening?"
               >
               </textarea>
               <strong>Everyone can reply</strong>
@@ -69,8 +47,8 @@ const HomePage = ({
                 <span><i className="fa fa-calendar-plus-o"></i></span>
               </div>
               <button
-                onClick={() => addTweetData('.home')}
-                type="button" id="home" className="tweet-button"
+                onClick={() => addTweetData('#tweetHomeBox', tweetData, setTweetData)}
+                type="button" id="tweetHomeButton" className="tweet-button"
               >
                 Tweet
               </button>
@@ -93,6 +71,7 @@ const HomePage = ({
           setTweetDropdown={setTweetDropdown}
           deleteModal={deleteModal}
           setDeleteModal={setDeleteModal}
+          setEditTweetModal={setEditTweetModal}
         />
       }
       {deleteModal.isActive &&
@@ -101,6 +80,10 @@ const HomePage = ({
           setDeleteModal={setDeleteModal}
           tweetData={tweetData}
           setTweetData={setTweetData}
+        />
+      }
+      {editTweetModal &&
+        <EditTweetModal
         />
       }
       { mobileLeftNav && <MobileLeftNav setMobileLeftNav={setMobileLeftNav}/>}
