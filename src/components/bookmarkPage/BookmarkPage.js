@@ -4,7 +4,9 @@ const BookmarkPage = () => {
   return (
     <div className="bookmarks-page">
       <div className="header">
-        <button type="button" className="previous-button"><i className="material-icons">&#xe5c4;</i></button>
+        <button type="button" className="previous-button">
+          <i className="material-icons">&#xe5c4;</i>
+        </button>
         <span>Bookmarks</span>
       </div>
       <div className="bookmarks-page-content">
