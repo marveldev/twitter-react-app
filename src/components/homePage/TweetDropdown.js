@@ -1,6 +1,6 @@
 const TweetDropdown = (
   {
-    tweetDropdown, setTweetDropdown, deleteModal, setDeleteModal, setEditTweetModal
+    tweetDropdown, setTweetDropdown,setDeleteModal, setEditTweetModal
   }
 ) => {
   return (
@@ -12,8 +12,8 @@ const TweetDropdown = (
       <div className="tweet-dropdown" style={{top: tweetDropdown.position}}>
         <button
           onClick={() => {
-            setDeleteModal({isActive: true, tweetId: deleteModal.tweetId});
-            setTweetDropdown(false)
+            setDeleteModal(true)
+            setTweetDropdown({...tweetDropdown, isActive:false})
           }}
         >
           <i className="fa fa-trash-o"></i>
@@ -21,10 +21,11 @@ const TweetDropdown = (
         </button>
         <button onClick={() =>
           {
-            setEditTweetModal(true); setTweetDropdown(false)
-          }
-        }>
-          <i class="fa fa-edit"></i>
+            setEditTweetModal(true)
+            setTweetDropdown({...tweetDropdown, isActive:false})
+          }}
+        >
+          <i className="fa fa-edit"></i>
           Edit Tweet
         </button>
         <button><i className="fa fa-code"></i>Embed Tweet</button>
