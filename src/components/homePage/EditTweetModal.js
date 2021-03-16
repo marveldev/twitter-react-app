@@ -3,6 +3,19 @@ import { inputEventHandler } from "../helper"
 const EditTweetModal = ({
   setEditTweetModal, tweetData, setTweetData, selectedTweet
 }) => {
+  const editTweetData = () => {
+    const newTweetInput = document.querySelector('#editTweetBox').value
+    const nextState =  tweetData.map((tweetItem) => {
+      if (tweetItem.id === selectedTweet.id) {
+        return { ...tweetItem, tweetText: newTweetInput }
+      }
+      return tweetItem
+    })
+
+    setTweetData(nextState)
+    setEditTweetModal(false)
+  }
+
   return (
     <>
       <div onClick={() => setEditTweetModal(false)} className="overlay"></div>
@@ -35,7 +48,7 @@ const EditTweetModal = ({
                 <span><i className="fa fa-calendar-plus-o"></i></span>
               </div>
               <button
-                onClick={() => {}}
+                onClick={editTweetData}
                 type="button" id="editTweetButton"
                 className="tweet-button"
               >
