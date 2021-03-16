@@ -84,6 +84,7 @@ const HomePage = (
       }
       {editTweetModal &&
         <EditTweetModal
+          setEditTweetModal={setEditTweetModal}
         />
       }
       { mobileLeftNav && <MobileLeftNav setMobileLeftNav={setMobileLeftNav}/>}
