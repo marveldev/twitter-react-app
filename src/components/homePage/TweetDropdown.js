@@ -19,8 +19,12 @@ const TweetDropdown = (
           <i className="fa fa-trash-o"></i>
           Delete
         </button>
-        <button onClick={() => setEditTweetModal(true)}>
-          <i className="material-icons">&#xe55e;</i>
+        <button onClick={() =>
+          {
+            setEditTweetModal(true); setTweetDropdown(false)
+          }
+        }>
+          <i class="fa fa-edit"></i>
           Edit Tweet
         </button>
         <button><i className="fa fa-code"></i>Embed Tweet</button>
