@@ -1,10 +1,12 @@
-const EditTweetModal = () => {
+import { inputEventHandler } from "../helper"
+
+const EditTweetModal = ({ setEditTweetModal }) => {
   return (
     <>
-      <div className="overlay"></div>
+      <div onClick={() => setEditTweetModal(false)} className="overlay"></div>
       <div className="edit-tweet-modal">
         <div className="tweet-modal-header">
-          <button type="button">
+          <button onClick={() => setEditTweetModal(false)} type="button">
             <i className="material-icons">&#xe5cd;</i>
           </button>
         </div>
@@ -13,12 +15,11 @@ const EditTweetModal = () => {
             className="home-page-photo" alt="user-profile" />
           <div>
             <div>
-              <textarea id="tweetModalBox" className="input-box"
-                onChange={() =>{}}
-                placeholder="What's happening?"
+              <textarea id="editTweetBox" className="input-box"
+                onChange={() => inputEventHandler('#editTweetBox', '#editTweetButton')}
+                placeholder="Enter new tweet here..."
               >
               </textarea>
-              <strong>Everyone can reply</strong>
             </div>
             <div className="tweet-options">
               <div>
@@ -32,10 +33,10 @@ const EditTweetModal = () => {
                 <span><i className="fa fa-calendar-plus-o"></i></span>
               </div>
               <button
-                type="button" id="modalTweetButton"
+                type="button" id="editTweetButton"
                 className="tweet-button"
               >
-                Tweet
+                Save
               </button>
             </div>
           </div>
