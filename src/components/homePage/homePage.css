@@ -201,12 +201,23 @@
 .edit-tweet-modal {
   background-color: #ffffff;
   position: fixed;
-  top: 3em;
+  top: 5em;
   left: 28%;
   width: 43%;
   height: fit-content;
   border-radius: 1em;
   z-index: 2;
+}
+
+#editTweetBox {
+  height: 10em;
+  max-height: 8em;
+  margin-top: 0.5em;
+}
+
+.edit-tweet-modal #tweetContainer {
+  border-bottom: none;
+  padding-top: 1em;
 }
 
 @media screen and (max-width: 1024px) {
