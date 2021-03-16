@@ -7,12 +7,11 @@ import './profilePage.css'
 import DeleteModal from "../homePage/DeleteModal"
 import EditTweetModal from "../homePage/EditTweetModal.js"
 
-const ProfilePage = (
-  {
-    tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal,
-    setCommentModal, tweetDropdown, setTweetDropdown, deleteModal, setDeleteModal
-  }
-) => {
+const ProfilePage = ({
+  tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal, selectedTweet,
+  setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible, setDeleteModalIsVisible,
+  setSelectedTweet
+}) => {
   const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
   const [editModalDisplay, setEditModal] = useState(false)
   const [bio, setBio] = useState({
@@ -68,6 +67,7 @@ const ProfilePage = (
             tweetData={tweetData}
             setCommentModal={setCommentModal}
             setTweetDropdown={setTweetDropdown}
+            setSelectedTweet={setSelectedTweet}
           />
         </div>
       </div>
@@ -83,22 +83,25 @@ const ProfilePage = (
         <TweetDropdown
           tweetDropdown={tweetDropdown}
           setTweetDropdown={setTweetDropdown}
-          setDeleteModal={setDeleteModal}
+          setDeleteModalIsVisible={setDeleteModalIsVisible}
           setEditTweetModal={setEditTweetModal}
         />
       }
-      {deleteModal &&
+      {deleteModalIsVisible &&
         <DeleteModal
-          tweetDropdown={tweetDropdown}
-          setDeleteModal={setDeleteModal}
+          selectedTweet={selectedTweet}
+          setDeleteModalIsVisible={setDeleteModalIsVisible}
           tweetData={tweetData}
           setTweetData={setTweetData}
         />
       }
       {editTweetModal &&
         <EditTweetModal
+          tweetData={tweetData}
+          setTweetData={setTweetData}
           tweetDropdown={tweetDropdown}
           setEditTweetModal={setEditTweetModal}
+          selectedTweet={selectedTweet}
         />
       }
     </div>

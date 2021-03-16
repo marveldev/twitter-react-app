@@ -12,8 +12,9 @@ const App = () => {
   const [tweetData, setTweetData] = useState([])
   const [editTweetModal, setEditTweetModal] = useState(false)
   const [tweetDropdown, setTweetDropdown] = useState({isActive: false})
-  const [deleteModal, setDeleteModal] = useState(false)
+  const [deleteModalIsVisible, setDeleteModalIsVisible] = useState(false)
   const [commentModal, setCommentModal] = useState(false)
+  const [selectedTweet, setSelectedTweet] = useState({})
 
   return (
     <BrowserRouter>
@@ -34,10 +35,12 @@ const App = () => {
                 setCommentModal={setCommentModal}
                 tweetDropdown={tweetDropdown}
                 setTweetDropdown={setTweetDropdown}
-                deleteModal={deleteModal}
-                setDeleteModal={setDeleteModal}
+                deleteModalIsVisible={deleteModalIsVisible}
+                setDeleteModalIsVisible={setDeleteModalIsVisible}
                 editTweetModal={editTweetModal}
                 setEditTweetModal={setEditTweetModal}
+                selectedTweet={selectedTweet}
+                setSelectedTweet={setSelectedTweet}
               />
             )} exact
           />
@@ -51,10 +54,12 @@ const App = () => {
                 setCommentModal={setCommentModal}
                 tweetDropdown={tweetDropdown}
                 setTweetDropdown={setTweetDropdown}
-                deleteModal={deleteModal}
-                setDeleteModal={setDeleteModal}
+                deleteModalIsVisible={deleteModalIsVisible}
+                setDeleteModalIsVisible={setDeleteModalIsVisible}
                 editTweetModal={editTweetModal}
                 setEditTweetModal={setEditTweetModal}
+                selectedTweet={selectedTweet}
+                setSelectedTweet={setSelectedTweet}
               />
             )}
           />

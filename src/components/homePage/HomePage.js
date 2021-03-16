@@ -8,12 +8,13 @@ import DeleteModal from "./DeleteModal"
 import { inputEventHandler, addTweetData } from "../helper"
 import EditTweetModal from "./EditTweetModal"
 
-const HomePage = (
-  {
-    tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal,
-    setCommentModal, tweetDropdown, setTweetDropdown, deleteModal, setDeleteModal
-  }
-) => {
+// Prop drilling
+
+const HomePage = ({
+  tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal,
+  setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible, setDeleteModalIsVisible,
+  selectedTweet, setSelectedTweet
+}) => {
   const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
   const [mobileLeftNav, setMobileLeftNav] = useState(false)
 
@@ -60,6 +61,7 @@ const HomePage = (
             tweetData={tweetData}
             setCommentModal={setCommentModal}
             setTweetDropdown={setTweetDropdown}
+            setSelectedTweet={setSelectedTweet}
           />
         </div>
       </div>
@@ -68,22 +70,25 @@ const HomePage = (
         <TweetDropdown
           tweetDropdown={tweetDropdown}
           setTweetDropdown={setTweetDropdown}
-          setDeleteModal={setDeleteModal}
+          setDeleteModalIsVisible={setDeleteModalIsVisible}
           setEditTweetModal={setEditTweetModal}
         />
       }
-      {deleteModal &&
+      {deleteModalIsVisible &&
         <DeleteModal
-          tweetDropdown={tweetDropdown}
-          setDeleteModal={setDeleteModal}
+          selectedTweet={selectedTweet}
+          setDeleteModalIsVisible={setDeleteModalIsVisible}
           tweetData={tweetData}
           setTweetData={setTweetData}
         />
       }
       {editTweetModal &&
         <EditTweetModal
+          tweetData={tweetData}
+          setTweetData={setTweetData}
           tweetDropdown={tweetDropdown}
           setEditTweetModal={setEditTweetModal}
+          selectedTweet={selectedTweet}
         />
       }
       { mobileLeftNav && <MobileLeftNav setMobileLeftNav={setMobileLeftNav}/>}

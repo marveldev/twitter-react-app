@@ -1,6 +1,8 @@
 import { inputEventHandler } from "../helper"
 
-const EditTweetModal = ({ setEditTweetModal, tweetDropdown }) => {
+const EditTweetModal = ({
+  setEditTweetModal, tweetData, setTweetData, selectedTweet
+}) => {
   return (
     <>
       <div onClick={() => setEditTweetModal(false)} className="overlay"></div>
@@ -17,7 +19,7 @@ const EditTweetModal = ({ setEditTweetModal, tweetDropdown }) => {
             <div>
               <textarea id="editTweetBox" className="input-box"
                 onChange={() => inputEventHandler('#editTweetBox', '#editTweetButton')}
-                defaultValue={tweetDropdown.tweetText}  placeholder="Enter new tweet here..."
+                defaultValue={selectedTweet.tweetText}  placeholder="Enter new tweet here..."
               >
               </textarea>
             </div>
@@ -33,6 +35,7 @@ const EditTweetModal = ({ setEditTweetModal, tweetDropdown }) => {
                 <span><i className="fa fa-calendar-plus-o"></i></span>
               </div>
               <button
+                onClick={() => {}}
                 type="button" id="editTweetButton"
                 className="tweet-button"
               >

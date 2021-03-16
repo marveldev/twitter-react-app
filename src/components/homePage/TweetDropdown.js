@@ -1,6 +1,6 @@
 const TweetDropdown = (
   {
-    tweetDropdown, setTweetDropdown,setDeleteModal, setEditTweetModal
+    tweetDropdown, setTweetDropdown,setDeleteModalIsVisible, setEditTweetModal
   }
 ) => {
   return (
@@ -12,7 +12,7 @@ const TweetDropdown = (
       <div className="tweet-dropdown" style={{top: tweetDropdown.position}}>
         <button
           onClick={() => {
-            setDeleteModal(true)
+            setDeleteModalIsVisible(true)
             setTweetDropdown({...tweetDropdown, isActive:false})
           }}
         >
