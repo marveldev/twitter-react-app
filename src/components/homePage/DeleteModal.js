@@ -1,8 +1,12 @@
-const DeleteModal = ({ deleteModal, setDeleteModal, tweetData, setTweetData }) => {
-  const deleteTweet = (tweetId) => {
+const DeleteModal = (
+  {
+    setDeleteModal, tweetData, setTweetData, tweetDropdown
+  }
+) => {
+  const deleteTweet = () => {
     setTweetData(
       tweetData.filter((tweetItem) => {
-        return tweetItem.id !== tweetId
+        return tweetItem.id !== tweetDropdown.id
       })
     )
     setDeleteModal(false)
@@ -15,7 +19,7 @@ const DeleteModal = ({ deleteModal, setDeleteModal, tweetData, setTweetData }) =
         <h3>Delete Tweet?</h3>
         <p>This can't be undone and it will be removed from your timeline.</p>
         <button onClick={() => setDeleteModal(false)} className="cancel-button">Cancel</button>
-        <button onClick={() => deleteTweet(deleteModal.tweetId)} className="confirm-button">Delete</button>
+        <button onClick={() => deleteTweet()} className="confirm-button">Delete</button>
       </div>
     </>
   )
