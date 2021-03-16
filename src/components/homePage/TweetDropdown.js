@@ -1,4 +1,8 @@
-const TweetDropdown = ({ tweetDropdown, setTweetDropdown, deleteModal, setDeleteModal }) => {
+const TweetDropdown = (
+  {
+    tweetDropdown, setTweetDropdown, deleteModal, setDeleteModal, setEditTweetModal
+  }
+) => {
   return (
     <>
       <div className="overlay" style={{backgroundColor: "transparent"}}
@@ -15,7 +19,10 @@ const TweetDropdown = ({ tweetDropdown, setTweetDropdown, deleteModal, setDelete
           <i className="fa fa-trash-o"></i>
           Delete
         </button>
-        <button><i className="material-icons">&#xe55e;</i>Pin to your profile</button>
+        <button onClick={() => setEditTweetModal(true)}>
+          <i className="material-icons">&#xe55e;</i>
+          Edit Tweet
+        </button>
         <button><i className="fa fa-code"></i>Embed Tweet</button>
         <button><i className="material-icons">&#xe1b8;</i>View Tweet activity</button>
       </div>
