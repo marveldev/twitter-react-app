@@ -1,30 +1,6 @@
+import { inputEventHandler, addTweetData } from "../helper"
+
 const TweetModal = ({ setTweetModalDisplay, tweetData, setTweetData }) => {
-  const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-  const tweetTextHandler = () => {
-    const tweetModalText = document.querySelector('#modalTweetText')
-    const tweetModalTextValue = tweetModalText.value
-    if (tweetModalTextValue.trim().length >= 1) {
-      document.querySelector('#modalTweetButton').classList.add('enable')
-    } else {
-      document.querySelector('#modalTweetButton').classList.remove('enable')
-    }
-  }
-
-  const addTweetData = () => {
-    const tweetText = document.querySelector('#modalTweetText').value
-    const name = 'Derick Alangi'
-    const id = 'id' + Date.parse(new Date()).toString()
-    const tweetObject = {
-      profilePhotoUrl,
-      tweetText,
-      name,
-      id
-    }
-
-    setTweetData([...tweetData, tweetObject])
-    setTweetModalDisplay(false)
-  }
-
   return (
     <>
       <div className="overlay" onClick={() => setTweetModalDisplay(false)}></div>
@@ -39,8 +15,8 @@ const TweetModal = ({ setTweetModalDisplay, tweetData, setTweetData }) => {
             className="home-page-photo" alt="user-profile" />
           <div>
             <div>
-              <textarea id="modalTweetText" className="input-box"
-                onChange={() => tweetTextHandler()}
+              <textarea id="tweetModalBox" className="input-box"
+                onChange={() => inputEventHandler('#tweetModalBox', '#modalTweetButton')}
                 placeholder="What's happening?"
               >
               </textarea>
@@ -58,7 +34,10 @@ const TweetModal = ({ setTweetModalDisplay, tweetData, setTweetData }) => {
                 <span><i className="fa fa-calendar-plus-o"></i></span>
               </div>
               <button
-                onClick={() => addTweetData()}
+                onClick={() => {
+                  addTweetData('#tweetModalBox', tweetData, setTweetData);
+                  setTweetModalDisplay(false)
+                }}
                 type="button" id="modalTweetButton"
                 className="tweet-button"
               >
