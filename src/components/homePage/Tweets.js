@@ -1,12 +1,11 @@
 import { useHistory } from "react-router-dom"
 
-const Tweets = ({ tweetData, setCommentModal, setTweetDropdown, setDeleteModal }) => {
+const Tweets = ({ tweetData, setCommentModal, setTweetDropdown }) => {
   const history = useHistory('')
-  const openTweetDropdown = (event, tweetId) => {
+  const openTweetDropdown = (event, tweetItem) => {
     event.stopPropagation()
     const top = event.clientY
-    setTweetDropdown({isActive: true, position: top + 'px'})
-    setDeleteModal({tweetId: tweetId})
+    setTweetDropdown({isActive: true, position: top + 'px', ...tweetItem})
   }
 
   return (
@@ -24,7 +23,7 @@ const Tweets = ({ tweetData, setCommentModal, setTweetDropdown, setDeleteModal }
                 Derick
               </strong>
               <button
-                onClick={event => openTweetDropdown(event, tweetItem.id)}
+                onClick={event => openTweetDropdown(event, tweetItem)}
               >
                 <i className="material-icons">&#xe5d3;</i>
               </button>
