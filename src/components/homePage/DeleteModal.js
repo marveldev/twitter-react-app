@@ -7,6 +7,7 @@ const DeleteModal = ({ deleteModal, setDeleteModal, tweetData, setTweetData }) =
     )
     setDeleteModal(false)
   }
+
   return (
     <>
       <div onClick={() => setDeleteModal(false)} className="overlay"></div>
