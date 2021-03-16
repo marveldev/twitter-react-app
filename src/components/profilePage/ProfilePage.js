@@ -5,10 +5,11 @@ import CommentModal from "../commentPage/CommentModal"
 import TweetDropdown from "../homePage/TweetDropdown"
 import './profilePage.css'
 import DeleteModal from "../homePage/DeleteModal"
+import EditTweetModal from "../homePage/EditTweetModal.js"
 
 const ProfilePage = (
   {
-    tweetData, setTweetData, commentModal,
+    tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal,
     setCommentModal, tweetDropdown, setTweetDropdown, deleteModal, setDeleteModal
   }
 ) => {
@@ -67,7 +68,6 @@ const ProfilePage = (
             tweetData={tweetData}
             setCommentModal={setCommentModal}
             setTweetDropdown={setTweetDropdown}
-            setDeleteModal={setDeleteModal}
           />
         </div>
       </div>
@@ -83,16 +83,22 @@ const ProfilePage = (
         <TweetDropdown
           tweetDropdown={tweetDropdown}
           setTweetDropdown={setTweetDropdown}
-          deleteModal={deleteModal}
           setDeleteModal={setDeleteModal}
+          setEditTweetModal={setEditTweetModal}
         />
       }
-      {deleteModal.isActive &&
+      {deleteModal &&
         <DeleteModal
-          deleteModal={deleteModal}
+          tweetDropdown={tweetDropdown}
           setDeleteModal={setDeleteModal}
           tweetData={tweetData}
           setTweetData={setTweetData}
+        />
+      }
+      {editTweetModal &&
+        <EditTweetModal
+          tweetDropdown={tweetDropdown}
+          setEditTweetModal={setEditTweetModal}
         />
       }
     </div>
