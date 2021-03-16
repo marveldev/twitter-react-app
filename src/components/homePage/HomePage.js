@@ -60,7 +60,6 @@ const HomePage = (
             tweetData={tweetData}
             setCommentModal={setCommentModal}
             setTweetDropdown={setTweetDropdown}
-            setDeleteModal={setDeleteModal}
           />
         </div>
       </div>
@@ -69,14 +68,13 @@ const HomePage = (
         <TweetDropdown
           tweetDropdown={tweetDropdown}
           setTweetDropdown={setTweetDropdown}
-          deleteModal={deleteModal}
           setDeleteModal={setDeleteModal}
           setEditTweetModal={setEditTweetModal}
         />
       }
-      {deleteModal.isActive &&
+      {deleteModal &&
         <DeleteModal
-          deleteModal={deleteModal}
+          tweetDropdown={tweetDropdown}
           setDeleteModal={setDeleteModal}
           tweetData={tweetData}
           setTweetData={setTweetData}
@@ -84,6 +82,7 @@ const HomePage = (
       }
       {editTweetModal &&
         <EditTweetModal
+          tweetDropdown={tweetDropdown}
           setEditTweetModal={setEditTweetModal}
         />
       }
