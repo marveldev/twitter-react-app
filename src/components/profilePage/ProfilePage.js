@@ -4,11 +4,16 @@ import Tweets from '../homePage/Tweets'
 import CommentModal from "../commentPage/CommentModal"
 import TweetDropdown from "../homePage/TweetDropdown"
 import './profilePage.css'
+import DeleteModal from "../homePage/DeleteModal"
 
-const ProfilePage = ({ tweetData, commentModal, setCommentModal }) => {
+const ProfilePage = (
+  {
+    tweetData, setTweetData, commentModal,
+    setCommentModal, tweetDropdown, setTweetDropdown, deleteModal, setDeleteModal
+  }
+) => {
   const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
   const [editModalDisplay, setEditModal] = useState(false)
-  const [tweetDropdown, setTweetDropdown] = useState(false)
   const [bio, setBio] = useState({
     name: 'Jane Doe',
     aboutUser: 'Front-end developer',
@@ -62,6 +67,7 @@ const ProfilePage = ({ tweetData, commentModal, setCommentModal }) => {
             tweetData={tweetData}
             setCommentModal={setCommentModal}
             setTweetDropdown={setTweetDropdown}
+            setDeleteModal={setDeleteModal}
           />
         </div>
       </div>
@@ -73,7 +79,22 @@ const ProfilePage = ({ tweetData, commentModal, setCommentModal }) => {
         />
       }
       {commentModal && <CommentModal setCommentModal={setCommentModal}/>}
-      {tweetDropdown && <TweetDropdown setTweetDropdown={setTweetDropdown} />}
+      {tweetDropdown.isActive &&
+        <TweetDropdown
+          tweetDropdown={tweetDropdown}
+          setTweetDropdown={setTweetDropdown}
+          deleteModal={deleteModal}
+          setDeleteModal={setDeleteModal}
+        />
+      }
+      {deleteModal.isActive &&
+        <DeleteModal
+          deleteModal={deleteModal}
+          setDeleteModal={setDeleteModal}
+          tweetData={tweetData}
+          setTweetData={setTweetData}
+        />
+      }
     </div>
   )
 }
