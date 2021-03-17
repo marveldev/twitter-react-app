@@ -126,12 +126,17 @@
   font-size: 1em;
 }
 
+.display-section .color-options {
+  align-items: initial;
+  padding: 1em;
+}
+
 .color-options {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 2.5em 2em 0;
-  height: 7em;
+  padding: 2.5em 2em 2em;
+  height: 8em;
 }
 
 .color-options i {
@@ -149,6 +154,7 @@
 
 #blueColor i {
   left: 0.6em;
+  bottom: 0.1em;
 }
 
 #blueColor {
