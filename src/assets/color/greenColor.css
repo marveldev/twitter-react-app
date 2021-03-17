@@ -1,0 +1,121 @@
+.green .user-info:hover {
+  background-color: #17bf6341;
+}
+
+.green .left-nav-content .active {
+  color: #17BF63;
+}
+
+.green .nav-button:hover {
+  background-color: #17bf6341;
+  color: #17BF63;
+}
+
+.green #tweetModalButton {
+  background-color: #17BF63;
+}
+
+.green #tweetModalButton:hover {
+  background-color: #11974e;
+}
+
+.green .tweet-modal-header > button:hover {
+  background-color: #17bf6341;
+}
+
+.green .tweet-modal-header > button {
+  color: #17BF63;
+}
+
+.green #tweetContainer strong {
+  color: #17BF63;
+}
+
+.green .tweet-button:hover {
+  background-color: #11974e;
+}
+
+.green .tweet-button {
+  background-color: #8BDFB1;
+}
+
+.green .enable {
+  background-color: #17BF63;
+}
+
+.green .tweet-options span {
+  color: #17BF63;
+}
+
+.green .trending-tweets > button {
+  color: #17BF63;
+}
+
+.green #header i {
+  color: #17BF63;
+}
+
+.green .current {
+  color: #17BF63;
+  border-bottom: 0.15em solid #17BF63;
+}
+
+.green .new-list-item > button {
+  color: #17BF63;
+  border: 1px solid #17BF63;
+}
+
+.green .header > button {
+  color: #17BF63;
+}
+
+.green .user-bio-container > button {
+  color: #17BF63;
+  border: 1px solid #17BF63;
+}
+
+.green .options-button > button:first-child {
+  color: #17BF63;
+  border-bottom: 2px solid #17BF63;
+}
+
+.green .headline > button {
+  color: #17BF63;
+}
+
+.green .message-button,
+.green .save-button,
+.green #saveProfileButton {
+  background-color: #17BF63;
+}
+
+.green .message-button:hover,
+.green .save-button:hover,
+.green #saveProfileButton:hover {
+  background-color: #11974e;
+}
+
+.green .trend-modal > button {
+  color: #17BF63;
+}
+
+.green .trend-modal > button:hover {
+  background-color: #17bf6341;
+}
+
+.green #container input:checked ~ #checkmark {
+  background-color: #17BF63;
+}
+
+.green .current-section {
+  border-right: 0.15em solid #17BF63;
+}
+
+.green .container input:checked ~ .checkmark {
+  background-color: #17BF63;
+  border: 0.15em solid #17BF63;
+}
+
+.green #defaultTheme {
+  border: 0.15em solid #17BF63;
+}

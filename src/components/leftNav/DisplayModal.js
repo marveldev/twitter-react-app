@@ -41,7 +41,7 @@ const DisplayModal = ({ setDisplayModal, theme, setTheme, textColor, setTextColo
                 <label className="container"
                   onClick={() => changeTextColor('blue', setTextColor)}
                 >
-                  <input type="radio" name="color"
+                  <input type="radio" name="colorInput"
                     defaultChecked={textColor === 'blue' ? true : false}
                   />
                   <span className="checkmark"></span>
@@ -52,7 +52,7 @@ const DisplayModal = ({ setDisplayModal, theme, setTheme, textColor, setTextColo
                 <label className="container"
                   onClick={() => changeTextColor('tangerine', setTextColor)}
                 >
-                  <input type="radio" name="color"
+                  <input type="radio" name="colorInput"
                     defaultChecked={textColor === 'tangerine' ? true : false}
                   />
                   <span className="checkmark"></span>
@@ -63,7 +63,7 @@ const DisplayModal = ({ setDisplayModal, theme, setTheme, textColor, setTextColo
                 <label className="container"
                   onClick={() => changeTextColor('cerise', setTextColor)}
                 >
-                  <input type="radio" name="color"
+                  <input type="radio" name="colorInput"
                     defaultChecked={textColor === 'cerise' ? true : false}
                   />
                   <span className="checkmark"></span>
@@ -74,7 +74,7 @@ const DisplayModal = ({ setDisplayModal, theme, setTheme, textColor, setTextColo
                 <label className="container"
                   onClick={() => changeTextColor('purple', setTextColor)}
                 >
-                  <input type="radio" name="color"
+                  <input type="radio" name="colorInput"
                     defaultChecked={textColor === 'purple' ? true : false}
                   />
                   <span className="checkmark"></span>
@@ -85,7 +85,7 @@ const DisplayModal = ({ setDisplayModal, theme, setTheme, textColor, setTextColo
                 <label className="container"
                   onClick={() => changeTextColor('orange', setTextColor)}
                 >
-                  <input type="radio" name="color"
+                  <input type="radio" name="colorInput"
                     defaultChecked={textColor === 'orange' ? true : false}
                   />
                   <span className="checkmark"></span>
@@ -96,7 +96,7 @@ const DisplayModal = ({ setDisplayModal, theme, setTheme, textColor, setTextColo
                 <label className="container"
                   onClick={() => changeTextColor('green', setTextColor)}
                 >
-                  <input type="radio" name="color"
+                  <input type="radio" name="colorInput"
                     defaultChecked={textColor === 'green' ? true : false}
                   />
                   <span className="checkmark"></span>

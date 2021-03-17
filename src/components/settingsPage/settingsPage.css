@@ -173,17 +173,24 @@
 }
 
 .color-options .container input:checked ~ .checkmark {
-  background-color: transparent;
   width: 2.5em;
 	height: 2.5em;
   border: none;
+
 }
 
 .color-options .container .checkmark:after {
   font-size: 2em;
-  left: 0.05em;
+  position: relative;
+  left: 0;
+  bottom: 0.1em;
   border-radius: 1.5em;
   font-weight: 100;
+}
+
+#blueColor .container .checkmark:after {
+  left: 0.1em;
+  bottom: 0;
 }
 
 #tangerineColor i {

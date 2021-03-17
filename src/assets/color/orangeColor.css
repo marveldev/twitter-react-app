@@ -1,0 +1,121 @@
+.orange .user-info:hover {
+  background-color: #f45d224d;
+}
+
+.orange .left-nav-content .active {
+  color: #F45D22;
+}
+
+.orange .nav-button:hover {
+  background-color: #f45d224d;
+  color: #F45D22;
+}
+
+.orange #tweetModalButton {
+  background-color: #F45D22;
+}
+
+.orange #tweetModalButton:hover {
+  background-color: #df4407;
+}
+
+.orange .tweet-modal-header > button:hover {
+  background-color: #f45d224d;
+}
+
+.orange .tweet-modal-header > button {
+  color: #F45D22;
+}
+
+.orange #tweetContainer strong {
+  color: #F45D22;
+}
+
+.orange .tweet-button:hover {
+  background-color: #df4407;
+}
+
+.orange .tweet-button {
+  background-color: #FAAE91;
+}
+
+.orange .enable {
+  background-color: #F45D22;
+}
+
+.orange .tweet-options span {
+  color: #F45D22;
+}
+
+.orange .trending-tweets > button {
+  color: #F45D22;
+}
+
+.orange #header i {
+  color: #F45D22;
+}
+
+.orange .current {
+  color: #F45D22;
+  border-bottom: 0.15em solid #F45D22;
+}
+
+.orange .new-list-item > button {
+  color: #F45D22;
+  border: 1px solid #F45D22;
+}
+
+.orange .header > button {
+  color: #F45D22;
+}
+
+.orange .user-bio-container > button {
+  color: #F45D22;
+  border: 1px solid #F45D22;
+}
+
+.orange .options-button > button:first-child {
+  color: #F45D22;
+  border-bottom: 2px solid #F45D22;
+}
+
+.orange .headline > button {
+  color: #F45D22;
+}
+
+.orange .message-button,
+.orange .save-button,
+.orange #saveProfileButton {
+  background-color: #F45D22;
+}
+
+.orange .message-button:hover,
+.orange .save-button:hover,
+.orange #saveProfileButton:hover {
+  background-color: #df4407;
+}
+
+.orange .trend-modal > button {
+  color: #F45D22;
+}
+
+.orange .trend-modal > button:hover {
+  background-color: #f45d224d;
+}
+
+.orange #container input:checked ~ #checkmark {
+  background-color: #F45D22;
+}
+
+.orange .current-section {
+  border-right: 0.15em solid #F45D22;
+}
+
+.orange .container input:checked ~ .checkmark {
+  background-color: #F45D22;
+  border: 0.15em solid #F45D22;
+}
+
+.orange #defaultTheme {
+  border: 0.15em solid #F45D22;
+}
