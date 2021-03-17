@@ -1,4 +1,9 @@
 const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
+const changeTheme = (theme, setTheme ) => {
+  setTheme(theme)
+  localStorage.setItem('storedTheme', theme)
+}
+
 const addTweetData = (selector, tweetData, setTweetData) => {
   const tweetText = document.querySelector(selector).value
   const name = 'Derick Alangi'
@@ -22,4 +27,4 @@ const inputEventHandler = (inputSelector, buttonSelector) => {
   }
 }
 
-export { inputEventHandler, addTweetData }
+export { inputEventHandler, addTweetData, changeTheme }
