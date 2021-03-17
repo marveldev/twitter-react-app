@@ -1,0 +1,92 @@
+.tangerine .user-info:hover {
+  background-color: #ffad1f3b;
+}
+
+.tangerine .left-nav-content .active {
+  color: #FFAD1F;
+}
+
+.tangerine .nav-button:hover {
+  background-color: #ffad1f3b;
+  color: #FFAD1F;
+}
+
+.tangerine #tweetModalButton {
+  background-color: #FFAD1F;
+}
+
+.tangerine #tweetModalButton:hover {
+  background-color: #F6A71E;
+}
+
+.tangerine .tweet-modal-header > button:hover {
+  background-color: #ffad1f3b;
+}
+
+.tangerine .tweet-modal-header > button {
+  color: #FFAD1F;
+}
+
+.tangerine #tweetContainer strong {
+  color: #FFAD1F;
+}
+
+.tangerine .tweet-button:hover {
+  background-color: #F6A71E;
+}
+
+.tangerine .tweet-button {
+  background-color: #FFD68F;
+}
+
+.tangerine .enable {
+  background-color: #FFAD1F;
+}
+
+.tangerine .tweet-options span {
+  color: #FFAD1F;
+}
+
+.tangerine .trending-tweets > button {
+  color: #FFAD1F;
+}
+
+.tangerine #header i {
+  color: #FFAD1F;
+}
+
+.tangerine .current {
+  color: #FFAD1F;
+  border-bottom: 0.15em solid #FFAD1F;
+}
+
+.tangerine .new-list-item > button {
+  color: #FFAD1F;
+  border: 1px solid #FFAD1F;
+}
+
+.tangerine .header > button {
+  color: #FFAD1F;
+}
+
+.tangerine .user-bio-container > button {
+  color: #FFAD1F;
+  border: 1px solid #FFAD1F;
+}
+
+.tangerine .options-button > button:first-child {
+  color: #FFAD1F;
+  border-bottom: 2px solid #FFAD1F;
+}
+
+.tangerine .headline > button {
+  color: #FFAD1F;
+}
+
+.tangerine .message-button {
+  background-color: #FFAD1F;
+}
+
+.tangerine .message-button:hover {
+  background-color: #F6A71E;
+}
