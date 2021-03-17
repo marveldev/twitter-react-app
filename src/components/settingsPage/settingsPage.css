@@ -128,58 +128,83 @@
 
 .color-options {
   display: flex;
-  justify-content: space-between;
-}
-
-.circle {
-  display: block;
-  border-radius: 50%;
-  font-size: 1.5em;
-  padding: 0.5em 0.8em;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2.5em 2em 0;
+  height: 7em;
 }
 
 .color-options i {
-  margin: 0.5em;
-  font-size: 1.6em;
+  position: relative;
+  bottom: 0.3em;
+  left: 0.4em;
+  font-size: 1.5em;
+}
+
+.color-options > div {
+  width: 3em;
+	height: 3em;
+  border-radius: 50%;
 }
 
 #blueColor i {
-  color: #5DADEC;
-  font-size: 1.8em;
+  left: 0.6em;
 }
 
-#blueColor > button {
-  color: #fff;
+#blueColor {
+  color: #1DA1F2;
   background-color: #1DA1F2;
 }
 
-#tangerineColor i {
-  color: #FFAD1F;
-  font-size: 1.9em;
+.color-options .checkmark {
+  position: absolute;
+  right: 0.1em;
+  top: 0.1em;
+  width: 3em;
+	height: 3em;
+  margin-right: 0;
+  border: none;
 }
 
-#tangerineColor > button {
-  color: #fff;
+.color-options .container input:checked ~ .checkmark {
+  background-color: transparent;
+  width: 3em;
+	height: 3em;
+  border: none;
+}
+
+.color-options .container .checkmark:after {
+  font-size: 2em;
+  left: 0.3em;
+  font-weight: 100;
+}
+
+#tangerineColor i {
+  font-size: 1.8em;
+  color: #FFAD1F;
+}
+
+#tangerineColor {
   background-color: #FFAD1F;
 }
 
-#orangeColor > button {
-  color: #fff;
+#orangeColor {
+  color: #F45D22;
   background-color: #F45D22;
 }
 
-#greenColor > button {
-  color: #fff;
+#greenColor {
+  color: #17BF63;
   background-color: #17BF63;
 }
 
-#ceriseColor > button {
-  color: #fff;
+#ceriseColor {
+  color: #E0245E;
   background-color: #E0245E;
 }
 
-#purpleColor > button {
-  color: #fff;
+#purpleColor {
+  color: #794BC4;
   background-color: #794BC4;
 }
 
@@ -228,15 +253,14 @@
 }
 
 .checkmark:after {
-  content: "\f00c";
-  font-family: 'FontAwesome';
+  content: "check";
+  font-family: 'Material Icons';
   position: absolute;
   display: none;
 }
 
 .container .checkmark:after {
   color: #fff;
-  font-weight: 100;
   left: 0.1em;
 }
 
