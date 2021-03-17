@@ -1,6 +1,6 @@
-import { changeTheme } from "../helper"
+import { changeTheme, changeTextColor } from "../helper"
 
-const DisplaySection = ({ theme, setTheme }) => {
+const DisplaySection = ({ theme, setTheme, textColor, setTextColor }) => {
   return (
     <div className="display-section">
       <div className="section header">
@@ -39,43 +39,67 @@ const DisplaySection = ({ theme, setTheme }) => {
           </div>
           <div className="color-options">
             <div id="blueColor">
-              <label className="container">
-                <input type="radio" name="textColor"/>
+              <label className="container"
+                onClick={() => changeTextColor('blue', setTextColor)}
+              >
+                <input type="radio" name="color"
+                  defaultChecked={textColor === 'blue' ? true : false}
+                />
                 <span className="checkmark"></span>
               </label>
               <i className="fa fa-heart"></i>
             </div>
             <div id="tangerineColor">
-              <label className="container">
-                <input type="radio" name="textColor"/>
+              <label className="container"
+                onClick={() => changeTextColor('tangerine', setTextColor)}
+              >
+                <input type="radio" name="color"
+                  defaultChecked={textColor === 'tangerine' ? true : false}
+                />
                 <span className="checkmark"></span>
               </label>
               <i className="fa fa-star"></i>
             </div>
             <div id="ceriseColor">
-              <label className="container">
-                <input type="radio" name="textColor"/>
+              <label className="container"
+                onClick={() => changeTextColor('cerise', setTextColor)}
+              >
+                <input type="radio" name="color"
+                  defaultChecked={textColor === 'cerise' ? true : false}
+                />
                 <span className="checkmark"></span>
               </label>
               <i className="material-icons">&#x1F338;</i>
             </div>
             <div id="purpleColor">
-              <label className="container">
-                <input type="radio" name="textColor"/>
+              <label className="container"
+                onClick={() => changeTextColor('purple', setTextColor)}
+              >
+                <input type="radio" name="color"
+                  defaultChecked={textColor === 'purple' ? true : false}
+                />
                 <span className="checkmark"></span>
               </label>
               <i className="material-icons">&#x1F47E;</i>
             </div>
             <div id="orangeColor">
-              <label className="container">
-                <input type="radio" name="textColor"/>
+              <label className="container"
+                onClick={() => changeTextColor('orange', setTextColor)}
+              >
+                <input type="radio" name="color"
+                  defaultChecked={textColor === 'orange' ? true : false}
+                />
                 <span className="checkmark"></span>
               </label>
               <i className="material-icons">&#x1F525;</i>
             </div>
             <div id="greenColor">
-              <label className="container">
-                <input type="radio" name="textColor"/>
+              <label className="container"
+                onClick={() => changeTextColor('green', setTextColor)}
+              >
+                <input type="radio" name="color"
+                  defaultChecked={textColor === 'green' ? true : false}
+                />
                 <span className="checkmark"></span>
               </label>
               <i className="material-icons">&#x1F951;</i>
