@@ -164,24 +164,25 @@
 
 .color-options .checkmark {
   position: absolute;
-  right: 0.1em;
-  top: 0.1em;
-  width: 3em;
-	height: 3em;
+  right: 0.2em;
+  top: 0.2em;
+  width: 2.5em;
+	height: 2.5em;
   margin-right: 0;
   border: none;
 }
 
 .color-options .container input:checked ~ .checkmark {
   background-color: transparent;
-  width: 3em;
-	height: 3em;
+  width: 2.5em;
+	height: 2.5em;
   border: none;
 }
 
 .color-options .container .checkmark:after {
   font-size: 2em;
-  left: 0.2em;
+  left: 0.05em;
+  border-radius: 1.5em;
   font-weight: 100;
 }
 

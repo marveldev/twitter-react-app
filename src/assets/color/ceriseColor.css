@@ -1,0 +1,122 @@
+.cerise .user-info:hover {
+  background-color: #e024603a;
+}
+
+.cerise .left-nav-content .active {
+  color: #E0245E;
+}
+
+.cerise .nav-button:hover {
+  background-color: #e024603a;
+  color: #E0245E;
+}
+
+.cerise #tweetModalButton {
+  background-color: #E0245E;
+  font-weight: 700;
+}
+
+.cerise #tweetModalButton:hover {
+  background-color: #c71a51;
+}
+
+.cerise .tweet-modal-header > button:hover {
+  background-color: #e024603a;
+}
+
+.cerise .tweet-modal-header > button {
+  color: #E0245E;
+}
+
+.cerise #tweetContainer strong {
+  color: #E0245E;
+}
+
+.cerise .tweet-button:hover {
+  background-color: #c71a51;
+}
+
+.cerise .tweet-button {
+  background-color: #F092AF;
+}
+
+.cerise .enable {
+  background-color: #E0245E;
+}
+
+.cerise .tweet-options span {
+  color: #E0245E;
+}
+
+.cerise .trending-tweets > button {
+  color: #E0245E;
+}
+
+.cerise #header i {
+  color: #E0245E;
+}
+
+.cerise .current {
+  color: #E0245E;
+  border-bottom: 0.15em solid #E0245E;
+}
+
+.cerise .new-list-item > button {
+  color: #E0245E;
+  border: 1px solid #E0245E;
+}
+
+.cerise .header > button {
+  color: #E0245E;
+}
+
+.cerise .user-bio-container > button {
+  color: #E0245E;
+  border: 1px solid #E0245E;
+}
+
+.cerise .options-button > button:first-child {
+  color: #E0245E;
+  border-bottom: 2px solid #E0245E;
+}
+
+.cerise .headline > button {
+  color: #E0245E;
+}
+
+.cerise .message-button,
+.cerise .save-button,
+.cerise #saveProfileButton {
+  background-color: #E0245E;
+}
+
+.cerise .message-button:hover,
+.cerise .save-button:hover,
+.cerise #saveProfileButton:hover {
+  background-color: #c71a51;
+}
+
+.cerise .trend-modal > button {
+  color: #E0245E;
+}
+
+.cerise .trend-modal > button:hover {
+  background-color: #e024603a;
+}
+
+.cerise #container input:checked ~ #checkmark {
+  background-color: #E0245E;
+}
+
+.cerise .current-section {
+  border-right: 0.15em solid #E0245E;
+}
+
+.cerise .container input:checked ~ .checkmark {
+  background-color: #E0245E;
+  border: 0.15em solid #E0245E;
+}
+
+.cerise #defaultTheme {
+  border: 0.15em solid #E0245E;
+}

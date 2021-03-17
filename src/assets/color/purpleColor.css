@@ -1,0 +1,122 @@
+.purple .user-info:hover {
+  background-color: #794bc432;
+}
+
+.purple .left-nav-content .active {
+  color: #794BC4;
+}
+
+.purple .nav-button:hover {
+  background-color: #794bc432;
+  color: #794BC4;
+}
+
+.purple #tweetModalButton {
+  background-color: #794BC4;
+  font-weight: 700;
+}
+
+.purple #tweetModalButton:hover {
+  background-color: #794bc4d3;
+}
+
+.purple .tweet-modal-header > button:hover {
+  background-color: #794bc432;
+}
+
+.purple .tweet-modal-header > button {
+  color: #794BC4;
+}
+
+.purple #tweetContainer strong {
+  color: #794BC4;
+}
+
+.purple .tweet-button:hover {
+  background-color: #794bc4d3;
+}
+
+.purple .tweet-button {
+  background-color: #BCA5E2;
+}
+
+.purple .enable {
+  background-color: #794BC4;
+}
+
+.purple .tweet-options span {
+  color: #794BC4;
+}
+
+.purple .trending-tweets > button {
+  color: #794BC4;
+}
+
+.purple #header i {
+  color: #794BC4;
+}
+
+.purple .current {
+  color: #794BC4;
+  border-bottom: 0.15em solid #794BC4;
+}
+
+.purple .new-list-item > button {
+  color: #794BC4;
+  border: 1px solid #794BC4;
+}
+
+.purple .header > button {
+  color: #794BC4;
+}
+
+.purple .user-bio-container > button {
+  color: #794BC4;
+  border: 1px solid #794BC4;
+}
+
+.purple .options-button > button:first-child {
+  color: #794BC4;
+  border-bottom: 2px solid #794BC4;
+}
+
+.purple .headline > button {
+  color: #794BC4;
+}
+
+.purple .message-button,
+.purple .save-button,
+.purple #saveProfileButton {
+  background-color: #794BC4;
+}
+
+.purple .message-button:hover,
+.purple .save-button:hover,
+.purple #saveProfileButton:hover {
+  background-color: #794bc4d3;
+}
+
+.purple .trend-modal > button {
+  color: #794BC4;
+}
+
+.purple .trend-modal > button:hover {
+  background-color: #794bc432;
+}
+
+.purple #container input:checked ~ #checkmark {
+  background-color: #794BC4;
+}
+
+.purple .current-section {
+  border-right: 0.15em solid #794BC4;
+}
+
+.purple .container input:checked ~ .checkmark {
+  background-color: #794BC4;
+  border: 0.15em solid #794BC4;
+}
+
+.purple #defaultTheme {
+  border: 0.15em solid #794BC4;
+}

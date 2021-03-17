@@ -1,13 +1,13 @@
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
-@import "./assets/dimTheme.css";
-@import "./assets/lightsOutTheme.css";
-@import "./assets/tangerineTextColor.css";
-@import "./assets/purpleTextColor.css";
-@import "./assets/orangeTextColor.css";
-@import "./assets/greenTextColor.css";
-@import "./assets/ceriseTextColor.css";
+@import "./assets/theme/dimTheme.css";
+@import "./assets/theme/lightsOutTheme.css";
+@import "./assets/color/tangerineColor.css";
+@import "./assets/color/purpleColor.css";
+@import "./assets/color/orangeColor.css";
+@import "./assets/color/greenColor.css";
+@import "./assets/color/ceriseColor.css";
 
 #root {
   margin: 0;
