@@ -9,6 +9,7 @@ import { useState } from 'react'
 const App = () => {
   const storedTheme = localStorage.getItem('storedTheme')
   const [theme, setTheme] = useState(storedTheme || '')
+  const [textColor, setTextColor] = useState('tangerine')
   const [tweetData, setTweetData] = useState([])
   const [editTweetModal, setEditTweetModal] = useState(false)
   const [tweetDropdown, setTweetDropdown] = useState({isActive: false})
@@ -18,7 +19,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className={`app-layer ${theme}`}>
+      <div className={`app-layer ${theme} ${textColor}`}>
         <LeftNav
           theme={theme}
           setTheme={setTheme}
