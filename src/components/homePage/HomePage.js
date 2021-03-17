@@ -8,8 +8,6 @@ import DeleteModal from "./DeleteModal"
 import { inputEventHandler, addTweetData } from "../helper"
 import EditTweetModal from "./EditTweetModal"
 
-// Prop drilling
-
 const HomePage = ({
   tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal,
   setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible, setDeleteModalIsVisible,
