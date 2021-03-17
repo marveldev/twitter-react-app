@@ -4,6 +4,11 @@ const changeTheme = (theme, setTheme ) => {
   localStorage.setItem('storedTheme', theme)
 }
 
+const changeTextColor = (textColor, setTextColor) => {
+  setTextColor(textColor)
+  localStorage.setItem('storedTextColor', textColor)
+}
+
 const addTweetData = (selector, tweetData, setTweetData) => {
   const tweetText = document.querySelector(selector).value
   const name = 'Derick Alangi'
@@ -27,4 +32,4 @@ const inputEventHandler = (inputSelector, buttonSelector) => {
   }
 }
 
-export { inputEventHandler, addTweetData, changeTheme }
+export { inputEventHandler, addTweetData, changeTheme, changeTextColor }
