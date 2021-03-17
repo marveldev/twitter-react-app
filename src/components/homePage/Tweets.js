@@ -21,9 +21,9 @@ const Tweets = ({ tweetData, setCommentModal, setTweetDropdown, setSelectedTweet
               <strong
                 onClick={event => { event.stopPropagation(); history.push("/profile") }}
               >
-                Derick
+                {tweetItem.name}
               </strong>
-              <button
+              <button type="button" title="More"
                 onClick={event => openTweetDropdown(event, tweetItem)}
               >
                 <i className="material-icons">&#xe5d3;</i>
@@ -31,15 +31,15 @@ const Tweets = ({ tweetData, setCommentModal, setTweetDropdown, setSelectedTweet
             </div>
             <p>{tweetItem.tweetText}</p>
             <div className="tweet-info">
-              <button
+              <button type="button"
                 onClick={event => { event.stopPropagation(); setCommentModal(true) }}
               >
                 <i className="fa fa-comment-o"></i>
                 5.1k
               </button>
-              <button><i className="fa fa-retweet"></i>2.1k</button>
-              <button><i className="fa fa-heart-o"></i>3.1k</button>
-              <button><i className="fa fa-upload"></i></button>
+              <button type="button"><i className="fa fa-retweet"></i>2.1k</button>
+              <button type="button"><i className="fa fa-heart-o"></i>3.1k</button>
+              <button type="button"><i className="fa fa-upload"></i></button>
             </div>
           </div>
         </div>

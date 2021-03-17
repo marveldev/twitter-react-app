@@ -123,6 +123,26 @@
 .tweet-person {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.tweet-person > strong:hover {
+  text-decoration: underline;
+}
+
+.tweet-person > button {
+  color: #5E7285;
+  border-radius: 2em;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.tweet-person i {
+  vertical-align: middle;
+}
+
+.tweet-person > button:hover {
+  background-color: #2576ac50;
 }
 
 @media screen and (max-width: 1024px) {

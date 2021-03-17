@@ -74,7 +74,7 @@
   position: fixed;
   top: 3em;
   left: 25em;
-  width: 45%;
+  width: 42%;
   height: 75%;
   border-radius: 1em;
   z-index: 2;
@@ -82,12 +82,15 @@
 
 .trend-modal > button {
   border: unset;
-  font-size: 1.5em;
   color: #1da1f2;
+  width: 3em;
+  height: 3em;
   margin: 0.3em 1em 0.3em 0.5em;
-  padding: 0.2em 0.6em;
-  border-radius: 1em;
-  background-color: #fff;
+  border-radius: 1.5em;
+}
+
+.trend-modal > button i {
+  vertical-align: bottom;
 }
 
 .trend-modal > button:hover {
@@ -100,9 +103,18 @@
   font-size: 1.3em;
 }
 
-.set-location {
+.set-trend {
   border-top: 1px solid #e6ecf0;
-  border-bottom: 15px solid #e6ecf0;
+  border-bottom: 0.8em solid #e6ecf0;
+}
+
+.set-trend:last-child {
+  border-bottom: none;
+}
+
+.set-trend > div {
+  padding: 0 1.5em 1em;
+  font-size: 1.1em;
 }
 
 .trend-modal p {
@@ -112,28 +124,55 @@
   padding: 0.4em 0 0.4em 1em;
 }
 
-.set-location > div {
+.checkbox-container {
   display: flex;
   justify-content: space-between;
-  margin: 0 2em 0 1.5em;
-}
-
-.trend-modal input {
-  transform: scale(1.5);
-  cursor: pointer;
-}
-
-.set-trend > div {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 2em 0 1.5em;
 }
 
 .trend-modal small {
-  display: block;
-  padding: 0 0 0 1.8em;
-  margin: 1em 0;
   color: #919ea9;
+}
+
+#container {
+  position: relative;
+  right: 1em;
+  cursor: pointer;
+}
+
+#container input {
+  opacity: 0;
+}
+
+#checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 0.3em;
+  border: 0.1em solid #00000071;
+  background-color: #eee;
+}
+
+#container input:checked ~ #checkmark {
+  background-color: #2196F3;
+}
+
+#checkmark:after {
+  content: "check";
+  font-family: 'Material Icons';
+  position: absolute;
+  display: none;
+}
+
+#container input:checked ~ #checkmark:after {
+  display: block;
+}
+
+#container #checkmark:after {
+  color: #fff;
+  bottom: -4px;
+  font-size: 1.3em;
 }
 
 @media screen and (max-width: 768px) {

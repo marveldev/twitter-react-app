@@ -6,25 +6,37 @@ const TrendingPane = () => {
 
   const trendModal = (
     <>
-      <div className="overlay"></div>
+      <div onClick={() => setModalActive(false)} className="overlay"></div>
       <div className="trend-modal">
-        <button type="button" onClick={() => setModalActive(false)}>X</button>
+        <button type="button" onClick={() => setModalActive(false)}>
+          <i className="material-icons">&#xe5cd;</i>
+        </button>
         <h4>Trends</h4>
-        <div className="set-location">
+        <div className="set-trend">
           <p>Location</p>
           <div>
-            <span>Show content in this location</span>
-            <input type="checkbox" />
+            <div className="checkbox-container">
+              <span>Show content in this location</span>
+              <label id="container">
+                <input type="checkbox" />
+                <span id="checkmark"></span>
+              </label>
+            </div>
+            <small>When this is on, you'll see what's happening around you right now.</small>
           </div>
-          <small>When this is on, you'll see what's happening around you right now.</small>
         </div>
         <div className="set-trend">
           <p>Personalization</p>
           <div>
-            <span>Trends for you</span>
-            <input type="checkbox" />
+            <div className="checkbox-container">
+              <span>Trends for you</span>
+              <label id="container">
+                <input type="checkbox" />
+                <span id="checkmark"></span>
+              </label>
+            </div>
+            <small>You can personalize trends based on your location and who you follow</small>
           </div>
-          <small>You can personalize trends based on your location and who you follow</small>
         </div>
       </div>
     </>
@@ -35,7 +47,7 @@ const TrendingPane = () => {
       <i className="fa fa-search"></i>
       <input type="text" className="search-input" placeholder="Search Twitter" />
       <div className="trending-tweets">
-        <h4>Trends</h4> 
+        <h4>Trends</h4>
         <button type="button" onClick={() => setModalActive(true)}><i className="material-icons">&#xe8b8;</i></button>
         <div className="current-trend">
           <p>Trending in Nigeria</p>

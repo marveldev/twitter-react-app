@@ -142,7 +142,12 @@ const DisplayModal = ({ setDisplayModal, theme, setTheme, textColor, setTextColo
               </div>
             </div>
           </section>
-          <button type="button" className="save-button">Done</button>
+          <button
+            onClick={() => setDisplayModal(false)}
+            type="button" className="save-button"
+          >
+            Done
+          </button>
         </div>
       </div>
     </>

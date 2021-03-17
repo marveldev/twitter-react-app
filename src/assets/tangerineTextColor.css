@@ -83,10 +83,39 @@
   color: #FFAD1F;
 }
 
-.tangerine .message-button {
+.tangerine .message-button,
+.tangerine .save-button,
+.tangerine #saveProfileButton {
   background-color: #FFAD1F;
 }
 
-.tangerine .message-button:hover {
+.tangerine .message-button:hover,
+.tangerine .save-button:hover,
+.tangerine #saveProfileButton:hover {
   background-color: #F6A71E;
+}
+
+.tangerine .trend-modal > button {
+  color: #FFAD1F;
+}
+
+.tangerine .trend-modal > button:hover {
+  background-color: #ffad1f3b;
+}
+
+.tangerine #container input:checked ~ #checkmark {
+  background-color: #FFAD1F;
+}
+
+.tangerine .current-section {
+  border-right: 0.15em solid #FFAD1F;
+}
+
+.tangerine .container input:checked ~ .checkmark {
+  background-color: #FFAD1F;
+  border: 0.15em solid #FFAD1F;
+}
+
+.tangerine #defaultTheme {
+  border: 0.15em solid #FFAD1F;
 }
