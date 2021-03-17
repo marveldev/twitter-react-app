@@ -3,7 +3,11 @@
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "./assets/dimTheme.css";
 @import "./assets/lightsOutTheme.css";
-@import "./assets/textColor.css";
+@import "./assets/tangerineTextColor.css";
+@import "./assets/purpleTextColor.css";
+@import "./assets/orangeTextColor.css";
+@import "./assets/greenTextColor.css";
+@import "./assets/ceriseTextColor.css";
 
 #root {
   margin: 0;
