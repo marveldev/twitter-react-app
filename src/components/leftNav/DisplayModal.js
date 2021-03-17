@@ -1,9 +1,6 @@
-const DisplayModal = ({ setDisplayModal, theme, setTheme }) => {
-  const changeTheme = (theme) => {
-    setTheme(theme)
-    localStorage.setItem('storedTheme', theme)
-  }
+import { changeTheme } from '../helper'
 
+const DisplayModal = ({ setDisplayModal, theme, setTheme }) => {
   return (
     <>
       <div className="overlay" onClick={() => setDisplayModal(false)}></div>
@@ -39,32 +36,50 @@ const DisplayModal = ({ setDisplayModal, theme, setTheme }) => {
             <div>
               <h3>Color</h3>
             </div>
-            <div className="color-options">
+            <section className="color-options">
               <div id="blueColor">
-                <button className="circle">✔</button>
+                <label className="container">
+                  <input type="radio" name="color"/>
+                  <span className="checkmark"></span>
+                </label>
                 <i className="fa fa-heart"></i>
               </div>
               <div id="tangerineColor">
-                <button className="circle">✔</button>
+                <label className="container">
+                  <input type="radio" name="color"/>
+                  <span className="checkmark"></span>
+                </label>
                 <i className="fa fa-star"></i>
               </div>
               <div id="ceriseColor">
-                <button className="circle">✔</button>
+                <label className="container">
+                  <input type="radio" name="color"/>
+                  <span className="checkmark"></span>
+                </label>
                 <i className="material-icons">&#x1F338;</i>
               </div>
               <div id="purpleColor">
-                <button className="circle">✔</button>
+                <label className="container">
+                  <input type="radio" name="color"/>
+                  <span className="checkmark"></span>
+                </label>
                 <i className="material-icons">&#x1F47E;</i>
               </div>
               <div id="orangeColor">
-                <button className="circle">✔</button>
+                <label className="container">
+                  <input type="radio" name="color"/>
+                  <span className="checkmark"></span>
+                </label>
                 <i className="material-icons">&#x1F525;</i>
               </div>
               <div id="greenColor">
-                <button className="circle">✔</button>
+                <label className="container">
+                  <input type="radio" name="color"/>
+                  <span className="checkmark"></span>
+                </label>
                 <i className="material-icons">&#x1F951;</i>
               </div>
-            </div>
+            </section>
           </section>
           <section className="more-options">
             <div>
@@ -73,17 +88,19 @@ const DisplayModal = ({ setDisplayModal, theme, setTheme }) => {
             <div className="theme-options">
               <div>
                 <label className="container" id="defaultTheme"
-                  onClick={() => changeTheme('default')}
+                  onClick={() => changeTheme('default', setTheme)}
                 >
-                  <input type="radio" name="radio"
+                  <input type="radio" name="theme"
                     defaultChecked={theme === 'default' ? true : false}
                   />
                   <span className="checkmark"></span>Default
                 </label>
               </div>
               <div>
-                <label className="container" id="dimTheme" onClick={() => changeTheme('dim')}>
-                  <input type="radio" name="radio"
+                <label className="container" id="dimTheme"
+                  onClick={() => changeTheme('dim', setTheme)}
+                >
+                  <input type="radio" name="theme"
                     defaultChecked={theme === 'dim' ? true : false}
                   />
                   <span className="checkmark"></span>Dim
@@ -91,9 +108,9 @@ const DisplayModal = ({ setDisplayModal, theme, setTheme }) => {
               </div>
               <div>
                 <label className="container" id="lightsOutTheme"
-                  onClick={() => changeTheme('lights-out')}
+                  onClick={() => changeTheme('lights-out', setTheme)}
                 >
-                  <input type="radio" name="radio"
+                  <input type="radio" name="theme"
                     defaultChecked={theme === 'lights-out' ? true : false}
                   />
                   <span className="checkmark"></span>Lights-out

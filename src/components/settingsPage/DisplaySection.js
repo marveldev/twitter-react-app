@@ -1,9 +1,6 @@
-const DisplaySection = ({ theme, setTheme }) => {
-  const changeTheme = (theme) => {
-    setTheme(theme)
-    localStorage.setItem('storedTheme', theme)
-  }
+import { changeTheme } from "../helper"
 
+const DisplaySection = ({ theme, setTheme }) => {
   return (
     <div className="display-section">
       <div className="section header">
@@ -42,27 +39,45 @@ const DisplaySection = ({ theme, setTheme }) => {
           </div>
           <div className="color-options">
             <div id="blueColor">
-              <button className="circle">✔</button>
+              <label className="container">
+                <input type="radio" name="textColor"/>
+                <span className="checkmark"></span>
+              </label>
               <i className="fa fa-heart"></i>
             </div>
             <div id="tangerineColor">
-              <button className="circle">✔</button>
+              <label className="container">
+                <input type="radio" name="textColor"/>
+                <span className="checkmark"></span>
+              </label>
               <i className="fa fa-star"></i>
             </div>
             <div id="ceriseColor">
-              <button className="circle">✔</button>
+              <label className="container">
+                <input type="radio" name="textColor"/>
+                <span className="checkmark"></span>
+              </label>
               <i className="material-icons">&#x1F338;</i>
             </div>
             <div id="purpleColor">
-              <button className="circle">✔</button>
+              <label className="container">
+                <input type="radio" name="textColor"/>
+                <span className="checkmark"></span>
+              </label>
               <i className="material-icons">&#x1F47E;</i>
             </div>
             <div id="orangeColor">
-              <button className="circle">✔</button>
+              <label className="container">
+                <input type="radio" name="textColor"/>
+                <span className="checkmark"></span>
+              </label>
               <i className="material-icons">&#x1F525;</i>
             </div>
             <div id="greenColor">
-              <button className="circle">✔</button>
+              <label className="container">
+                <input type="radio" name="textColor"/>
+                <span className="checkmark"></span>
+              </label>
               <i className="material-icons">&#x1F951;</i>
             </div>
           </div>
@@ -74,7 +89,7 @@ const DisplaySection = ({ theme, setTheme }) => {
           <div className="theme-options">
             <div>
               <label className="container" id="defaultTheme"
-                onClick={() => changeTheme('default')}
+                onClick={() => changeTheme('default', setTheme)}
               >
                 <input type="radio" name="radio"
                   defaultChecked={theme === 'default' ? true : false}
@@ -83,7 +98,9 @@ const DisplaySection = ({ theme, setTheme }) => {
               </label>
             </div>
             <div>
-              <label className="container" id="dimTheme" onClick={() => changeTheme('dim')}>
+              <label className="container" id="dimTheme"
+                onClick={() => changeTheme('dim', setTheme)}
+              >
                 <input type="radio" name="radio"
                   defaultChecked={theme === 'dim' ? true : false}
                 />
@@ -92,7 +109,7 @@ const DisplaySection = ({ theme, setTheme }) => {
             </div>
             <div>
               <label className="container" id="lightsOutTheme"
-                onClick={() => changeTheme('lights-out')}
+                onClick={() => changeTheme('lights-out', setTheme)}
               >
                 <input type="radio" name="radio"
                   defaultChecked={theme === 'lights-out' ? true : false}
