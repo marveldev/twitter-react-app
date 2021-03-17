@@ -8,8 +8,9 @@ import { useState } from 'react'
 
 const App = () => {
   const storedTheme = localStorage.getItem('storedTheme')
+  const storedTextColor = localStorage.getItem('storedTextColor')
   const [theme, setTheme] = useState(storedTheme || '')
-  const [textColor, setTextColor] = useState('tangerine')
+  const [textColor, setTextColor] = useState(storedTextColor || '')
   const [tweetData, setTweetData] = useState([])
   const [editTweetModal, setEditTweetModal] = useState(false)
   const [tweetDropdown, setTweetDropdown] = useState({isActive: false})
@@ -23,6 +24,8 @@ const App = () => {
         <LeftNav
           theme={theme}
           setTheme={setTheme}
+          textColor={textColor}
+          setTextColor={setTextColor}
           tweetData={tweetData}
           setTweetData={setTweetData}
         />
@@ -77,6 +80,8 @@ const App = () => {
               <SettingsPage
                 theme={theme}
                 setTheme={setTheme}
+                textColor={textColor}
+                setTextColor={setTextColor}
               />
             )}
           />
