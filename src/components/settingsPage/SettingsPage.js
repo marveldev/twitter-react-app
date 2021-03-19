@@ -89,6 +89,7 @@ const SettingsPage = ({ theme, setTheme, textColor, setTextColor }) => {
             setTheme={setTheme}
             textColor={textColor}
             setTextColor={setTextColor}
+            switchCurrentSection={switchCurrentSection}
           />
         }
       </div>

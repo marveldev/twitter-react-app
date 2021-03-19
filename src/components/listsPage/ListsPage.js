@@ -1,10 +1,17 @@
+import { useHistory } from 'react-router'
 import './listsPage.css'
 
 const ListsPage = () => {
+  const history = useHistory()
   return (
     <div className="lists-page">
       <div className="header">
-        <button type="button"><i className="material-icons">&#xe5c4;</i></button>
+        <button
+          onClick={() => history.goBack()}
+          type="button"
+        >
+          <i className="material-icons">&#xe5c4;</i>
+        </button>
         <div>
           <span>Lists</span>
           <small>@Marvel1167481</small>

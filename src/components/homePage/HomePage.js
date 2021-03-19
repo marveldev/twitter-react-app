@@ -5,7 +5,7 @@ import CommentModal from "../commentPage/CommentModal"
 import './homePage.css'
 import TweetDropdown from "./TweetDropdown"
 import DeleteModal from "./DeleteModal"
-import { inputEventHandler, addTweetData } from "../helper"
+import { inputEventHandler, addTweetData } from "../common"
 import EditTweetModal from "./EditTweetModal"
 
 const HomePage = ({

@@ -1,7 +1,7 @@
 import { useHistory } from "react-router-dom"
 
 const Tweets = ({ tweetData, setCommentModal, setTweetDropdown, setSelectedTweet }) => {
-  const history = useHistory('')
+  const history = useHistory()
   const openTweetDropdown = (event, tweetItem) => {
     event.stopPropagation()
     const top = event.clientY

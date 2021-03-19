@@ -1,17 +1,19 @@
 import { useState } from "react"
+import { useHistory } from "react-router-dom"
 import EditProfileModal from './EditProfileModal'
 import Tweets from '../homePage/Tweets'
 import CommentModal from "../commentPage/CommentModal"
-import TweetDropdown from "../homePage/TweetDropdown"
-import './profilePage.css'
 import DeleteModal from "../homePage/DeleteModal"
-import EditTweetModal from "../homePage/EditTweetModal.js"
+import TweetDropdown from "../homePage/TweetDropdown"
+import EditTweetModal from "../homePage/EditTweetModal"
+import './profilePage.css'
 
 const ProfilePage = ({
   tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal, selectedTweet,
   setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible, setDeleteModalIsVisible,
   setSelectedTweet
 }) => {
+  const { goBack } = useHistory()
   const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
   const [editModalDisplay, setEditModal] = useState(false)
   const [bio, setBio] = useState({
@@ -27,7 +29,12 @@ const ProfilePage = ({
   return (
     <div className="profile-page">
       <div className="header">
-        <button type="button"><i className="material-icons">&#xe5c4;</i></button>
+        <button
+          onClick={() => goBack()}
+          type="button"
+        >
+          <i className="material-icons">&#xe5c4;</i>
+        </button>
         <div>
           <span>{bio.name}</span>
           <small>4 Tweets</small>

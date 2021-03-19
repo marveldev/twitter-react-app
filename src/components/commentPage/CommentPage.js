@@ -1,14 +1,17 @@
+import { useHistory } from 'react-router-dom'
+import { useState } from "react"
 import CommentModal from './CommentModal'
 import Comments from "./Comments"
 import './commentPage.css'
-import { useState } from "react"
 
 const CommentPage = () => {
   const [commentModalDisplay, setCommentModal] = useState(false)
+  const { goBack } = useHistory()
+
   return (
     <div className="comment-page">
       <div className="header">
-        <button><i className="material-icons">&#xe5c4;</i></button>
+        <button onClick={() => goBack()}><i className="material-icons">&#xe5c4;</i></button>
         <span>Tweet</span>
       </div>
       <div className="tweet-content">

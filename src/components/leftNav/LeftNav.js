@@ -1,106 +1,69 @@
-import { Link } from 'react-router-dom'
 import { useState } from "react"
+import { Link, useHistory } from 'react-router-dom'
 import TweetModal from './TweetModal'
-import './leftNav.css'
 import DisplayModal from './DisplayModal'
+import DropDownModal from './DropDownModal'
+import './leftNav.css'
 
-const LeftNav = ({ theme, setTheme, textColor, setTextColor, tweetData, setTweetData }) => {
-  const [activeNav, setActiveNav] = useState('')
+const LeftNav = ({
+  theme, setTheme, textColor, setTextColor,
+  tweetData, setTweetData, setActivePage
+}) => {
   const [tweetModalDisplay, setTweetModalDisplay] = useState(false)
   const [dropDownDisplay, setDropDownDisplay] = useState(false)
   const [displayModal, setDisplayModal] = useState(false)
-
-  const dropDownModal = (
-    <>
-      <div className="overlay" style={{backgroundColor: "#110d0d0a"}}
-        onClick={() => setDropDownDisplay(false)}
-      >
-      </div>
-      <div className="dropdown-content">
-        <button className="dropdown-button">
-          <i className="material-icons">&#xe8e1;</i>
-          Topics
-        </button>
-        <button className="dropdown-button">
-          <i className="fa fa-bolt"></i>
-          Moments
-        </button>
-        <button className="dropdown-button">
-          <i className="fa fa-external-link-square"></i>
-          Twitter Ads
-        </button>
-        <button className="dropdown-button">
-          <i className="fa fa-bar-chart"></i>
-          Analytics
-        </button>
-        <Link to='./settings'
-          className="dropdown-button"
-          onClick={() => setDropDownDisplay(false)}
-        >
-          <i className="material-icons">&#xe8b8;</i>
-          Settings and privacy
-        </Link>
-        <button className="dropdown-button">
-          <i className="fa fa-question-circle-o"></i>
-          Help Center
-        </button>
-        <button className="dropdown-button"
-          onClick={() => {setDisplayModal(true); setDropDownDisplay(false)}}
-        >
-          <i className="material-icons">&#xe3ae;</i>
-          Display
-        </button>
-      </div>
-    </>
-  )
-
+  const { location } = useHistory()
+  const { pathname } = location
+  console.log(pathname);
   return (
     <div className="left-nav">
       <div className="left-nav-content">
         <span id="logo"><i className="fa">&#xf099;</i></span>
-        <Link to="/" className={activeNav === 'home' ? 'nav-button active' : 'nav-button'}
-          onClick={() => setActiveNav('home')}>
+        <Link to="/"
+          className="nav-button" id={pathname === '/' ? 'active' : ''}
+          onClick={() => setActivePage('/')}
+        >
           <i className="glyphicon glyphicon-home"></i>
           <span>Home</span>
         </Link>
         <Link to="/explore"
-          className={activeNav === 'explore' ? 'nav-button active' : 'nav-button'}
-          onClick={() => setActiveNav('explore')}
+          className="nav-button" id={pathname === '/explore' ? 'active' : ''}
+          onClick={() => setActivePage('/explore')}
         >
           <i className="fa fa-hashtag"></i>
           <span>Explore</span>
         </Link>
         <Link to="/notification"
-          className={activeNav === 'notification' ? 'nav-button active' : 'nav-button'}
-          onClick={() => setActiveNav('notification')}
+          className="nav-button" id={pathname === '/notification' ? 'active' : ''}
+          onClick={() => setActivePage('/notification')}
         >
           <i className="fa fa-bell-o"></i>
           <span>Notifications</span>
         </Link>
         <Link to="/messages"
-          className={activeNav === 'messages' ? 'nav-button active' : 'nav-button'}
-          onClick={() => setActiveNav('messages')}
+          className="nav-button" id={pathname === '/messages' ? 'active' : ''}
+          onClick={() => setActivePage('/messages')}
         >
           <i className="fa fa-envelope-o"></i>
           <span>Messages</span>
         </Link>
         <Link to="/bookmark"
-          className={activeNav === 'bookmark' ? 'nav-button active' : 'nav-button'}
-          onClick={() => setActiveNav('bookmark')}
+          className="nav-button" id={pathname === '/bookmark' ? 'active' : ''}
+          onClick={() => setActivePage('/bookmark')}
         >
           <i className="fa fa-bookmark-o"></i>
           <span>Bookmarks</span>
         </Link>
         <Link to="/list"
-          className={activeNav === 'list' ? 'nav-button active' : 'nav-button'}
-          onClick={() => setActiveNav('list')}
+          className="nav-button" id={pathname === '/list' ? 'active' : ''}
+          onClick={() => setActivePage('/list')}
         >
           <i className="fa fa-list-alt"></i>
           <span>Lists</span>
         </Link>
         <Link to="/profile"
-          className={activeNav === 'profile' ? 'nav-button active' : 'nav-button'}
-          onClick={() => setActiveNav('profile')}
+          className="nav-button" id={pathname === '/profile' ? 'active' : ''}
+          onClick={() => setActivePage('/profile')}
         >
           <i className="fa fa-user-o"></i>
           <span>Profile</span>
@@ -128,7 +91,12 @@ const LeftNav = ({ theme, setTheme, textColor, setTextColor, tweetData, setTweet
           setTweetData={setTweetData}
         />
       }
-      { dropDownDisplay && dropDownModal }
+      { dropDownDisplay &&
+        <DropDownModal
+          setDropDownDisplay={setDropDownDisplay}
+          setDisplayModal={setDisplayModal}
+        />
+      }
       { displayModal &&
         <DisplayModal
           setDisplayModal={setDisplayModal}

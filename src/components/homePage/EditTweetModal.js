@@ -1,4 +1,4 @@
-import { inputEventHandler } from "../helper"
+import { inputEventHandler } from "../common"
 
 const EditTweetModal = ({
   setEditTweetModal, tweetData, setTweetData, selectedTweet

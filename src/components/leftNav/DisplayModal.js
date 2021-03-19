@@ -1,4 +1,4 @@
-import { changeTheme, changeTextColor } from '../helper'
+import { changeTheme, changeTextColor } from '../common'
 
 const DisplayModal = ({ setDisplayModal, theme, setTheme, textColor, setTextColor }) => {
   return (

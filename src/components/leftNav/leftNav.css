@@ -33,7 +33,7 @@ button {
   background-color: #E8F5FE;
 }
 
-.left-nav-content .active {
+#active {
   color: #1DA1F2;
   text-decoration: none;
 }

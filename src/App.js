@@ -1,16 +1,17 @@
+import { useState } from 'react'
+import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom'
 import {
   TrendingPane, HomePage, LeftNav, ProfilePage, ExplorePage,
   NotificationPage, BookmarkPage, ListsPage, MessagePage, CommentPage, SettingsPage
 } from './components'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './index.css'
-import { useState } from 'react'
 
 const App = () => {
   const storedTheme = localStorage.getItem('storedTheme')
   const storedTextColor = localStorage.getItem('storedTextColor')
   const [theme, setTheme] = useState(storedTheme || '')
   const [textColor, setTextColor] = useState(storedTextColor || '')
+  const [activePage, setActivePage] = useState('')
   const [tweetData, setTweetData] = useState([])
   const [editTweetModal, setEditTweetModal] = useState(false)
   const [tweetDropdown, setTweetDropdown] = useState({isActive: false})
@@ -28,6 +29,7 @@ const App = () => {
           setTextColor={setTextColor}
           tweetData={tweetData}
           setTweetData={setTweetData}
+          setActivePage={setActivePage}
         />
         <Switch>
           <Route path="/"

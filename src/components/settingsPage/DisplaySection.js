@@ -1,10 +1,13 @@
-import { changeTheme, changeTextColor } from "../helper"
+import { changeTheme, changeTextColor } from "../common"
 
-const DisplaySection = ({ theme, setTheme, textColor, setTextColor }) => {
+const DisplaySection = ({ theme, setTheme, textColor, setTextColor, switchCurrentSection }) => {
   return (
     <div className="display-section">
       <div className="section header">
-        <button type="button" className="previous-button">
+        <button
+          onClick={() => switchCurrentSection('accessibility')}
+          type="button" className="previous-button"
+        >
           <i className="material-icons">&#xe5c4;</i>
         </button>
         <span>Display</span>
