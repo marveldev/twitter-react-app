@@ -6,13 +6,15 @@
   grid-template-columns: 1fr 1.5fr;
 }
 
-.message-pane {
+.initial-message-section {
+  position: absolute;
+  top: 30%;
+  left: 50%;
   text-align: center;
   font-size: 1.2em;
-  margin: auto;
 }
 
-.page-core {
+.message-contact-page {
   position: relative;
   top: 2.5em;
   border-right: 1px solid #E6ECF0;
@@ -103,7 +105,7 @@
     left: 25.2%;
   }
 
-  .message-pane {
+  .initial-message-section {
     text-align: center;
     font-size: 1.2em;
     margin: auto;
@@ -131,7 +133,7 @@
     width: 100%;
   }
 
-  .message-pane {
+  .initial-message-section {
     display: none;
   }
 }
