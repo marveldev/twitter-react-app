@@ -1,4 +1,4 @@
-import { changeTheme, changeTextColor } from "../common"
+import { changeTheme, changeTextColor } from "../common/helper"
 
 const DisplaySection = ({ theme, setTheme, textColor, setTextColor, switchCurrentSection }) => {
   return (

@@ -1,11 +1,11 @@
 import { useState } from "react"
 import { useHistory } from "react-router-dom"
 import EditProfileModal from './EditProfileModal'
-import Tweets from '../homePage/Tweets'
+import Tweets from '../common/Tweets'
 import CommentModal from "../commentPage/CommentModal"
-import DeleteModal from "../homePage/DeleteModal"
-import TweetDropdown from "../homePage/TweetDropdown"
-import EditTweetModal from "../homePage/EditTweetModal"
+import DeleteModal from "../common/DeleteModal"
+import TweetDropdown from "../common/TweetDropdown"
+import EditTweetModal from "../common/EditTweetModal"
 import './profilePage.css'
 
 const ProfilePage = ({

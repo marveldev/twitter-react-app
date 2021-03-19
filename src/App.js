@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import {
   TrendingPane, HomePage, LeftNav, ProfilePage, ExplorePage,
   NotificationPage, BookmarkPage, ListsPage, MessagePage, CommentPage, SettingsPage
@@ -30,6 +30,7 @@ const App = () => {
           tweetData={tweetData}
           setTweetData={setTweetData}
           setActivePage={setActivePage}
+          activePage={activePage}
         />
         <Switch>
           <Route path="/"

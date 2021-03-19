@@ -14,7 +14,7 @@ const LeftNav = ({
   const [displayModal, setDisplayModal] = useState(false)
   const { location } = useHistory()
   const { pathname } = location
-  console.log(pathname);
+
   return (
     <div className="left-nav">
       <div className="left-nav-content">

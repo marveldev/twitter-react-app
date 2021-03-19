@@ -1,12 +1,12 @@
-import Tweets from "./Tweets"
+import Tweets from "../common/Tweets"
 import { useState } from "react"
 import MobileLeftNav from "../leftNav/MobileLeftNav"
 import CommentModal from "../commentPage/CommentModal"
 import './homePage.css'
-import TweetDropdown from "./TweetDropdown"
-import DeleteModal from "./DeleteModal"
-import { inputEventHandler, addTweetData } from "../common"
-import EditTweetModal from "./EditTweetModal"
+import TweetDropdown from "../common/TweetDropdown"
+import DeleteModal from "../common/DeleteModal"
+import { inputEventHandler, addTweetData } from "../common/helper"
+import EditTweetModal from "../common/EditTweetModal"
 
 const HomePage = ({
   tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal,
