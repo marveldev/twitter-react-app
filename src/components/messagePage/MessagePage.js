@@ -1,6 +1,6 @@
 import './messagePage.css'
-import { InitialContactPage } from "./ContactPage"
-import { InitialMessageSection } from './MessageSection'
+import { ContactPage } from "./ContactPage"
+import { MessageSection } from './MessageSection'
 
 const MessagePage = () => {
   return (
@@ -11,11 +11,11 @@ const MessagePage = () => {
           <button type="button"><i className="fa fa-envelope-o"></i></button>
         </div>
         <div className="message-contact-page">
-          <InitialContactPage/>
+          <ContactPage/>
         </div>
       </div>
       <div className="current-message-section">
-        <InitialMessageSection/>
+        <MessageSection/>
       </div>
     </div>
   )

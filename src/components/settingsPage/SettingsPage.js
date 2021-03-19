@@ -24,7 +24,7 @@ const SettingsPage = ({ theme, setTheme, textColor, setTextColor }) => {
 
   return (
     <div className="settings-page">
-      <div id="settingsPage">
+      <div>
         <div className="headline">
           <button type="button" className="previous-button"><i className="material-icons">&#xe5c4;</i></button>
           <span>Settings</span>
