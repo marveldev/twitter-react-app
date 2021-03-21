@@ -18,6 +18,7 @@ const App = () => {
   const [deleteModalIsVisible, setDeleteModalIsVisible] = useState(false)
   const [commentModal, setCommentModal] = useState(false)
   const [selectedTweet, setSelectedTweet] = useState({})
+  const [messageData, setMessageData] = useState([])
 
   return (
     <BrowserRouter>
@@ -76,7 +77,15 @@ const App = () => {
           <Route path="/list" component={ListsPage}/>
         </Switch>
         <Switch>
-          <Route path="/messages" component={MessagePage}/>
+          <Route
+            path="/messages"
+            component={() => (
+              <MessagePage
+                messageData={messageData}
+                setMessageData={setMessageData}
+              />
+            )}
+          />
           <Route
             path="/settings"
             component={() => (
