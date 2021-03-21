@@ -2,7 +2,7 @@ import './messagePage.css'
 import { ContactPage } from "./ContactPage"
 import { MessageSection } from './MessageSection'
 
-const MessagePage = () => {
+const MessagePage = ({ messageData, setMessageData }) => {
   return (
     <div className="message-page">
       <div>
@@ -15,7 +15,10 @@ const MessagePage = () => {
         </div>
       </div>
       <div className="current-message-section">
-        <MessageSection/>
+        <MessageSection
+          messageData={messageData}
+          setMessageData={setMessageData}
+        />
       </div>
     </div>
   )

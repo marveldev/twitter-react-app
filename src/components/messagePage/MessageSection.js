@@ -1,3 +1,5 @@
+import Message from "./Message.js";
+
 const InitialMessageSection = () => {
   return (
     <div className="initial-message-section">
@@ -8,29 +10,43 @@ const InitialMessageSection = () => {
   )
 }
 
-const MessageSection = () => {
+const MessageSection = ({ messageData, setMessageData }) => {
+  const addMessageData = () => {
+    const text = document.querySelector('#messageBox').value
+    const id = 'id' + Date.parse(new Date()).toString()
+    const messageObject = {
+      text,
+      id
+    }
+
+    setMessageData([...messageData, messageObject])
+  }
+
   return (
-    <>
-      <div className="message-section">
-        <div className="section-header">
-          <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="user-profile" />
-          <strong>Danny Thompson</strong>
-          <span class="material-icons">&#xe88f;</span>
-        </div>
-        <div className="section-content">
-          <div className="message-container">
-            <h1>hello</h1>
-          </div>
-          <form>
-            <span className="fa fa-file-picture-o"></span>
-            <span className="fa fa-git-square"></span>
-            <textarea placeholder="Start a new message"></textarea>
-            <span className="fa fa-smile-o smiley-icon"></span>
-            <span className="material-icons send-icon">&#xe163;</span>
-          </form>
-        </div>
+    <div className="message-section">
+      <div className="section-header">
+        <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="user-profile" />
+        <strong>Danny Thompson</strong>
+        <span className="material-icons">&#xe88f;</span>
       </div>
-    </>
+      <div id="sectionContent">
+        <div className="message-container">
+          <Message
+            messageData={messageData}
+            setMessageData={setMessageData}
+          />
+        </div>
+        <form>
+          <span className="fa fa-file-picture-o"></span>
+          <span className="fa fa-git-square"></span>
+          <textarea id="messageBox" placeholder="Start a new message"></textarea>
+          <span className="fa fa-smile-o smiley-icon"></span>
+          <span onClick={() => addMessageData()} className="material-icons send-icon">
+            &#xe163;
+          </span>
+        </form>
+      </div>
+    </div>
   )
 }
 
