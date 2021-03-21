@@ -152,6 +152,8 @@
   height: 38em;
   max-height: 45em;
   overflow-y: scroll;
+  padding: 1em;
+  border-bottom: 1px solid #E6ECF0;
 }
 
 .message-section form {
@@ -164,7 +166,7 @@
   padding: 1em 1em;
 }
 
-.message-section textarea {
+#messageBox {
   font-size: 1.1em;
   padding: 1em 2em 0;
   border: none;
@@ -176,27 +178,78 @@
   background-color: #EBEEF0;
 }
 
-.message-section .section-content span {
-  font-size: 1.5em;
-  color: #1DA1F2;
-}
-
 .message-section span {
-  font-size: 1.8em;
+  font-size: 1.6em;
   margin-right: 0.8em;
   color: #1DA1F2;
+  cursor: pointer;
 }
 
-.message-section .section-content .smiley-icon {
+.smiley-icon {
   position: relative;
   right: 1.5em;
   font-size: 1.7em;
   color: #1DA1F2;
+  cursor: pointer;
 }
 
-.message-section .send-icon {
+#sectionContent {
   position: relative;
-  right: 1em;
+  top: 4em;
+  border-right: 1px solid #E6ECF0;
+  height: 100%;
+}
+
+.message-item {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.message-section .message {
+  background-color: #1DA1F2;
+  color: #fff;
+  font-weight: 600;
+  width: fit-content;
+  border-radius: 1em 1em 0 1em;
+  padding: 0.9em;
+  max-width: 25em;
+  word-wrap: break-word;
+  height: auto;
+  margin: 0;
+}
+
+.message-time {
+  float: right;
+  color: #9aad88;
+}
+
+.message-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.message-options {
+  visibility: hidden;
+  margin-right: 0.5em;
+}
+
+.message-options > p {
+  display: inline;
+  font-size: 1.7em;
+  padding: 0.5em;
+  border-radius: 1.5em;
+  vertical-align: middle;
+}
+
+.message-options > p:hover {
+  background-color: #E8F5FE;
+}
+
+.message-section .message:hover {
+  background-color: #2d91cf;
 }
 
 @media screen and (max-width: 1024px) {
