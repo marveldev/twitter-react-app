@@ -20,6 +20,7 @@ const App = () => {
   const [commentModal, setCommentModal] = useState(false)
   const [selectedTweet, setSelectedTweet] = useState({})
   const [messageData, setMessageData] = useState([])
+  const [commentData, setCommentData] = useState([])
   const [bio, setBio] = useState({
     name: 'Jane Doe',
     aboutUser: 'Front-end developer',
@@ -69,6 +70,8 @@ const App = () => {
               <CommentPage
                 bio={bio}
                 selectedTweet={selectedTweet}
+                commentData={commentData}
+                setCommentData={setCommentData}
               />
             )}
           />

@@ -1,4 +1,29 @@
-const CommentModal = ({ setCommentModal, bio, selectedTweet }) => {
+const CommentModal = ({ setCommentModal, bio, selectedTweet, commentData, setCommentData }) => {
+  const addComment = () => {
+    const commentText = document.querySelector('#commentTextBox').value
+    const id = 'id' + Date.parse(new Date()).toString()
+    const commentObject = {
+      commentText,
+      id,
+      parentId: selectedTweet.id
+    }
+
+    setCommentData([...commentData, commentObject])
+    setCommentModal(false)
+  }
+
+  const inputEventHandler = (event) => {
+    const inputValue = document.querySelector('#commentTextBox').value
+    if (inputValue.trim().length >= 1) {
+      document.querySelector('#commentButton').classList.add('enable')
+      if (event.which === 13 && !event.shiftKey) {
+        addComment()
+      }
+    } else {
+      document.querySelector('#commentButton').classList.remove('enable')
+    }
+  }
+
   return (
     <>
       <div className="overlay" onClick={() => setCommentModal(false)}></div>
@@ -17,7 +42,10 @@ const CommentModal = ({ setCommentModal, bio, selectedTweet }) => {
         </div>
         <div className="comment-input">
           <img src={bio.profilePhoto} className="home-page-photo" alt="user-profile" />
-          <textarea className="input-box" placeholder="Tweet your reply"></textarea>
+          <textarea onKeyUp={inputEventHandler} className="input-box" id="commentTextBox"
+            placeholder="Tweet your reply"
+          >
+          </textarea>
         </div>
         <div className="tweet-options">
           <div>
@@ -27,7 +55,7 @@ const CommentModal = ({ setCommentModal, bio, selectedTweet }) => {
             <span><i className="fa fa-smile-o"></i></span>
             <span><i className="fa fa-calendar-plus-o"></i></span>
           </div>
-          <button className="tweet-button">Reply</button>
+          <button onClick={addComment} id="commentButton" className="tweet-button">Reply</button>
         </div>
       </div>
     </>
