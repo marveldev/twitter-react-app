@@ -1,4 +1,4 @@
-import Message from "./Message.js";
+import Message from "./Message";
 
 const InitialMessageSection = () => {
   return (
@@ -22,6 +22,18 @@ const MessageSection = ({ messageData, setMessageData }) => {
     setMessageData([...messageData, messageObject])
   }
 
+  const inputEventHandler = (event) => {
+    const inputValue = document.querySelector('#messageBox').value
+    if (inputValue.trim().length >= 1) {
+      document.querySelector('.send-button').classList.add('allow')
+      if (event.which === 13) {
+        addMessageData()
+      }
+    } else {
+      document.querySelector('.send-button').classList.remove('allow')
+    }
+  }
+
   return (
     <div className="message-section">
       <div className="section-header">
@@ -39,11 +51,15 @@ const MessageSection = ({ messageData, setMessageData }) => {
         <form>
           <span className="fa fa-file-picture-o"></span>
           <span className="fa fa-git-square"></span>
-          <textarea id="messageBox" placeholder="Start a new message"></textarea>
+          <textarea
+            onKeyUp={(event) => inputEventHandler(event)}
+            id="messageBox" placeholder="Start a new message" autoFocus
+          >
+          </textarea>
           <span className="fa fa-smile-o smiley-icon"></span>
-          <span onClick={() => addMessageData()} className="material-icons send-icon">
+          <button onClick={() => addMessageData()} className="material-icons send-button">
             &#xe163;
-          </span>
+          </button>
         </form>
       </div>
     </div>

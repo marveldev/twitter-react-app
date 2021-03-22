@@ -252,6 +252,18 @@
   background-color: #2d91cf;
 }
 
+.send-button {
+  pointer-events: none;
+  color: #1DA1F2;
+  margin-right: 0.8em;
+  opacity: 0.5;
+}
+
+.allow {
+  pointer-events: auto;
+  opacity: 1;
+}
+
 @media screen and (max-width: 1024px) {
   .headline {
     width: 22em;
