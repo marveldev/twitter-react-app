@@ -1,5 +1,3 @@
-import { inputEventHandler } from "./helper"
-
 const EditTweetModal = ({
   setEditTweetModal, tweetData, setTweetData, selectedTweet
 }) => {
@@ -14,6 +12,18 @@ const EditTweetModal = ({
 
     setTweetData(nextState)
     setEditTweetModal(false)
+  }
+
+  const inputEventHandler = (event,  buttonSelector) => {
+    const inputValue = event.target.value
+    if (inputValue.trim().length >= 1) {
+      document.querySelector(buttonSelector).classList.add('enable')
+      if (event.which === 13) {
+        editTweetData()
+      }
+    } else {
+      document.querySelector(buttonSelector).classList.remove('enable')
+    }
   }
 
   return (
@@ -31,7 +41,7 @@ const EditTweetModal = ({
           <div>
             <div>
               <textarea id="editTweetBox" className="input-box"
-                onChange={() => inputEventHandler('#editTweetBox', '#editTweetButton')}
+                onKeyUp={(event) => inputEventHandler(event, '#editTweetButton')}
                 defaultValue={selectedTweet.tweetText}  placeholder="Enter new tweet here..."
               >
               </textarea>
@@ -50,7 +60,7 @@ const EditTweetModal = ({
               <button
                 onClick={editTweetData}
                 type="button" id="editTweetButton"
-                className="tweet-button"
+                className="enable tweet-button"
               >
                 Save
               </button>

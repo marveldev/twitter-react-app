@@ -28,7 +28,11 @@ const HomePage = ({
           <div>
             <div>
               <textarea
-                onChange={() => inputEventHandler('#tweetHomeBox', '#tweetHomeButton')}
+                onKeyUp={(event) =>
+                  inputEventHandler(event, '#tweetHomeBox',
+                    '#tweetHomeButton', tweetData, setTweetData
+                  )
+                }
                 id="tweetHomeBox" className="input-box" placeholder="What's happening?"
               >
               </textarea>
