@@ -1,3 +1,5 @@
+import { addEntryToDb, clearAllEntries } from "../../dataStorage"
+
 const EditProfileModal = ({ setEditModal, bio, setBio }) => {
   const addPhoto = (id) => {
     const photoReader = new FileReader()
@@ -24,12 +26,16 @@ const EditProfileModal = ({ setEditModal, bio, setBio }) => {
     const day = date.getDate()
     const year = date.getFullYear()
     const birthDate = 'Born '.concat(month, ' ', day, ',' , ' ', year)
-    setBio({
+    const bioObject = {
       name: nameInput, aboutUser: bioInput, location: locationInput,
       website: websiteInput, birthDate: birthDate, profilePhoto: profilePhoto,
       headerPhoto: headerPhoto
-    })
+    }
+
+    setBio(bioObject)
     setEditModal(false)
+    clearAllEntries('bio')
+    addEntryToDb('bio', bioObject)
   }
 
   return (
