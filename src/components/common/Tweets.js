@@ -9,9 +9,15 @@ const Tweets = ({ tweetData, setCommentModal, setTweetDropdown, setSelectedTweet
     setSelectedTweet(tweetItem)
   }
 
+  const openCommentModal = (event, tweetItem) => {
+    event.stopPropagation()
+    setCommentModal(true)
+    setSelectedTweet(tweetItem)
+  }
+
   return (
     tweetData.map(tweetItem => (
-      <div onClick={() => history.push("/comment")}
+      <div onClick={() => {history.push("/comment"); setSelectedTweet(tweetItem) }}
         key={tweetItem.id} className="tweet-item"
       >
         <div className="tweet-content-item">
@@ -34,7 +40,7 @@ const Tweets = ({ tweetData, setCommentModal, setTweetDropdown, setSelectedTweet
             <p>{tweetItem.tweetText}</p>
             <div className="tweet-info">
               <button type="button"
-                onClick={event => { event.stopPropagation(); setCommentModal(true) }}
+                onClick={event => openCommentModal(event, tweetItem)}
               >
                 <i className="fa fa-comment-o"></i>
                 5.1k

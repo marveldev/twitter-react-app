@@ -4,10 +4,9 @@ import CommentModal from './CommentModal'
 import Comments from "./Comments"
 import './commentPage.css'
 
-const CommentPage = () => {
+const CommentPage = ({ bio, selectedTweet }) => {
   const [commentModalDisplay, setCommentModal] = useState(false)
   const { goBack } = useHistory()
-
   return (
     <div className="comment-page">
       <div className="header">
@@ -16,12 +15,12 @@ const CommentPage = () => {
       </div>
       <div className="tweet-content">
         <div>
-          <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="user-profile" />
-          <strong className="user-profile-name">Jane Doe</strong>
+          <img src={bio.profilePhoto} className="home-page-photo" alt="user-profile" />
+          <strong className="user-profile-name">{bio.name}</strong>
           <button><i className="material-icons">&#xe5d3;</i></button>
         </div>
         <div>
-          <p className="tweet-text">Hey All</p>
+          <p className="tweet-text">{selectedTweet.tweetText}</p>
           <p id="time">2:51pm. Feb 15, 2021. Twitter Web App</p>
         </div>
         <div className="tweet-interaction">
@@ -42,7 +41,13 @@ const CommentPage = () => {
         </div>
       </div>
       <div id="commentOutput"></div>
-      {commentModalDisplay && <CommentModal setCommentModal={setCommentModal}/>}
+      {commentModalDisplay &&
+        <CommentModal
+          setCommentModal={setCommentModal}
+          bio={bio}
+          selectedTweet={selectedTweet}
+        />
+      }
       {<Comments />}
     </div>
   )

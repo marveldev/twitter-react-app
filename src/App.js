@@ -64,7 +64,14 @@ const App = () => {
               />
             )} exact
           />
-          <Route path="/comment" component={CommentPage}/>
+          <Route path="/comment"
+            component={() => (
+              <CommentPage
+                bio={bio}
+                selectedTweet={selectedTweet}
+              />
+            )}
+          />
           <Route path="/profile"
             component={() => (
               <ProfilePage

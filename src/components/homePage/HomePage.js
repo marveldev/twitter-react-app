@@ -67,7 +67,13 @@ const HomePage = ({
           />
         </div>
       </div>
-      {commentModal && <CommentModal setCommentModal={setCommentModal}/>}
+      {commentModal &&
+        <CommentModal
+          setCommentModal={setCommentModal}
+          bio={bio}
+          selectedTweet={selectedTweet}
+        />
+      }
       {tweetDropdown.isActive &&
         <TweetDropdown
           tweetDropdown={tweetDropdown}
