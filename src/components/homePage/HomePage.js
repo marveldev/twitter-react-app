@@ -11,7 +11,7 @@ import EditTweetModal from "../common/EditTweetModal"
 const HomePage = ({
   tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal,
   setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible, setDeleteModalIsVisible,
-  selectedTweet, setSelectedTweet, bio
+  selectedTweet, setSelectedTweet, bio, commentData, setCommentData
 }) => {
   const [mobileLeftNav, setMobileLeftNav] = useState(false)
 
@@ -72,6 +72,8 @@ const HomePage = ({
           setCommentModal={setCommentModal}
           bio={bio}
           selectedTweet={selectedTweet}
+          commentData={commentData}
+          setCommentData={setCommentData}
         />
       }
       {tweetDropdown.isActive &&

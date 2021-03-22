@@ -62,6 +62,8 @@ const App = () => {
                 selectedTweet={selectedTweet}
                 setSelectedTweet={setSelectedTweet}
                 bio={bio}
+                commentData={commentData}
+                setCommentData={setCommentData}
               />
             )} exact
           />
@@ -92,6 +94,8 @@ const App = () => {
                 setSelectedTweet={setSelectedTweet}
                 bio={bio}
                 setBio={setBio}
+                commentData={commentData}
+                setCommentData={setCommentData}
               />
             )}
           />
