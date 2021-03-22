@@ -18,7 +18,7 @@ const EditProfileModal = ({ setEditModal, bio, setBio }) => {
     const headerPhoto = document.querySelector('#headerPhoto').src
     const profilePhoto = document.querySelector('#profilePhoto').src
     const websiteInput = document.querySelector('.website-field').value
-    const birthDateInput = document.querySelector('.birth-date-field').value
+    const birthDateInput = document.querySelector('.birth-date-field').value || '1996-04-05'
     const date = new Date(birthDateInput)
     const month = date.toLocaleString('default', { month: 'long' });
     const day = date.getDate()

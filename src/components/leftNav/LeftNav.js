@@ -7,7 +7,7 @@ import './leftNav.css'
 
 const LeftNav = ({
   theme, setTheme, textColor, setTextColor,
-  tweetData, setTweetData, setActivePage
+  tweetData, setTweetData, setActivePage, bio
 }) => {
   const [tweetModalDisplay, setTweetModalDisplay] = useState(false)
   const [dropDownDisplay, setDropDownDisplay] = useState(false)
@@ -79,9 +79,8 @@ const LeftNav = ({
           Tweet
         </button>
         <div className="user-info">
-          <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-            className="left-nav-photo" alt="user-profile" />
-          <span>Jane Doe</span>
+          <img src={bio.profilePhoto} className="left-nav-photo" alt="user-profile" />
+          <span>{bio.name}</span>
         </div>
       </div>
       { tweetModalDisplay &&
@@ -89,6 +88,7 @@ const LeftNav = ({
           setTweetModalDisplay={setTweetModalDisplay}
           tweetData={tweetData}
           setTweetData={setTweetData}
+          bio={bio}
         />
       }
       { dropDownDisplay &&

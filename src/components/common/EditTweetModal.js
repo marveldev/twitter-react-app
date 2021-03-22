@@ -1,5 +1,5 @@
 const EditTweetModal = ({
-  setEditTweetModal, tweetData, setTweetData, selectedTweet
+  setEditTweetModal, tweetData, setTweetData, selectedTweet, bio
 }) => {
   const editTweetData = () => {
     const newTweetInput = document.querySelector('#editTweetBox').value
@@ -36,8 +36,7 @@ const EditTweetModal = ({
           </button>
         </div>
         <div id="tweetContainer">
-          <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-            className="home-page-photo" alt="user-profile" />
+          <img src={bio.profilePhoto} className="home-page-photo" alt="user-profile" />
           <div>
             <div>
               <textarea id="editTweetBox" className="input-box"

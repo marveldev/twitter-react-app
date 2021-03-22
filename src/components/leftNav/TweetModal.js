@@ -1,6 +1,6 @@
 import { inputEventHandler, addTweetData } from "../common/helper"
 
-const TweetModal = ({ setTweetModalDisplay, tweetData, setTweetData }) => {
+const TweetModal = ({ setTweetModalDisplay, tweetData, setTweetData, bio }) => {
   return (
     <>
       <div className="overlay" onClick={() => setTweetModalDisplay(false)}></div>
@@ -11,8 +11,7 @@ const TweetModal = ({ setTweetModalDisplay, tweetData, setTweetData }) => {
           </button>
         </div>
         <div id="tweetContainer">
-          <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-            className="home-page-photo" alt="user-profile" />
+          <img src={bio.profilePhoto} className="home-page-photo" alt="user-profile" />
           <div>
             <div>
               <textarea id="tweetModalBox" className="input-box"

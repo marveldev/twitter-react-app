@@ -11,20 +11,10 @@ import './profilePage.css'
 const ProfilePage = ({
   tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal, selectedTweet,
   setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible, setDeleteModalIsVisible,
-  setSelectedTweet
+  setSelectedTweet, bio, setBio
 }) => {
   const { goBack } = useHistory()
-  const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
   const [editModalDisplay, setEditModal] = useState(false)
-  const [bio, setBio] = useState({
-    name: 'Jane Doe',
-    aboutUser: 'Front-end developer',
-    location: 'Lagos, Nigeria',
-    website: '',
-    birthDate: 'Born April 5, 1906',
-    profilePhoto: profilePhotoUrl,
-    headerPhoto: profilePhotoUrl
-  })
 
   return (
     <div className="profile-page">
@@ -75,6 +65,7 @@ const ProfilePage = ({
             setCommentModal={setCommentModal}
             setTweetDropdown={setTweetDropdown}
             setSelectedTweet={setSelectedTweet}
+            bio={bio}
           />
         </div>
       </div>
@@ -109,6 +100,7 @@ const ProfilePage = ({
           tweetDropdown={tweetDropdown}
           setEditTweetModal={setEditTweetModal}
           selectedTweet={selectedTweet}
+          bio={bio}
         />
       }
     </div>

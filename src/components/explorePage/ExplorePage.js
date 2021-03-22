@@ -47,7 +47,9 @@ const ExplorePage = () => {
         <div>
           <h4>Computer Programming</h4>
           <div className="tweet-content-item">
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="user-profile" />
+            <img src="https://images.pexels.com/photos/6735182/pexels-photo-6735182.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              className="home-page-photo" alt="user-profile"
+            />
             <div>
               <div className="tweet-person">
                 <strong>Derick Alangi</strong>
@@ -65,7 +67,9 @@ const ExplorePage = () => {
             </div>
           </div>
           <div className="tweet-content-item">
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="user-profile" />
+            <img src="https://images.pexels.com/photos/2083188/pexels-photo-2083188.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              className="home-page-photo" alt="user-profile"
+            />
             <div>
               <div className="tweet-person">
                 <strong>Molly Struve</strong>
@@ -84,7 +88,9 @@ const ExplorePage = () => {
             </div>
           </div>
           <div className="tweet-content-item">
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="user-profile" />
+            <img src="https://images.pexels.com/photos/3853513/pexels-photo-3853513.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              className="home-page-photo" alt="user-profile"
+            />
             <div>
               <div className="tweet-person">
                 <strong>Danny Thompson</strong>

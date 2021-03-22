@@ -37,8 +37,10 @@ const MessageSection = ({ messageData, setMessageData }) => {
   return (
     <div className="message-section">
       <div className="section-header">
-        <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="user-profile" />
-        <strong>Danny Thompson</strong>
+        <img src="https://images.pexels.com/photos/2703463/pexels-photo-2703463.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          className="home-page-photo" alt="user-profile"
+        />
+        <strong>Daniella Thompson</strong>
         <span className="material-icons">&#xe88f;</span>
       </div>
       <div id="sectionContent">

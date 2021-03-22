@@ -24,10 +24,12 @@ const ContactPage = () => {
         <input type="text" className="search-input" placeholder="Search for people and groups" />
       </div>
       <div className="contact-list">
-        <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="user-profile" />
+        <img src="https://images.pexels.com/photos/2703463/pexels-photo-2703463.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          className="home-page-photo" alt="user-profile"
+        />
         <div>
           <div className="tweet-person">
-            <strong>Danny Thompson</strong>
+            <strong>Daniella Thompson</strong>
           </div>
           <p>
             Bad Habits you should break as a developer!

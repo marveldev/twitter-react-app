@@ -1,4 +1,3 @@
-const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
 const changeTheme = (theme, setTheme ) => {
   setTheme(theme)
   localStorage.setItem('storedTheme', theme)
@@ -11,12 +10,9 @@ const changeTextColor = (textColor, setTextColor) => {
 
 const addTweetData = (selector, tweetData, setTweetData, setTweetModalDisplay) => {
   const tweetText = document.querySelector(selector).value
-  const name = 'Derick Alangi'
   const id = 'id' + Date.parse(new Date()).toString()
   const tweetObject = {
-    profilePhotoUrl,
     tweetText,
-    name,
     id
   }
 

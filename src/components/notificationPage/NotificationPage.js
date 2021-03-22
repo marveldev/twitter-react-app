@@ -17,21 +17,21 @@ const NotificationPage = () => {
         <div>
           <i className="fa fa-bell symbol"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
+            <img src="https://images.pexels.com/photos/1725399/pexels-photo-1725399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="user-profile"/>
             <p>New Tweet notifications for <strong>Ebenezer Don</strong></p>
           </div>
         </div>
         <div>
           <i className="fa fa-user-o symbol"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
+            <img src="https://images.pexels.com/photos/6924280/pexels-photo-6924280.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="user-profile"/>
             <p><strong>Alo Kayode</strong> followed you</p>
           </div>
         </div>
         <div>
           <i className="fa fa-heart heart-icon"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
+            <img src="https://images.pexels.com/photos/1725399/pexels-photo-1725399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="user-profile"/>
             <p><strong>Ebenezer Don</strong> liked your Tweet</p>
             <p>Ten ways to know a junior developer</p>
           </div>
@@ -39,7 +39,7 @@ const NotificationPage = () => {
         <div>
           <i className="fa fa-star"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
+            <img src="https://images.pexels.com/photos/6338278/pexels-photo-6338278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="user-profile"/>
             <p>Recommended For You</p>
             <p>I'm fired</p>
           </div>
@@ -47,29 +47,29 @@ const NotificationPage = () => {
         <div>
           <i className="fa fa-heart heart-icon"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
-            <p><strong>John Ademoye</strong> liked tour Tweet</p>
+            <img src="https://images.pexels.com/photos/1983917/pexels-photo-1983917.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="user-profile"/>
+            <p><strong>Marcella Dias</strong> liked tour Tweet</p>
             <p>hey</p>
           </div>
         </div>
         <div>
           <i className="fa fa-bell symbol"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
+            <img src="https://images.pexels.com/photos/1725399/pexels-photo-1725399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="user-profile"/>
             <p>New Tweet notifications for <strong>Ebenezer Don</strong></p>
           </div>
         </div>
         <div>
           <i className="fa fa-user-o symbol"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
+            <img src="https://images.pexels.com/photos/6924280/pexels-photo-6924280.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="user-profile"/>
             <p><strong>Alo Kayode</strong> followed you</p>
           </div>
         </div>
         <div>
           <i className="fa fa-star"></i>
           <div>
-            <img src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" alt="user-profile"/>
+            <img src="https://images.pexels.com/photos/6338278/pexels-photo-6338278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="user-profile"/>
             <p>Recommended For You</p>
             <p>I'm fired</p>
           </div>

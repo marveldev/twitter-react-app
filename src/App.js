@@ -7,6 +7,7 @@ import {
 import './index.css'
 
 const App = () => {
+  const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
   const storedTheme = localStorage.getItem('storedTheme')
   const storedTextColor = localStorage.getItem('storedTextColor')
   const [theme, setTheme] = useState(storedTheme || '')
@@ -19,6 +20,15 @@ const App = () => {
   const [commentModal, setCommentModal] = useState(false)
   const [selectedTweet, setSelectedTweet] = useState({})
   const [messageData, setMessageData] = useState([])
+  const [bio, setBio] = useState({
+    name: 'Jane Doe',
+    aboutUser: 'Front-end developer',
+    location: 'Lagos, Nigeria',
+    website: '',
+    birthDate: 'Born April 5, 1906',
+    profilePhoto: profilePhotoUrl,
+    headerPhoto: profilePhotoUrl
+  })
 
   return (
     <BrowserRouter>
@@ -32,6 +42,7 @@ const App = () => {
           setTweetData={setTweetData}
           setActivePage={setActivePage}
           activePage={activePage}
+          bio={bio}
         />
         <Switch>
           <Route path="/"
@@ -49,6 +60,7 @@ const App = () => {
                 setEditTweetModal={setEditTweetModal}
                 selectedTweet={selectedTweet}
                 setSelectedTweet={setSelectedTweet}
+                bio={bio}
               />
             )} exact
           />
@@ -68,6 +80,8 @@ const App = () => {
                 setEditTweetModal={setEditTweetModal}
                 selectedTweet={selectedTweet}
                 setSelectedTweet={setSelectedTweet}
+                bio={bio}
+                setBio={setBio}
               />
             )}
           />

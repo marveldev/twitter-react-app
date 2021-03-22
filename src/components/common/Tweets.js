@@ -1,6 +1,6 @@
 import { useHistory } from "react-router-dom"
 
-const Tweets = ({ tweetData, setCommentModal, setTweetDropdown, setSelectedTweet }) => {
+const Tweets = ({ tweetData, setCommentModal, setTweetDropdown, setSelectedTweet, bio }) => {
   const history = useHistory()
   const openTweetDropdown = (event, tweetItem) => {
     event.stopPropagation()
@@ -15,13 +15,15 @@ const Tweets = ({ tweetData, setCommentModal, setTweetDropdown, setSelectedTweet
         key={tweetItem.id} className="tweet-item"
       >
         <div className="tweet-content-item">
-          <img onClick={event => { event.stopPropagation(); history.push("/profile") }} src="https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG" className="home-page-photo" alt="user-profile" />
+          <img onClick={event => { event.stopPropagation(); history.push("/profile") }}
+            src={bio.profilePhoto} className="home-page-photo" alt="user-profile"
+          />
           <div>
             <div className="tweet-person">
               <strong
                 onClick={event => { event.stopPropagation(); history.push("/profile") }}
               >
-                {tweetItem.name}
+                {bio.name}
               </strong>
               <button type="button" title="More"
                 onClick={event => openTweetDropdown(event, tweetItem)}

@@ -11,9 +11,8 @@ import EditTweetModal from "../common/EditTweetModal"
 const HomePage = ({
   tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal,
   setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible, setDeleteModalIsVisible,
-  selectedTweet, setSelectedTweet
+  selectedTweet, setSelectedTweet, bio
 }) => {
-  const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
   const [mobileLeftNav, setMobileLeftNav] = useState(false)
 
   return (
@@ -24,7 +23,7 @@ const HomePage = ({
       </div>
       <div className="home-page-content">
         <div id="tweetContainer">
-          <img src={profilePhotoUrl} className="home-page-photo" alt="user-profile" />
+          <img src={bio.profilePhoto} className="home-page-photo" alt="user-profile" />
           <div>
             <div>
               <textarea
@@ -64,6 +63,7 @@ const HomePage = ({
             setCommentModal={setCommentModal}
             setTweetDropdown={setTweetDropdown}
             setSelectedTweet={setSelectedTweet}
+            bio={bio}
           />
         </div>
       </div>
@@ -91,6 +91,7 @@ const HomePage = ({
           tweetDropdown={tweetDropdown}
           setEditTweetModal={setEditTweetModal}
           selectedTweet={selectedTweet}
+          bio={bio}
         />
       }
       { mobileLeftNav && <MobileLeftNav setMobileLeftNav={setMobileLeftNav}/>}
