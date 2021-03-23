@@ -159,6 +159,10 @@
   .tweet-content-item {
     grid-template-columns: 0.3fr 1.8fr;
   }
+
+  .explore-page .header {
+    width: 42.2em;
+  }
 }
 
 @media screen and (max-width: 425px) {

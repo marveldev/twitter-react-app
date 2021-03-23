@@ -111,3 +111,10 @@
   grid-template-columns: 0.35fr 1.8fr;
   border-top: none;
 }
+
+@media screen and (max-width: 768px) {
+  .comment-modal {
+    left: 15%;
+    width: 70%;
+  }
+}
