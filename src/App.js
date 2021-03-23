@@ -21,6 +21,8 @@ const App = () => {
   const [selectedTweet, setSelectedTweet] = useState({})
   const [messageData, setMessageData] = useState([])
   const [commentData, setCommentData] = useState([])
+  const [selectedContact, setSelectedContact] = useState()
+
   const [bio, setBio] = useState({
     name: 'Jane Doe',
     aboutUser: 'Front-end developer',
@@ -111,6 +113,8 @@ const App = () => {
               <MessagePage
                 messageData={messageData}
                 setMessageData={setMessageData}
+                selectedContact={selectedContact}
+                setSelectedContact={setSelectedContact}
               />
             )}
           />

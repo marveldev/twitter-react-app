@@ -1,8 +1,8 @@
 import './messagePage.css'
-import { ContactPage } from "./ContactPage"
-import { MessageSection } from './MessageSection'
+import { ContactSection } from "./ContactSection"
+import { ChatSection } from './ChatSection'
 
-const MessagePage = ({ messageData, setMessageData }) => {
+const MessagePage = ({ messageData, setMessageData, selectedContact, setSelectedContact }) => {
   return (
     <div className="message-page">
       <div>
@@ -11,13 +11,17 @@ const MessagePage = ({ messageData, setMessageData }) => {
           <button type="button"><i className="fa fa-envelope-o"></i></button>
         </div>
         <div className="message-contact-page">
-          <ContactPage/>
+          <ContactSection
+            selectedContact={selectedContact}
+            setSelectedContact={setSelectedContact}
+          />
         </div>
       </div>
       <div className="current-message-section">
-        <MessageSection
+        <ChatSection
           messageData={messageData}
           setMessageData={setMessageData}
+          selectedContact={selectedContact}
         />
       </div>
     </div>

@@ -1,14 +1,15 @@
-const Message = ({ messageData }) => {
+const Message = ({ messageData, selectedContact }) => {
+  const filteredData = messageData.filter(item => item.contactId === selectedContact)
   const openMessageOptions = (selector) => {
     document.querySelector(`#${selector}`).style.visibility = 'visible'
   }
-
+  console.log(filteredData);
   const closeMessageOptions = (selector) => {
     document.querySelector(`#${selector}`).style.visibility = 'hidden'
   }
 
   return (
-    messageData.map(messageItem => (
+    filteredData.map(messageItem => (
       <div key={messageItem.id}
         onMouseOver={() => openMessageOptions(messageItem.id)}
         onMouseOut= {() => closeMessageOptions(messageItem.id)}

@@ -7,6 +7,7 @@ import './commentPage.css'
 const CommentPage = ({ bio, selectedTweet, commentData, setCommentData }) => {
   const [commentModalDisplay, setCommentModal] = useState(false)
   const { goBack } = useHistory()
+
   return (
     <div id={selectedTweet.id} className="comment-page">
       <div className="header">
