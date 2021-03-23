@@ -9,8 +9,6 @@ request.onsuccess = () => {
 request.onupgradeneeded = () => {
   const database = request.result
   database.createObjectStore('bio', { autoIncrement: true })
-  // database.createObjectStore('tweet-data', { keyPath: 'tweetItemId' })
-  // database.createObjectStore('comment-data', { autoIncrement: true })
 }
 
 request.onerror = () => {
@@ -38,7 +36,6 @@ const getEntryFromDb = async (storeName) => {
     const transaction = database.transaction([storeName])
     const store = transaction.objectStore(storeName)
     const getData = store.getAll()
-    console.log(getData);
 
     getData.onsuccess = () => {
       resolve(getData.result)
@@ -49,7 +46,6 @@ const getEntryFromDb = async (storeName) => {
       reject(getData.error)
     }
   })
-  console.log(Promise.resolve(data));
 
   return Promise.resolve(data)
 }
@@ -60,12 +56,5 @@ const clearAllEntries = (storeName) => {
   const store = transaction.objectStore(storeName)
   store.clear()
 }
-
-// const deleteEntry = (storeName, entryId) => {
-//   const database = request.result
-//   const transaction = database.transaction([storeName], 'readwrite')
-//   const store = transaction.objectStore(storeName)
-//   store.delete(entryId)
-// }
 
 export { request, addEntryToDb, getEntryFromDb, clearAllEntries }
