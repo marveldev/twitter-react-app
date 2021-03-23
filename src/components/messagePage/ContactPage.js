@@ -38,15 +38,41 @@ const ContactPage = () => {
           </div>
         </div>
         <div className="contact-list">
-          <img src="https://images.pexels.com/photos/2703463/pexels-photo-2703463.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          <img src="https://images.pexels.com/photos/2700116/pexels-photo-2700116.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
             className="home-page-photo" alt="user-profile"
           />
           <div>
             <div className="tweet-person">
-              <strong>Daniella Thompson</strong>
+              <strong>Sheila Butter</strong>
             </div>
             <p>
-              Bad Habits you should break as a developer!
+              Live life to the fullest, and focus on the positive.
+            </p>
+          </div>
+        </div>
+        <div className="contact-list">
+          <img src="https://images.pexels.com/photos/5649341/pexels-photo-5649341.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            className="home-page-photo" alt="user-profile"
+          />
+          <div>
+            <div className="tweet-person">
+              <strong>Ego Emmanuel</strong>
+            </div>
+            <p>
+              There is more to life than increasing its speed.
+            </p>
+          </div>
+        </div>
+        <div className="contact-list">
+          <img src="https://images.pexels.com/photos/4401285/pexels-photo-4401285.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            className="home-page-photo" alt="user-profile"
+          />
+          <div>
+            <div className="tweet-person">
+              <strong>Amy Thompson</strong>
+            </div>
+            <p>
+              Love is like the wind, you can't see it but you can feel it.
             </p>
           </div>
         </div>
@@ -56,36 +82,10 @@ const ContactPage = () => {
           />
           <div>
             <div className="tweet-person">
-              <strong>Daniella Thompson</strong>
+              <strong>Herman Hesse</strong>
             </div>
             <p>
-              Bad Habits you should break as a developer!
-            </p>
-          </div>
-        </div>
-        <div className="contact-list">
-          <img src="https://images.pexels.com/photos/2703463/pexels-photo-2703463.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-            className="home-page-photo" alt="user-profile"
-          />
-          <div>
-            <div className="tweet-person">
-              <strong>Daniella Thompson</strong>
-            </div>
-            <p>
-              Bad Habits you should break as a developer!
-            </p>
-          </div>
-        </div>
-        <div className="contact-list">
-          <img src="https://images.pexels.com/photos/2703463/pexels-photo-2703463.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-            className="home-page-photo" alt="user-profile"
-          />
-          <div>
-            <div className="tweet-person">
-              <strong>Daniella Thompson</strong>
-            </div>
-            <p>
-              Bad Habits you should break as a developer!
+              Happiness is holding someone in your arms and knowing you hold the whole world.
             </p>
           </div>
         </div>
