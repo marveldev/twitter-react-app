@@ -139,3 +139,7 @@
 .orange .message-section .message:hover {
   background-color: #df4407;
 }
+
+.orange #current {
+  border-right: 0.2em solid #F45D22;
+}

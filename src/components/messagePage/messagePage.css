@@ -31,6 +31,10 @@
   cursor: pointer;
 }
 
+.contact-list:hover {
+  background-color: #EBEEF0;
+}
+
 .contact-list > div {
   font-size: 1.1em;
 }
@@ -261,6 +265,10 @@
 .allow {
   pointer-events: auto;
   opacity: 1;
+}
+
+#current {
+  border-right: 0.2em solid #1DA1F2;
 }
 
 @media screen and (max-width: 1024px) {

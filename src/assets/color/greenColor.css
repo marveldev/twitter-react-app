@@ -139,3 +139,7 @@
 .green .message-section .message:hover {
   background-color: #11974e;
 }
+
+.green #current {
+  border-right: 0.2em solid #17BF63;
+}

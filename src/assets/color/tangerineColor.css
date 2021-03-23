@@ -139,3 +139,7 @@
 .tangerine .message-section .message:hover {
   background-color: #F6A71E;
 }
+
+.tangerine #current {
+  border-right: 0.2em solid #FFAD1F;
+}

@@ -140,3 +140,7 @@
 .cerise .message-section .message:hover {
   background-color: #c71a51;
 }
+
+.cerise #current {
+  border-right: 0.2em solid #E0245E;
+}

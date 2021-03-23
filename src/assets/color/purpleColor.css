@@ -140,3 +140,7 @@
 .purple .message-section .message:hover {
   background-color: #794bc4d3;
 }
+
+.purple #current {
+  border-right: 0.2em solid #794BC4;
+}
