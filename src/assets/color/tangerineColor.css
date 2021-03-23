@@ -119,3 +119,23 @@
 .tangerine #defaultTheme {
   border: 0.15em solid #FFAD1F;
 }
+
+.tangerine .message-section span {
+  color: #FFAD1F;
+}
+
+.tangerine .send-button {
+  color: #FFAD1F;
+}
+
+.tangerine .message-section .message {
+  background-color: #FFAD1F;
+}
+
+.tangerine .message-options > p:hover {
+  background-color: #ffad1f3b;
+}
+
+.tangerine .message-section .message:hover {
+  background-color: #F6A71E;
+}

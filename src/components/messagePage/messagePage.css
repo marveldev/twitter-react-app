@@ -28,7 +28,7 @@
   grid-template-columns: 0.2fr 0.8fr;
   padding: 1em 0;
   border-bottom: 0.1em solid #E6ECF0;
-  border-right: 0.2em solid #1DA1F2;
+  cursor: pointer;
 }
 
 .contact-list > div {
@@ -189,7 +189,6 @@
   position: relative;
   right: 1.5em;
   font-size: 1.7em;
-  color: #1DA1F2;
   cursor: pointer;
 }
 

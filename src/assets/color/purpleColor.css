@@ -120,3 +120,23 @@
 .purple #defaultTheme {
   border: 0.15em solid #794BC4;
 }
+
+.purple .message-section span {
+  color: #794BC4;
+}
+
+.purple .send-button {
+  color: #794BC4;
+}
+
+.purple .message-section .message {
+  background-color: #794BC4;
+}
+
+.purple .message-options > p:hover {
+  background-color: #794bc432;
+}
+
+.purple .message-section .message:hover {
+  background-color: #794bc4d3;
+}

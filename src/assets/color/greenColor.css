@@ -119,3 +119,23 @@
 .green #defaultTheme {
   border: 0.15em solid #17BF63;
 }
+
+.green .message-section span {
+  color: #17BF63;
+}
+
+.green .send-button {
+  color: #17BF63;
+}
+
+.green .message-section .message {
+  background-color: #17BF63;
+}
+
+.green .message-options > p:hover {
+  background-color: #17bf6341;
+}
+
+.green .message-section .message:hover {
+  background-color: #11974e;
+}

@@ -16,7 +16,7 @@ const addTweetData = (selector, tweetData, setTweetData, setTweetModalDisplay) =
     id
   }
 
-  setTweetData([...tweetData, tweetObject])
+  setTweetData([ tweetObject, ...tweetData ])
 
   if (setTweetModalDisplay) {
     setTweetModalDisplay(false)
@@ -29,7 +29,8 @@ const inputEventHandler = (event, inputSelector, buttonSelector, tweetData,
   const inputValue = document.querySelector(inputSelector).value
   if (inputValue.trim().length >= 1) {
     document.querySelector(buttonSelector).classList.add('enable')
-    if (event.which === 13 && !event.shiftKey) {
+    const keyCode = event.which || event.keyCode
+    if (keyCode === 16) {
       addTweetData(inputSelector, tweetData, setTweetData, setTweetModalDisplay)
     }
   } else {
