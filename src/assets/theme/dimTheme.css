@@ -209,7 +209,8 @@
 
 .dim .entry-box-container textarea::placeholder,
 .dim .entry-box-container input::placeholder,
-.dim .input-box::placeholder {
+.dim .input-box::placeholder,
+.dim #messageBox::placeholder {
   color: #788895;
 }
 
@@ -282,6 +283,7 @@
 
 .dim .section-content {
   border-right: 1px solid #38444D;
+  border-left: 1px solid #38444D;
 }
 
 .dim .section-content span {
@@ -325,4 +327,62 @@
 
 .dim .display-modal h3 {
   color: #8899A6;
+}
+
+.dim .tweet-dropdown {
+  background-color: #15202b;
+  box-shadow: 0.2em 0.2em 0.5em 0.5em #a5b0bb1c;
+}
+
+.dim .tweet-dropdown button {
+  background-color: #15202b;
+}
+
+.dim .tweet-dropdown button:first-child {
+  color: #e982a3;
+}
+
+.dim .tweet-dropdown button:hover {
+  background-color: #192734;
+}
+
+.dim .delete-modal {
+  background-color: #15202b;
+}
+
+.dim .delete-modal p {
+  color: #588AA6;
+}
+
+.dim .cancel-button {
+  background: #253341;
+}
+
+.dim .edit-tweet-modal {
+  background-color: #15202b;
+}
+
+.dim .edit-tweet-modal #tweetContainer {
+  border-bottom: none;
+}
+
+.dim .message-container {
+  border-bottom: 1px solid #38444D;
+}
+
+.dim #messageBox {
+  background-color: #253341;
+}
+
+.dim #sectionContent {
+  border-right: 1px solid #38444D;
+}
+
+.dim .section-header {
+  border: 0.1em solid #38444D;
+  background-color: #15202b;
+}
+
+.dim .contact-list {
+  border-bottom: 0.1em solid #38444D;
 }

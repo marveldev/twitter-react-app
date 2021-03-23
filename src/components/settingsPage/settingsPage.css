@@ -59,6 +59,7 @@
   position: relative;
   top: 4em;
   border-right: 1px solid #E6ECF0;
+  border-left: 1px solid #E6ECF0;
   height: 100%;
 }
 

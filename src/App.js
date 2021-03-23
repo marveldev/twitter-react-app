@@ -10,8 +10,8 @@ const App = () => {
   const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
   const storedTheme = localStorage.getItem('storedTheme')
   const storedTextColor = localStorage.getItem('storedTextColor')
-  const [theme, setTheme] = useState(storedTheme || '')
-  const [textColor, setTextColor] = useState(storedTextColor || '')
+  const [theme, setTheme] = useState(storedTheme || 'default')
+  const [textColor, setTextColor] = useState(storedTextColor || 'blue')
   const [activePage, setActivePage] = useState('')
   const [tweetData, setTweetData] = useState([])
   const [editTweetModal, setEditTweetModal] = useState(false)
