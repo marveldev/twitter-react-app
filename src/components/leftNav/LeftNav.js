@@ -79,8 +79,8 @@ const LeftNav = ({
           Tweet
         </button>
         <div className="user-info">
-          <img src={bio.profilePhoto} className="left-nav-photo" alt="user-profile" />
-          <span>{bio.name}</span>
+          <img src={bio?.profilePhoto} className="left-nav-photo" alt="user-profile" />
+          <span>{bio?.name}</span>
         </div>
       </div>
       { tweetModalDisplay &&

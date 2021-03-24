@@ -3,7 +3,7 @@ const Message = ({ messageData, selectedContact }) => {
   const openMessageOptions = (selector) => {
     document.querySelector(`#${selector}`).style.visibility = 'visible'
   }
-  console.log(filteredData);
+
   const closeMessageOptions = (selector) => {
     document.querySelector(`#${selector}`).style.visibility = 'hidden'
   }

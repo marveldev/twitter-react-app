@@ -297,6 +297,10 @@
   .headline {
     width: 18.6em;
   }
+
+  .current-message-section {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 425px) {

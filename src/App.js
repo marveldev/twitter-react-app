@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import {
   TrendingPane, HomePage, LeftNav, ProfilePage, ExplorePage,
   NotificationPage, BookmarkPage, ListsPage, MessagePage, CommentPage, SettingsPage
 } from './components'
+import { getEntryFromDb, request } from './dataStorage'
 import './index.css'
 
 const App = () => {
@@ -22,16 +23,14 @@ const App = () => {
   const [messageData, setMessageData] = useState([])
   const [commentData, setCommentData] = useState([])
   const [selectedContact, setSelectedContact] = useState()
+  const [bio, setBio] = useState({})
 
-  const [bio, setBio] = useState({
-    name: 'Jane Doe',
-    aboutUser: 'Front-end developer',
-    location: 'Lagos, Nigeria',
-    website: '',
-    birthDate: 'Born April 5, 1906',
-    profilePhoto: profilePhotoUrl,
-    headerPhoto: profilePhotoUrl
-  })
+  // useEffect(() => {
+  //   request.onsuccess = async () => {
+  //     const bioFromDb = await getEntryFromDb('bio')
+  //     setBio(bioFromDb)
+  //   }
+  // }, [bio])
 
   return (
     <BrowserRouter>

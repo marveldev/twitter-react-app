@@ -1,7 +1,6 @@
 import contactList from './contactList'
 
 const ContactSection = ({ selectedContact, setSelectedContact }) => {
-
   return (
     <div className="contact-section">
       <div id="searchInputContainer">
@@ -10,7 +9,7 @@ const ContactSection = ({ selectedContact, setSelectedContact }) => {
       </div>
       <div>
         {contactList.map(contact => (
-          <div id={selectedContact === contact.id ? 'current' : ''}
+          <div key={contact.id} id={selectedContact === contact.id ? 'current' : ''}
             className="contact-list" onClick={() => setSelectedContact(contact)}
           >
             <img src={contact.photoUrl} className="home-page-photo" alt="user-profile"

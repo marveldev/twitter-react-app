@@ -244,11 +244,6 @@ button {
     display: none;
   }
 
-  .bookmarks,
-  .lists {
-    display: none;
-  }
-
   #tweetModalButton {
     display: none;
   }
@@ -300,7 +295,8 @@ button {
     font-size: 1.4em;
   }
 
-  .nav-button:nth-child(1n+6) {
+  .nav-button:nth-child(6),
+  .nav-button:nth-child(7) {
     display: none;
   }
 }

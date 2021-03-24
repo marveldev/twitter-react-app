@@ -41,6 +41,7 @@ const ChatSection = ({ messageData, setMessageData, selectedContact }) => {
       {selectedContact && (
         <div className="message-section">
           <div className="section-header">
+            <span className="material-icons previous-button">&#xe5c4;</span>
             <img src={selectedContact.photoUrl}
               className="home-page-photo" alt="user-profile"
             />

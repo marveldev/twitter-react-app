@@ -46,6 +46,7 @@
 .notification-page-content {
   position: relative;
   top: 7.2em;
+  padding-bottom: 2em;
   border-bottom: 1px solid #E6ECF0;
 }
 

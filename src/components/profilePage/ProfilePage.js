@@ -26,16 +26,16 @@ const ProfilePage = ({
           <i className="material-icons">&#xe5c4;</i>
         </button>
         <div>
-          <span>{bio.name}</span>
+          <span>{bio?.name}</span>
           <small>4 Tweets</small>
         </div>
       </div>
       <div className="page-content">
-        <img src={bio.headerPhoto} className="photo" alt=""/>
+        <img src={bio?.headerPhoto} className="photo" alt=""/>
         <div className="user-bio-container">
           <div>
             <div className="profile-photo">
-              <img src={bio.profilePhoto} alt=""/>
+              <img src={bio?.profilePhoto} alt=""/>
             </div>
             <div className="user-bio">
               <strong>{bio.name}</strong>
