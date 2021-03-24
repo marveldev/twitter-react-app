@@ -38,9 +38,11 @@ const App = () => {
 
       getEntryFromDb('tweetData')
         .then(result => setTweetData(result.reverse()))
-    }
 
-  }, [])
+      getEntryFromDb('commentData')
+        .then(result => setCommentData(result))
+    }
+  }, [bio, tweetData, commentData])
 
   return (
     <BrowserRouter>

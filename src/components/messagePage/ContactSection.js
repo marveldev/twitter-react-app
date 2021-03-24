@@ -9,7 +9,7 @@ const ContactSection = ({ selectedContact, setSelectedContact }) => {
       </div>
       <div>
         {contactList.map(contact => (
-          <div key={contact.id} id={selectedContact === contact.id ? 'current' : ''}
+          <div key={contact.id} id={selectedContact.id === contact.id ? 'current' : ''}
             className="contact-list" onClick={() => setSelectedContact(contact)}
           >
             <img src={contact.photoUrl} className="home-page-photo" alt="user-profile"

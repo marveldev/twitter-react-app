@@ -1,4 +1,4 @@
-const request = indexedDB.open('reactTwitter', 2)
+const request = indexedDB.open('reactTwitter', 3)
 
 request.onsuccess = () => {
   const database = request.result
@@ -10,6 +10,7 @@ request.onupgradeneeded = () => {
   const database = request.result
   database.createObjectStore('bio', { autoIncrement: true })
   database.createObjectStore('tweetData', { keyPath: 'id' })
+  database.createObjectStore('commentData', { keyPath: 'id' })
 }
 
 request.onerror = () => {

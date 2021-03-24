@@ -1,3 +1,5 @@
+import { addEntryToDb } from '../../dataStorage'
+
 const CommentModal = ({ setCommentModal, bio, selectedTweet, commentData, setCommentData }) => {
   const addComment = () => {
     const commentText = document.querySelector('#commentTextBox').value
@@ -10,13 +12,14 @@ const CommentModal = ({ setCommentModal, bio, selectedTweet, commentData, setCom
 
     setCommentData([...commentData, commentObject])
     setCommentModal(false)
+    addEntryToDb('commentData', commentObject)
   }
 
   const inputEventHandler = (event) => {
     const inputValue = document.querySelector('#commentTextBox').value
     if (inputValue.trim().length >= 1) {
       document.querySelector('#commentButton').classList.add('enable')
-      if (event.which === 13 && !event.shiftKey) {
+      if (event.which === 13 && event.shiftKey) {
         addComment()
       }
     } else {

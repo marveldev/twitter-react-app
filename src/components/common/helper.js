@@ -1,4 +1,4 @@
-import { addEntryToDb } from "../../dataStorage.js"
+import { addEntryToDb } from "../../dataStorage"
 
 const changeTheme = (theme, setTheme ) => {
   setTheme(theme)
@@ -21,9 +21,7 @@ const addTweetData = (selector, tweetData, setTweetData, setTweetModalDisplay) =
   setTweetData([ tweetObject, ...tweetData ])
   addEntryToDb('tweetData', tweetObject)
 
-  if (setTweetModalDisplay) {
-    setTweetModalDisplay(false)
-  }
+  setTweetModalDisplay && setTweetModalDisplay(false)
 }
 
 const inputEventHandler = (event, inputSelector, buttonSelector, tweetData,
@@ -32,8 +30,7 @@ const inputEventHandler = (event, inputSelector, buttonSelector, tweetData,
   const inputValue = document.querySelector(inputSelector).value
   if (inputValue.trim().length >= 1) {
     document.querySelector(buttonSelector).classList.add('enable')
-    const keyCode = event.which || event.keyCode
-    if (keyCode === 16) {
+    if (event.which === 13 && event.shiftKey) {
       addTweetData(inputSelector, tweetData, setTweetData, setTweetModalDisplay)
     }
   } else {

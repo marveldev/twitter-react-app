@@ -271,6 +271,10 @@
   border-right: 0.2em solid #1DA1F2;
 }
 
+.section-header button {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
   .headline {
     width: 22em;
@@ -298,8 +302,9 @@
     width: 18.6em;
   }
 
-  .current-message-section {
-    display: none;
+  .section-header button {
+    display: inline;
+    color: #1DA1F2;
   }
 }
 

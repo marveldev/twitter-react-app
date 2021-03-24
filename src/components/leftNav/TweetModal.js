@@ -37,10 +37,9 @@ const TweetModal = ({ setTweetModalDisplay, tweetData, setTweetData, bio }) => {
                 <span><i className="fa fa-calendar-plus-o"></i></span>
               </div>
               <button
-                onClick={() => {
-                  addTweetData('#tweetModalBox', tweetData, setTweetData);
-                  setTweetModalDisplay(false)
-                }}
+                onClick={() =>
+                  addTweetData('#tweetModalBox', tweetData, setTweetData, setTweetModalDisplay)
+                }
                 type="button" id="modalTweetButton"
                 className="tweet-button"
               >
