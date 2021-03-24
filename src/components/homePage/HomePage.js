@@ -23,7 +23,7 @@ const HomePage = ({
       </div>
       <div className="home-page-content">
         <div id="tweetContainer">
-          <img src={bio.profilePhoto} className="home-page-photo" alt="user-profile" />
+          <img src={bio?.profilePhoto} className="home-page-photo" alt="user-profile" />
           <div>
             <div>
               <textarea

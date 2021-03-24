@@ -22,14 +22,14 @@ const Tweets = ({ tweetData, setCommentModal, setTweetDropdown, setSelectedTweet
       >
         <div className="tweet-content-item">
           <img onClick={event => { event.stopPropagation(); history.push("/profile") }}
-            src={bio.profilePhoto} className="home-page-photo" alt="user-profile"
+            src={bio?.profilePhoto} className="home-page-photo" alt="user-profile"
           />
           <div>
             <div className="tweet-person">
               <strong
                 onClick={event => { event.stopPropagation(); history.push("/profile") }}
               >
-                {bio.name}
+                {bio?.name}
               </strong>
               <button type="button" title="More"
                 onClick={event => openTweetDropdown(event, tweetItem)}

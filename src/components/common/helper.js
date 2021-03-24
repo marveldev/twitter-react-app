@@ -1,3 +1,5 @@
+import { addEntryToDb } from "../../dataStorage.js"
+
 const changeTheme = (theme, setTheme ) => {
   setTheme(theme)
   localStorage.setItem('storedTheme', theme)
@@ -17,6 +19,7 @@ const addTweetData = (selector, tweetData, setTweetData, setTweetModalDisplay) =
   }
 
   setTweetData([ tweetObject, ...tweetData ])
+  addEntryToDb('tweetData', tweetObject)
 
   if (setTweetModalDisplay) {
     setTweetModalDisplay(false)

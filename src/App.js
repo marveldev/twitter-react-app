@@ -23,14 +23,24 @@ const App = () => {
   const [messageData, setMessageData] = useState([])
   const [commentData, setCommentData] = useState([])
   const [selectedContact, setSelectedContact] = useState()
-  const [bio, setBio] = useState({})
+  const [bio, setBio] = useState(null)
+  // const [dbIsInitialized, setDbIsInitialized] = useState(false)
 
-  // useEffect(() => {
-  //   request.onsuccess = async () => {
-  //     const bioFromDb = await getEntryFromDb('bio')
-  //     setBio(bioFromDb)
-  //   }
-  // }, [bio])
+  useEffect(() => {
+    request.onsuccess = () => {
+      getEntryFromDb('bio')
+        .then(result => setBio(result[0] ? result[0] : {
+          name: 'Jane Doe', aboutUser: '',
+          location: 'Lagos, Nigeria', website: '',
+          birthDate: '', profilePhoto: profilePhotoUrl,
+          headerPhoto: profilePhotoUrl
+        }))
+
+      getEntryFromDb('tweetData')
+        .then(result => setTweetData(result.reverse()))
+    }
+
+  }, [])
 
   return (
     <BrowserRouter>

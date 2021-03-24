@@ -38,10 +38,10 @@ const ProfilePage = ({
               <img src={bio?.profilePhoto} alt=""/>
             </div>
             <div className="user-bio">
-              <strong>{bio.name}</strong>
-              <p>{bio.aboutUser}</p>
-              <span><i className="material-icons">&#xe55f;</i>{bio.location}</span>
-              <span><i className="fa fa-birthday-cake"></i>{bio.birthDate}</span>
+              <strong>{bio?.name}</strong>
+              <p>{bio?.aboutUser}</p>
+              <span><i className="material-icons">&#xe55f;</i>{bio?.location}</span>
+              <span><i className="fa fa-birthday-cake"></i>{bio?.birthDate}</span>
               <span><i className="fa fa-calendar"></i>Joined January 2021</span>
               <div>
                 <span><strong>48 </strong>Following</span>

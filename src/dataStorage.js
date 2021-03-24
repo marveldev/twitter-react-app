@@ -9,6 +9,7 @@ request.onsuccess = () => {
 request.onupgradeneeded = () => {
   const database = request.result
   database.createObjectStore('bio', { autoIncrement: true })
+  database.createObjectStore('tweetData', { keyPath: 'id' })
 }
 
 request.onerror = () => {
