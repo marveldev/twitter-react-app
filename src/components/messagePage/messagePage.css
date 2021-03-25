@@ -230,12 +230,11 @@
 
 .message-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
 }
 
 .message-options {
-  visibility: hidden;
   margin-right: 0.5em;
 }
 

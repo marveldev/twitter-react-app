@@ -11,6 +11,7 @@ request.onupgradeneeded = () => {
   database.createObjectStore('bio', { autoIncrement: true })
   database.createObjectStore('tweetData', { keyPath: 'id' })
   database.createObjectStore('commentData', { keyPath: 'id' })
+  database.createObjectStore('messageData', { keyPath: 'id' })
 }
 
 request.onerror = () => {

@@ -1,12 +1,19 @@
 import { useHistory } from 'react-router-dom'
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import CommentModal from './CommentModal'
 import Comments from "./Comments"
+import { getEntryFromDb } from '../../dataStorage'
 import './commentPage.css'
 
-const CommentPage = ({ bio, selectedTweet, commentData, setCommentData }) => {
+const CommentPage = ({ selectedTweet, commentData, setCommentData, dbIsInitialized }) => {
   const [commentModalDisplay, setCommentModal] = useState(false)
   const { goBack } = useHistory()
+  const [bio, setBio] = useState(null)
+
+  useEffect(() => {
+    dbIsInitialized && getEntryFromDb('bio')
+      .then(result => setBio(result[0]))
+  }, [bio, dbIsInitialized])
 
   return (
     <div id={selectedTweet.id} className="comment-page">
@@ -16,8 +23,8 @@ const CommentPage = ({ bio, selectedTweet, commentData, setCommentData }) => {
       </div>
       <div className="tweet-content">
         <div>
-          <img src={bio.profilePhoto} className="home-page-photo" alt="user-profile" />
-          <strong className="user-profile-name">{bio.name}</strong>
+          <img src={bio?.profilePhoto} className="home-page-photo" alt="user-profile" />
+          <strong className="user-profile-name">{bio?.name}</strong>
           <button><i className="material-icons">&#xe5d3;</i></button>
         </div>
         <div>

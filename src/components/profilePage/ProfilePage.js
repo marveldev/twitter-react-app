@@ -1,20 +1,28 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useHistory } from "react-router-dom"
 import EditProfileModal from './EditProfileModal'
 import Tweets from '../common/Tweets'
-import CommentModal from "../commentPage/CommentModal"
-import DeleteModal from "../common/DeleteModal"
-import TweetDropdown from "../common/TweetDropdown"
-import EditTweetModal from "../common/EditTweetModal"
+import CommentModal from '../commentPage/CommentModal'
+import DeleteModal from '../common/DeleteModal'
+import TweetDropdown from '../common/TweetDropdown'
+import EditTweetModal from '../common/EditTweetModal'
+import { getEntryFromDb } from '../../dataStorage'
+import { constants } from '../common'
 import './profilePage.css'
 
 const ProfilePage = ({
   tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal, selectedTweet,
   setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible, setDeleteModalIsVisible,
-  setSelectedTweet, bio, setBio, commentData, setCommentData
+  setSelectedTweet, commentData, setCommentData, dbIsInitialized
 }) => {
   const { goBack } = useHistory()
-  const [editModalDisplay, setEditModal] = useState(false)
+  const [editProfileModal, setEditProfileModal] = useState(false)
+  const [bio, setBio] = useState(null)
+
+  useEffect(() => {
+    dbIsInitialized && getEntryFromDb('bio')
+      .then(result => setBio(result[0]))
+  }, [bio, dbIsInitialized])
 
   return (
     <div className="profile-page">
@@ -26,19 +34,19 @@ const ProfilePage = ({
           <i className="material-icons">&#xe5c4;</i>
         </button>
         <div>
-          <span>{bio?.name}</span>
+          <span>{bio?.name || constants.NAME}</span>
           <small>4 Tweets</small>
         </div>
       </div>
       <div className="page-content">
-        <img src={bio?.headerPhoto} className="photo" alt=""/>
+        <img src={bio?.headerPhoto || constants.PHOTOURL} className="photo" alt=""/>
         <div className="user-bio-container">
           <div>
             <div className="profile-photo">
-              <img src={bio?.profilePhoto} alt=""/>
+              <img src={bio?.profilePhoto || constants.PHOTOURL} alt=""/>
             </div>
             <div className="user-bio">
-              <strong>{bio?.name}</strong>
+              <strong>{bio?.name || constants.NAME}</strong>
               <p>{bio?.aboutUser}</p>
               <span><i className="material-icons">&#xe55f;</i>{bio?.location}</span>
               <span><i className="fa fa-birthday-cake"></i>{bio?.birthDate}</span>
@@ -49,7 +57,7 @@ const ProfilePage = ({
               </div>
             </div>
           </div>
-          <button onClick={() => setEditModal(true)} type="button">
+          <button onClick={() => setEditProfileModal(true)} type="button">
             Edit profile
           </button>
         </div>
@@ -69,9 +77,9 @@ const ProfilePage = ({
           />
         </div>
       </div>
-      { editModalDisplay &&
+      { editProfileModal &&
         <EditProfileModal
-          setEditModal={setEditModal}
+          setEditProfileModal={setEditProfileModal}
           bio={bio}
           setBio={setBio}
         />

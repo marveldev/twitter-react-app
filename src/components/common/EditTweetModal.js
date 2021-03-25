@@ -36,7 +36,7 @@ const EditTweetModal = ({
           </button>
         </div>
         <div id="tweetContainer">
-          <img src={bio.profilePhoto} className="home-page-photo" alt="user-profile" />
+          <img src={bio?.profilePhoto} className="home-page-photo" alt="user-profile" />
           <div>
             <div>
               <textarea id="editTweetBox" className="input-box"

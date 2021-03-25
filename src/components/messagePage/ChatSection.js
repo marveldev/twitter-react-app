@@ -1,15 +1,5 @@
 import Message from './Message'
 
-const InitialChatSection = () => {
-  return (
-    <div className="initial-message-section">
-      <strong>You don’t have a message selected</strong>
-      <p>Choose one from your existing messages, or start a new one.</p>
-      <button type="button" className="message-button">New message</button>
-    </div>
-  )
-}
-
 const ChatSection = ({ messageData, setMessageData, selectedContact }) => {
   const addMessageData = () => {
     const text = document.querySelector('#messageBox').value
@@ -37,7 +27,13 @@ const ChatSection = ({ messageData, setMessageData, selectedContact }) => {
 
   return (
     <>
-      {!selectedContact && <InitialChatSection />}
+      {!selectedContact && (
+        <div className="initial-message-section">
+          <strong>You don’t have a message selected</strong>
+          <p>Choose one from your existing messages, or start a new one.</p>
+          <button type="button" className="message-button">New message</button>
+        </div>
+      )}
       {selectedContact && (
         <div className="message-section">
           <div className="section-header">
@@ -75,4 +71,4 @@ const ChatSection = ({ messageData, setMessageData, selectedContact }) => {
   )
 }
 
-export { InitialChatSection, ChatSection }
+export default ChatSection

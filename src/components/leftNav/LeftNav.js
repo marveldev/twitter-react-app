@@ -1,19 +1,29 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Link, useHistory } from 'react-router-dom'
-import TweetModal from './TweetModal'
+import { constants } from "../common"
 import DisplayModal from './DisplayModal'
 import DropDownModal from './DropDownModal'
+import { getEntryFromDb } from '../../dataStorage'
+import EditProfileModal from "../profilePage/EditProfileModal"
+import TweetModal from './TweetModal'
 import './leftNav.css'
 
 const LeftNav = ({
   theme, setTheme, textColor, setTextColor,
-  tweetData, setTweetData, setActivePage, bio
+  tweetData, setTweetData, setActivePage, dbIsInitialized
 }) => {
   const [tweetModalDisplay, setTweetModalDisplay] = useState(false)
   const [dropDownDisplay, setDropDownDisplay] = useState(false)
   const [displayModal, setDisplayModal] = useState(false)
+  const [editProfileModal, setEditProfileModal] = useState(false)
+  const [bio, setBio] = useState(null)
   const { location } = useHistory()
   const { pathname } = location
+
+  useEffect(() => {
+    dbIsInitialized && getEntryFromDb('bio')
+      .then(result => setBio(result[0]))
+  }, [bio, dbIsInitialized])
 
   return (
     <div className="left-nav">
@@ -75,12 +85,14 @@ const LeftNav = ({
         <button className="tweet-modal-button" onClick={() => setTweetModalDisplay(true)}>
           <i className="material-icons">&#xe0cb;</i>
         </button>
-        <button type="button" id="tweetModalButton" onClick={() => setTweetModalDisplay(true)}>
+        <button type="button" id="tweetModalButton"
+          onClick={() => bio ? setTweetModalDisplay(true) : setEditProfileModal(true)}
+        >
           Tweet
         </button>
         <div className="user-info">
-          <img src={bio?.profilePhoto} className="left-nav-photo" alt="user-profile" />
-          <span>{bio?.name}</span>
+          <img src={bio?.profilePhoto || constants.PHOTOURL} className="left-nav-photo" alt="user-profile" />
+          <span>{bio?.name || constants.NAME}</span>
         </div>
       </div>
       { tweetModalDisplay &&
@@ -104,6 +116,13 @@ const LeftNav = ({
           setTheme={setTheme}
           textColor={textColor}
           setTextColor={setTextColor}
+        />
+      }
+      { editProfileModal &&
+        <EditProfileModal
+          setEditProfileModal={setEditProfileModal}
+          bio={bio}
+          setBio={setBio}
         />
       }
     </div>

@@ -5,10 +5,10 @@ const Comments = ({ commentData, bio, selectedTweet }) => {
     filteredData.map(commentItem => (
       <div key={commentItem.id} className="comment-item">
         <div className="tweet-content-item">
-          <img src={bio.profilePhoto} className="home-page-photo" alt="user-profile" />
+          <img src={bio?.profilePhoto} className="home-page-photo" alt="user-profile" />
           <div>
             <div className="tweet-person">
-              <strong>{bio.name}</strong>
+              <strong>{bio?.name}</strong>
               <button><i className="material-icons">&#xe5d3;</i></button>
             </div>
             <p>{commentItem.commentText}</p>

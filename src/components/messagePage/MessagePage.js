@@ -1,5 +1,5 @@
-import { ChatSection } from './ChatSection'
-import { ContactSection } from "./ContactSection"
+import ChatSection from './ChatSection'
+import ContactSection from "./ContactSection"
 import './messagePage.css'
 
 const MessagePage = ({ messageData, setMessageData, selectedContact, setSelectedContact }) => {

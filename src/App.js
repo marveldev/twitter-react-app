@@ -4,11 +4,10 @@ import {
   TrendingPane, HomePage, LeftNav, ProfilePage, ExplorePage,
   NotificationPage, BookmarkPage, ListsPage, MessagePage, CommentPage, SettingsPage
 } from './components'
-import { getEntryFromDb, request } from './dataStorage'
+import { request } from './dataStorage'
 import './index.css'
 
 const App = () => {
-  const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
   const storedTheme = localStorage.getItem('storedTheme')
   const storedTextColor = localStorage.getItem('storedTextColor')
   const [theme, setTheme] = useState(storedTheme || 'default')
@@ -23,26 +22,13 @@ const App = () => {
   const [messageData, setMessageData] = useState([])
   const [commentData, setCommentData] = useState([])
   const [selectedContact, setSelectedContact] = useState()
-  const [bio, setBio] = useState(null)
-  // const [dbIsInitialized, setDbIsInitialized] = useState(false)
+  const [dbIsInitialized, setDbIsInitialized] = useState(false)
 
   useEffect(() => {
     request.onsuccess = () => {
-      getEntryFromDb('bio')
-        .then(result => setBio(result[0] ? result[0] : {
-          name: 'Jane Doe', aboutUser: '',
-          location: 'Lagos, Nigeria', website: '',
-          birthDate: '', profilePhoto: profilePhotoUrl,
-          headerPhoto: profilePhotoUrl
-        }))
-
-      getEntryFromDb('tweetData')
-        .then(result => setTweetData(result.reverse()))
-
-      getEntryFromDb('commentData')
-        .then(result => setCommentData(result))
+      setDbIsInitialized(true)
     }
-  }, [bio, tweetData, commentData])
+  }, [dbIsInitialized])
 
   return (
     <BrowserRouter>
@@ -56,7 +42,7 @@ const App = () => {
           setTweetData={setTweetData}
           setActivePage={setActivePage}
           activePage={activePage}
-          bio={bio}
+          dbIsInitialized={dbIsInitialized}
         />
         <Switch>
           <Route path="/"
@@ -74,19 +60,19 @@ const App = () => {
                 setEditTweetModal={setEditTweetModal}
                 selectedTweet={selectedTweet}
                 setSelectedTweet={setSelectedTweet}
-                bio={bio}
                 commentData={commentData}
                 setCommentData={setCommentData}
+                dbIsInitialized={dbIsInitialized}
               />
             )} exact
           />
           <Route path="/comment"
             component={() => (
               <CommentPage
-                bio={bio}
                 selectedTweet={selectedTweet}
                 commentData={commentData}
                 setCommentData={setCommentData}
+                dbIsInitialized={dbIsInitialized}
               />
             )}
           />
@@ -105,10 +91,9 @@ const App = () => {
                 setEditTweetModal={setEditTweetModal}
                 selectedTweet={selectedTweet}
                 setSelectedTweet={setSelectedTweet}
-                bio={bio}
-                setBio={setBio}
                 commentData={commentData}
                 setCommentData={setCommentData}
+                dbIsInitialized={dbIsInitialized}
               />
             )}
           />

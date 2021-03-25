@@ -1,6 +1,7 @@
 import { addEntryToDb, clearAllEntries } from "../../dataStorage"
+import { constants } from "../common/constants.js"
 
-const EditProfileModal = ({ setEditModal, bio, setBio }) => {
+const EditProfileModal = ({ setEditProfileModal, bio, setBio }) => {
   const addPhoto = (id) => {
     const photoReader = new FileReader()
     photoReader.readAsDataURL(document.querySelector(id).files[0])
@@ -33,18 +34,18 @@ const EditProfileModal = ({ setEditModal, bio, setBio }) => {
     }
 
     setBio(bioObject)
-    setEditModal(false)
+    setEditProfileModal(false)
     clearAllEntries('bio')
     addEntryToDb('bio', bioObject)
   }
 
   return (
     <>
-      <div onClick={() => setEditModal(false)} className="overlay"></div>
+      <div onClick={() => setEditProfileModal(false)} className="overlay"></div>
       <div className="edit-profile-modal">
         <div className="header">
           <button
-            onClick={() => setEditModal(false)} type="button" id="closeModalButton"
+            onClick={() => setEditProfileModal(false)} type="button" id="closeModalButton"
           >
             <i className="material-icons">&#xe5cd;</i>
           </button>
@@ -56,7 +57,7 @@ const EditProfileModal = ({ setEditModal, bio, setBio }) => {
           </button>
         </div>
         <div className="content">
-          <img src={bio?.headerPhoto} className="photo" id="headerPhoto" alt="user-profile" />
+          <img src={bio?.headerPhoto || constants.PHOTOURL} className="photo" id="headerPhoto" alt="user-profile" />
           <div className="header-photo-container">
             <input
               onChange={() => addPhoto('#headerPhotoPicker')}
@@ -71,7 +72,7 @@ const EditProfileModal = ({ setEditModal, bio, setBio }) => {
           </div>
           <div>
             <div className="profile-photo">
-              <img src={bio?.profilePhoto} id="profilePhoto" alt="user-profile"/>
+              <img src={bio?.profilePhoto || constants.PHOTOURL} id="profilePhoto" alt="user-profile"/>
             </div>
             <div className="add-photo">
               <input

@@ -1,19 +1,27 @@
+import { useState, useEffect } from "react"
 import Tweets from "../common/Tweets"
-import { useState } from "react"
-import MobileLeftNav from "../leftNav/MobileLeftNav"
 import CommentModal from "../commentPage/CommentModal"
-import './homePage.css'
 import TweetDropdown from "../common/TweetDropdown"
 import DeleteModal from "../common/DeleteModal"
 import { inputEventHandler, addTweetData } from "../common/helper"
 import EditTweetModal from "../common/EditTweetModal"
+import { constants } from "../common/constants"
+import { getEntryFromDb } from "../../dataStorage"
+import MobileLeftNav from "../leftNav/MobileLeftNav"
+import './homePage.css'
 
 const HomePage = ({
   tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal,
   setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible, setDeleteModalIsVisible,
-  selectedTweet, setSelectedTweet, bio, commentData, setCommentData
+  selectedTweet, setSelectedTweet, commentData, setCommentData, dbIsInitialized
 }) => {
   const [mobileLeftNav, setMobileLeftNav] = useState(false)
+  const [bio, setBio] = useState(null)
+
+  useEffect(() => {
+    dbIsInitialized && getEntryFromDb('bio')
+      .then(result => setBio(result[0]))
+  }, [bio, dbIsInitialized])
 
   return (
     <div className="home-page">
@@ -23,11 +31,13 @@ const HomePage = ({
       </div>
       <div className="home-page-content">
         <div id="tweetContainer">
-          <img src={bio?.profilePhoto} className="home-page-photo" alt="user-profile" />
+          <img src={bio?.profilePhoto || constants.PHOTOURL}
+            className="home-page-photo" alt="user-profile"
+          />
           <div>
             <div>
               <textarea
-                onKeyUp={(event) =>
+                onKeyUp={(event) => bio &&
                   inputEventHandler(event, '#tweetHomeBox',
                     '#tweetHomeButton', tweetData, setTweetData
                   )
