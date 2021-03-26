@@ -1,4 +1,5 @@
 import database from '../../dataBase'
+import { CONSTANTS } from '../common/constants'
 
 const EditProfileModal = ({ setEditModal, bio }) => {
   const addPhoto = (id) => {
@@ -55,7 +56,7 @@ const EditProfileModal = ({ setEditModal, bio }) => {
           </button>
         </div>
         <div className="content">
-          <img src={bio.headerPhoto} className="photo" id="headerPhoto" alt="user-profile" />
+          <img src={bio?.headerPhoto || CONSTANTS.PHOTOURL} className="photo" id="headerPhoto" alt="user-profile" />
           <div className="header-photo-container">
             <input
               onChange={() => addPhoto('#headerPhotoPicker')}
@@ -70,7 +71,7 @@ const EditProfileModal = ({ setEditModal, bio }) => {
           </div>
           <div>
             <div className="profile-photo">
-              <img src={bio.profilePhoto} id="profilePhoto" alt="user-profile"/>
+              <img src={bio?.profilePhoto || CONSTANTS.PHOTOURL} id="profilePhoto" alt="user-profile"/>
             </div>
             <div className="add-photo">
               <input
@@ -85,19 +86,19 @@ const EditProfileModal = ({ setEditModal, bio }) => {
               <input
                 type="text" className="name-field"
                 maxLength="20" placeholder="Name"
-                defaultValue={bio.name}
+                defaultValue={bio?.name}
                 required
               />
               <textarea
                 className="about-user"
                 placeholder="Short introduction"
-                defaultValue={bio.aboutUser}>
+                defaultValue={bio?.aboutUser}>
               </textarea>
               <input type="text" className="location-field"
-                maxLength="20" placeholder="Location" defaultValue={bio.location}
+                maxLength="20" placeholder="Location" defaultValue={bio?.location}
               />
               <textarea className="website-field"
-                placeholder="Website" defaultValue={bio.website}
+                placeholder="Website" defaultValue={bio?.website}
               >
               </textarea>
               <label>Birth date

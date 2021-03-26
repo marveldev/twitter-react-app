@@ -1,12 +1,13 @@
-import Tweets from "../common/Tweets"
 import { useState } from "react"
-import MobileLeftNav from "../leftNav/MobileLeftNav"
+import Tweets from "../common/Tweets"
 import CommentModal from "../commentPage/CommentModal"
-import './homePage.css'
 import TweetDropdown from "../common/TweetDropdown"
 import DeleteModal from "../common/DeleteModal"
 import { inputEventHandler, addTweetData } from "../common/helper"
 import EditTweetModal from "../common/EditTweetModal"
+import { CONSTANTS } from '../common/constants'
+import MobileLeftNav from "../leftNav/MobileLeftNav"
+import './homePage.css'
 
 const HomePage = ({
   tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal,
@@ -24,14 +25,12 @@ const HomePage = ({
       </div>
       <div className="home-page-content">
         <div id="tweetContainer">
-          <img src={bio?.profilePhoto} className="home-page-photo" alt="user-profile" />
+          <img src={bio?.profilePhoto || CONSTANTS.PHOTOURL} className="home-page-photo" alt="user-profile" />
           <div>
             <div>
               <textarea
                 onKeyUp={(event) =>
-                  inputEventHandler(event, '#tweetHomeBox',
-                    '#tweetHomeButton', tweetData, setTweetData
-                  )
+                  bio && inputEventHandler(event, '#tweetHomeBox', '#tweetHomeButton')
                 }
                 id="tweetHomeBox" className="input-box" placeholder="What's happening?"
               >
@@ -50,7 +49,7 @@ const HomePage = ({
                 <span><i className="fa fa-calendar-plus-o"></i></span>
               </div>
               <button
-                onClick={() => addTweetData('#tweetHomeBox', tweetData, setTweetData)}
+                onClick={() => addTweetData('#tweetHomeBox')}
                 type="button" id="tweetHomeButton" className="tweet-button"
               >
                 Tweet
@@ -58,12 +57,12 @@ const HomePage = ({
             </div>
           </div>
         </div>
-        <div id="tweetOutput">
+        <div>
           <Tweets
             tweetData={tweetData}
+            setSelectedTweet={setSelectedTweet}
             setCommentModal={setCommentModal}
             setTweetDropdown={setTweetDropdown}
-            setSelectedTweet={setSelectedTweet}
             bio={bio}
           />
         </div>
@@ -89,8 +88,6 @@ const HomePage = ({
         <DeleteModal
           selectedTweet={selectedTweet}
           setDeleteModalIsVisible={setDeleteModalIsVisible}
-          tweetData={tweetData}
-          setTweetData={setTweetData}
         />
       }
       {editTweetModal &&

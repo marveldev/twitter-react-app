@@ -7,6 +7,7 @@ import DeleteModal from "../common/DeleteModal"
 import TweetDropdown from "../common/TweetDropdown"
 import EditTweetModal from "../common/EditTweetModal"
 import './profilePage.css'
+import { CONSTANTS } from '../common/constants'
 
 const ProfilePage = ({
   tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal, selectedTweet,
@@ -27,19 +28,19 @@ const ProfilePage = ({
           <i className="material-icons">&#xe5c4;</i>
         </button>
         <div>
-          <span>{bio?.name}</span>
+          <span>{bio?.name || CONSTANTS.NAME}</span>
           <small>4 Tweets</small>
         </div>
       </div>
       <div className="page-content">
-        <img src={bio?.headerPhoto} className="photo" alt=""/>
+        <img src={bio?.headerPhoto || CONSTANTS.PHOTOURL} className="photo" alt=""/>
         <div className="user-bio-container">
           <div>
             <div className="profile-photo">
-              <img src={bio?.profilePhoto} alt=""/>
+              <img src={bio?.profilePhoto || CONSTANTS.PHOTOURL} alt=""/>
             </div>
             <div className="user-bio">
-              <strong>{bio?.name}</strong>
+              <strong>{bio?.name || CONSTANTS.NAME}</strong>
               <p>{bio?.aboutUser}</p>
               <span><i className="material-icons">&#xe55f;</i>{bio?.location}</span>
               <span><i className="fa fa-birthday-cake"></i>{bio?.birthDate}</span>
@@ -61,13 +62,13 @@ const ProfilePage = ({
           <button>Likes</button>
         </div>
         <div id="tweetOutput">
-          <Tweets
+          {/* <Tweets
             tweetData={tweetData}
             bio={bio}
             setCommentModal={setCommentModal}
             setTweetDropdown={setTweetDropdown}
             setSelectedTweet={setSelectedTweet}
-          />
+          /> */}
         </div>
       </div>
       { editModalDisplay &&

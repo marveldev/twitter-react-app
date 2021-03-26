@@ -9,13 +9,11 @@ import {
 import './index.css'
 
 const App = () => {
-  const profilePhotoUrl = 'https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
   const storedTheme = localStorage.getItem('storedTheme')
   const storedTextColor = localStorage.getItem('storedTextColor')
   const [theme, setTheme] = useState(storedTheme || 'default')
   const [textColor, setTextColor] = useState(storedTextColor || 'blue')
   const [activePage, setActivePage] = useState('')
-  const [tweetData, setTweetData] = useState([])
   const [editTweetModal, setEditTweetModal] = useState(false)
   const [tweetDropdown, setTweetDropdown] = useState({isActive: false})
   const [deleteModalIsVisible, setDeleteModalIsVisible] = useState(false)
@@ -25,19 +23,12 @@ const App = () => {
   const [commentData, setCommentData] = useState([])
   const [selectedContact, setSelectedContact] = useState()
 
-  const [bio, setBio] = useState({
-    name: 'Jane Doe',
-    aboutUser: 'Front-end developer',
-    location: 'Lagos, Nigeria',
-    website: '',
-    birthDate: 'Born April 5, 1906',
-    profilePhoto: profilePhotoUrl,
-    headerPhoto: profilePhotoUrl
-  })
-
   const bioData = useLiveQuery(() => database.bio.toArray(), [])
+  const tweetData = useLiveQuery(() => database.tweetData.toArray(), [])
+
   if (!bioData) return null
-  console.log(bioData);
+  if (!tweetData) return null
+  console.log(tweetData);
 
   return (
     <BrowserRouter>
@@ -47,8 +38,6 @@ const App = () => {
           setTheme={setTheme}
           textColor={textColor}
           setTextColor={setTextColor}
-          tweetData={tweetData}
-          setTweetData={setTweetData}
           setActivePage={setActivePage}
           activePage={activePage}
           bioData={bioData}
@@ -58,7 +47,6 @@ const App = () => {
             component={() => (
               <HomePage
                 tweetData={tweetData}
-                setTweetData={setTweetData}
                 commentModal={commentModal}
                 setCommentModal={setCommentModal}
                 tweetDropdown={tweetDropdown}
@@ -89,7 +77,6 @@ const App = () => {
             component={() => (
               <ProfilePage
                 tweetData={tweetData}
-                setTweetData={setTweetData}
                 commentModal={commentModal}
                 setCommentModal={setCommentModal}
                 tweetDropdown={tweetDropdown}

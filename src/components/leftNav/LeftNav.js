@@ -1,8 +1,10 @@
 import { useState } from "react"
 import { Link, useHistory } from 'react-router-dom'
-import TweetModal from './TweetModal'
+import { CONSTANTS } from '../common/constants'
 import DisplayModal from './DisplayModal'
 import DropDownModal from './DropDownModal'
+import EditProfileModal from '../profilePage/EditProfileModal'
+import TweetModal from './TweetModal'
 import './leftNav.css'
 
 const LeftNav = ({
@@ -12,6 +14,7 @@ const LeftNav = ({
   const [tweetModalDisplay, setTweetModalDisplay] = useState(false)
   const [dropDownDisplay, setDropDownDisplay] = useState(false)
   const [displayModal, setDisplayModal] = useState(false)
+  const [editModalDisplay, setEditModal] = useState(false)
   const { location } = useHistory()
   const { pathname } = location
   const bio = bioData[0]
@@ -76,12 +79,16 @@ const LeftNav = ({
         <button className="tweet-modal-button" onClick={() => setTweetModalDisplay(true)}>
           <i className="material-icons">&#xe0cb;</i>
         </button>
-        <button type="button" id="tweetModalButton" onClick={() => setTweetModalDisplay(true)}>
+        <button type="button" id="tweetModalButton"
+          onClick={() => { bio ? setTweetModalDisplay(true) : setEditModal(true) }}
+        >
           Tweet
         </button>
         <div className="user-info">
-          <img src={bio?.profilePhoto} className="left-nav-photo" alt="user-profile" />
-          <span>{bio?.name}</span>
+          <img src={bio?.profilePhoto || CONSTANTS.PHOTOURL}
+            className="left-nav-photo" alt="user-profile"
+          />
+          <span>{bio?.name || CONSTANTS.NAME}</span>
         </div>
       </div>
       { tweetModalDisplay &&
@@ -105,6 +112,12 @@ const LeftNav = ({
           setTheme={setTheme}
           textColor={textColor}
           setTextColor={setTextColor}
+        />
+      }
+      { editModalDisplay &&
+        <EditProfileModal
+          setEditModal={setEditModal}
+          bio={bio}
         />
       }
     </div>

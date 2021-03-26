@@ -2,6 +2,7 @@ import { useHistory } from "react-router-dom"
 
 const Tweets = ({ tweetData, setCommentModal, setTweetDropdown, setSelectedTweet, bio }) => {
   const history = useHistory()
+
   const openTweetDropdown = (event, tweetItem) => {
     event.stopPropagation()
     const top = event.clientY
@@ -16,7 +17,7 @@ const Tweets = ({ tweetData, setCommentModal, setTweetDropdown, setSelectedTweet
   }
 
   return (
-    tweetData.map(tweetItem => (
+    tweetData && tweetData.map(tweetItem => (
       <div onClick={() => {history.push("/comment"); setSelectedTweet(tweetItem) }}
         key={tweetItem.id} className="tweet-item"
       >

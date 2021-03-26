@@ -37,6 +37,7 @@
 .home-page-content {
   position: relative;
   top: 6em;
+  padding-bottom: 1em;
 }
 
 #tweetContainer {

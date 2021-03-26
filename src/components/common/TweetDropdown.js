@@ -1,8 +1,6 @@
-const TweetDropdown = (
-  {
-    tweetDropdown, setTweetDropdown,setDeleteModalIsVisible, setEditTweetModal
-  }
-) => {
+const TweetDropdown = ({
+    tweetDropdown, setTweetDropdown, setDeleteModalIsVisible, setEditTweetModal
+}) => {
   return (
     <>
       <div className="overlay" style={{backgroundColor: "transparent"}}

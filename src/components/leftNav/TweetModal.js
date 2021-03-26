@@ -16,9 +16,7 @@ const TweetModal = ({ setTweetModalDisplay, tweetData, setTweetData, bio }) => {
             <div>
               <textarea id="tweetModalBox" className="input-box"
                 onKeyUp={(event) =>
-                  inputEventHandler(event, '#tweetModalBox',
-                    '#modalTweetButton',  tweetData, setTweetData, setTweetModalDisplay
-                  )
+                  inputEventHandler(event, '#tweetModalBox', '#modalTweetButton', setTweetModalDisplay)
                 }
                 placeholder="What's happening?"
               >
