@@ -1,5 +1,7 @@
+import { useLiveQuery } from 'dexie-react-hooks'
 import { useState } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import database from './dataBase'
 import {
   TrendingPane, HomePage, LeftNav, ProfilePage, ExplorePage,
   NotificationPage, BookmarkPage, ListsPage, MessagePage, CommentPage, SettingsPage
@@ -33,6 +35,10 @@ const App = () => {
     headerPhoto: profilePhotoUrl
   })
 
+  const bioData = useLiveQuery(() => database.bio.toArray(), [])
+  if (!bioData) return null
+  console.log(bioData);
+
   return (
     <BrowserRouter>
       <div className={`app-layer ${theme} ${textColor}`}>
@@ -45,7 +51,7 @@ const App = () => {
           setTweetData={setTweetData}
           setActivePage={setActivePage}
           activePage={activePage}
-          bio={bio}
+          bioData={bioData}
         />
         <Switch>
           <Route path="/"
@@ -63,7 +69,7 @@ const App = () => {
                 setEditTweetModal={setEditTweetModal}
                 selectedTweet={selectedTweet}
                 setSelectedTweet={setSelectedTweet}
-                bio={bio}
+                bioData={bioData}
                 commentData={commentData}
                 setCommentData={setCommentData}
               />
@@ -72,7 +78,7 @@ const App = () => {
           <Route path="/comment"
             component={() => (
               <CommentPage
-                bio={bio}
+                bioData={bioData}
                 selectedTweet={selectedTweet}
                 commentData={commentData}
                 setCommentData={setCommentData}
@@ -94,8 +100,7 @@ const App = () => {
                 setEditTweetModal={setEditTweetModal}
                 selectedTweet={selectedTweet}
                 setSelectedTweet={setSelectedTweet}
-                bio={bio}
-                setBio={setBio}
+                bioData={bioData}
                 commentData={commentData}
                 setCommentData={setCommentData}
               />

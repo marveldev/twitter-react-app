@@ -4,9 +4,10 @@ import CommentModal from './CommentModal'
 import Comments from "./Comments"
 import './commentPage.css'
 
-const CommentPage = ({ bio, selectedTweet, commentData, setCommentData }) => {
+const CommentPage = ({ bioData, selectedTweet, commentData, setCommentData }) => {
   const [commentModalDisplay, setCommentModal] = useState(false)
   const { goBack } = useHistory()
+  const bio = bioData[0]
 
   return (
     <div id={selectedTweet.id} className="comment-page">
@@ -16,8 +17,8 @@ const CommentPage = ({ bio, selectedTweet, commentData, setCommentData }) => {
       </div>
       <div className="tweet-content">
         <div>
-          <img src={bio.profilePhoto} className="home-page-photo" alt="user-profile" />
-          <strong className="user-profile-name">{bio.name}</strong>
+          <img src={bio?.profilePhoto} className="home-page-photo" alt="user-profile" />
+          <strong className="user-profile-name">{bio?.name}</strong>
           <button><i className="material-icons">&#xe5d3;</i></button>
         </div>
         <div>

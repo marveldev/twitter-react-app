@@ -11,10 +11,11 @@ import './profilePage.css'
 const ProfilePage = ({
   tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal, selectedTweet,
   setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible, setDeleteModalIsVisible,
-  setSelectedTweet, bio, setBio, commentData, setCommentData
+  setSelectedTweet, bioData, commentData, setCommentData
 }) => {
   const { goBack } = useHistory()
   const [editModalDisplay, setEditModal] = useState(false)
+  const bio = bioData[0]
 
   return (
     <div className="profile-page">
@@ -26,22 +27,22 @@ const ProfilePage = ({
           <i className="material-icons">&#xe5c4;</i>
         </button>
         <div>
-          <span>{bio.name}</span>
+          <span>{bio?.name}</span>
           <small>4 Tweets</small>
         </div>
       </div>
       <div className="page-content">
-        <img src={bio.headerPhoto} className="photo" alt=""/>
+        <img src={bio?.headerPhoto} className="photo" alt=""/>
         <div className="user-bio-container">
           <div>
             <div className="profile-photo">
-              <img src={bio.profilePhoto} alt=""/>
+              <img src={bio?.profilePhoto} alt=""/>
             </div>
             <div className="user-bio">
-              <strong>{bio.name}</strong>
-              <p>{bio.aboutUser}</p>
-              <span><i className="material-icons">&#xe55f;</i>{bio.location}</span>
-              <span><i className="fa fa-birthday-cake"></i>{bio.birthDate}</span>
+              <strong>{bio?.name}</strong>
+              <p>{bio?.aboutUser}</p>
+              <span><i className="material-icons">&#xe55f;</i>{bio?.location}</span>
+              <span><i className="fa fa-birthday-cake"></i>{bio?.birthDate}</span>
               <span><i className="fa fa-calendar"></i>Joined January 2021</span>
               <div>
                 <span><strong>48 </strong>Following</span>
@@ -62,10 +63,10 @@ const ProfilePage = ({
         <div id="tweetOutput">
           <Tweets
             tweetData={tweetData}
+            bio={bio}
             setCommentModal={setCommentModal}
             setTweetDropdown={setTweetDropdown}
             setSelectedTweet={setSelectedTweet}
-            bio={bio}
           />
         </div>
       </div>
@@ -73,13 +74,11 @@ const ProfilePage = ({
         <EditProfileModal
           setEditModal={setEditModal}
           bio={bio}
-          setBio={setBio}
         />
       }
       {commentModal &&
         <CommentModal
           setCommentModal={setCommentModal}
-          bio={bio}
           selectedTweet={selectedTweet}
           commentData={commentData}
           setCommentData={setCommentData}
@@ -108,7 +107,6 @@ const ProfilePage = ({
           tweetDropdown={tweetDropdown}
           setEditTweetModal={setEditTweetModal}
           selectedTweet={selectedTweet}
-          bio={bio}
         />
       }
     </div>

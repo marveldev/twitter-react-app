@@ -11,9 +11,10 @@ import EditTweetModal from "../common/EditTweetModal"
 const HomePage = ({
   tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal,
   setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible, setDeleteModalIsVisible,
-  selectedTweet, setSelectedTweet, bio, commentData, setCommentData
+  selectedTweet, setSelectedTweet, bioData, commentData, setCommentData
 }) => {
   const [mobileLeftNav, setMobileLeftNav] = useState(false)
+  const bio = bioData[0]
 
   return (
     <div className="home-page">
@@ -23,7 +24,7 @@ const HomePage = ({
       </div>
       <div className="home-page-content">
         <div id="tweetContainer">
-          <img src={bio.profilePhoto} className="home-page-photo" alt="user-profile" />
+          <img src={bio?.profilePhoto} className="home-page-photo" alt="user-profile" />
           <div>
             <div>
               <textarea

@@ -1,6 +1,6 @@
-import { addEntryToDb, clearAllEntries } from "../../dataStorage"
+import database from '../../dataBase'
 
-const EditProfileModal = ({ setEditModal, bio, setBio }) => {
+const EditProfileModal = ({ setEditModal, bio }) => {
   const addPhoto = (id) => {
     const photoReader = new FileReader()
     photoReader.readAsDataURL(document.querySelector(id).files[0])
@@ -13,7 +13,7 @@ const EditProfileModal = ({ setEditModal, bio, setBio }) => {
     })
   }
 
-  const updateBio = () => {
+  const updateBio = async () => {
     const nameInput = document.querySelector('.name-field').value
     const bioInput = document.querySelector('.about-user').value
     const locationInput = document.querySelector('.location-field').value
@@ -32,10 +32,9 @@ const EditProfileModal = ({ setEditModal, bio, setBio }) => {
       headerPhoto: headerPhoto
     }
 
-    setBio(bioObject)
+    await database.bio.clear()
+    await database.bio.add(bioObject)
     setEditModal(false)
-    clearAllEntries('bio')
-    addEntryToDb('bio', bioObject)
   }
 
   return (

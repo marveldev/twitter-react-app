@@ -1,7 +1,6 @@
 import contactList from './contactList'
 
 const ContactSection = ({ selectedContact, setSelectedContact }) => {
-
   return (
     <div className="contact-section">
       <div id="searchInputContainer">
