@@ -10,9 +10,9 @@ import MobileLeftNav from "../leftNav/MobileLeftNav"
 import './homePage.css'
 
 const HomePage = ({
-  tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal,
-  setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible, setDeleteModalIsVisible,
-  selectedTweet, setSelectedTweet, bioData, commentData, setCommentData
+  tweetData, commentModal, editTweetModal, setEditTweetModal,
+  setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible,
+  setDeleteModalIsVisible, selectedTweet, setSelectedTweet, bioData
 }) => {
   const [mobileLeftNav, setMobileLeftNav] = useState(false)
   const bio = bioData[0]
@@ -25,7 +25,9 @@ const HomePage = ({
       </div>
       <div className="home-page-content">
         <div id="tweetContainer">
-          <img src={bio?.profilePhoto || CONSTANTS.PHOTOURL} className="home-page-photo" alt="user-profile" />
+          <img src={bio?.profilePhoto || CONSTANTS.PHOTOURL}
+            className="home-page-photo" alt="user-profile"
+          />
           <div>
             <div>
               <textarea
@@ -72,8 +74,6 @@ const HomePage = ({
           setCommentModal={setCommentModal}
           bio={bio}
           selectedTweet={selectedTweet}
-          commentData={commentData}
-          setCommentData={setCommentData}
         />
       }
       {tweetDropdown.isActive &&
@@ -93,7 +93,6 @@ const HomePage = ({
       {editTweetModal &&
         <EditTweetModal
           tweetData={tweetData}
-          setTweetData={setTweetData}
           tweetDropdown={tweetDropdown}
           setEditTweetModal={setEditTweetModal}
           selectedTweet={selectedTweet}

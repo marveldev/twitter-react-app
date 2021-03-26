@@ -1,28 +1,23 @@
-const EditTweetModal = ({
-  setEditTweetModal, tweetData, setTweetData, selectedTweet, bio
-}) => {
-  const editTweetData = () => {
-    const newTweetInput = document.querySelector('#editTweetBox').value
-    const nextState =  tweetData.map((tweetItem) => {
-      if (tweetItem.id === selectedTweet.id) {
-        return { ...tweetItem, tweetText: newTweetInput }
-      }
-      return tweetItem
-    })
+import database from '../../dataBase'
 
-    setTweetData(nextState)
+const EditTweetModal = ({ setEditTweetModal, selectedTweet, bio }) => {
+  const editTweetData = async id => {
+    const newTweetInput = document.querySelector('#editTweetBox').value
+    await database.tweetData.update(id, {tweetText: newTweetInput})
+
     setEditTweetModal(false)
   }
 
-  const inputEventHandler = (event,  buttonSelector) => {
-    const inputValue = event.target.value
+  const inputEventHandler = event => {
+    const inputValue = document.querySelector('#editTweetBox').value
     if (inputValue.trim().length >= 1) {
-      document.querySelector(buttonSelector).classList.add('enable')
-      if (event.which === 13) {
-        editTweetData()
+      document.querySelector('#editTweetButton').classList.add('enable')
+      const keyCode = event.which || event.keyCode
+      if (keyCode === 13 && event.shiftKey) {
+        editTweetData(selectedTweet.id)
       }
     } else {
-      document.querySelector(buttonSelector).classList.remove('enable')
+      document.querySelector('#editTweetButton').classList.remove('enable')
     }
   }
 
@@ -40,7 +35,7 @@ const EditTweetModal = ({
           <div>
             <div>
               <textarea id="editTweetBox" className="input-box"
-                onKeyUp={(event) => inputEventHandler(event, '#editTweetButton')}
+                onKeyUp={inputEventHandler}
                 defaultValue={selectedTweet.tweetText}  placeholder="Enter new tweet here..."
               >
               </textarea>
@@ -57,9 +52,8 @@ const EditTweetModal = ({
                 <span><i className="fa fa-calendar-plus-o"></i></span>
               </div>
               <button
-                onClick={editTweetData}
-                type="button" id="editTweetButton"
-                className="enable tweet-button"
+                onClick={() => editTweetData(selectedTweet.id)}
+                type="button" id="editTweetButton"className="enable tweet-button"
               >
                 Save
               </button>

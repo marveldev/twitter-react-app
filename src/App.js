@@ -20,15 +20,15 @@ const App = () => {
   const [commentModal, setCommentModal] = useState(false)
   const [selectedTweet, setSelectedTweet] = useState({})
   const [messageData, setMessageData] = useState([])
-  const [commentData, setCommentData] = useState([])
   const [selectedContact, setSelectedContact] = useState()
 
   const bioData = useLiveQuery(() => database.bio.toArray(), [])
   const tweetData = useLiveQuery(() => database.tweetData.toArray(), [])
+  const commentData = useLiveQuery(() => database.commentData.toArray(), [])
 
   if (!bioData) return null
   if (!tweetData) return null
-  console.log(tweetData);
+  if (!commentData) return null
 
   return (
     <BrowserRouter>
@@ -58,8 +58,6 @@ const App = () => {
                 selectedTweet={selectedTweet}
                 setSelectedTweet={setSelectedTweet}
                 bioData={bioData}
-                commentData={commentData}
-                setCommentData={setCommentData}
               />
             )} exact
           />
@@ -69,7 +67,6 @@ const App = () => {
                 bioData={bioData}
                 selectedTweet={selectedTweet}
                 commentData={commentData}
-                setCommentData={setCommentData}
               />
             )}
           />
@@ -88,8 +85,6 @@ const App = () => {
                 selectedTweet={selectedTweet}
                 setSelectedTweet={setSelectedTweet}
                 bioData={bioData}
-                commentData={commentData}
-                setCommentData={setCommentData}
               />
             )}
           />

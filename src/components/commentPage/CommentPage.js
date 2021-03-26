@@ -4,7 +4,7 @@ import CommentModal from './CommentModal'
 import Comments from "./Comments"
 import './commentPage.css'
 
-const CommentPage = ({ bioData, selectedTweet, commentData, setCommentData }) => {
+const CommentPage = ({ bioData, selectedTweet, commentData }) => {
   const [commentModalDisplay, setCommentModal] = useState(false)
   const { goBack } = useHistory()
   const bio = bioData[0]
@@ -54,8 +54,6 @@ const CommentPage = ({ bioData, selectedTweet, commentData, setCommentData }) =>
           setCommentModal={setCommentModal}
           bio={bio}
           selectedTweet={selectedTweet}
-          commentData={commentData}
-          setCommentData={setCommentData}
         />
       }
     </div>

@@ -1,18 +1,18 @@
 import { useState } from "react"
 import { useHistory } from "react-router-dom"
-import EditProfileModal from './EditProfileModal'
 import Tweets from '../common/Tweets'
 import CommentModal from "../commentPage/CommentModal"
 import DeleteModal from "../common/DeleteModal"
 import TweetDropdown from "../common/TweetDropdown"
 import EditTweetModal from "../common/EditTweetModal"
-import './profilePage.css'
 import { CONSTANTS } from '../common/constants'
+import EditProfileModal from './EditProfileModal'
+import './profilePage.css'
 
 const ProfilePage = ({
-  tweetData, setTweetData, commentModal, editTweetModal, setEditTweetModal, selectedTweet,
-  setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible, setDeleteModalIsVisible,
-  setSelectedTweet, bioData, commentData, setCommentData
+  tweetData, commentModal, editTweetModal, setEditTweetModal, selectedTweet,
+  setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible,
+  setDeleteModalIsVisible, setSelectedTweet, bioData
 }) => {
   const { goBack } = useHistory()
   const [editModalDisplay, setEditModal] = useState(false)
@@ -62,13 +62,13 @@ const ProfilePage = ({
           <button>Likes</button>
         </div>
         <div id="tweetOutput">
-          {/* <Tweets
+          <Tweets
             tweetData={tweetData}
             bio={bio}
+            setSelectedTweet={setSelectedTweet}
             setCommentModal={setCommentModal}
             setTweetDropdown={setTweetDropdown}
-            setSelectedTweet={setSelectedTweet}
-          /> */}
+          />
         </div>
       </div>
       { editModalDisplay &&
@@ -81,8 +81,7 @@ const ProfilePage = ({
         <CommentModal
           setCommentModal={setCommentModal}
           selectedTweet={selectedTweet}
-          commentData={commentData}
-          setCommentData={setCommentData}
+          bio={bio}
         />
       }
       {tweetDropdown.isActive &&
@@ -97,17 +96,15 @@ const ProfilePage = ({
         <DeleteModal
           selectedTweet={selectedTweet}
           setDeleteModalIsVisible={setDeleteModalIsVisible}
-          tweetData={tweetData}
-          setTweetData={setTweetData}
         />
       }
       {editTweetModal &&
         <EditTweetModal
           tweetData={tweetData}
-          setTweetData={setTweetData}
           tweetDropdown={tweetDropdown}
           setEditTweetModal={setEditTweetModal}
           selectedTweet={selectedTweet}
+          bio={bio}
         />
       }
     </div>

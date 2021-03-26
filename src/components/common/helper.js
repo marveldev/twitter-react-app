@@ -12,7 +12,6 @@ const changeTextColor = (textColor, setTextColor) => {
 
 const addTweetData = async (selector, setTweetModalDisplay) => {
   const tweetText = document.querySelector(selector).value
-
   await database.tweetData.add({tweetText})
 
   document.querySelector(selector).value = ''

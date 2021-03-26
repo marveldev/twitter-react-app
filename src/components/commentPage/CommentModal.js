@@ -1,22 +1,23 @@
-const CommentModal = ({ setCommentModal, bio, selectedTweet, commentData, setCommentData }) => {
-  const addComment = () => {
+import database from '../../dataBase'
+
+const CommentModal = ({ setCommentModal, bio, selectedTweet }) => {
+  const addComment = async () => {
     const commentText = document.querySelector('#commentTextBox').value
-    const id = 'id' + Date.parse(new Date()).toString()
     const commentObject = {
       commentText,
-      id,
       parentId: selectedTweet.id
     }
 
-    setCommentData([...commentData, commentObject])
+    await database.commentData.add(commentObject)
     setCommentModal(false)
   }
 
-  const inputEventHandler = (event) => {
+  const inputEventHandler = event => {
     const inputValue = document.querySelector('#commentTextBox').value
     if (inputValue.trim().length >= 1) {
       document.querySelector('#commentButton').classList.add('enable')
-      if (event.which === 13 && !event.shiftKey) {
+      const keyCode = event.which || event.keyCode
+      if (keyCode === 13 && event.shiftKey) {
         addComment()
       }
     } else {
