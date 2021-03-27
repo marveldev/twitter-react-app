@@ -14,16 +14,19 @@ const ChatSection = ({ messageData, setMessageData, selectedContact }) => {
   const addMessageData = () => {
     const text = document.querySelector('#messageBox').value
     const id = 'id' + Date.parse(new Date()).toString()
+    const chatTime =
+      new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
     const messageObject = {
       text,
       id,
+      chatTime,
       contactId: selectedContact
     }
 
     setMessageData([...messageData, messageObject])
   }
 
-  const inputEventHandler = (event) => {
+  const inputEventHandler = event => {
     const inputValue = document.querySelector('#messageBox').value
     if (inputValue.trim().length >= 1) {
       document.querySelector('.send-button').classList.add('allow')
