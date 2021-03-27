@@ -1,8 +1,10 @@
+import { displaySettingsPage } from '../common/helper'
+
 const NotificationSection = () => {
   return (
     <div className="notification-section">
       <div className="section header">
-        <button type="button" className="previous-button">
+        <button type="button" onClick={displaySettingsPage} className="previous-button">
           <i className="material-icons">&#xe5c4;</i>
         </button>
         <span>Notifications</span>

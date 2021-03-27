@@ -1,8 +1,10 @@
+import { displaySettingsPage } from '../common/helper'
+
 const AccessiblitySection = ({ switchCurrentSection }) => {
   return (
     <div className="accessibility-section">
       <div className="section header">
-        <button type="button" className="previous-button">
+        <button type="button" onClick={displaySettingsPage} className="previous-button">
           <i className="material-icons">&#xe5c4;</i>
         </button>
         <span>Accessibility, display and languages</span>

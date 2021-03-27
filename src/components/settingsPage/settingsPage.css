@@ -333,17 +333,18 @@
 
 @media screen and (max-width: 768px) {
   .settings-page {
-    left: 15.3%;
+    left: 15%;
     display: block;
     border-right: 1px solid #E6ECF0;
   }
 
   .previous-button {
-    display: inline;
+    display: flex;
   }
 
   .settings-page .headline {
-    width: 74%;
+    justify-content: left;
+    width: 73.5%;
   }
 
   #currentSection {
@@ -351,7 +352,16 @@
   }
 
   .section {
+    align-items: center;
     width: 74%;
+  }
+
+  .section .previous-button {
+    width: 3em;
+    height: 3em;
+    align-items: center;
+    border-radius: 1.5em;
+    margin-left: 1em;
   }
 }
 

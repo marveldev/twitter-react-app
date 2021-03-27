@@ -109,6 +109,7 @@
   .notification-page-content {
     height: 100%;
     border-right: 1px solid #E6ECF0;
+    padding-bottom: 1em;
   }
 
   .notification-page {

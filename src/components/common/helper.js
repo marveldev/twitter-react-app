@@ -32,4 +32,9 @@ const inputEventHandler = (event, inputSelector, buttonSelector, setTweetModalDi
   }
 }
 
-export { inputEventHandler, addTweetData, changeTheme, changeTextColor }
+const displaySettingsPage = () => {
+  document.querySelector('#settingsPage').style.display = 'block'
+  document.querySelector('#currentSection').style.display = 'none'
+}
+
+export { inputEventHandler, addTweetData, changeTheme, changeTextColor, displaySettingsPage }

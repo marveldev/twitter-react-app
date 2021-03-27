@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useHistory } from "react-router-dom"
 import AccessiblitySection from './AccessiblitySection'
 import AccountSection from './AccountSection'
 import DisplaySection from './DisplaySection.js'
@@ -22,11 +23,15 @@ const SettingsPage = ({ theme, setTheme, textColor, setTextColor }) => {
     localStorage.setItem('storedSection', name)
   }
 
+  const { goBack } = useHistory()
+
   return (
     <div className="settings-page">
-      <div>
+      <div id="settingsPage">
         <div className="headline">
-          <button type="button" className="previous-button"><i className="material-icons">&#xe5c4;</i></button>
+          <button type="button" onClick={() => goBack()} className="previous-button">
+            <i className="material-icons">&#xe5c4;</i>
+          </button>
           <span>Settings</span>
         </div>
         <div className="settings page-core">
