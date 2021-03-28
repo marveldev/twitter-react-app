@@ -46,7 +46,6 @@
 .notification-page-content {
   position: relative;
   top: 7.2em;
-  border-bottom: 1px solid #E6ECF0;
 }
 
 .notification-page-content > div:hover {
@@ -122,13 +121,12 @@
     width: 100%;
   }
 
-  .notification-page-content > div:last-child {
-    margin-bottom: 10em;
-    border-bottom: 1px solid #E6ECF0;
-  }
-
   .notification-page-content > div {
     grid-template-columns: 0.3fr 1.4fr;
+  }
+
+  .notification-page-content > div:last-child {
+    padding-bottom: 8em;
   }
 }
 

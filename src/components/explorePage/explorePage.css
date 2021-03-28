@@ -11,6 +11,7 @@
 .explore-page-content {
   width: 42.7em;
   margin: 4em 0 0;
+  padding-bottom: 5em;
 }
 
 .header .search-input {
@@ -166,10 +167,6 @@
 }
 
 @media screen and (max-width: 425px) {
-  .explore-page-content {
-    margin: 4em 0;
-  }
-
   #image {
     height: 18em;
   }
@@ -186,9 +183,8 @@
     grid-template-columns: 0.3fr 1.4fr;
   }
 
-  .tweet-content-item:last-child {
-    margin-bottom: 7em;
-    border-bottom: 1px solid #E6ECF0;
+  .explore-page .header {
+    width: 100%;
   }
 
   .explore-page-content .home-page-photo {

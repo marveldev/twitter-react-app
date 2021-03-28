@@ -37,7 +37,7 @@
 .home-page-content {
   position: relative;
   top: 6em;
-  padding-bottom: 1em;
+  padding-bottom: 8em;
 }
 
 #tweetContainer {
@@ -263,7 +263,27 @@
   }
 
   #tweetContainer {
-    grid-template-columns: 0.4fr 1.5fr;
+    grid-template-columns: 0.35fr 1.5fr;
+  }
+
+  .tweet-item .tweet-content-item {
+    grid-template-columns: 0.5fr 1.8fr;
+  }
+
+  .home-page-photo {
+    margin-left: 1.3em;
+  }
+
+  .delete-modal {
+    left: 0;
+    top: 5em;
+    border-radius: 0;
+  }
+
+  .edit-tweet-modal {
+    width: 100%;
+    left: 0;
+    border-radius: 0;
   }
 }
 

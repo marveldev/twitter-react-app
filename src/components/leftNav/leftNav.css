@@ -357,6 +357,10 @@ button {
     margin: auto 0;
   }
 
+  .nav-button:nth-child(1n+6) {
+    display: none;
+  }
+
   #logo {
     display: none;
   }
@@ -427,6 +431,14 @@ button {
 
   .dropdown-button:nth-child(4) {
     border-bottom: none;
+  }
+
+  .tweet-modal {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
   }
 }
 

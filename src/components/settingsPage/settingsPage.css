@@ -396,6 +396,7 @@
   .color-options {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    height: 14em;
   }
 
   .color-options > div {

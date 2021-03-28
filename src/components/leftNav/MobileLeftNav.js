@@ -24,17 +24,11 @@ const MobileLeftNav = ({ setMobileLeftNav }) => {
               <span><strong>17</strong> Followers</span>
             </div>
           </div>
-          <Link to="/profile"
-            className="dropdown-button"
-            onClick={() => {}}
-          >
+          <Link to="/profile" className="dropdown-button">
             <i className="fa fa-user-o"></i>
             <span>Profile</span>
           </Link>
-          <Link to="/list"
-            className="dropdown-button"
-            onClick={() => {}}
-          >
+          <Link to="/list" className="dropdown-button">
             <i className="fa fa-list-alt"></i>
             <span>Lists</span>
           </Link>
@@ -42,10 +36,7 @@ const MobileLeftNav = ({ setMobileLeftNav }) => {
             <i className="material-icons">&#xe8e1;</i>
             Topics
           </button>
-          <Link to="/bookmark"
-            className="dropdown-button"
-            onClick={() => {}}
-          >
+          <Link to="/bookmark" className="dropdown-button">
             <i className="fa fa-bookmark-o"></i>
             <span>Bookmarks</span>
           </Link>
@@ -58,10 +49,7 @@ const MobileLeftNav = ({ setMobileLeftNav }) => {
             <i className="fa fa-bar-chart"></i>
             Analytics
           </button>
-          <Link to='./settings'
-            className="dropdown-button"
-            onClick={() => {}}
-          >
+          <Link to='./settings' className="dropdown-button">
             <i className="material-icons">&#xe8b8;</i>
             Settings and privacy
           </Link>

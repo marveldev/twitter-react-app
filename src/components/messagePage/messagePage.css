@@ -327,13 +327,21 @@
   .message-page {
     left: 0;
     display: block;
+    width: 100%;
+    margin-bottom: 15em;
   }
 
   .headline {
     width: 100%;
+    left: 0;
   }
 
-  .initial-message-section {
-    display: none;
+  .contact-list {
+    grid-template-columns: 0.2fr 0.8fr;
+    padding: 1em 0;
+  }
+
+  .contact-list:last-child {
+    padding-bottom: 8em;
   }
 }

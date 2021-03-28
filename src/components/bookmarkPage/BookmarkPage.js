@@ -1,10 +1,13 @@
+import { useHistory } from 'react-router-dom'
 import './bookmarkPage.css'
 
 const BookmarkPage = () => {
+  const { goBack } = useHistory()
+
   return (
     <div className="bookmarks-page">
       <div className="header">
-        <button type="button" className="previous-button">
+        <button type="button"  onClick={() => goBack()} className="previous-button">
           <i className="material-icons">&#xe5c4;</i>
         </button>
         <span>Bookmarks</span>
