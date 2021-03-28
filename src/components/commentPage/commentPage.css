@@ -1,6 +1,7 @@
 .comment-page {
   border-right: 1px solid #E6ECF0;
   height: 100%;
+  padding-bottom: 2em;
 }
 
 .comment-page .header span {

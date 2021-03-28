@@ -303,6 +303,14 @@ button {
   .dropdown-content {
     bottom: 7em;
   }
+
+  .display-modal {
+    left: 10%;
+  }
+
+  .display-modal .section-content {
+    max-height: 28em;
+  }
 }
 
 @media screen and (max-width: 425px) {

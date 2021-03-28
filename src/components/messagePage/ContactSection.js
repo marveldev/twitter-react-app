@@ -1,6 +1,15 @@
 import contactList from './contactList'
 
 const ContactSection = ({ selectedContact, setSelectedContact }) => {
+  const switchCurrentSection = contact => {
+    if (window.innerWidth <= 768) {
+      document.querySelector('.message-contact-page').style.display = 'none'
+      document.querySelector('.current-message-section').style.display = 'block'
+    }
+
+    setSelectedContact(contact)
+  }
+
   return (
     <div className="contact-section">
       <div id="searchInputContainer">
@@ -9,8 +18,8 @@ const ContactSection = ({ selectedContact, setSelectedContact }) => {
       </div>
       <div>
         {contactList.map(contact => (
-          <div id={selectedContact === contact.id ? 'current' : ''}
-            className="contact-list" onClick={() => setSelectedContact(contact)}
+          <div key={contact.id} id={selectedContact === contact.id ? 'current' : ''}
+            className="contact-list" onClick={() => switchCurrentSection(contact)}
           >
             <img src={contact.photoUrl} className="home-page-photo" alt="user-profile"
             />

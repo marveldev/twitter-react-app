@@ -267,14 +267,11 @@
 
   .edit-profile-modal {
     left: 10%;
+    top: 1em;
   }
 
-  .edit-profile-modal > .header {
-    width: 42.7em;
-  }
-
-  .entry-box-container {
-    margin: 0 1em;
+  .content {
+    max-height: 30em;
   }
 }
 

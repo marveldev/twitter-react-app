@@ -38,12 +38,20 @@ const ChatSection = ({ messageData, setMessageData, selectedContact }) => {
     }
   }
 
+  const displayContactSection = () => {
+    document.querySelector('.message-contact-page').style.display = 'block'
+    document.querySelector('.current-message-section').style.display = 'none'
+  }
+
   return (
     <>
       {!selectedContact && <InitialChatSection />}
       {selectedContact && (
         <div className="message-section">
           <div className="section-header">
+            <button type="button" onClick={displayContactSection} className="previous-button">
+              <i className="material-icons">&#xe5c4;</i>
+            </button>
             <img src={selectedContact.photoUrl}
               className="home-page-photo" alt="user-profile"
             />

@@ -291,11 +291,35 @@
 
 @media screen and (max-width: 768px) {
   .message-page {
-    left: 15.3%;
+    left: 15%;
+    display: block;
+    border-right: 1px solid #E6ECF0;
   }
 
   .headline {
-    width: 18.6em;
+    width: 73.5%;
+  }
+
+  .current-message-section {
+    display: none;
+  }
+
+  .message-contact-page {
+    width: 100%;
+  }
+
+  .contact-list {
+    grid-template-columns: 0.2fr 1fr;
+    padding: 1em;
+  }
+
+  .section-header {
+    width: 40.6em;
+  }
+
+  .section-header .previous-button {
+    color: #1DA1F2;
+    margin: 1em;
   }
 }
 
