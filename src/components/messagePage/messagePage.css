@@ -271,6 +271,37 @@
   border-right: 0.2em solid #1DA1F2;
 }
 
+.chat-dropdown {
+  background-color: #ffffff;
+  position: absolute;
+  right: 25%;
+  width: 10em;
+  height: auto;
+  z-index: 2;
+  border-radius: 0.5em;
+  box-shadow: 0.2em 0.2em 0.5em 0.5em #e4e7eaca;
+}
+
+.chat-dropdown button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 3.5em;
+}
+
+.chat-dropdown i {
+  font-size: 1.3em;
+}
+
+.chat-dropdown button:first-child {
+  color: #E0245E;
+}
+
+.chat-dropdown button:hover {
+  background-color: #F7F7F7;
+}
+
 @media screen and (max-width: 1024px) {
   .headline {
     width: 22em;

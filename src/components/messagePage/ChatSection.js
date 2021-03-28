@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Message from './Message'
 
 const InitialChatSection = () => {
@@ -11,6 +12,9 @@ const InitialChatSection = () => {
 }
 
 const ChatSection = ({ messageData, setMessageData, selectedContact }) => {
+  const [chatDropdown, setChatDropdown] = useState({isActive: false})
+  const [deleteModalIsVisible, setDeleteModalIsVisible] = useState(false)
+
   const addMessageData = () => {
     const text = document.querySelector('#messageBox').value
     const id = 'id' + Date.parse(new Date()).toString()
@@ -63,8 +67,31 @@ const ChatSection = ({ messageData, setMessageData, selectedContact }) => {
               <Message
                 messageData={messageData}
                 selectedContact={selectedContact}
+                chatDropdown={chatDropdown}
+                setChatDropdown={setChatDropdown}
               />
             </div>
+            {chatDropdown.isActive && (
+              <div>
+                <div className="overlay" style={{backgroundColor: "transparent"}}
+                  onClick={() => setChatDropdown(false)}
+                >
+                </div>
+                <div className="chat-dropdown" style={{top: chatDropdown.top}}>
+                  <button
+                    onClick={() => { setDeleteModalIsVisible(true); setChatDropdown(false) }}
+                  >
+                    <i className="fa fa-trash-o"></i>
+                    Delete for you
+                  </button>
+                  <button onClick={() =>{}}
+                  >
+                    <i className="fa fa-edit"></i>
+                    Copy message
+                  </button>
+                </div>
+              </div>
+            )}
             <form>
               <span className="fa fa-file-picture-o"></span>
               <span className="fa fa-git-square"></span>
@@ -80,6 +107,23 @@ const ChatSection = ({ messageData, setMessageData, selectedContact }) => {
             </form>
           </div>
         </div>
+      )}
+      {deleteModalIsVisible && (
+        <>
+          <div onClick={() => setDeleteModalIsVisible(false)} className="overlay"></div>
+          <div className="delete-modal">
+            <h3>Delete Tweet?</h3>
+            <p>This message will be deleted for you. Other people in the
+              conversation will still be able to see it.
+            </p>
+            <button onClick={() => setDeleteModalIsVisible(false)} className="cancel-button">
+              Cancel
+            </button>
+            <button onClick={() => {}} className="confirm-button">
+              Delete
+            </button>
+          </div>
+        </>
       )}
     </>
   )
