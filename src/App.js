@@ -19,16 +19,18 @@ const App = () => {
   const [deleteModalIsVisible, setDeleteModalIsVisible] = useState(false)
   const [commentModal, setCommentModal] = useState(false)
   const [selectedTweet, setSelectedTweet] = useState({})
-  const [messageData, setMessageData] = useState([])
+  // const [messageData, setMessageData] = useState([])
   const [selectedContact, setSelectedContact] = useState()
 
   const bioData = useLiveQuery(() => database.bio.toArray(), [])
   const tweetData = useLiveQuery(() => database.tweetData.toArray(), [])
   const commentData = useLiveQuery(() => database.commentData.toArray(), [])
+  const messageData = useLiveQuery(() => database.messageData.toArray(), [])
 
   if (!bioData) return null
   if (!tweetData) return null
   if (!commentData) return null
+  if (!messageData) return null
 
   return (
     <BrowserRouter>
@@ -99,7 +101,6 @@ const App = () => {
             component={() => (
               <MessagePage
                 messageData={messageData}
-                setMessageData={setMessageData}
                 selectedContact={selectedContact}
                 setSelectedContact={setSelectedContact}
               />

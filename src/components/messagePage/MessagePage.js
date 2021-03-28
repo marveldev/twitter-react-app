@@ -2,7 +2,7 @@ import './messagePage.css'
 import { ContactSection } from "./ContactSection"
 import { ChatSection } from './ChatSection'
 
-const MessagePage = ({ messageData, setMessageData, selectedContact, setSelectedContact }) => {
+const MessagePage = ({ messageData, selectedContact, setSelectedContact }) => {
   return (
     <div className="message-page">
       <div>
@@ -20,7 +20,6 @@ const MessagePage = ({ messageData, setMessageData, selectedContact, setSelected
       <div className="current-message-section">
         <ChatSection
           messageData={messageData}
-          setMessageData={setMessageData}
           selectedContact={selectedContact}
         />
       </div>

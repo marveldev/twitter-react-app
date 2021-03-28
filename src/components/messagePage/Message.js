@@ -1,6 +1,6 @@
-const Message = ({ messageData, selectedContact, setChatDropdown }) => {
-  const filteredData = messageData.filter(item => item.contactId === selectedContact)
-  
+const Message = ({ messageData, selectedContact, setChatDropdown, setSelectedMessageId }) => {
+  const filteredData = messageData.filter(item => item.selectedContact.id === selectedContact.id)
+
   const openMessageOptions = (selector) => {
     document.querySelector(`#${selector}`).style.visibility = 'visible'
   }
@@ -9,23 +9,26 @@ const Message = ({ messageData, selectedContact, setChatDropdown }) => {
     document.querySelector(`#${selector}`).style.visibility = 'hidden'
   }
 
-  const openTweetDropdown = event => {
+  const openTweetDropdown = (event, id) => {
     const top = event.clientY
     setChatDropdown({isActive: true, top: (top + 'px')})
+    setSelectedMessageId(id)
   }
 
   return (
     filteredData.map(messageItem => (
-      <div key={messageItem.id}
-        onMouseOver={() => openMessageOptions(messageItem.id)}
-        onMouseOut= {() => closeMessageOptions(messageItem.id)}
+      <div key={messageItem.messageId}
+        onMouseOver={() => openMessageOptions(messageItem.messageId) }
+        onMouseOut= {() => closeMessageOptions(messageItem.messageId)}
         className="message-item"
       >
         <div>
           <div className="message-content">
-            <div id={messageItem.id} className="message-options">
+            <div id={messageItem.messageId} className="message-options">
               <p className="fa">&#xf08a;</p>
-              <p onClick={openTweetDropdown} className="material-icons">
+              <p onClick={(event) => openTweetDropdown(event, messageItem.messageId)}
+                className="material-icons"
+              >
                 &#xe5d3;
               </p>
             </div>

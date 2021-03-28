@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import database from '../../dataBase'
 import Message from './Message'
 
 const InitialChatSection = () => {
@@ -11,23 +12,24 @@ const InitialChatSection = () => {
   )
 }
 
-const ChatSection = ({ messageData, setMessageData, selectedContact }) => {
+const ChatSection = ({ messageData, selectedContact }) => {
   const [chatDropdown, setChatDropdown] = useState({isActive: false})
-  const [deleteModalIsVisible, setDeleteModalIsVisible] = useState(false)
+  const [deleteModal, setDeleteModal] = useState(false)
+  const [selectedMessageId, setSelectedMessageId] = useState('')
 
-  const addMessageData = () => {
+  const addMessageData = async () => {
     const text = document.querySelector('#messageBox').value
-    const id = 'id' + Date.parse(new Date()).toString()
+    const messageId = 'id' + Date.parse(new Date()).toString()
     const chatTime =
       new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
     const messageObject = {
+      messageId,
       text,
-      id,
       chatTime,
-      contactId: selectedContact
+      selectedContact
     }
 
-    setMessageData([...messageData, messageObject])
+    await database.messageData.add(messageObject)
   }
 
   const inputEventHandler = event => {
@@ -40,6 +42,11 @@ const ChatSection = ({ messageData, setMessageData, selectedContact }) => {
     } else {
       document.querySelector('.send-button').classList.remove('allow')
     }
+  }
+
+  const deleteMessage = async () => {
+    await database.messageData.delete(selectedMessageId)
+    setDeleteModal(false)
   }
 
   const displayContactSection = () => {
@@ -67,8 +74,8 @@ const ChatSection = ({ messageData, setMessageData, selectedContact }) => {
               <Message
                 messageData={messageData}
                 selectedContact={selectedContact}
-                chatDropdown={chatDropdown}
                 setChatDropdown={setChatDropdown}
+                setSelectedMessageId={setSelectedMessageId}
               />
             </div>
             {chatDropdown.isActive && (
@@ -79,13 +86,12 @@ const ChatSection = ({ messageData, setMessageData, selectedContact }) => {
                 </div>
                 <div className="chat-dropdown" style={{top: chatDropdown.top}}>
                   <button
-                    onClick={() => { setDeleteModalIsVisible(true); setChatDropdown(false) }}
+                    onClick={() => { setDeleteModal(true); setChatDropdown(false) }}
                   >
                     <i className="fa fa-trash-o"></i>
                     Delete for you
                   </button>
-                  <button onClick={() =>{}}
-                  >
+                  <button type="button">
                     <i className="fa fa-edit"></i>
                     Copy message
                   </button>
@@ -108,18 +114,18 @@ const ChatSection = ({ messageData, setMessageData, selectedContact }) => {
           </div>
         </div>
       )}
-      {deleteModalIsVisible && (
+      {deleteModal && (
         <>
-          <div onClick={() => setDeleteModalIsVisible(false)} className="overlay"></div>
+          <div onClick={() => setDeleteModal(false)} className="overlay"></div>
           <div className="delete-modal">
             <h3>Delete Tweet?</h3>
             <p>This message will be deleted for you. Other people in the
               conversation will still be able to see it.
             </p>
-            <button onClick={() => setDeleteModalIsVisible(false)} className="cancel-button">
+            <button onClick={() => setDeleteModal(false)} className="cancel-button">
               Cancel
             </button>
-            <button onClick={() => {}} className="confirm-button">
+            <button onClick={deleteMessage} className="confirm-button">
               Delete
             </button>
           </div>
