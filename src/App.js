@@ -1,5 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import database from './dataBase'
 import {
@@ -21,12 +21,17 @@ const App = () => {
   const [selectedTweet, setSelectedTweet] = useState({})
   const [selectedContact, setSelectedContact] = useState()
 
-  const bioData = useLiveQuery(() => database.bio.toArray(), [])
+  const [bioData, setBioData] = useState([])
   const tweetData = useLiveQuery(() => database.tweetData.toArray(), [])
   const commentData = useLiveQuery(() => database.commentData.toArray(), [])
   const messageData = useLiveQuery(() => database.messageData.toArray(), [])
 
-  if (!bioData) return null
+  useEffect(() => database.bio.toArray()
+    .then(result => {
+      setBioData(result)
+    }), []
+  )
+
   if (!tweetData) return null
   if (!commentData) return null
   if (!messageData) return null
@@ -86,6 +91,7 @@ const App = () => {
                 selectedTweet={selectedTweet}
                 setSelectedTweet={setSelectedTweet}
                 bioData={bioData}
+                setBioData={setBioData}
               />
             )}
           />

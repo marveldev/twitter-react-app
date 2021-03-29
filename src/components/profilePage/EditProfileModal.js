@@ -1,7 +1,7 @@
 import database from '../../dataBase'
 import { CONSTANTS } from '../common/constants'
 
-const EditProfileModal = ({ setEditModal, bio }) => {
+const EditProfileModal = ({ setEditModal, bio, setBioData }) => {
   const addPhoto = (id) => {
     const photoReader = new FileReader()
     photoReader.readAsDataURL(document.querySelector(id).files[0])
@@ -35,6 +35,8 @@ const EditProfileModal = ({ setEditModal, bio }) => {
 
     await database.bio.clear()
     await database.bio.add(bioObject)
+    const newItemList = await database.bio.toArray()
+    setBioData(newItemList)
     setEditModal(false)
   }
 

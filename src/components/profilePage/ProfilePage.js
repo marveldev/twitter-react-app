@@ -12,7 +12,7 @@ import './profilePage.css'
 const ProfilePage = ({
   tweetData, commentModal, editTweetModal, setEditTweetModal, selectedTweet,
   setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible,
-  setDeleteModalIsVisible, setSelectedTweet, bioData
+  setDeleteModalIsVisible, setSelectedTweet, bioData, setBioData
 }) => {
   const { goBack } = useHistory()
   const [editModalDisplay, setEditModal] = useState(false)
@@ -75,6 +75,7 @@ const ProfilePage = ({
         <EditProfileModal
           setEditModal={setEditModal}
           bio={bio}
+          setBioData={setBioData}
         />
       }
       {commentModal &&
