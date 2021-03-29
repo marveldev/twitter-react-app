@@ -364,7 +364,7 @@
 
   .headline {
     width: 100%;
-    left: 0;
+    margin-left: 0;
   }
 
   .contact-list {

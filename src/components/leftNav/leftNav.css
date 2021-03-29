@@ -386,6 +386,7 @@ button {
 
   .mobile-left-nav .headline {
     position: relative;
+    margin-left: 0;
     width: 100%;
   }
 

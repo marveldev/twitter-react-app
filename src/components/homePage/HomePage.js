@@ -99,7 +99,12 @@ const HomePage = ({
           bio={bio}
         />
       }
-      { mobileLeftNav && <MobileLeftNav setMobileLeftNav={setMobileLeftNav}/>}
+      { mobileLeftNav &&
+        <MobileLeftNav
+          setMobileLeftNav={setMobileLeftNav}
+          bio={bio}
+        />
+      }
     </div>
   )
 }

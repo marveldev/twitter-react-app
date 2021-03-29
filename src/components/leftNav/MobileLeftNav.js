@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
+import { CONSTANTS } from '../common/constants'
 
-const MobileLeftNav = ({ setMobileLeftNav }) => {
+const MobileLeftNav = ({ setMobileLeftNav, bio }) => {
   return (
     <>
       <div className="overlay" onClick={() => setMobileLeftNav(false)}></div>
@@ -16,9 +17,9 @@ const MobileLeftNav = ({ setMobileLeftNav }) => {
         </div>
         <div id="mobileLeftNav">
           <div className="user-profile">
-            <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
+            <img src={bio?.profilePhoto || CONSTANTS.PHOTOURL}
               className="left-nav-photo" alt="user-profile" />
-            <strong>Jane Doe</strong>
+            <strong>{bio?.name || CONSTANTS.NAME}</strong>
             <div>
               <span><strong>38</strong> Following</span>
               <span><strong>17</strong> Followers</span>

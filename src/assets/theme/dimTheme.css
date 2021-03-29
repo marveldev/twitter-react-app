@@ -405,3 +405,19 @@
   background-color: #15202b;
   box-shadow: 0.2em 0.2em 0.5em 0.5em #a5b0bb1c;
 }
+
+@media screen and (max-width: 425px) {
+  .dim .left-nav-content {
+    border-top: 1px solid #38444D;
+    background-color: #15202b;
+    box-shadow: 0.3em 0.5em 0.3em 0.3em #a5b0bb1c;
+  }
+
+  .dim .mobile-left-nav {
+    background-color: #15202b;
+  }
+
+  .dim .dropdown-button:nth-child(2n+7) {
+    border-bottom: 1px solid #38444D;
+  }
+}
