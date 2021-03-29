@@ -50,8 +50,9 @@ const ChatSection = ({ messageData, selectedContact }) => {
   }
 
   const displayContactSection = () => {
-    document.querySelector('.message-contact-page').style.display = 'block'
     document.querySelector('.current-message-section').style.display = 'none'
+    document.querySelector('#contactSection').style.display = 'block'
+    document.querySelector('.left-nav-content').style.display = 'flex'
   }
 
   return (
@@ -63,10 +64,10 @@ const ChatSection = ({ messageData, selectedContact }) => {
             <button type="button" onClick={displayContactSection} className="previous-button">
               <i className="material-icons">&#xe5c4;</i>
             </button>
-            <img src={selectedContact.photoUrl}
+            <img src={selectedContact?.photoUrl}
               className="home-page-photo" alt="user-profile"
             />
-            <strong>{selectedContact.name}</strong>
+            <strong>{selectedContact?.name}</strong>
             <span className="material-icons">&#xe88f;</span>
           </div>
           <div id="sectionContent">
@@ -78,26 +79,6 @@ const ChatSection = ({ messageData, selectedContact }) => {
                 setSelectedMessageId={setSelectedMessageId}
               />
             </div>
-            {chatDropdown.isActive && (
-              <div>
-                <div className="overlay" style={{backgroundColor: "transparent"}}
-                  onClick={() => setChatDropdown(false)}
-                >
-                </div>
-                <div className="chat-dropdown" style={{top: chatDropdown.top}}>
-                  <button
-                    onClick={() => { setDeleteModal(true); setChatDropdown(false) }}
-                  >
-                    <i className="fa fa-trash-o"></i>
-                    Delete for you
-                  </button>
-                  <button type="button">
-                    <i className="fa fa-edit"></i>
-                    Copy message
-                  </button>
-                </div>
-              </div>
-            )}
             <form>
               <span className="fa fa-file-picture-o"></span>
               <span className="fa fa-git-square"></span>
@@ -111,6 +92,26 @@ const ChatSection = ({ messageData, selectedContact }) => {
                 &#xe163;
               </button>
             </form>
+          </div>
+        </div>
+      )}
+      {chatDropdown.isActive && (
+        <div>
+          <div className="overlay" style={{backgroundColor: "transparent"}}
+            onClick={() => setChatDropdown(false)}
+          >
+          </div>
+          <div className="chat-dropdown" style={{top: chatDropdown.top}}>
+            <button
+              onClick={() => { setDeleteModal(true); setChatDropdown(false) }}
+            >
+              <i className="fa fa-trash-o"></i>
+              Delete for you
+            </button>
+            <button type="button">
+              <i className="fa fa-edit"></i>
+              Copy message
+            </button>
           </div>
         </div>
       )}

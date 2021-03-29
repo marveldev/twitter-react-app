@@ -3,7 +3,8 @@ import contactList from './contactList'
 const ContactSection = ({ selectedContact, setSelectedContact }) => {
   const switchCurrentSection = contact => {
     if (window.innerWidth <= 768) {
-      document.querySelector('.message-contact-page').style.display = 'none'
+      document.querySelector('#contactSection').style.display = 'none'
+      document.querySelector('.left-nav-content').style.display = 'none'
       document.querySelector('.current-message-section').style.display = 'block'
     }
 

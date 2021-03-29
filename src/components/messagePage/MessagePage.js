@@ -5,7 +5,7 @@ import { ChatSection } from './ChatSection'
 const MessagePage = ({ messageData, selectedContact, setSelectedContact }) => {
   return (
     <div className="message-page">
-      <div>
+      <div id="contactSection">
         <div className="headline">
           <span>Messages</span>
           <button type="button"><i className="fa fa-envelope-o"></i></button>
