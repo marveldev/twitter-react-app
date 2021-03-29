@@ -19,7 +19,6 @@ const App = () => {
   const [deleteModalIsVisible, setDeleteModalIsVisible] = useState(false)
   const [commentModal, setCommentModal] = useState(false)
   const [selectedTweet, setSelectedTweet] = useState({})
-  // const [messageData, setMessageData] = useState([])
   const [selectedContact, setSelectedContact] = useState()
 
   const bioData = useLiveQuery(() => database.bio.toArray(), [])
