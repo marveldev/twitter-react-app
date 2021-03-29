@@ -338,7 +338,8 @@
   background-color: #15202b;
 }
 
-.dim .tweet-dropdown button:first-child {
+.dim .tweet-dropdown button:first-child,
+.dim .chat-dropdown button:first-child {
   color: #e982a3;
 }
 
@@ -385,4 +386,22 @@
 
 .dim .contact-list {
   border-bottom: 0.1em solid #38444D;
+}
+
+.dim .message-section .message {
+  color: #fff;
+}
+
+.dim .message-options > p:hover {
+  background-color: #192734;
+}
+
+.dim .contact-list:hover,
+.dim .chat-dropdown button:hover {
+  background-color: #192734;
+}
+
+.dim .chat-dropdown {
+  background-color: #15202b;
+  box-shadow: 0.2em 0.2em 0.5em 0.5em #a5b0bb1c;
 }

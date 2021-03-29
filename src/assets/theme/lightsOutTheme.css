@@ -323,3 +323,80 @@
 .lights-out .display-modal {
   background-color: #000;
 }
+
+.lights-out .display-modal h3 {
+  color: #8899A6;
+}
+
+.lights-out .tweet-dropdown {
+  background-color: #000;
+  box-shadow: 0.2em 0.2em 0.5em 0.5em #fdf8f833;
+}
+
+.lights-out .tweet-dropdown button {
+  background-color: #000;
+}
+
+.lights-out .tweet-dropdown button:first-child,
+.lights-out .chat-dropdown button:first-child {
+  color: #e982a3;
+}
+
+.lights-out .tweet-dropdown button:hover {
+  background-color: #15181C;
+}
+
+.lights-out .delete-modal {
+  background-color: #000;
+}
+
+.lights-out .cancel-button {
+  background: #253341;
+}
+
+.lights-out .edit-tweet-modal {
+  background-color: #000;
+}
+
+.lights-out .edit-tweet-modal #tweetContainer {
+  border-bottom: none;
+}
+
+.lights-out .message-container {
+  border-bottom: 1px solid #2F3336;
+}
+
+.lights-out #messageBox {
+  background-color: #202327;
+}
+
+.lights-out #sectionContent {
+  border-right: 1px solid #2F3336;
+}
+
+.lights-out .section-header {
+  border: 0.1em solid #2F3336;
+  background-color: #000;
+}
+
+.lights-out .contact-list {
+  border-bottom: 0.1em solid #15181C;
+}
+
+.lights-out .message-section .message {
+  color: #fff;
+}
+
+.lights-out .message-options > p:hover {
+  background-color: #15181C;
+}
+
+.lights-out .contact-list:hover,
+.lights-out .chat-dropdown button:hover {
+  background-color: #15181C;
+}
+
+.lights-out .chat-dropdown {
+  background-color: #000;
+  box-shadow: 0.2em 0.2em 0.5em 0.5em #fdf8f833;
+}
