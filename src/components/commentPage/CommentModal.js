@@ -1,4 +1,5 @@
 import database from '../../dataBase'
+import { CONSTANTS } from '../common/constants'
 
 const CommentModal = ({ setCommentModal, bio, selectedTweet }) => {
   const addComment = async () => {
@@ -35,14 +36,14 @@ const CommentModal = ({ setCommentModal, bio, selectedTweet }) => {
           </button>
         </div>
         <div className="comment-content">
-          <img src={bio?.profilePhoto} className="home-page-photo" alt="user-profile" />
+          <img src={bio?.profilePhoto || CONSTANTS.PHOTOURL} className="home-page-photo" alt="user-profile" />
           <div>
-            <span className="user-profile-name">{bio?.name}</span>
+            <span className="user-profile-name">{bio?.name || CONSTANTS.NAME}</span>
             <p>{selectedTweet.tweetText}</p>
           </div>
         </div>
         <div className="comment-input">
-          <img src={bio?.profilePhoto} className="home-page-photo" alt="user-profile" />
+          <img src={bio?.profilePhoto || CONSTANTS.PHOTOURL} className="home-page-photo" alt="user-profile" />
           <textarea onKeyUp={inputEventHandler} className="input-box" id="commentTextBox"
             placeholder="Tweet your reply"
           >

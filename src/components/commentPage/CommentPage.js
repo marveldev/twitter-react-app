@@ -2,6 +2,7 @@ import { useHistory } from 'react-router-dom'
 import { useState } from "react"
 import CommentModal from './CommentModal'
 import Comments from "./Comments"
+import { CONSTANTS } from '../common/constants'
 import './commentPage.css'
 
 const CommentPage = ({ bioData, selectedTweet, commentData }) => {
@@ -17,8 +18,10 @@ const CommentPage = ({ bioData, selectedTweet, commentData }) => {
       </div>
       <div className="tweet-content">
         <div>
-          <img src={bio?.profilePhoto} className="home-page-photo" alt="user-profile" />
-          <strong className="user-profile-name">{bio?.name}</strong>
+          <img src={bio?.profilePhoto || CONSTANTS.PHOTOURL}
+            className="home-page-photo" alt="user-profile"
+          />
+          <strong className="user-profile-name">{bio?.name || CONSTANTS.NAME}</strong>
           <button><i className="material-icons">&#xe5d3;</i></button>
         </div>
         <div>

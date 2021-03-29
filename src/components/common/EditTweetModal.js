@@ -1,4 +1,5 @@
 import database from '../../dataBase'
+import { CONSTANTS } from './constants'
 
 const EditTweetModal = ({ setEditTweetModal, selectedTweet, bio }) => {
   const editTweetData = async id => {
@@ -31,7 +32,9 @@ const EditTweetModal = ({ setEditTweetModal, selectedTweet, bio }) => {
           </button>
         </div>
         <div id="tweetContainer">
-          <img src={bio.profilePhoto} className="home-page-photo" alt="user-profile" />
+          <img src={bio?.profilePhoto || CONSTANTS.PHOTOURL}
+            className="home-page-photo" alt="user-profile"
+          />
           <div>
             <div>
               <textarea id="editTweetBox" className="input-box"

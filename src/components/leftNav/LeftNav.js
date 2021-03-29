@@ -76,7 +76,9 @@ const LeftNav = ({
           <i className="fa fa-caret-down"></i>
           <span>More</span>
         </button>
-        <button className="tweet-modal-button" onClick={() => setTweetModalDisplay(true)}>
+        <button className="tweet-modal-button"
+          onClick={() => { bio ? setTweetModalDisplay(true) : setEditModal(true) }}
+        >
           <i className="material-icons">&#xe0cb;</i>
         </button>
         <button type="button" id="tweetModalButton"
