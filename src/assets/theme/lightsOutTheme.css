@@ -279,6 +279,7 @@
 
 .lights-out .section-content {
   border-right: 1px solid #2F3336;
+  border-left: 1px solid #2F3336;
 }
 
 .lights-out .section-content span {

@@ -7,6 +7,7 @@ import { inputEventHandler, addTweetData } from "../common/helper"
 import EditTweetModal from "../common/EditTweetModal"
 import { CONSTANTS } from '../common/constants'
 import MobileLeftNav from "../leftNav/MobileLeftNav"
+import EditProfileModal from '../profilePage/EditProfileModal'
 import './homePage.css'
 
 const HomePage = ({
@@ -14,6 +15,7 @@ const HomePage = ({
   setCommentModal, tweetDropdown, setTweetDropdown, deleteModalIsVisible,
   setDeleteModalIsVisible, selectedTweet, setSelectedTweet, bioData
 }) => {
+  const [editModalDisplay, setEditModal] = useState(false)
   const [mobileLeftNav, setMobileLeftNav] = useState(false)
   const bio = bioData[0]
 
@@ -32,7 +34,8 @@ const HomePage = ({
             <div>
               <textarea
                 onKeyUp={(event) =>
-                  bio && inputEventHandler(event, '#tweetHomeBox', '#tweetHomeButton')
+                  bio ? inputEventHandler(event, '#tweetHomeBox', '#tweetHomeButton')
+                  : setEditModal(true)
                 }
                 id="tweetHomeBox" className="input-box" placeholder="What's happening?"
               >
@@ -96,6 +99,12 @@ const HomePage = ({
           tweetDropdown={tweetDropdown}
           setEditTweetModal={setEditTweetModal}
           selectedTweet={selectedTweet}
+          bio={bio}
+        />
+      }
+      {editModalDisplay &&
+        <EditProfileModal
+          setEditModal={setEditModal}
           bio={bio}
         />
       }
